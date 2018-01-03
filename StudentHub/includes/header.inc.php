@@ -27,6 +27,7 @@
 
 						<section class="side-nav-profile-div">
 							<img src="assets/img/profile-placeholder.jpg" class="side-nav-profile-img" alt="Logo">
+							<img src="assets/img/profile-placeholder.jpg" class="side-nav-profile-img" alt="Logo">
 						    <span class="side-nav-profile-name">User Name</span>
 						</section>
 
@@ -80,7 +81,9 @@
 				<h4>Log In To Your Students Hub Account</h4>
 				<p>This is the Log In modal</p>
 			</section>
+
 			<section class="modal-footer">
 				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
 			</section>
+
 		</section>

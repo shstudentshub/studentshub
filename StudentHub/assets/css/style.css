@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Custom CSS
 
@@ -48,6 +49,22 @@ nav a{
     max-width: 1400px;
 }
 
+=======
+/*Custom CSS*/
+
+/*.btn{
+    background-color: transparent;
+    border-radius: 0px;
+    border: 1px solid #f45800;
+    color: #f45800;
+}
+.btn:hover{
+    background-color: #f45800;
+    border-radius: 0px;
+    color: #fff;
+}
+*/
+>>>>>>> 7aa12da0f832f92aea3ebbf2f03f117445272ef4
 
 .custom-navbar{
     background-color: #fff;
@@ -67,7 +84,10 @@ nav a{
     height: 55px;
     margin: 5px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7aa12da0f832f92aea3ebbf2f03f117445272ef4
 .navbar-fixed, .modal {
     z-index: 9999;
 }
@@ -88,4 +108,8 @@ nav a{
 .side-nav-profile-name {
     color: #f45800;
     font-weight: bold;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7aa12da0f832f92aea3ebbf2f03f117445272ef4
