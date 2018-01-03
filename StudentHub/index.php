@@ -28,6 +28,32 @@
           </div>
       </nav>
     </div>
+    <div class="category-nav hide-on-med-and-down">
+      <ul>
+        <li><a href="#">Some links</a></li>
+        <li><a href="#">Some links</a></li>
+        <li><a href="#">Some links</a></li>
+        <li><a href="#">Some links</a></li>
+        <li><a href="#">Some links</a></li>
+        <li><a href="#">Some links</a></li>
+        <li><a href="#">Some links</a></li>
+        <li><a href="#">Some links</a></li>
+        <li><a href="#">Some links</a></li>
+      </ul>
+    </div>
+    <div class="section">
+      <div class="input-field hide-on-large-only">
+        <input id="search" type="search" placeholder="Search for items" required>
+        <label class="label-icon" for="search"></label>
+        <i class="material-icons">close</i>
+      </div>
+    </div>
+    <div class="section">
+      <div class="row">
+        
+      </div>
+    </div>
+
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>

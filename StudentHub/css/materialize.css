@@ -3389,7 +3389,7 @@ nav ul a span.badge {
 }
 
 .section {
-  padding-top: 1rem;
+/*  padding-top: 1rem;*/
   padding-bottom: 1rem;
 }
 
@@ -4236,7 +4236,7 @@ nav i,
 nav [class^="mdi-"], nav [class*="mdi-"],
 nav i.material-icons {
   display: block;
-  font-size: 24px;
+  font-size: 20px;
   height: 56px;
   line-height: 56px;
 }
@@ -4257,7 +4257,7 @@ nav .button-collapse {
   position: relative;
   z-index: 1;
   height: 56px;
-  margin: 0 18px;
+  margin: 0 10px;
 }
 
 nav .button-collapse i {
@@ -6002,7 +6002,8 @@ textarea.materialize-textarea {
   height: 3rem;
   width: 100%;
   font-size: 1rem;
-  margin: 0 0 20px 0;
+/*  margin: 0 0 20px 0;*/
+  margin-left: 5px;
   padding: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -6424,6 +6425,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 .input-field input[type=search] {
   display: block;
   line-height: inherit;
+  border: 1px solid #e5e5e5;
 }
 
 .nav-wrapper .input-field input[type=search] {
