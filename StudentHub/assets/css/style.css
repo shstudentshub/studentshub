@@ -49,7 +49,9 @@ nav a{
     max-width: 1400px;
 }
 
-=======
+.category-nav > ul li a{
+  color: #746d6d;
+}
 /*Custom CSS*/
 
 /*.btn{
