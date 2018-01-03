@@ -17,7 +17,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="#">Sign in</a></li>
                 <li><a href="#" class="btn">Sign up</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="#"><i class="tiny material-icons">add_shopping_cart</i></a></li>
               </ul>
 
               <ul id="nav-mobile" class="side-nav">
