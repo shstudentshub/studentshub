@@ -11,10 +11,11 @@ $(function(){
     $(".dropdown-trigger").dropdown();
 
     //initialize the carousel
-    $('.carousel').carousel();
+    $('.intro-carousel').carousel({fullWidth: true});
+    $('.recent-added-carousel').carousel();
 
     setInterval(function() {
-    	$('.carousel').carousel('next');
+    	$('.intro-carousel').carousel('next');
     },3000);
         
 });

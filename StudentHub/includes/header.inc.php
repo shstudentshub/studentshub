@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Students Hub | The Total Student Shopping Experience</title>
+		<link rel="shortcut icon" href="assets/img/students-hub-logo.png" type="image/x-icon">
+      	<meta name="keywords" content="">
+  		<meta name="description" content="">
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--Import materialize.css-->
 		<link type="text/css" rel="stylesheet" href="./assets/css/materialize.css"  media="screen,projection"/>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 		<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css"  media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>
@@ -52,27 +57,15 @@
 				</section>
 			</nav>
 		</section>
-		<!-- Menu category-->
-		<!-- <div class="category-nav hide-on-med-and-down">
-			<ul>
-				<li><a href="#">Some links</a></li>
-				<li><a href="#">Some links</a></li>
-				<li><a href="#">Some links</a></li>
-				<li><a href="#">Some links</a></li>
-				<li><a href="#">Some links</a></li>
-				<li><a href="#">Some links</a></li>
-				<li><a href="#">Some links</a></li>
-				<li><a href="#">Some links</a></li>
-				<li><a href="#">Some links</a></li>
-			</ul>
-		</div> -->
+
 		<!-- Search box for mobile viewport only -->
 		<div class="search-div">
 			<div class="input-field hide-on-large-only">
-				<input id="search" type="search" placeholder="Search for items" required>
+				<input id="search" type="search" placeholder=" &#128270; Search for items" required>
 				<label class="label-icon" for="search"></label>
 			</div>
 		</div>
+
 		<!-- Modals for login and signup -->
 		<!-- Sign up modal -->
 		<section id="signup-modal" class="modal">
@@ -84,6 +77,7 @@
 				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
 			</section>
 		</section>
+
 		<!-- Sign in modal -->
 		<section id="signin-modal" class="modal">
 			<section class="modal-content">

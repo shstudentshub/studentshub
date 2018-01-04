@@ -1,4 +1,7 @@
 /*Custom CSS*/
+* {
+    font-family: 'Raleway', sans-serif;
+}
 
 .custom-navbar{
     background-color: #fff;
@@ -45,37 +48,28 @@
     padding: 0px 7% 0px 2%;
 }
 
-.category-nav > ul{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    box-sizing: border-box;
-    max-width: 1400px;
-    padding: 0 2%;
-}
-
-.category-nav > ul li a{
-  color: #746d6d;
-}
-
 .intro-row {
     margin-top: 20px;
 }
 
-.carousel {
-    background-color: #f7f7f7;
-    border-bottom: 10px;
+.recent-added-carousel {
+    height: 310px;
 }
 
-.carousel-header{
+.item-title{
+    color: #444;
+    z-index: 999;
+    font-weight: bold;
+}
+
+.item-sub-title {
+    font-size: 14px;
+    font-style: italic;
     color: #c0c0c0;
 }
 
 .carousel-item img {
-    z-index: 99999;
+    z-index: 99;
 }
 
 .pick-of-the-day-div {
@@ -85,7 +79,7 @@
 
 .pick-of-the-day-img {
     width: 100%;
-    height: 270px;
+    height: 290px;
     border-radius: 3px;
 }
 
@@ -106,4 +100,43 @@
     height: inherit;
     border-radius: 5px;
     margin-top: 30px;
+}
+
+.recent-item {
+    transition: all 0.2s ease-in;
+}
+
+.recent-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px #c0c0c0,
+        0px 7px 14px #c0c0c0;
+}
+
+.recent-item  img {
+    width: 100%;
+    height: 150px;
+}
+
+.recent-item-sm img {
+    height: 180px;
+}
+
+
+@media screen and (max-width: 993px) {
+    .pick-of-the-day-div {
+        margin-top: 10px;
+    }
+
+    .pick-of-the-day-img {
+        width: 100%;
+        height: 190px;
+    }
+
+    .pick-of-the-day-text {
+        font-size: 12px;
+    }
+
+    .surprise-div {
+        height: 90px;
+    }
 }
