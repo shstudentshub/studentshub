@@ -7,10 +7,14 @@
 
         <section class="carousel carousel-slider intro-carousel" data-indicators="true">
             <h5 class="center-align carousel-header">Shopping Now</h5>
-            <a class="carousel-item" href="#one!"><img src="assets/img/placeholder-1.png"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/placeholder-2.png"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/placeholder-3.png"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/placeholder-4.png"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder6.png"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder7.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder8.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder2.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder4.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder3.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder0.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder9.jpg"></a>
         </section>
     </section>
 
@@ -20,7 +24,7 @@
 
             <a href="" title="">
                 <section class="pick-of-the-day-div">
-                    <img src="assets/img/students-hub-logo.png" class="pick-of-the-day-img">
+                    <img src="assets/img/try.jpg" class="pick-of-the-day-img">
                     <p class="center-align pick-of-the-day-text">Pick Of The Day</p>
                 </section>
             </a>
