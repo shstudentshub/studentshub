@@ -1,0 +1,54 @@
+/*Custom CSS*/
+
+/*.btn{
+    background-color: transparent;
+    border-radius: 0px;
+    border: 1px solid #f45800;
+    color: #f45800;
+}
+.btn:hover{
+    background-color: #f45800;
+    border-radius: 0px;
+    color: #fff;
+}
+*/
+
+.custom-navbar{
+    background-color: #fff;
+}
+
+.custom-navbar ul a{
+    color: #f45800;
+    font-weight: bold;
+}
+
+.custom-navbar a{
+    color: #f45800;
+}
+/* Index Page CSS*/
+.navbar-logo{
+    width: 70px;
+    height: 55px;
+    margin: 5px;
+}
+.navbar-fixed, .modal {
+    z-index: 9999;
+}
+
+.side-nav-profile-div {
+    margin: 2px 10%;
+    border-bottom: 1px solid rgba(0,0,0,.125) ;
+}
+
+.side-nav-profile-img {
+    display: block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin:  5px 0px 0px 0px;
+    border-radius: 100%;
+}
+.side-nav-profile-name {
+    color: #f45800;
+    font-weight: bold;
+}
