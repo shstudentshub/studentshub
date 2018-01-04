@@ -8,12 +8,15 @@
 }
 
 .custom-navbar ul a{
-    color: #009688;
+    /*color: #009688; */
+    color: #F56400;
     font-weight: bold;
 }
 
+
 .custom-navbar a{
-    color: #009688;
+  /*  color: #009688;  */
+  color: #F56400;
 }
 /* Index Page CSS*/
 .navbar-logo{
@@ -120,6 +123,46 @@
 .recent-item-sm img {
     height: 180px;
 }
+
+/* Search initializing */
+#search{
+  margin-right: 610px;
+}
+
+input-placeholder { /* WebKit browsers */
+    color:    red;
+     opacity: 1 !important;
+}
+
+:-webkit-input-placeholder {
+  color: #746B65;;
+
+}
+
+::-moz-placeholder {
+  color: #746B65;
+  opacity:
+
+ }
+
+:-ms-input-placeholder {
+   color: #746B65;
+
+ }
+
+/*
+#search:focus{
+  border-bottom: 2px solid red !important;
+}
+
+/* Overiding Code for underline color in Materialize input */
+
+input[type=search]:focus {
+  border-bottom: 1px solid #F56400 !important;
+  box-shadow: 0 1px 0 0 #F56400 !important
+  }
+
+
 
 
 @media screen and (max-width: 993px) {

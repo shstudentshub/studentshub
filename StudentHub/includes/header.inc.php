@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--Import materialize.css-->
 		<link type="text/css" rel="stylesheet" href="./assets/css/materialize.css"  media="screen,projection"/>
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css"  media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>

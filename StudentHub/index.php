@@ -2,7 +2,7 @@
 <?php include "includes/header.inc.php"; ?>
 
 <section class="row intro-row">
-    
+
     <section class="col m8 l8 s12">
 
         <section class="carousel carousel-slider intro-carousel" data-indicators="true">
@@ -17,7 +17,7 @@
     <!-- the division beside the carousel -->
     <section class="col m4 l4 s12">
         <section class="intro-div-right">
-            
+
             <a href="" title="">
                 <section class="pick-of-the-day-div">
                     <img src="assets/img/students-hub-logo.png" class="pick-of-the-day-img">
@@ -30,10 +30,10 @@
                     <p class="center-align">Another Item Comes Here</p>
                 </section>
             </a>
-            
+
         </section>
     </section>
-    
+
 </section> <br/><br/>
 
 <section class="row recently-added-row">
@@ -41,7 +41,7 @@
     <section class="col s12 m12 l12 hide-on-med-and-down">
         <h5 class="center-align item-title">Recently Added</h5>
 
-        
+
         <section class="col m2 l2 s12">
             <a href="" title="View Item">
                 <section class="recent-item">
@@ -95,7 +95,7 @@
                 </section>
             </a>
         </section>
-    
+
 
     </section>
 
@@ -103,7 +103,7 @@
     <section class="col s12 m12 l12 hide-on-large-only">
 
         <section class="carousel recent-added-carousel">
-            <h5 class="center-align item-title">Recently Added 
+            <h5 class="center-align item-title">Recently Added
                 <span class="item-sub-title">(swipe to change)</span>
             </h5>
             <section class="recent-item-sm">

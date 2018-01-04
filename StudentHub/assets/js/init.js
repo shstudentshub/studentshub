@@ -16,6 +16,6 @@ $(function(){
 
     setInterval(function() {
     	$('.intro-carousel').carousel('next');
-    },3000);
-        
+    },5000);
+
 });
