@@ -39,7 +39,7 @@
 <section class="row recently-added-row">
     <!-- display recently added items for desktop -->
     <section class="col s12 m12 l12 hide-on-med-and-down">
-        <h5 class="center-align item-title">Recently Added</h5>
+        <h5 class="center-align item-title">Recently Added</h5><br/>
 
 
         <section class="col m2 l2 s12">
@@ -144,6 +144,59 @@
             </section>
         </section>
 
+    </section>
+</section>
+<br/><br/><br/>
+
+<section class="row reviews-row">
+    <h5 class="center-align item-title">Reviews From Happy Clients</h5><br/>
+    <section class="row">
+
+        <section class="col s12 m4 l4">
+            <section class="review-item">
+                <img src="assets/img/profile-placeholder.jpg" class="review-item-img"><br/>
+
+                <p class="center-align review-item-name">Person Name<br/>
+                    <span class="review-item-position">Person Position</span>
+                </p>
+                <p class="center-align review-item-quote">
+                    <span class="review-quote-sign"><i class="fa fa-quote-left"></i></span>
+                    <span>Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet. lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum. Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum</span>
+                    <span class="review-quote-sign"><i class="fa fa-quote-right"></i></span>
+                </p>
+            </section>
+        </section>
+
+        <section class="col s12 m4 l4">
+            <section class="review-item">
+                <img src="assets/img/profile-placeholder.jpg" class="review-item-img"><br/>
+
+                <p class="center-align review-item-name">Person Name<br/>
+                    <span class="review-item-position">Person Position</span>
+                </p>
+                <p class="center-align review-item-quote">
+                    <span class="review-quote-sign"><i class="fa fa-quote-left"></i></span>
+                    <span>Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet. lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum. Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum</span>
+                    <span class="review-quote-sign"><i class="fa fa-quote-right"></i></span>
+                </p>
+            </section>
+        </section>
+
+        <section class="col s12 m4 l4">
+            <section class="review-item">
+                <img src="assets/img/profile-placeholder.jpg" class="review-item-img"><br/>
+
+                <p class="center-align review-item-name">Person Name<br/>
+                    <span class="review-item-position">Person Position</span>
+                </p>
+                <p class="center-align review-item-quote">
+                    <span class="review-quote-sign"><i class="fa fa-quote-left"></i></span>
+                    <span>Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet. lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum. Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum</span>
+                    <span class="review-quote-sign"><i class="fa fa-quote-right"></i></span>
+                </p>
+            </section>
+        </section>
+        
     </section>
 </section>
 
