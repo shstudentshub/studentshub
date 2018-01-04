@@ -1,14 +1,20 @@
-<<<<<<< HEAD
-$(document).ready(function(){
-  //initialize the side nav
-=======
 /* This module is for the initialization of components */
+$(function(){
 
-$(document).ready(function(){
 	//initialize the side nav
->>>>>>> 7aa12da0f832f92aea3ebbf2f03f117445272ef4
     $(".button-collapse").sideNav();
 
     //initialize the modal
     $('.modal').modal();
+
+    //initialize the dropdown
+    $(".dropdown-trigger").dropdown();
+
+    //initialize the carousel
+    $('.carousel').carousel();
+
+    setInterval(function() {
+    	$('.carousel').carousel('next');
+    },3000);
+        
 });
