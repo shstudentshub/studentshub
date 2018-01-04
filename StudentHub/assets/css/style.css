@@ -8,16 +8,15 @@
 }
 
 .custom-navbar ul a{
-    /*color: #009688; */
     color: #F56400;
     font-weight: bold;
 }
 
 
 .custom-navbar a{
-  /*  color: #009688;  */
   color: #F56400;
 }
+
 /* Index Page CSS*/
 .navbar-logo{
     width: 70px;
@@ -27,6 +26,20 @@
 
 .navbar-fixed, .modal {
     z-index: 9999;
+}
+
+.form-logo {
+    height: 80px;
+    width: 80px;
+    margin-left: 35%;
+}
+
+.user-form input{
+    text-align: center;
+}
+
+.user-form .btn-div {
+    margin-left: 10%;
 }
 
 .side-nav-profile-div {
@@ -42,13 +55,10 @@
     margin:  5px 0px 0px 0px;
     border-radius: 100%;
 }
-.side-nav-profile-name {
-    color: #009688;
-    font-weight: bold;
-}
 
-.search-div {
-    padding: 0px 7% 0px 2%;
+.side-nav-profile-name {
+    color: #F56400;
+    font-weight: bold;
 }
 
 .intro-row {
@@ -87,7 +97,7 @@
 }
 
 .pick-of-the-day-text {
-    background-color: rgb(0,150,136,.3);
+    background: rgb(245,100,0,.5);
     padding: 5px 2px;
     position: relative;
     margin: -42px 0 0 0px;
@@ -104,35 +114,82 @@
 }
 
 .surprise-div {
-    background: #f9eb04;
+    background: rgb(245,100,0,.5);
     padding: 20px;
     height: inherit;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-top: 30px;
 }
 
 .recent-item {
     transition: all 0.2s ease-in;
+    padding: 5px;
 }
 
 .recent-item:hover {
-    transform: scale(1.05);
     box-shadow: 0px 6px 12px #c0c0c0,
         0px 7px 14px #c0c0c0;
+}
+
+.recent-item:hover img{
+    transform: scale(1);
 }
 
 .recent-item  img {
     width: 100%;
     height: 150px;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in;
 }
 
 .recent-item-sm img {
     height: 180px;
 }
 
+/*for the review row*/
+.reviews-row {
+    background:transparent;
+}
+
+.review-item {
+    background: #f7f7f7;
+    padding: 3%;
+    border-radius: 3px;
+}
+
+.review-item-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin-left: 30%;
+}
+
+.review-item-name {
+    font-weight: bold;
+}
+
+.review-item-position {
+    font-weight: lighter;
+    font-size: smaller;
+    font-style: italic;
+}
+
+.review-item-quote {
+    font-size: larger;
+}
+
+.review-quote-sign {
+    color: #c0c0c0;
+}
 /* Search initializing */
-#search{
-  margin-right: 600px;
+
+.search{
+  margin-right: 550px;
+}
+
+.search-sm-div{
+   padding: 0px 10px 0px 0px;
+
 }
 
 input-placeholder { /* WebKit browsers */
@@ -166,7 +223,7 @@ input-placeholder { /* WebKit browsers */
 input[type=search]:focus {
   border-bottom: 1px solid #F56400 !important;
   box-shadow: 0 1px 0 0 #F56400 !important
-  }
+}
 
 
 
@@ -187,5 +244,9 @@ input[type=search]:focus {
 
     .surprise-div {
         height: 90px;
+    }
+
+    .review-item {
+        margin-bottom: 10px;
     }
 }
