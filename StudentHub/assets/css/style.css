@@ -302,7 +302,25 @@ input-placeholder { /* WebKit browsers */
  }
 
 /* Custom buttons   */
-.btn, .custon-btn1{
+.btn1{
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  cursor: pointer;
+
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn1, .custon-btn1{
   background-color: #fff;
   color: #F56400;
   border: 1px solid #F56400;
