@@ -167,7 +167,7 @@
 }
 
 .process-item {
-    
+
 }
 
 .process-item-icon-div {
@@ -227,19 +227,20 @@
 
 /* for the footer row*/
 .footer-row {
-    background: rgb(245,100,0,.5);
+  /*  background: rgb(245,100,0,.5); */
+    background-color: #fff;
     padding: 3%  2% 0% 2%;
     margin: 0px;
 }
 
 .footer-item {
-    
+
 }
 
 .footer-header-title {
     display: inline-block;
     font-weight: bolder;
-    color: #fff;
+    color: #000;
     font-size: 16px;
 }
 
@@ -249,12 +250,29 @@
 }
 
 .footer-list li a {
-    color: #fff;
+    color: #000;
 }
 
 .footer-cr {
-    color: #fff;
+    color: #000;
 }
+
+/*Customs css*/
+address{
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 1.43000;
+}
+
+hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
 
 input-placeholder { /* WebKit browsers */
     color:    red;

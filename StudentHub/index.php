@@ -262,107 +262,12 @@
                 </p>
             </section>
         </section>
-        
+
     </section>
 </section>
 
 <!-- footer row -->
-<section class="row footer-row">
-    <section class="row">
-        <h6 class="center-align item-title">Hear From Us Regularly By Joining Our Mailing List</h6><br/>
-        <section class="col m3 l3"></section>
-        <section class="col m6 l6">
-            <form method="post" class="col s12">
-                <section class="row">
-                    <section class="input-field col s9 m9">
-                        <input type="email" class="validate"  placeholder="Your Email Address" required>
-                    </section>
-                    <section class="input-field col s3 m3">
-                        <button type="submit" class="btn custom-btn">Join</button>
-                    </section>
-                </section>
-            </form>
-        </section>
-        <section class="col m3 l3"></section>
-    </section><br/>
 
-    <section class="row">
-        <section class="col s12 m3 l3">
-            <section class="footer-item">
-                <section class="footer-header">
-                    <h6 class="footer-header-title">Students Hub</h6>
-                </section>
-
-                <section class="footer-list">
-                    <li><a href=""><i class="fa fa-square"></i>
-                            Street Or House Number<br/>
-                            City Name, Country Name
-                        </a></li>
-
-                    <li><a href=""><i class="fa fa-square"></i>
-                            emailaddess@ofstudents.hub
-                        </a></li>
-
-                    <li><a href=""><i class="fa fa-square"></i>
-                            (+000) 000 000 0000
-                        </a></li>
-                </section>
-            </section>
-            
-        </section>
-
-        <section class="col s4 m3 l3">
-            <section class="footer-item">
-                <section class="footer-header">
-                    <h6 class="footer-header-title">Company</h6>
-                </section>
-
-                <section class="footer-list">
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Policies</a></li>
-                    <li><a href="">Privacy</a></li>
-                </section>
-            </section>
-            
-        </section>
-
-        <section class="col s4 m3 l3">
-            <section class="footer-item">
-                <section class="footer-header">
-                    <h6 class="footer-header-title">Info</h6>
-                </section>
-
-                <section class="footer-list">
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Buying</a></li>
-                    <li><a href="">Selling</a></li>
-                    <li><a href="">Customer Service</a></li>
-                </section>
-            </section>
-            
-        </section>
-
-        <section class="col s4 m3 l3">
-            <section class="footer-item">
-                <section class="footer-header">
-                    <h6 class="footer-header-title">Follow Us</h6>
-                </section>
-
-                <section class="footer-list">
-                    <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
-                    <li><a href=""><i class="fa fa-twitter"></i>  Twitter</a></li>
-                    <li><a href=""><i class="fa fa-instagram"></i>  Instagram</a></li>
-                    <li><a href=""><i class="fa fa-linkedin"></i>  LinkedIn</a></li>
-                </section>
-            </section>
-            
-        </section>
-    </section>
-
-    <p class="center-align footer-cr">Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</p>
-    
-</section>
 
 <!-- include the footer of the document -->
 <?php include "includes/footer.inc.php"; ?>
