@@ -185,7 +185,8 @@
 }
 
 .process-item-title, .process-item-sub-title {
-    color: rgb(245,100,0,.5);
+  /*  color: rgb(245,100,0,.5); */
+  color: #605b5b;
 }
 
 
@@ -272,6 +273,10 @@ hr{
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
+}
+
+strong{
+  font-weight: bold;
 }
 
 

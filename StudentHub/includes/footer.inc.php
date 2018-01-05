@@ -44,7 +44,7 @@
                               Model Town Link Road Lahore<br/>
                               60 Street. Accra Ghana 54770<br/>
                               info@studentshubafrica.com <br/>
-                              (+000) 000 000 0000
+                              <strong>Tel:</strong><a href="tel:+233 20 586 5858"> +233 20 586 5858</a>
                             </address>
                     </section>
                 </section>
