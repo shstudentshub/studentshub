@@ -26,20 +26,6 @@
                     </section>
 
                     <section class="footer-list">
-                      <!--
-                        <li><a href=""><i class="fa fa-square"></i>
-                                Street Or House Number<br/>
-                                City Name, Country Name
-                            </a></li>
-
-                        <li><a href=""><i class="fa fa-square"></i>
-                                emailaddess@ofstudents.hub
-                            </a></li>
-
-                        <li><a href=""><i class="fa fa-square"></i>
-                                (+000) 000 000 0000
-                            </a></li>-->
-
                             <address>
                               Model Town Link Road Lahore<br/>
                               60 Street. Accra Ghana 54770<br/>
