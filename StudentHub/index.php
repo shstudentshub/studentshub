@@ -8,7 +8,6 @@
         <section class="carousel carousel-slider intro-carousel" data-indicators="true">
             <h5 class="center-align carousel-header">Shopping Now</h5>
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder01.jpg"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder02.jpg"></a>
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder6.png"></a>
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder7.jpg"></a>
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder8.jpg"></a>
