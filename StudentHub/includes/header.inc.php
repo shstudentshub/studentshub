@@ -94,6 +94,7 @@
 						    <section class="row">
 						        <section class="input-field col s12">
 						          <input type="email" class="validate" placeholder="Email Address" required>
+                      <label for="email" data-error="Wrong email" data-success="Correct"></label>
 						        </section>
 						    </section>
 
