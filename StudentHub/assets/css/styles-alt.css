@@ -1,0 +1,27 @@
+/*Custom CSS*/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+.admin-login-row {
+	padding: 10% 0 0 0;
+}
+
+.admin-form-div {
+	border: 1px solid #ccc;
+	padding: 3%;
+}
+
+.admin-form-logo {
+	height: 80px;
+    width: 80px;
+    margin-left: 40%;
+}
+
+.admin-form input {
+	text-align: center;
+}
+
+.admin-form .admin-login-btn {
+	width: 100%;
+}

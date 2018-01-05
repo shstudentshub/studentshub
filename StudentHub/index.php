@@ -154,7 +154,7 @@
 </section>
 <br/><br/><br/>
 
-
+<!-- how it works row -->
 <section class="row process-row">
     <h5 class="center-align item-title">How It Works</h5><br/>
         <section class="row">
@@ -213,6 +213,7 @@
 
 </section>
 
+<!-- reviews row -->
 <section class="row reviews-row">
     <h5 class="center-align item-title">Reviews From Happy Clients</h5><br/>
     <section class="row">
@@ -265,6 +266,7 @@
     </section>
 </section>
 
+<!-- footer row -->
 <section class="row footer-row">
     <section class="row">
         <h6 class="center-align item-title">Hear From Us Regularly By Joining Our Mailing List</h6><br/>
