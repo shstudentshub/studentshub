@@ -297,12 +297,12 @@ input-placeholder { /* WebKit browsers */
  }
 
 /* Custom buttons   */
-.btn, .custon-btn{
+.btn, .custon-btn1{
   background-color: #fff;
   color: #F56400;
   border: 1px solid #F56400;
 }
-.custom-btn:hover{
+.custom-btn1:hover{
   background-color: #F56400;
   color: #fff;
 }
