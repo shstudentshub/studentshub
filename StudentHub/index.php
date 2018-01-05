@@ -266,8 +266,6 @@
     </section>
 </section>
 
-<!-- footer row -->
-
 
 <!-- include the footer of the document -->
 <?php include "includes/footer.inc.php"; ?>

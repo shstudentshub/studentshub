@@ -25,7 +25,7 @@
 				</section><br/>
 				<section class="row btn-div">
 					<section class="col s12">
-						<button class="btn admin-login-btn" type="submit" name="action">Login</button>
+						<button class="btn admin-login-btn custom-btn" type="submit" name="action">Login</button>
 					</section>
 				</section><br/>
 				<p class="center-align admin-login-res"></p>
