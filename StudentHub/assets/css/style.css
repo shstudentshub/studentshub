@@ -262,6 +262,7 @@ address{
   margin-bottom: 20px;
   font-style: normal;
   line-height: 1.43000;
+  color: #120909;
 }
 
 hr{
@@ -295,12 +296,17 @@ input-placeholder { /* WebKit browsers */
 
  }
 
-/*
-#search:focus{
-  border-bottom: 2px solid red !important;
+/* Custom buttons   */
+.btn, .custon-btn{
+  background-color: #fff;
+  color: #F56400;
+  border: 1px solid #F56400;
+}
+.custom-btn:hover{
+  background-color: #F56400;
+  color: #fff;
 }
 
-/* Overiding Code for underline color in Materialize input */
 
 input[type=search]:focus {
   border-bottom: 1px solid #F56400 !important;

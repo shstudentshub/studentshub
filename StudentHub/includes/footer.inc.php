@@ -10,7 +10,7 @@
                             <input type="email" class="validate"  placeholder="Your Email Address" required>
                         </section>
                         <section class="input-field col s3 m3">
-                            <button type="submit" class="btn custom-btn">Join</button>
+                            <button type="submit" class="btn custom-btn">Join&nbspUs</button>
                         </section>
                     </section>
                 </form>
