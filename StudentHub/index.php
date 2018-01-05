@@ -224,7 +224,13 @@
                 <img src="assets/img/profile-placeholder.jpg" class="review-item-img"><br/>
 
                 <p class="center-align review-item-name">Person Name<br/>
-                    <span class="review-item-position">Person Position</span>
+                    <span class="review-item-position" style="color:rgba(227, 240, 10, 0.9)">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </span>
                 </p>
                 <p class="center-align review-item-quote">
                     <span class="review-quote-sign"><i class="fa fa-quote-left"></i></span>
@@ -239,7 +245,13 @@
                 <img src="assets/img/profile-placeholder.jpg" class="review-item-img"><br/>
 
                 <p class="center-align review-item-name">Person Name<br/>
-                    <span class="review-item-position">Person Position</span>
+                    <span class="review-item-position">
+                      <i class="fa fa-star" aria-hidden="true" style="color:rgba(227, 240, 10, 0.9)"></i>
+                      <i class="fa fa-star" aria-hidden="true" style="color:rgba(227, 240, 10, 0.9)"></i>
+                      <i class="fa fa-star" aria-hidden="true" style="color:rgba(227, 240, 10, 0.9)"></i>
+                      <i class="fa fa-star" aria-hidden="true" style="color:rgba(227, 240, 10, 0.9)"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </span>
                 </p>
                 <p class="center-align review-item-quote">
                     <span class="review-quote-sign"><i class="fa fa-quote-left"></i></span>
@@ -254,7 +266,13 @@
                 <img src="assets/img/profile-placeholder.jpg" class="review-item-img"><br/>
 
                 <p class="center-align review-item-name">Person Name<br/>
-                    <span class="review-item-position">Person Position</span>
+                    <span class="review-item-position" style="color:rgba(227, 240, 10, 0.9)">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </span>
                 </p>
                 <p class="center-align review-item-quote">
                     <span class="review-quote-sign"><i class="fa fa-quote-left"></i></span>
