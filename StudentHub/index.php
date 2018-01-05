@@ -50,7 +50,7 @@
             <a href="" title="View Item">
                 <section class="recent-item">
                     <img src="assets/img/placeholder-1.png">
-                    <p>This is a  description of the image 1</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </section>
             </a>
         </section>
@@ -59,7 +59,7 @@
             <a href="" title="View Item">
                 <section class="recent-item">
                     <img src="assets/img/placeholder-2.png">
-                    <p>This is a  description of the image 1</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </section>
             </a>
         </section>
@@ -68,7 +68,7 @@
             <a href="" title="View Item">
                 <section class="recent-item">
                     <img src="assets/img/placeholder-3.png">
-                    <p>This is a  description of the image 1</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </section>
             </a>
         </section>
@@ -77,7 +77,7 @@
             <a href="" title="View Item">
                 <section class="recent-item">
                     <img src="assets/img/placeholder-4.png">
-                    <p>This is a  description of the image 1</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </section>
             </a>
         </section>
@@ -86,7 +86,7 @@
             <a href="" title="View Item">
                 <section class="recent-item">
                     <img src="assets/img/placeholder-2.png">
-                    <p>This is a  description of the image 1</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </section>
             </a>
         </section>
@@ -95,11 +95,12 @@
             <a href="" title="View Item">
                 <section class="recent-item">
                     <img src="assets/img/placeholder-1.png">
-                    <p>This is a  description of the image 1</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </section>
             </a>
-        </section>
+        </section><br/><br/>
 
+        <p class="center-align"><a href="" class="custom-text-color">View More <i class="fa fa-chevron-right"></i></a></p>
 
     </section>
 
@@ -113,45 +114,106 @@
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-1.png">
-                    <p>This is a  description of the image 1</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </a>
             </section>
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-2.png">
-                    <p>This is a  description of the image 2</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </a>
             </section>
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-3.png">
-                    <p>This is a  description of the image 3</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </a>
             </section>
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-4.png">
-                    <p>This is a  description of the image 4</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </a>
             </section>
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-2.png">
-                    <p>This is a  description of the image 4</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </a>
             </section>
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-1.png">
-                    <p>This is a  description of the image 4</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
                 </a>
             </section>
         </section>
 
+        <p class="center-align"><a href="" class="custom-text-color">View More <i class="fa fa-chevron-right"></i></a></p>
     </section>
 </section>
 <br/><br/><br/>
 
+<!-- how it works row -->
+<section class="row process-row">
+    <h5 class="center-align item-title">How It Works</h5><br/>
+        <section class="row">
+            <h6 class="center-align item-title">Buying</h6><br/>
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-search"></i></h1>
+                    <h5 class="center-align process-item-title">1. Search Item</h5>
+                    <p class="center-align process-item-sub-title">Search Items Posted By Verified Users</p>
+                </section>
+            </section>
+
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-phone"></i></h1>
+                    <h5 class="center-align process-item-title">2. Contact Seller</h5>
+                    <p class="center-align process-item-sub-title">Call Or Send The Seller A Message</p>
+                </section>
+            </section>
+
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-handshake-o"></i></h1>
+                    <h5 class="center-align process-item-title">3. Close Deal</h5>
+                    <p class="center-align process-item-sub-title">Close The Deal With The Seller In Person</p>
+                </section>
+            </section>
+        </section><br/><br/>
+
+        <section class="row">
+            <h6 class="center-align item-title">Selling</h6><br/>
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-paper-plane"></i></h1>
+                    <h5 class="center-align process-item-title">1. Post Item</h5>
+                    <p class="center-align process-item-sub-title">Post Item For Millions Of People To See</p>
+                </section>
+            </section>
+
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-mobile"></i></h1>
+                    <h5 class="center-align process-item-title">2. Receive Client Call</h5>
+                    <p class="center-align process-item-sub-title">Receive Call From People Interested In Your Item</p>
+                </section>
+            </section>
+
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-handshake-o"></i></h1>
+                    <h5 class="center-align process-item-title">3. Close Deal</h5>
+                    <p class="center-align process-item-sub-title">Close The Deal With The Buyer In Person</p>
+                </section>
+            </section>
+        </section>
+
+</section>
+
+<!-- reviews row -->
 <section class="row reviews-row">
     <h5 class="center-align item-title">Reviews From Happy Clients</h5><br/>
     <section class="row">
@@ -202,6 +264,104 @@
         </section>
         
     </section>
+</section>
+
+<!-- footer row -->
+<section class="row footer-row">
+    <section class="row">
+        <h6 class="center-align item-title">Hear From Us Regularly By Joining Our Mailing List</h6><br/>
+        <section class="col m3 l3"></section>
+        <section class="col m6 l6">
+            <form method="post" class="col s12">
+                <section class="row">
+                    <section class="input-field col s9 m9">
+                        <input type="email" class="validate"  placeholder="Your Email Address" required>
+                    </section>
+                    <section class="input-field col s3 m3">
+                        <button type="submit" class="btn custom-btn">Join</button>
+                    </section>
+                </section>
+            </form>
+        </section>
+        <section class="col m3 l3"></section>
+    </section><br/>
+
+    <section class="row">
+        <section class="col s12 m3 l3">
+            <section class="footer-item">
+                <section class="footer-header">
+                    <h6 class="footer-header-title">Students Hub</h6>
+                </section>
+
+                <section class="footer-list">
+                    <li><a href=""><i class="fa fa-square"></i>
+                            Street Or House Number<br/>
+                            City Name, Country Name
+                        </a></li>
+
+                    <li><a href=""><i class="fa fa-square"></i>
+                            emailaddess@ofstudents.hub
+                        </a></li>
+
+                    <li><a href=""><i class="fa fa-square"></i>
+                            (+000) 000 000 0000
+                        </a></li>
+                </section>
+            </section>
+            
+        </section>
+
+        <section class="col s4 m3 l3">
+            <section class="footer-item">
+                <section class="footer-header">
+                    <h6 class="footer-header-title">Company</h6>
+                </section>
+
+                <section class="footer-list">
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Policies</a></li>
+                    <li><a href="">Privacy</a></li>
+                </section>
+            </section>
+            
+        </section>
+
+        <section class="col s4 m3 l3">
+            <section class="footer-item">
+                <section class="footer-header">
+                    <h6 class="footer-header-title">Info</h6>
+                </section>
+
+                <section class="footer-list">
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Buying</a></li>
+                    <li><a href="">Selling</a></li>
+                    <li><a href="">Customer Service</a></li>
+                </section>
+            </section>
+            
+        </section>
+
+        <section class="col s4 m3 l3">
+            <section class="footer-item">
+                <section class="footer-header">
+                    <h6 class="footer-header-title">Follow Us</h6>
+                </section>
+
+                <section class="footer-list">
+                    <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i>  Twitter</a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i>  Instagram</a></li>
+                    <li><a href=""><i class="fa fa-linkedin"></i>  LinkedIn</a></li>
+                </section>
+            </section>
+            
+        </section>
+    </section>
+
+    <p class="center-align footer-cr">Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</p>
+    
 </section>
 
 <!-- include the footer of the document -->
