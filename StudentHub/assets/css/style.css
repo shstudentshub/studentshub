@@ -316,7 +316,6 @@ input-placeholder { /* WebKit browsers */
   display: inline-block;
   height: 36px;
   line-height: 36px;
-
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
 }
