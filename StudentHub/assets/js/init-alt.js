@@ -6,4 +6,6 @@ $(function(){
         $(".se-pre-con").fadeOut("slow");;
     });
 
+    $(".dropdown-trigger").dropdown();
+
 });
