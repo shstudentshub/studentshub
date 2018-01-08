@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include "../db-config.php";
 
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -11,7 +11,7 @@
 
 		//hash the password
 		$userPassword = password_hash($userPassword, PASSWORD_BCRYPT);
-		
+
 		$requestQuery = "SELECT * FROM users WHERE user_email  = ?";
 
 		$preparedQuery = $database->prepare($requestQuery);

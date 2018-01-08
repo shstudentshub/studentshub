@@ -44,7 +44,7 @@ $(".user-signup-form").on("submit", function(event) {
 			//if signup successful,
 			if (response.success) {
 				showSnackBar(response.message,"success");
-				
+
 				setTimeout(function() {
 					$(".signup-modal").modal("close");
 					$(".signin-modal").modal("open");
@@ -84,7 +84,7 @@ $(".user-signin-form").on("submit", function(event) {
 			//if login successful,
 			if (response.success) {
 				showSnackBar(response.message,"success");
-				
+
 				setTimeout(function() {
 					var currentPage = getCurrentPage();
 					window.location.href = currentPage;
