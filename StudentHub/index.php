@@ -107,11 +107,10 @@
 
     <!-- display recently added slider for mobile -->
     <section class="col s12 m12 l12 hide-on-large-only">
-
-        <section class="carousel recent-added-carousel">
-            <h5 class="center-align item-title">Recently Added
-                <span class="item-sub-title">(swipe to change)</span>
-            </h5>
+        <h5 class="center-align item-title">Recently Added</h5>
+        <p class="center-align item-sub-title">(swipe to navigate)</p>
+        <section class="center-align mobile-slide-div">
+            
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-1.png">

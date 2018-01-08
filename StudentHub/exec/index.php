@@ -12,15 +12,15 @@
 			<h4 class="center-align">Admin Login</h4>
 			<p class="center-align">Enter Admin Credentials To Login</p>
 			<br/>
-			<form method="post" class="admin-form" accept-charset="utf-8">
+			<form method="post" class="admin-form" accept-charset="utf-8" class="admin-form">
 				<section class="row">
 					<section class="input-field col s12">
-						<input id="login-email" type="email" class="validate" placeholder="Admin Username" required>
+						<input id="login-email" type="text" class="validate admin-username" placeholder="Admin Username" required>
 					</section>
 				</section>
 				<section class="row">
 					<section class="input-field col s12">
-						<input id="login-password" type="password" class="validate" placeholder="Admin Password" required>
+						<input id="login-password" type="password" class="validate admin-password" placeholder="Admin Password" required>
 					</section>
 				</section><br/>
 				<section class="row btn-div">

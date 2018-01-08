@@ -8,15 +8,15 @@ body {
 }
 
 .custom-btn {
-	background: rgb(245,100,0,.7);
+	background: #f78d44;
 }
 
 .custom-btn:hover {
-	background: rgb(245,100,0,.5);
+	background: #f7ae7b;
 }
 
 .admin-custom-navbar {
-	background: rgb(245,100,0,.5);
+	background: #f78d44;
 	padding: 0% 1%;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 .side-div li.selected-item {
-	background: rgb(245,100,0,.5);
+	background: #f78d44;
 	border-radius: 5px;
 	margin-bottom: 1px;
 }
@@ -92,14 +92,14 @@ body {
 
 .side-div li a.selected:hover {
 	color: #fff;
-	background: rgb(245,100,0,.5);
+	background: #f78d44;
 	cursor: default;
 	border-bottom: 1px solid transparent !important;
 }
 
 .side-div li a:hover {
 	text-decoration: none;
-	background: rgb(245,100,0,.7);
+	background: #f7ae7b;
 	border-radius: 5px;
 	color: #fff;
 }
@@ -110,6 +110,29 @@ body {
 	height: 85.5vh;
 	overflow: auto;
 	margin-top: 5px;
+}
+
+.jumbotron {
+	padding: 10px;
+	background: #f7f7f7;
+	border-radius: 5px;
+}
+
+.no-items-text {
+	color: #ccc;
+}
+
+.action-icon-edit, .action-icon-delete {
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.action-icon-edit {
+	color: #2962ff ;
+}
+
+.action-icon-delete {
+	color: #FF2A55;
 }
 
 

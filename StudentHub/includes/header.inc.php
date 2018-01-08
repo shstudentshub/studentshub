@@ -1,3 +1,24 @@
+<?php 
+	include "api/db-config.php";
+	session_start();
+	$userLoggedIn = false;
+
+	if (isset($_SESSION["userId"])) {
+		$userLoggedIn = true;
+		$userId = intval($_SESSION["userId"]);
+
+		#get the detail of the current user
+		$requestQuery = "SELECT * FROM users WHERE user_id  = ?";
+		$preparedQuery = $database->prepare($requestQuery);
+		$preparedQuery->bind_param('i',$userId);
+		$preparedQuery->execute();
+		$result = $preparedQuery->get_result();
+
+		$row = $result->fetch_assoc();
+		$userFullname = $row["user_name"];
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,12 +37,12 @@
 	<body>
 		<div class="se-pre-con"></div>
 
-		<!-- Dropdown Structure -->
-		<ul id="cat-dropdown1" class="dropdown-content">
-			<li><a href="#!">one</a></li>
-			<li><a href="#!">two</a></li>
+		<!-- User DropDown -->
+		<ul id="user-dropdown" class="dropdown-content">
+			<li><a href="#!">Account</a></li>
+			<li><a href="#!">Need Help?</a></li>
 			<li class="divider"></li>
-			<li><a href="#!">three</a></li>
+			<li><a href="logout.php">Logout</a></li>
 		</ul>
 
 		<!-- The navbar -->
@@ -39,12 +60,22 @@
 							</a>
 						</li>
 						<li class="hide-on-med-and-down">
-							<a class="dropdown-trigger" href="#!" data-activates="cat-dropdown1">Categories <i class="fa fa-chevron-down"></i></a>
+							<!-- <a class="dropdown-trigger" href="#!" data-activates="cat-dropdown1">Categories <i class="fa fa-chevron-down"></i></a> -->
 						</li>
-						<li><a href="#">Sell</a></li>
+						
+						<?php 
+							if (!$userLoggedIn) { ?>
+
+						<li><a href="#signin-modal" class="modal-trigger">Sell</a></li>
 						<li><a href="#signin-modal" class="modal-trigger">Sign In</a></li>
 						<li><a href="#signup-modal" class="modal-trigger">Sign Up</a></li>
-						<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+
+						<?php 
+							} else if ($userLoggedIn) { ?>
+								<li><a href="post-item.php">Sell</a></li>
+								<li><a class="dropdown-trigger" href="#!" data-activates="user-dropdown"><?php echo $userFullname; ?> <i class="fa fa-chevron-down"></i></a></li>
+
+						<?php } ?>
 					</ul>
 					<ul class="side-nav" id="nav-mobile">
 						<section class="side-nav-profile-div">
@@ -69,7 +100,7 @@
 
 		<!-- Modals for login and signup -->
 		<!-- Sign up modal -->
-		<section id="signup-modal" class="modal">
+		<section id="signup-modal" class="modal signup-modal">
 			<section class="modal-content">
 				<section class="row">
 					<section class="col s12 m2 l2"></section>
@@ -80,43 +111,37 @@
 						<p class="center-align">Fill &amp; Submit The Form To Sign Up</p>
 						<br/>
 
-						<form method="post" class="user-form" accept-charset="utf-8">
+						<form method="post" class="user-form user-signup-form" accept-charset="utf-8">
 							<section class="row">
 						        <section class="input-field col s12">
-						          <input  type="text" class="validate" placeholder="Full Name" required>
+						          <input  type="text" class="validate user-signup-fullname" placeholder="Full Name" required>						        
+						      	</section>
+						    </section>
+
+						    <section class="row">
+						        <section class="input-field col s12">
+						          <input type="tel" class="validate user-signup-contact" placeholder="Contact Number" required>
 						        </section>
 						    </section>
 
 						    <section class="row">
 						        <section class="input-field col s12">
-						          <input type="tel" class="validate" placeholder="Contact Number" required>
+						          <input type="email" class="validate user-signup-email" placeholder="Email Address" required>
 						        </section>
 						    </section>
 
 						    <section class="row">
 						        <section class="input-field col s12">
-						          <input type="email" class="validate" placeholder="Email Address" required>
-                      <label for="email" data-error="Wrong email" data-success="Correct"></label>
-						        </section>
-						    </section>
-
-						    <section class="row">
-						        <section class="input-field col s12">
-						          <input type="password" class="validate" placeholder="Password" required>
+						          <input type="password" class="validate user-signup-password" placeholder="Password" required>
 						        </section>
 						    </section>
 
 						    <section class="row btn-div">
-						    	<section class="col s4">
-						    		<button class="btn" type="submit" name="action">Sign Up</button>
+						    	<section class="col s6">
+						    		<button class="btn custom-btn" type="submit" name="action">Sign Up</button>
 						    	</section>
-
-						    	<section class="col s3">
-						    		<button class="btn" type="reset" name="action">Clear</button>
-						    	</section>
-
-						    	<section class="col s4">
-						    		<button type="button" class="btn modal-action modal-close">Cancel</button>
+						    	<section class="col s6">
+						    		<button type="button" class="btn modal-action modal-close custom-btn">Cancel</button>
 						    	</section>
 						    </section>
 
@@ -128,7 +153,7 @@
 		</section>
 
 		<!-- Sign in modal -->
-		<section id="signin-modal" class="modal">
+		<section id="signin-modal" class="modal signin-modal">
 			<section class="modal-content">
 
 				<section class="row">
@@ -140,30 +165,26 @@
 						<p class="center-align">Enter Your Email And Password To Login</p>
 						<br/>
 
-						<form method="post" class="user-form" accept-charset="utf-8">
+						<form method="post" class="user-form user-signin-form" accept-charset="utf-8">
 							<section class="row">
 						        <section class="input-field col s12">
-						          <input id="login-email" type="email" class="validate" placeholder="Email Address" required>
+						          <input type="email" class="validate user-signin-email" placeholder="Email Address" required>
 						        </section>
 						    </section>
 
 						    <section class="row">
 						        <section class="input-field col s12">
-						          <input id="login-password" type="password" class="validate" placeholder="Password" required>
+						          <input type="password" class="validate user-signin-password" placeholder="Password" required>
 						        </section>
 						    </section>
 
 						    <section class="row btn-div">
-						    	<section class="col s4">
-						    		<button class="btn" type="submit" name="action">Sign Up</button>
+						    	<section class="col s6">
+						    		<button class="btn custom-btn" type="submit" name="action">Sign In</button>
 						    	</section>
 
-						    	<section class="col s3">
-						    		<button class="btn" type="reset" name="action">Clear</button>
-						    	</section>
-
-						    	<section class="col s4">
-						    		<button type="button" class="btn modal-action modal-close">Cancel</button>
+						    	<section class="col s6">
+						    		<button type="button" class="btn modal-action modal-close custom-btn">Cancel</button>
 						    	</section>
 						    </section>
 
@@ -173,4 +194,12 @@
 				</section>
 
 			</section>
+		</section>
+
+		<!-- this is the snackbar for the page -->
+		<section class="snackbar">
+			<i class="fa fa-check snackbar-icon-success"></i>
+			<i class="fa fa-warning snackbar-icon-error"></i>
+			<img src="assets/img/snackbar-loader.gif" class="snackbar-loader">
+			<span class="snackbar-text"><b> This is the text</b></span><br/>
 		</section>

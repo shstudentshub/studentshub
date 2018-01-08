@@ -6,6 +6,11 @@ $(function(){
         $(".se-pre-con").fadeOut("slow");;
     });
 
+    //initialize the drop down
     $(".dropdown-trigger").dropdown();
+
+    //initialize the modal
+    $('.modal').modal();
+
 
 });
