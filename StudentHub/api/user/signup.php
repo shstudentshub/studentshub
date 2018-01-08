@@ -33,13 +33,16 @@
 
 			if ($preparedInsertQuery->execute()) {
 				session_start();
-				$_SESSION["userEmail"] = $email;
+				$_SESSION["userEmail"] = $userEmail;
 				$response["success"] = true;
 				$response["message"] = "Signup Successful";
 				header('Content-Type: application/json');
 		        echo json_encode($response);
 
 			}else{
+				#send the error
+				#echo preparedInsertQuery->error;
+				
 				$response["success"] = false;
 				$response["message"] = "Please Check Your Internet Connection";
 				header('Content-Type: application/json');
