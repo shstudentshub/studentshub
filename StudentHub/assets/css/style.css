@@ -255,7 +255,7 @@
     border-radius: 2px;
     padding: 10px; 
     position: relative; 
-    z-index: 1000;
+    z-index: 9999;
     left: 25%; 
     top: 30px; 
 }
@@ -409,11 +409,22 @@ input[type=search]:focus {
 }
 
 
+/* Custom Mobile CSS */
+@media (max-width: 1366px){
+
+    .surprise-div {
+      height: 125px;
+     }
+
+}
 
 
-@media screen and (max-width: 993px) {
+@media (max-width: 1200px){
     .pick-of-the-day-div {
-        margin-top: 10px;
+        margin-top: -40px;
+        margin-left: 0px;
+        width: 100%;
+        height: 200px;
     }
 
     .pick-of-the-day-img {
@@ -426,7 +437,70 @@ input[type=search]:focus {
     }
 
     .surprise-div {
-        height: 90px;
+      height: 180px;
+      margin-top: 10px;
+      margin-left: 0px;
+      width: 100%;
+       
+    }
+    .carousel{
+      margin-top: -40px;
+    }
+}
+
+@media (max-width: 1066px) {
+  .search{
+      margin-right: 390px;
+    }
+}
+
+
+@media (max-width: 1054px) {
+  .search{
+      margin-right: 390px;
+    }
+}
+
+@media (max-width: 1024px){
+    .search{
+      margin-right: 500px;
+    }
+
+    .surprise-div{
+      height:122px;
+    }
+
+}
+
+
+
+@media (max-width: 992px)  {
+
+    .pick-of-the-day-div {
+      margin-top: 10px;
+      margin-left: 0px;
+      width: 470px;
+        
+    }
+
+    .pick-of-the-day-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .pick-of-the-day-text {
+        font-size: 12px;
+    }
+
+    .surprise-div {
+      height: 250px;
+      margin-top: -199px;
+      margin-left: 490px;
+      width: 480px;
+    }
+
+    .carousel{
+      margin-top: 10px;
     }
 
     .review-item {
@@ -460,6 +534,144 @@ input[type=search]:focus {
         height: 90vh;
     }
 }
+
+
+@media (max-width: 768px){
+    .pick-of-the-day-div {
+       margin-top: 20px;
+        margin-left: 0px;
+        width: 370px;
+    }
+
+    .pick-of-the-day-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .pick-of-the-day-text {
+        font-size: 12px;
+    }
+
+    .surprise-div {
+        height: 190px;
+        margin-left: 390px;
+        margin-top: -200px;
+        width: 350px;
+    }
+  /**/
+
+    .carousel{
+      margin-top: 10px;
+    }
+}
+
+
+
+@media (max-width: 600px){
+    .pick-of-the-day-div {
+        margin-top: 10px;
+        margin-left: 0px;
+        width: 270px;
+    }
+
+    .pick-of-the-day-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .pick-of-the-day-text {
+        font-size: 12px;
+    }
+
+    .surprise-div {
+        height: 200px;
+        width: 260px;
+        margin-left: 290px;
+        margin-top: -195px;
+    }
+  /**/
+}
+
+@media (max-width: 550px){
+    .pick-of-the-day-div {
+        margin-top: 10px;
+        margin-left: 0px;
+        width: 260px;
+    }
+
+    .pick-of-the-day-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .pick-of-the-day-text {
+        font-size: 12px;
+    }
+
+    .surprise-div {
+        height: 200px;
+        width: 240px;
+        margin-left: 270px;
+        margin-top: -195px;
+    }
+  /**/
+}
+
+@media (max-device-width: 480px) and (orientation: landscape){
+  .pick-of-the-day-div {
+        margin-top: 20px;
+        margin-left: 0px;
+        width: 100%;
+       
+    }
+
+    .pick-of-the-day-img {
+        width: 100%;
+        height: 190px;
+    }
+
+    .pick-of-the-day-text {
+        font-size: 12px;
+    }
+
+    .surprise-div {
+      height: 200px;
+      margin-top: 10px;
+      margin-left: 0px;
+      width: 100%;
+       
+    }
+}
+
+@media (max-device-width: 480px){
+  .pick-of-the-day-div {
+        margin-top: 20px;
+        margin-left: 0px;
+        width: 100%;
+       height: 200px
+    }
+
+    .pick-of-the-day-img {
+        width: 100%;
+        height: 190px;
+    }
+
+    .pick-of-the-day-text {
+        font-size: 12px;
+    }
+
+    .surprise-div {
+      height: 200px;
+      margin-top: 10px;
+      margin-left: 0px;
+      width: 100%;
+       
+    }
+}
+
+
+
+
 
 /*for pre loader*/
 .no-js #loader { display: none;  }

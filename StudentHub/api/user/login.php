@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include "../db-config.php";
 
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -18,20 +18,20 @@
 
 			$row = $result->fetch_assoc();
 			if (password_verify($userPassword, $row["user_password"])) {
-				
+
 				$_SESSION["userId"] = $row["user_id"];
 				$response["success"] = true;
 				$response["message"] = "Login Successful";
 				header('Content-Type: application/json');
 				echo json_encode($response);
-				
+
 			} else {
 
 				$response["success"] = false;
 				$response["message"] = "Wrong Email Or Password";
 				header('Content-Type: application/json');
 		        echo json_encode($response);
-			} 
+			}
 		} else {
 			$response["success"] = false;
 			$response["message"] = "Wrong Email Or Password";

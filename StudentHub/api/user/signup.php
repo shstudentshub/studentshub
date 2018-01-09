@@ -27,7 +27,7 @@
 
 		} else {
 
-			$insertQuery = "INSERT INTO users(user_name,user_email,user_contact,user_password) VALUES (?,?,?,?)";
+			$insertQuery = "INSERT INTO users(user_name,user_email,user_contact,user_password) VALUES(?,?,?,?)";
 			$preparedInsertQuery = $database->prepare($insertQuery);
 			$preparedInsertQuery->bind_param('ssss',$userFullname,$userEmail,$userContact,$userPassword);
 
@@ -40,9 +40,6 @@
 		        echo json_encode($response);
 
 			}else{
-				#send the error
-				#echo preparedInsertQuery->error;
-				
 				$response["success"] = false;
 				$response["message"] = "Please Check Your Internet Connection";
 				header('Content-Type: application/json');

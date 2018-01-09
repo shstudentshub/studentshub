@@ -3,7 +3,7 @@
 
 <section class="row intro-row">
 
-    <section class="col m8 l8 s12">
+    <section class="col l8 s12">
 
         <section class="carousel carousel-slider intro-carousel" data-indicators="true">
             <h5 class="center-align carousel-header">Shopping Now</h5>
