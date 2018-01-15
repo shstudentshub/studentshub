@@ -87,7 +87,30 @@
 				</section>
 
 				<section class="col s12 m10 l10">
-					
+					<section class="row">
+						<section class="col s12 m3 l3">
+							<section class="panel purple accent-1">
+								<p><span class="dashboard-summary-number user-no-of-posts">0</span><br/>Total Posts</p>
+							</section>
+						</section>
+
+						<section class="col s12 m3 l3">
+							<section class="panel cyan accent-1">
+								<p><span class="dashboard-summary-number user-no-of-approved-posts">0</span><br/>Approved Posts</p>
+							</section>
+						</section>
+
+						<section class="col s12 m3 l3">
+							<section class="panel orange accent-1">
+								<p><span class="dashboard-summary-number user-no-of-rejected-posts">0</span><br/>Rejected Posts</p>
+							</section>
+						</section>
+						<section class="col s12 m3 l3">
+							<section class="panel green accent-1">
+								<p><span class="dashboard-summary-number user-no-of-pending-posts">0</span><br/>Pending Posts</p>
+							</section>
+						</section>
+					</section>
 				</section>
 
 			</section>

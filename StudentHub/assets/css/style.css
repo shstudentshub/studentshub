@@ -322,6 +322,9 @@ body {
     color: #111;
 }
 
+.dashboard-summary-number {
+    font-size: 42px;
+}
 
 .post-fab {
     height: 60px;
