@@ -72,7 +72,7 @@
 
 						<?php 
 							} else if ($userLoggedIn) { ?>
-								<li><a href="post-item.php">Sell</a></li>
+								<li><a href="dashboard.php">Dashboard</a></li>
 								<li><a class="dropdown-trigger" href="#!" data-activates="user-dropdown"><?php echo $userFullname; ?> <i class="fa fa-chevron-down"></i></a></li>
 
 						<?php } ?>
@@ -201,5 +201,5 @@
 			<i class="fa fa-check snackbar-icon-success"></i>
 			<i class="fa fa-warning snackbar-icon-error"></i>
 			<img src="assets/img/snackbar-loader.gif" class="snackbar-loader">
-			<span class="snackbar-text"><b> This is the text</b></span><br/>
+			<span class="snackbar-text"><b> </b></span><br/>
 		</section>

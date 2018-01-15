@@ -1,13 +1,13 @@
 CONSTANTS = {
 	getHomeCategoriesUrl: "api/user/getHomeCategories.php",
 	userSignupUrl: "api/user/signup.php",
-	userLoginUrl: "api/user/login.php"
+	userLoginUrl: "api/user/login.php",
+	userPostsUrl: "api/user/getUserPosts.php"
 }
 
 //initialization of some methods
 getHomeCategories();
-setCurrentPage();
-
+getUserPosts();
 
 //event to handle the sign up of a user
 $(".user-signup-form").on("submit", function(event) {
@@ -86,8 +86,8 @@ $(".user-signin-form").on("submit", function(event) {
 				showSnackBar(response.message,"success");
 
 				setTimeout(function() {
-					var currentPage = getCurrentPage();
-					window.location.href = currentPage;
+					console.log('successful login');
+					window.location.href = 'dashboard.php';
 					hideSnackBar();
 				},1000);
 			} else if(!response.success) { //else if login is not successful,
@@ -106,6 +106,13 @@ $(".user-signup-form .validate, .user-signin-form .validate").on("input", functi
 function getHomeCategories() {
 	$.get(CONSTANTS.getHomeCategoriesUrl, function(response) {
 		$(".home-categories").html(response);
+	})
+}
+
+//function to get the user's posts
+function getUserPosts() {
+	$.get(CONSTANTS.userPostsUrl, function(response) {
+		$(".user-posts").html(response);
 	})
 }
 
@@ -136,14 +143,4 @@ function hideSnackBar() {
 	$(".snackbar").addClass("hide").removeClass("show");
 	$(".snackbar-icon-error,.snackbar-icon-success, .snackbar-loader").show();
 	$(".snackbar-text").html('');
-}
-
-//a function to set the current user's page
-function setCurrentPage() {
-	localStorage.setItem("currentPage", window.location.href );
-}
-
-//a function to get the current user's page
-function getCurrentPage() {
-	return localStorage.getItem("currentPage");
 }

@@ -2,7 +2,7 @@
 	include "../db-config.php";
 
 	$categoryArray = array();
-	$counter = 1;
+	
 	$getQuery = "SELECT * FROM categories ORDER BY category_name ASC";
 	$result = $database->query($getQuery);
 

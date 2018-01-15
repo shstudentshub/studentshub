@@ -1,4 +1,10 @@
 /*Custom CSS*/
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -21,12 +27,30 @@
     color: #F56400;
 }
 
+.custom-bg {
+    background: #F56400;
+}
+
+.custom-bg-lt {
+    background: #f8af7d;
+}
+
 .custom-btn {
   background: #f78d44;
 }
 
 .custom-btn:hover {
   background: #f7ae7b;
+}
+
+.panel {
+    padding: 10px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: #444;
 }
 /* Index Page CSS*/
 .navbar-logo{
@@ -36,7 +60,7 @@
 }
 
 .navbar-fixed, .modal {
-    z-index: 4;
+    z-index: 99999;
 }
 
 .search{
@@ -244,6 +268,75 @@
     color: #c0c0c0;
 }
 
+/* user dashboard styling*/
+.dashboard-div {
+    min-height: 80vh;
+    padding: 10px;
+    margin: 0;
+}
+
+.dashboard-side-div li {
+    list-style-type: none;
+    display: block;
+    height: 40px;
+    background: inherit;
+    margin-bottom: 5px;
+    line-height: 30px;
+    padding: 3px;
+    border-left: 3px solid transparent;
+}
+
+.dashboard-side-div li a {
+    color: #444;
+    display: block;
+    height: inherit;
+    font-size: 16px;
+}
+
+.dashboard-side-div li.selected-item {
+    border-left: 3px solid #F56400;
+    background: #f7f7f7;
+}
+
+.dashboard-side-div li a.selected {
+    color: #111;
+}
+
+.dashboard-side-nav-sm li{
+    border-left: 3px solid transparent;
+    width: inherit;
+    margin: 2px 10%;
+}
+
+.dashboard-side-nav-sm li a {
+    color: #444;
+}
+
+
+.dashboard-side-nav-sm li.selected-item {
+    border-left: 3px solid #F56400;
+    background: #f7f7f7;
+}
+
+.dashboard-side-nav-sm li a.selected {
+    color: #111;
+}
+
+
+.post-fab {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    margin: 0 30px 60px 0;
+    background: #F56400;
+    float: right;
+    line-height: 60px;
+}
+
+.post-fab:hover {
+    background: #f8af7d;
+}
+
 /* For the snackbar styling */
 .snackbar {
     visibility: hidden; 
@@ -445,6 +538,11 @@ input[type=search]:focus {
     }
     .carousel{
       margin-top: -40px;
+    }
+
+    .dashboard-div {
+        margin-top: 10vh;
+        min-height: 70vh;
     }
 }
 
