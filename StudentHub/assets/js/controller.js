@@ -2,12 +2,15 @@ CONSTANTS = {
 	getHomeCategoriesUrl: "api/user/getHomeCategories.php",
 	userSignupUrl: "api/user/signup.php",
 	userLoginUrl: "api/user/login.php",
-	userPostsUrl: "api/user/getUserPosts.php"
+	userPostsUrl: "api/user/getUserPosts.php",
+	getItemCategoryUrl: "api/user/getItemCategories.php",
+	addItemUrl: "api/user/addItem.php"
 }
 
 //initialization of some methods
 getHomeCategories();
 getUserPosts();
+getItemCategories();
 
 //event to handle the sign up of a user
 $(".user-signup-form").on("submit", function(event) {
@@ -97,8 +100,92 @@ $(".user-signin-form").on("submit", function(event) {
 	}
 });
 
+//event handler to handle the submission of the items
+$(".add-post-form").on("submit", function(event) {
+	event.preventDefault();
+
+	var formData = new FormData(),
+		itemImg = document.getElementById('post-item-img').files,
+		itemName = $(".post-item-name").val().trim(),
+		itemPrice = $(".post-item-price").val(),
+		itemLocation = $(".post-item-location").val().trim(),
+		itemDetails = $(".post-item-details").val().trim(),
+		itemCategory = $(".post-item-categories").val().trim(),
+		itemPriceTerm = $(".post-item-price-term").val().trim();
+
+	//validating the fields
+	if ((itemImg.length < 1)) {
+		showSnackBar("Please Select Item Image", "error");
+	} else if ((itemImg.length > 0) && (itemImg[0].size > (3 * 1024 *1024))) {
+		showSnackBar("Item Image Cannot Be Greater Than 5MB", "error");
+	} else if (itemName == "") {
+		showSnackBar("Please Provide The Item Name", "error");
+	} else if (itemPrice == "") {
+		showSnackBar("Please Provide The Item Price", "error");
+	} else if (itemLocation == "") {
+		showSnackBar("Please Provide The Item Location", "error");
+	} else if (itemDetails == "") {
+		showSnackBar("Please Provide The Item Details", "error");
+	} else if (itemCategory == ""  || itemCategory == null || itemCategory == undefined) {
+		showSnackBar("Please Provide The Item Category", "error");
+	} else if (itemPriceTerm == "" || itemPriceTerm == null || itemPriceTerm == undefined) {
+		showSnackBar("Please Provide The Item Price Term", "error");
+	} else {
+		//append the file to the formdata 
+		formData.append("itemImage",itemImg[0]);
+
+		var postItemUrl = CONSTANTS.addItemUrl + "?itemName=" + itemName + 
+		"&itemPrice=" + itemPrice + "&itemLocation=" + itemLocation + "&itemDetails=" + itemDetails + "&itemCategory=" + itemCategory + 
+		"&itemPriceTerm=" + itemPriceTerm;
+
+		$.ajax({
+	     	url: postItemUrl,
+			type: "POST",
+			data: formData,
+			enctype: 'multipart/form-data',
+			contentType: false,
+			processData: false,
+			success: function(response, textStatus, jqXHR){
+				console.log(response);
+			    /*if (response.success) {
+			    	
+				} else if (!response.success) {
+					
+				} else {
+
+				}*/
+			},
+			error: function(error) {
+				console.log(error);
+			}
+
+	    });
+
+	}
+
+
+});
+
+//event handler to display the item image if it is selected
+$(".post-item-img").on("change", function(){
+    var file = document.getElementById('post-item-img').files;
+
+    $(".post-item-img-label").html("Item Photo Selected").css("background","#0ff");
+
+	var reader = new FileReader();
+	reader.onload = function (e) {
+	    $(".post-item-img-preview").attr('src', e.target.result);
+	}
+	        
+	reader.readAsDataURL(file[0]);
+});
+
 //event to hide the snackbar if a user starts to enter something after an error
-$(".user-signup-form .validate, .user-signin-form .validate").on("input", function() {
+$(".user-signup-form .validate, .user-signin-form .validate, .add-post-form .validate").on("input", function() {
+	hideSnackBar();
+});
+
+$(".add-post-form .post-item-img, .add-post-form .item-select").on("change", function() {
 	hideSnackBar();
 });
 
@@ -114,6 +201,13 @@ function getUserPosts() {
 	$.get(CONSTANTS.userPostsUrl, function(response) {
 		$(".user-posts").html(response);
 	})
+}
+
+//function to get the item categories
+function getItemCategories() {
+	$.get(CONSTANTS.getItemCategoryUrl, function(response) {
+		$(".post-item-categories").html(response);
+	});
 }
 
 //function to show the snackbar with the message and optional image

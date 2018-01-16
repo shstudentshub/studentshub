@@ -31,7 +31,7 @@ body {
     background: #F56400;
 }
 
-.custom-bg-lt {
+.custom-bg:hover, .custom-bg-lt {
     background: #f8af7d;
 }
 
@@ -296,10 +296,12 @@ body {
 .dashboard-side-div li.selected-item {
     border-left: 3px solid #F56400;
     background: #f7f7f7;
+    cursor: default;
 }
 
 .dashboard-side-div li a.selected {
     color: #111;
+    cursor: default;
 }
 
 .dashboard-side-nav-sm li{
@@ -310,6 +312,7 @@ body {
 
 .dashboard-side-nav-sm li a {
     color: #444;
+    cursor: default;
 }
 
 
@@ -320,12 +323,14 @@ body {
 
 .dashboard-side-nav-sm li a.selected {
     color: #111;
+    cursor: default;
 }
 
 .dashboard-summary-number {
     font-size: 42px;
 }
 
+/*for the item posting page*/
 .post-fab {
     height: 60px;
     width: 60px;
@@ -339,6 +344,35 @@ body {
 .post-fab:hover {
     background: #f8af7d;
 }
+.add-post-form textarea {
+    border: 1px solid #c0c0c0;
+    max-height: 100px;
+    min-height: 100px;
+    margin-left: 1%;
+}
+
+.add-post-form .category-row,.add-post-form .btn-row {
+    margin-left: 1%;
+}
+
+.post-item-img-preview {
+    height: 110px;
+    width: 110px;
+}
+.post-item-img {
+    visibility: hidden;
+}
+
+.post-item-img-label {
+    height: 50px;
+    cursor: pointer;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    padding: 2%;
+    border-radius: 3px;
+}
+
 
 /* For the snackbar styling */
 .snackbar {
@@ -546,6 +580,10 @@ input[type=search]:focus {
     .dashboard-div {
         margin-top: 10vh;
         min-height: 70vh;
+    }
+
+    .user-dashboard-summary {
+        margin-bottom: 10px;
     }
 }
 

@@ -57,7 +57,7 @@
 						<li class="selected-item"><a href="dashboard.php" class="selected">My Dashboard</a></li>
 						<li><a href="posts.php">My Posts</a></li>
 						<li><a href="profile.php">My Profile</a></li>
-						<li><a href="account-setup.php">Account Setup</a></li>
+						<li><a href="account-setup.php">Account Settings</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
 
@@ -82,31 +82,31 @@
 					<li class="selected-item"><a href="dashboard.php" class="selected"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
 					<li><a href="posts.php"><i class="fa fa-tags"></i> My Posts</a></li>
 					<li><a href="profile.php"><i class="fa fa-user"></i>&nbsp; My Profile</a></li>
-					<li><a href="account-setup.php"><i class="fa fa-cog"></i> Account Setup</a></li>
+					<li><a href="account-setup.php"><i class="fa fa-cog"></i> Account Settings</a></li>
 					<li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
 				</section>
 
 				<section class="col s12 m10 l10">
 					<section class="row">
 						<section class="col s12 m3 l3">
-							<section class="panel purple accent-1">
+							<section class="panel purple accent-1 user-dashboard-summary">
 								<p><span class="dashboard-summary-number user-no-of-posts">0</span><br/>Total Posts</p>
 							</section>
 						</section>
 
 						<section class="col s12 m3 l3">
-							<section class="panel cyan accent-1">
+							<section class="panel cyan accent-1 user-dashboard-summary">
 								<p><span class="dashboard-summary-number user-no-of-approved-posts">0</span><br/>Approved Posts</p>
 							</section>
 						</section>
 
 						<section class="col s12 m3 l3">
-							<section class="panel orange accent-1">
+							<section class="panel orange accent-1 user-dashboard-summary">
 								<p><span class="dashboard-summary-number user-no-of-rejected-posts">0</span><br/>Rejected Posts</p>
 							</section>
 						</section>
 						<section class="col s12 m3 l3">
-							<section class="panel green accent-1">
+							<section class="panel green accent-1 user-dashboard-summary">
 								<p><span class="dashboard-summary-number user-no-of-pending-posts">0</span><br/>Pending Posts</p>
 							</section>
 						</section>

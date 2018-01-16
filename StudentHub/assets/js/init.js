@@ -12,6 +12,9 @@ $(function(){
     //initialize the modal
     $('.modal').modal();
 
+    //initialize the select element
+    $('select').material_select();
+
     //initialize the dropdown
     $(".dropdown-trigger").dropdown();
 

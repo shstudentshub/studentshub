@@ -57,7 +57,7 @@
 						<li><a href="dashboard.php">My Dashboard</a></li>
 						<li class="selected-item"><a href="posts.php" class="selected">My Posts</a></li>
 						<li><a href="profile.php">My Profile</a></li>
-						<li><a href="account-setup.php">Account Setup</a></li>
+						<li><a href="account-setup.php">Account Settings</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
 
@@ -82,7 +82,7 @@
 					<li><a href="dashboard.php"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
 					<li class="selected-item"><a href="posts.php" class="selected"><i class="fa fa-tags"></i> My Posts</a></li>
 					<li><a href="profile.php"><i class="fa fa-user"></i>&nbsp; My Profile</a></li>
-					<li><a href="account-setup.php"><i class="fa fa-cog"></i> Account Setup</a></li>
+					<li><a href="account-setup.php"><i class="fa fa-cog"></i> Account Settings</a></li>
 					<li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
 				</section>
 
@@ -94,19 +94,79 @@
 
 		</section>
 
-		<div class=" row">
+		<section class=" row">
 			<a class="btn-large waves-effect waves-light post-fab modal-trigger" href="#modal1"><i class="fa fa-plus"></i></a>
-		</div>
+		</section>
 
 		  <!-- Modal Structure -->
-		<div id="modal1" class="modal">
+		<section id="modal1" class="modal">
 		    <div class="modal-content">
-		      <h4>Modal Header</h4>
-		      <p>A bunch of text</p>
-		    </div>
-		    <div class="modal-footer">
-		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-		    </div>
-		</div>
+		      	<h4 class="center-align">Post Item</h4>
+		      	<section class="row">
+		      		<form method="post" enctype="multipart/form-data" class="col s12 add-post-form">
+		      			<section class="row">
+		      				<section class="col s12 m6 l6">
+		      					<img src="assets/img/item-img-preview.png" class="post-item-img-preview">
+		      				    <input type="file" id="post-item-img" class="post-item-img" accept="image/*"><br/>
+		      				    <label for="post-item-img" class="post-item-img-label orange accent-1">Upload Item Photo</label>
+		      				</section>
+		      			</section>
+
+		      			<section class="row">
+			      			<section class="col s12 m12 l12">
+			      				<input type="text" class="validate post-item-name" placeholder="Item Name (Title)" required>
+			      			</section>
+			      		</section><br/>
+
+		      			<section class="row">
+			      			<!-- <section class="col s12 m6 l6">
+			      				<input type="text" class="validate post-item-details" placeholder="Item Description" required>
+			      			</section> -->
+
+			      			<section class="col s12 m6 l6">
+			      				<input type="number" class="validate post-item-price" placeholder="Item Price (GH&cent;) e.g 20" required>
+			      			</section>
+		      			
+
+			      			<section class="col s12 m6 l6">
+			      				<input type="text" class="validate post-item-location" placeholder="Item Location" required>
+			      			</section>
+		      			</section><br><br/>
+
+		      			<section class="row">
+			      			<section class="col s12">
+			      				<textarea class="validate post-item-details" placeholder="Item Details" required></textarea>
+			      			</section>
+		      			</section><br/>
+
+		      			<section class="row category-row">
+			      			<section class="col s12 m6 l6">
+			      				<select class="browser-default item-select post-item-categories" required>
+			      				</select>
+			      			</section>
+
+			      			<section class="col s12 m6 l6">
+			      				<select class="browser-default item-select post-item-price-term" required>
+			      					<option selected disabled>Price Term</option>
+			      					<option value="fixed">Fixed</option>
+			      					<option value="negotiable">Negotiable</option>
+			      				</select>
+			      			</section>
+		      			</section>
+
+		      			<section class="row btn-row">
+		      				<section class="col s12 m12 l12">
+		      					<button type="submit" class="btn waves-effect waves-light custom-bg">Submit</button>
+		      					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		      					<button type="button" class="btn modal-action modal-close waves-effect waves-green teal">Cancel</button>
+		      				</section>
+		      			</section>
+		      		</form>
+		      	</section>
+		    </section>
+		    <section class="modal-footer">
+		      
+		    </section>
+		</section>
 
 <?php include "includes/footer.inc.php"; ?>

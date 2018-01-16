@@ -57,7 +57,7 @@
 						<li><a href="dashboard.php">My Dashboard</a></li>
 						<li><a href="posts.php">My Posts</a></li>
 						<li class="selected-item"><a href="profile.php" class="selected">My Profile</a></li>
-						<li><a href="account-setup.php">Account Setup</a></li>
+						<li><a href="account-setup.php">Account Settings</a></li>
 						<li><a href="logout.php">Logout</a></li>
 					</ul>
 
@@ -82,7 +82,7 @@
 					<li><a href="dashboard.php"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
 					<li><a href="posts.php"><i class="fa fa-tags"></i> My Posts</a></li>
 					<li class="selected-item"><a href="profile.php" class="selected"><i class="fa fa-user"></i>&nbsp; My Profile</a></li>
-					<li><a href="account-setup.php"><i class="fa fa-cog"></i> Account Setup</a></li>
+					<li><a href="account-setup.php"><i class="fa fa-cog"></i> Account Settings</a></li>
 					<li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
 				</section>
 
