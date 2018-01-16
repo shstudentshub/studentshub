@@ -172,7 +172,8 @@
 		      	<h4 class="center-align">Delete Item</h4>
 		      	<section class="row">
 		      		<form method="post" enctype="multipart/form-data" class="col s12 add-post-form">
-		      			
+		      			<input type="hidden" class="delete-item-id" value="">
+		      			<h3 class="center-align">Are You Sure You Want To Delete This Item ?</h3>
 		      	</section>
 		    </section>
 		</section>
