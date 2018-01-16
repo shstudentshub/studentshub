@@ -147,13 +147,13 @@ $(".add-post-form").on("submit", function(event) {
 			processData: false,
 			success: function(response, textStatus, jqXHR){
 				console.log(response);
-			    /*if (response.success) {
+			    if (response.success) {
 			    	
 				} else if (!response.success) {
 					
 				} else {
 
-				}*/
+				}
 			},
 			error: function(error) {
 				console.log(error);
