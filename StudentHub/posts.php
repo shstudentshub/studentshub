@@ -167,13 +167,24 @@
 		</section>
 
 		<!-- Delete Item Modal -->
-		<section id="modal1" class="modal post-item-modal">
+		<section id="modal1" class="modal delete-item-modal">
 		    <div class="modal-content">
-		      	<h4 class="center-align">Delete Item</h4>
+		      	<h4 class="center-align">Delete Item</h4><hr>
 		      	<section class="row">
 		      		<form method="post" enctype="multipart/form-data" class="col s12 add-post-form">
 		      			<input type="hidden" class="delete-item-id" value="">
 		      			<h3 class="center-align">Are You Sure You Want To Delete This Item ?</h3>
+
+			      		<section class="row btn-row">
+			      			<section class="col s12 m3 l3"></section>
+			      			<section class="col s12 m6 l6">
+			      				<button type="submit" class="btn waves-effect waves-light custom-bg">Yes, Delete</button>
+			      					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			      				<button type="button" class="btn modal-action modal-close waves-effect waves-green teal">No, Cancel</button>
+			      			</section>
+			      			<section class="col s12 m3 l3"></section>
+			      		</section>
+		      		</form>
 		      	</section>
 		    </section>
 		</section>

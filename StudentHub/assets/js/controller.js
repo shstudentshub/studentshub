@@ -208,7 +208,9 @@ function getUserPosts() {
 
 //function to delete user's post
 function showDeleteUserItemAlert(itemObj) {
-	alert(JSON.stringify(itemObj));
+	$(".delete-item-id").val(itemObj.itemId);
+	console.log(itemObj.itemId);
+	$(".delete-item-modal").modal("open");
 }
 
 //function to get the item categories

@@ -42,11 +42,11 @@
 
 			#encode the item's detials into an array for further operations
 			$itemArray["itemId"] = $itemId;
-			$itemArray["itemImg"] = $itemImg;
+			/*$itemArray["itemImg"] = $itemImg;
 			$itemArray["itemName"] = $itemName;
 			$itemArray["itemPrice"] = $itemPrice;
 			$itemArray["itemDetails"] = $itemDetails;
-			$itemArray["itemLocation"] = $itemLocation;
+			$itemArray["itemLocation"] = $itemLocation;*/
 
 			$itemObj = json_encode($itemArray);
 
