@@ -164,8 +164,16 @@
 		      		</form>
 		      	</section>
 		    </section>
-		    <section class="modal-footer">
-		      
+		</section>
+
+		<!-- Delete Item Modal -->
+		<section id="modal1" class="modal post-item-modal">
+		    <div class="modal-content">
+		      	<h4 class="center-align">Delete Item</h4>
+		      	<section class="row">
+		      		<form method="post" enctype="multipart/form-data" class="col s12 add-post-form">
+		      			
+		      	</section>
 		    </section>
 		</section>
 
