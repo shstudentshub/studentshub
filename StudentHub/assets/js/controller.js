@@ -174,7 +174,11 @@ $(".delete-post-form").on("submit", function(event) {
 	event.preventDefault();
 
 	var itemId = $(".delete-item-id").val();
-	var data = $.param({itemId: itemId});
+	var itemImg = $(".delete-item-img").val();
+	var data = $.param({
+			itemId: itemId,
+			itemImg: itemImg
+		});
 
 	$.post(CONSTANTS.deleteUserItemUrl,data, function(response) {
 		if (response.success) {
@@ -232,6 +236,7 @@ function getUserPosts() {
 //function to delete user's post
 function showDeleteUserItemAlert(itemObj) {
 	$(".delete-item-id").val(itemObj.itemId);
+	$(".delete-item-img").val(itemObj.itemImg);
 	$(".delete-item-modal").modal("open");
 }
 
