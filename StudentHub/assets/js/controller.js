@@ -181,6 +181,7 @@ $(".delete-post-form").on("submit", function(event) {
 		});
 
 	$.post(CONSTANTS.deleteUserItemUrl,data, function(response) {
+		
 		if (response.success) {
 			showSnackBar(response.message,"success");
 			setTimeout(function() {
