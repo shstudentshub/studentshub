@@ -5,7 +5,7 @@ CONSTANTS = {
 	userPostsUrl: "api/user/getUserPosts.php",
 	getItemCategoryUrl: "api/user/getItemCategories.php",
 	addUserItemUrl: "api/user/addUserItem.php",
-	editUserItemUrl: "api/user/editUserItem.php"
+	deleteUserItemUrl: "api/user/deleteUserItem.php"
 }
 
 //initialization of some methods
@@ -209,7 +209,6 @@ function getUserPosts() {
 //function to delete user's post
 function showDeleteUserItemAlert(itemObj) {
 	$(".delete-item-id").val(itemObj.itemId);
-	console.log(itemObj.itemId);
 	$(".delete-item-modal").modal("open");
 }
 
