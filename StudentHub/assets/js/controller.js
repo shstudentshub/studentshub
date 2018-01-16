@@ -5,6 +5,7 @@ CONSTANTS = {
 	userPostsUrl: "api/user/getUserPosts.php",
 	getItemCategoryUrl: "api/user/getItemCategories.php",
 	addUserItemUrl: "api/user/addUserItem.php",
+	editUserItemUrl: "api/user/editUserItem.php"
 }
 
 //initialization of some methods
@@ -166,15 +167,13 @@ $(".add-post-form").on("submit", function(event) {
 	    });
 
 	}
-
-
 });
 
-//event handler to display the item image if it is selected
+//event handlers to display the item image if it is selected
 $(".post-item-img").on("change", function(){
     var file = document.getElementById('post-item-img').files;
 
-    $(".post-item-img-label").html("Item Photo Selected").css("background","#0ff");
+    $(".post-item-img-label").html("Item Photo Selected");
 
 	var reader = new FileReader();
 	reader.onload = function (e) {
@@ -207,10 +206,15 @@ function getUserPosts() {
 	})
 }
 
+//function to delete user's post
+function showDeleteUserItemAlert(itemObj) {
+	alert(JSON.stringify(itemObj));
+}
+
 //function to get the item categories
 function getItemCategories() {
 	$.get(CONSTANTS.getItemCategoryUrl, function(response) {
-		$(".post-item-categories").html(response);
+		$(".post-item-categories, .edit-item-categories").html(response);
 	});
 }
 

@@ -98,7 +98,7 @@
 			<a class="btn-large waves-effect waves-light post-fab modal-trigger" href="#modal1"><i class="fa fa-plus"></i></a>
 		</section>
 
-		  <!-- Modal Structure -->
+		<!-- Post Item Modal -->
 		<section id="modal1" class="modal post-item-modal">
 		    <div class="modal-content">
 		      	<h4 class="center-align">Post Item</h4>
@@ -124,7 +124,7 @@
 			      			</section> -->
 
 			      			<section class="col s12 m6 l6">
-			      				<input type="number" class="validate post-item-price" placeholder="Item Price (GH&cent;) e.g 20" required>
+			      				<input type="number" class="validate post-item-price" placeholder="Item Price (GH&cent;) e.g 20" step="any" required>
 			      			</section>
 		      			
 
