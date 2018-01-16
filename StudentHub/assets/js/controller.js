@@ -4,7 +4,7 @@ CONSTANTS = {
 	userLoginUrl: "api/user/login.php",
 	userPostsUrl: "api/user/getUserPosts.php",
 	getItemCategoryUrl: "api/user/getItemCategories.php",
-	addItemUrl: "api/user/addItem.php"
+	addUserItemUrl: "api/user/addUserItem.php",
 }
 
 //initialization of some methods
@@ -134,7 +134,7 @@ $(".add-post-form").on("submit", function(event) {
 		//append the file to the formdata 
 		formData.append("itemImage",itemImg[0]);
 
-		var postItemUrl = CONSTANTS.addItemUrl + "?itemName=" + itemName + 
+		var postItemUrl = CONSTANTS.addUserItemUrl + "?itemName=" + itemName + 
 		"&itemPrice=" + itemPrice + "&itemLocation=" + itemLocation + "&itemDetails=" + itemDetails + "&itemCategory=" + itemCategory + 
 		"&itemPriceTerm=" + itemPriceTerm;
 
@@ -148,15 +148,19 @@ $(".add-post-form").on("submit", function(event) {
 			success: function(response, textStatus, jqXHR){
 				console.log(response);
 			    if (response.success) {
-			    	
+			    	showSnackBar(response.message,"success");
+			    	setTimeout(function() {
+						$(".post-item-modal").modal("close");
+						hideSnackBar();
+					},1000);
 				} else if (!response.success) {
-					
+					showSnackBar(response.message,"error");
 				} else {
-
+					showSnackBar("orry, An Error Occured. Check Your Internet Connection And Try Again","error");
 				}
 			},
 			error: function(error) {
-				console.log(error);
+				showSnackBar("orry, An Error Occured. Check Your Internet Connection And Try Again","error");
 			}
 
 	    });

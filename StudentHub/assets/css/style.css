@@ -373,6 +373,23 @@ body {
     border-radius: 3px;
 }
 
+.user-item-img {
+    height: 50px;
+    width: 50px;
+}
+
+.user-item-action-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.edit-icon {
+    color: blue;
+}
+
+.delete-icon {
+    color: red;
+}
 
 /* For the snackbar styling */
 .snackbar {

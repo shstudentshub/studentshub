@@ -99,7 +99,7 @@
 		</section>
 
 		  <!-- Modal Structure -->
-		<section id="modal1" class="modal">
+		<section id="modal1" class="modal post-item-modal">
 		    <div class="modal-content">
 		      	<h4 class="center-align">Post Item</h4>
 		      	<section class="row">
