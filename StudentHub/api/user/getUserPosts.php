@@ -19,7 +19,7 @@
 			              <th>#</th>
 			              <th>Item Photo</th>
 			              <th>Item Name</th>
-			              <th>Item Price</th>
+			              <th>Item Price <span>(GH&cent;)</span></th>
 			              <th>Item Category</th>
 			              <th>Item Location</th>
 			              <th>Item Status</th>
@@ -68,7 +68,7 @@
 					<td>$counter</td>
 					<td><img src='uploads/items/$itemImg' class='user-item-img'></td>
 					<td>$newItemName</td>
-					<td><span>GH&cent;</span> $itemPrice</td>
+					<td>$itemPrice</td>
 					<td>$newCategoryName</td>
 					<td>$newItemLocation</td>
 					<td>$itemApprovalStatus</td>

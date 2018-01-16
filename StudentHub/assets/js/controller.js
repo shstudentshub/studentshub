@@ -147,26 +147,49 @@ $(".add-post-form").on("submit", function(event) {
 			contentType: false,
 			processData: false,
 			success: function(response, textStatus, jqXHR){
-				console.log(response);
+
 			    if (response.success) {
 			    	showSnackBar(response.message,"success");
 			    	setTimeout(function() {
 						$(".post-item-modal").modal("close");
 						hideSnackBar();
 					},1000);
+					getUserPosts();
 				} else if (!response.success) {
 					showSnackBar(response.message,"error");
 				} else {
-					showSnackBar("orry, An Error Occured. Check Your Internet Connection And Try Again","error");
+					showSnackBar("Sorry, An Error Occured. Check Your Internet Connection And Try Again","error");
 				}
 			},
 			error: function(error) {
-				showSnackBar("orry, An Error Occured. Check Your Internet Connection And Try Again","error");
+				showSnackBar("Sorry, An Error Occured. Check Your Internet Connection And Try Again","error");
 			}
 
 	    });
 
 	}
+});
+
+$(".delete-post-form").on("submit", function(event) {
+	event.preventDefault();
+
+	var itemId = $(".delete-item-id").val();
+	var data = $.param({itemId: itemId});
+
+	$.post(CONSTANTS.deleteUserItemUrl,data, function(response) {
+		if (response.success) {
+			showSnackBar(response.message,"success");
+			setTimeout(function() {
+				$(".delete-item-modal").modal("close");
+				hideSnackBar();
+			},1000);
+			getUserPosts();
+		} else if (!response.success) {
+			showSnackBar(response.message,"error");
+		} else {
+			showSnackBar("Sorry, An Error Occured. Check Your Internet Connection And Try Again","error");
+		}
+	});
 });
 
 //event handlers to display the item image if it is selected

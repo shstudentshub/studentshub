@@ -1,5 +1,4 @@
 <?php
-	<?php
 	include "../db-config.php";
 	$response = array();
 
