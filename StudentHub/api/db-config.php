@@ -8,5 +8,4 @@
     //Instantiate an object of the mysqli class to connect to the database
     $database =  mysqli_connect(SERVER_NAME,USER_NAME,USER_PASSWORD,DATABASE_NAME) or die("Sorry, could not connect to database.");
 
-    //$database =  new mysqli($hostname, $username, $password, $dbName);
 ?>
