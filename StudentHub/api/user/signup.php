@@ -41,6 +41,7 @@
 
 			}else{
 				$response["success"] = false;
+        $response["status"] = $preparedInsertQuery->execute();
 				$response["message"] = "Please Check Your Internet Connection";
 				header('Content-Type: application/json');
 		        echo json_encode($response);

@@ -10,17 +10,18 @@
 		<li><a href="posts.php"><i class="fa fa-plus"></i> Posts</a></li>
 		<li><a href="categories.php"><i class="fa fa-list"></i> Categories</a></li>
 		<li><a href="users.php"><i class="fa fa-users"></i> Users</a></li>
-		<li class="selected-item"><a href="ads.php" class="selected"><i class="fa fa-buysellads"></i> Ads</a></li>
+		<li class="selected-item"><a href="ads.php" class="selected"><i class="fa fa-buysellads"></i> View Pending Items</a></li>
 		<hr>
 		<li><a href="send-messages.php"><i class="fa fa-send"></i> Send Message</a></li>
 		<li><a href="messages.php"><i class="fa fa-envelope"></i> Messages</a></li>
 		<li><a href="notifications.php"><i class="fa fa-bell"></i> Notifications</a></li>
 		<li><a href="about.php"><i class="fa fa-info-circle"></i> About</a></li>
+		<li><a href="logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
 	</section>
 
 	<!--content div  -->
 	<section class="col m10 l10 content-div">
-		<h1>Ads Content Comes Here</h1>
+		<h1><i>Pending Items<i/></h1>
 	</section>
 
 </section>
