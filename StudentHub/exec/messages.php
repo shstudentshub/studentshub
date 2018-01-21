@@ -10,12 +10,13 @@
 		<li><a href="posts.php"><i class="fa fa-plus"></i> Posts</a></li>
 		<li><a href="categories.php"><i class="fa fa-list"></i> Categories</a></li>
 		<li><a href="users.php"><i class="fa fa-users"></i> Users</a></li>
-		<li><a href="ads.php"><i class="fa fa-buysellads"></i> Ads</a></li>
+		<li><a href="ads.php"><i class="fa fa-buysellads"></i> View Pending Items</a></li>
 		<hr>
 		<li><a href="send-messages.php"><i class="fa fa-send"></i> Send Message</a></li>
 		<li class="selected-item"><a href="messages.php" class="selected"><i class="fa fa-envelope"></i> Messages</a></li>
 		<li><a href="notifications.php"><i class="fa fa-bell"></i> Notifications</a></li>
 		<li><a href="about.php"><i class="fa fa-info-circle"></i> About</a></li>
+		<li><a href="logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
 	</section>
 
 	<!--content div  -->
