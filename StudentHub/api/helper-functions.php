@@ -1,6 +1,6 @@
 <?php
 	function truncateString($string, $lengthLimit, $newLength) {
-		if (count($string) > $lengthLimit) {
+		if (strlen($string) > $lengthLimit) {
 			return substr($string, 0 , $newLength)."...";
 		} else {
 			return $string;
