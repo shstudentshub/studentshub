@@ -55,11 +55,13 @@
 		<section class="row dashboard-div">
 			<section class="row container">
 				<section class="col s12">
-					<h3 style="margin-top:50px">Oops.. Sorry the page you are requesting is not available. Tell us what you did</h3>
+
 				</section>
 
 				<section class="col s12">
-					<p class="center-align"><a href="./.." class="btn1 custom-btn1" style="text-align: center;margin-top: 170px;width: 150px">Continue shopping</a></p>
+          <img src="../assets/img/404.jpeg" alt="" style="display:block;margin: 0 auto;line-height:1.5px">
+          <h5 style="margin-top:10px;text-align:center">Oops..You've reached the land of the dead</h5>
+					<p class="center-align"><a href="./.." class="btn1 custom-btn1" style="text-align: center;margin-top: 0px;width: 150px">Continue shopping</a></p>
 				</section>
 			</section>
 		</section>
