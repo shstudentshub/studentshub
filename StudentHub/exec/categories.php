@@ -27,7 +27,7 @@
 	</section>
 	<!-- fab and modals -->
 	<section class="fixed-action-btn">
-		<a class="btn-floating btn-large modal-trigger custom-btn" href="#add-category-modal">
+		<a class="btn-floating btn-large modal-trigger custom-btn pulse" href="#add-category-modal">
 			<i class="fa fa-plus"></i>
 		</a>
 	</section>
