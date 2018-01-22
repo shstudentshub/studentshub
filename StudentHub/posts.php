@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include "api/db-config.php";
 	session_start();
 	$userLoggedIn = false;
@@ -99,7 +99,7 @@
 		</section>
 
 		<section class="fixed-action-btn">
-			<a class="btn-large waves-effect waves-light post-fab modal-trigger" href="#modal1"><i class="fa fa-plus"></i></a>
+			<a class="btn-large waves-effect waves-light post-fab modal-trigger pulse" href="#modal1"><i class="fa fa-plus"></i></a>
 		</section>
 
 		<!-- Post Item Modal -->
@@ -130,7 +130,7 @@
 			      			<section class="col s12 m6 l6">
 			      				<input type="number" class="validate post-item-price" placeholder="Item Price (GH&cent;) e.g 20" step="any" required>
 			      			</section>
-		      			
+
 
 			      			<section class="col s12 m6 l6">
 			      				<input type="text" class="validate post-item-location" placeholder="Item Location" required>

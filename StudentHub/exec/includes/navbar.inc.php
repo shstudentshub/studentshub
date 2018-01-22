@@ -27,7 +27,7 @@
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href=""><i class="fa fa-envelope"></i></a></li>
 				<li><a href=""><i class="fa fa-bell"></i></a></li>
-				<li><li><a class="dropdown-trigger" href="#!" data-activates="adminOptions">Hello <?php echo ucfirst($_SESSION["adminUsername"]); ?></i></a></li></li>
+				<li><li><a class="dropdown-trigger" href="#!" data-activates="adminOptions" onclick="Materialize.toast('Admin log in as: <?php echo ucfirst($_SESSION["adminUsername"]);?>', 4000)">Hello <?php echo ucfirst($_SESSION["adminUsername"]); ?></i></a></li></li>
 			</ul>
 		</div>
 	</nav>
