@@ -1,5 +1,10 @@
 RewriteEngine on
 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^(.*)$ $.1.php [NC,L]
+
 ErrorDocument 403  http://localhost/StudentHub/error/index.php
 ErrorDocument 404  http://localhost/StudentHub/error/index.php
 ErrorDocument 500  http://localhost/StudentHub/error/index.php

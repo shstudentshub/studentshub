@@ -55,9 +55,16 @@
 
 					<ul class="right">
 						<li class="hide-on-med-and-down">
-							<a>
-								<input id="search" type="search" placeholder=" &#128270; Search for items" class="search">
-							</a>
+							<section class="row">
+								<section class="input-field col s9 m9">
+								  <a>
+									<input id="search" type="search" class="search"  placeholder="Search for items">
+								  </a>
+								</section>
+								<section class="input-field col s3 m3">
+									<button type="submit" class="btn1 custom-btn2">Search</button>
+								</section>
+							</section>
 						</li>
 						<li class="hide-on-med-and-down">
 							<!-- <a class="dropdown-trigger" href="#!" data-activates="cat-dropdown1">Categories <i class="fa fa-chevron-down"></i></a> -->
@@ -93,8 +100,9 @@
 
 		<!-- Search box for mobile viewport only -->
 		<div class="search-sm-div">
-			<div class="input-field hide-on-large-only">
-				<input id="search" type="search" placeholder=" &#128270; Search for items" required class="search-sm">
+			<div class= "wrapme hide-on-large-only">
+				<input id="mb-search" type="search" placeholder=" &#128270; Search for items" required class="search-sm">
+				<button type="submit" class="btn1 custom-btn2">Search</button>
 			</div>
 		</div>
 

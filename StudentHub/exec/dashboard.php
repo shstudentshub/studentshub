@@ -36,7 +36,7 @@
 					<p><span class="dashboard-summary-number admin-total-categories">0</span> Categories</p>
 				</section>
 			</section>
-			
+
 		</section><br><hr>
 
 		<section class="row">
