@@ -1,41 +1,63 @@
 <?php 
 	include "../db-config.php";
+	include "../helper-functions.php";
 
 	$categoryArray = array();
 	$counter = 1;
-	$getQuery = "SELECT * FROM categories ORDER BY category_name ASC";
+	$itemStatus = $itemStatusArray['Pending'];
+	$getQuery = "SELECT item_id, item_name, item_details, item_img, item_post_date,user_name, category_name FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON item_category_id = category_id AND item_approval_status = $itemStatus ORDER BY item_id DESC";
 	$result = $database->query($getQuery);
 
 	if ($result->num_rows > 0) {
-		echo "<table class='striped responsive-table'>
-                <h5><strong>Post Categories</strong></h5><hr/>
+		echo "<table class='responsive-table'>
+                <h5><strong>Pending Posts</strong></h5><hr/>
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Category Name</th>
+                        <th>Item Picture</th>
+                        <th>Item Name</th>
+                        <th>Item Category</th>
+                        <th>Item Details</th>
+                        <th>Publisher</th>
+                        <th>Publish Date</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
             	<tbody>";
+
 		while ($row = $result->fetch_assoc()) {
-			$categoryId = $row['category_id'];
-			$categoryName = $row['category_name'];
+			$itemId = $row["item_id"];
+			$itemPicture = $row["item_img"];
+			$itemName = $row["item_name"];
+			$itemCategory = $row["category_name"];
+			$itemDetails = $row["item_details"];
+			$itemPublisher = $row["user_name"];
+			$itemPublishDate = $row["item_post_date"];
 
-			$categoryArray["categoryName"] = $categoryName;
-			$categoryArray["categoryId"] = intval($categoryId);
-
-			$categoryObj = json_encode($categoryArray);
+			$itemName = truncateString($itemName,15,15);
+			$itemCategory = truncateString($itemCategory,15,15);
+			$itemDetails = truncateString($itemDetails,15,15);
+			$itemPublisher = truncateString($itemPublisher,15,15);
 
 			echo "
 				<tr>
                     <td>$counter</td>
-                    <td>$categoryName</td>
+                    <td><img src='../uploads/items/$itemPicture' class='admin-item-img'></td>
+                    <td>$itemName</td>
+                    <td>$itemCategory</td>
+                    <td>$itemDetails</td>
+                    <td>$itemPublisher</td>
+                    <td>$itemPublishDate</td>
+
                     <td>
-                        <i class='fa fa-pencil action-icon-edit' onclick='showEditCategoryForm($categoryObj)'></i>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                        <i class='fa fa-trash-o action-icon-delete' onclick='showDeleteCategoryDialog($categoryObj)'></i>
+                        <button type='button' class='btn indigo accent-2'><i class='fa fa-eye'></i> View</button>
+                        &nbsp;
+                        <button type='button' class='btn green accent-2'><i class='fa fa-check'></i> Approve</button>
+                        &nbsp;
+                        <button type='button' class='btn red accent-2'><i class='fa fa-times'></i> Decline</button>
                     </td>
                 </tr>";
+
 			$counter ++;
 		}
 

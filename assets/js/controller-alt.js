@@ -172,7 +172,9 @@ function showDeleteCategoryDialog(category) {
 /*Methods for the pending posts page*/
 //functionto get the pending posts
 function getPendingPosts() {
-	
+	$.get(CONSTANTS.getPendingPostsUrl, function(response) {
+		$(".pending-posts-res").html(response);
+	})
 }
 
 //function to get the admin dashboard summary
