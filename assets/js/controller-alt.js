@@ -7,7 +7,8 @@ const CONSTANTS = {
 	deleteCategoryUrl: "../api/admin/deleteCategory.php",
 	getDashboardSummaryUrl: "../api/admin/getDashboardSummary.php",
 	getDashboardUsersGraphDataUrl: "../api/admin/getDashboardUsersGraphData.php",
-	getDashboardPostsGraphDataUrl: "../api/admin/getDashboardPostsGraphData.php"
+	getDashboardPostsGraphDataUrl: "../api/admin/getDashboardPostsGraphData.php",
+	getPendingPostsUrl: "../api/admin/getPendingPosts.php",
 }
 
 //initializations of some methods
@@ -15,6 +16,7 @@ getCategories();
 getDashboardSummary();
 getDashboardUsersGraphData();
 getDashboardPostsGraphData();
+getPendingPosts();
 
 //event handler to handle the login of the admin
 $(".admin-form").on("submit", function(event) {
@@ -145,7 +147,7 @@ $(".delete-category-form").on("submit", function(event) {
 	});
 });
 
-/*All functions for requests for all the pages*/
+/*All functions for requests for category page*/
 //function to get the categories for the categories page
 function getCategories() {
 	$.get(CONSTANTS.getCategoriesUrl, function(response) {
@@ -165,6 +167,12 @@ function showDeleteCategoryDialog(category) {
 	$(".category-delete-msg").html("Are You Sure You Want To Delete The Category '" + category.categoryName + "'");
 	$(".delete-category-id").val(category.categoryId);
 	$(".delete-category-modal").modal("open");
+}
+
+/*Methods for the pending posts page*/
+//functionto get the pending posts
+function getPendingPosts() {
+	
 }
 
 //function to get the admin dashboard summary
