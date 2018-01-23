@@ -150,22 +150,6 @@ body {
     font-size: 42px;
 }
 
-/*for the pending posts page*/
-.admin-item-img {
-	height: 50px;
-	width: 50px;
-}
-
-.view-item-image {
-	height: 100px;
-	width: 100px;
-}
-
-.decline-item-message {
-	height: 90px;
-	max-height: 90px;
-	width: inherit;
-}
 /*for pre loader*/
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }

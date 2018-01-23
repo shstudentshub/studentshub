@@ -27,7 +27,7 @@
 
 		} else {
 
-			$insertQuery = "INSERT INTO users(user_name,user_email,user_contact,user_password) VALUES(?,?,?,?)";
+			$insertQuery = "INSERT INTO users(user_name,user_email,user_contact,user_password,user_sign_date) VALUES(?,?,?,?,NOW())";
 			$preparedInsertQuery = $database->prepare($insertQuery);
 			$preparedInsertQuery->bind_param('ssss',$userFullname,$userEmail,$userContact,$userPassword);
 

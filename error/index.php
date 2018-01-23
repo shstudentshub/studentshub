@@ -12,6 +12,19 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="./../assets/css/font-awesome.min.css" media="screen,projection"/>
 		<link rel="stylesheet" href="./../assets/css/style.css">
+    <style media="screen">
+      body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+
+      @media (max-device-width:1200px) {
+        body{
+
+          overflow-y: scroll;
+        }
+      }
+    </style>
 	</head>
 	<body>
 		<div class="se-pre-con"></div>
@@ -54,12 +67,9 @@
 
 		<section class="row dashboard-div">
 			<section class="row container">
-				<section class="col s12">
-
-				</section>
 
 				<section class="col s12">
-          <img src="../assets/img/404.jpeg" alt="" style="display:block;margin: 0 auto;line-height:1.5px">
+          <img src="../assets/img/404.jpeg" alt="" style="display:block;margin: 0 auto" class="image">
           <h5 style="margin-top:10px;text-align:center">Oops..You've reached the land of the dead</h5>
 					<p class="center-align"><a href="./.." class="btn1 custom-btn1" style="text-align: center;margin-top: 0px;width: 150px">Continue shopping</a></p>
 				</section>

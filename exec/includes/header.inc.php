@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Students Hub - Admin</title>
+		<title>Students Hub Admin</title>
 		<link rel="shortcut icon" href="../assets/img/students-hub-logo.png" type="image/x-icon">
       	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>

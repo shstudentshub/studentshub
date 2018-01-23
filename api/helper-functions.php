@@ -1,6 +1,4 @@
 <?php
-	$itemStatusArray  = array('Pending' => 0, 'Approved' => 1, 'Declined' => 2 );
-
 	function truncateString($string, $lengthLimit, $newLength) {
 		if (strlen($string) > $lengthLimit) {
 			return substr($string, 0 , $newLength)."...";
