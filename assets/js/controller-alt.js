@@ -194,8 +194,8 @@ function approveItem(itemObj) {
 
 //a function to show decline item modal
 function showDeclineItemModal(itemObj) {
-	alert('decline item');
-	console.log('decline item');
+	$(".decline-item-id").val(itemObj.itemId);
+	$(".decline-item-modal").modal("open");
 }
 
 //function to get the admin dashboard summary

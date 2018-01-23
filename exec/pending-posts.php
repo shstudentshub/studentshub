@@ -28,7 +28,7 @@
 		</section>
 	</section>
 
-	<!-- Modal Structure -->
+	<!-- View Item Modal -->
 	<div id="viewItemModal" class="modal view-item-modal">
 	    <div class="modal-content">
 	    	<h4><b>Item Details</b></h4><hr>
@@ -45,10 +45,27 @@
 	      	<h6><b>Item Details</b></h6>
 	      	<p class="item-details"></p><br>
 
-
 	    </div>
 	    <div class="modal-footer">
 	      	<a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+	    </div>
+	</div>
+
+
+	<!-- Decline Item Modal -->
+	<div id="declineItemModal" class="modal decline-item-modal">
+	    <div class="modal-content">
+	    	<h4><b>Decline Item</b></h4><hr>
+
+	      	<form method="post" enctype="multipart/form-data" accept-charset="utf-8">
+	      		<input type="hidden" class="decline-item-id">
+	      		<label><b>Reasons For Declining Item</b></label><br/>
+	      		<textarea placeholder="..." class="decline-item-message"></textarea><br/>
+	      		<button type="submit" class="btn teal">Decline</button>&nbsp;&nbsp;&nbsp;
+	      		<button type="submit" class="btn modal-action modal-close red">Cancel</button>
+	      	</form>
+
+	    </div>
 	    </div>
 	</div>
         
