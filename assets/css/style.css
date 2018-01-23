@@ -568,7 +568,7 @@ input-placeholder { /* WebKit browsers */
 }
 
 #mb-search{
-    width:75%;
+    width:70%;
     border:1px solid #e5e5e5;
 }
 
@@ -583,7 +583,7 @@ input-placeholder { /* WebKit browsers */
 }
 
 input[type=search]:focus {
-  border-bottom: 1px solid #e5e5e5 !important; 
+  border-bottom: 1px solid #e5e5e5 !important;
   box-shadow: 0 1px 0 0 #F56400 !important
 }
 
@@ -880,5 +880,3 @@ margin-left: -40px;
     z-index: 9999;
     background: url(../img/students-hub-logo.gif) center no-repeat #fff;
 }
-
-
