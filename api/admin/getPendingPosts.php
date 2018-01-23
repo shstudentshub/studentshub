@@ -2,7 +2,7 @@
 	include "../db-config.php";
 	include "../helper-functions.php";
 
-	$categoryArray = array();
+	$itemsArray = array();
 	$counter = 1;
 	$itemStatus = $itemStatusArray['Pending'];
 	$getQuery = "SELECT item_id, item_name, item_details, item_img, item_post_date,user_name, category_name FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON item_category_id = category_id AND item_approval_status = $itemStatus ORDER BY item_id DESC";
@@ -26,7 +26,7 @@
             	<tbody>";
 
 		while ($row = $result->fetch_assoc()) {
-			$itemId = $row["item_id"];
+			$itemId = intval($row["item_id"]);
 			$itemPicture = $row["item_img"];
 			$itemName = $row["item_name"];
 			$itemCategory = $row["category_name"];
@@ -34,27 +34,44 @@
 			$itemPublisher = $row["user_name"];
 			$itemPublishDate = $row["item_post_date"];
 
-			$itemName = truncateString($itemName,15,15);
-			$itemCategory = truncateString($itemCategory,15,15);
-			$itemDetails = truncateString($itemDetails,15,15);
-			$itemPublisher = truncateString($itemPublisher,15,15);
+			$newItemName = truncateString($itemName,15,15);
+			$newItemCategory = truncateString($itemCategory,15,15);
+			$newItemDetails = truncateString($itemDetails,15,15);
+			$newItemPublisher = truncateString($itemPublisher,15,15);
+
+			$itemsArray["itemId"] = $itemId;
+			$itemsArray["itemName"] = $itemName;
+			$itemsArray["itemPicture"] = $itemPicture;
+			$itemsArray["itemCategory"] = $itemCategory;
+			$itemsArray["itemDetails"] = $itemDetails;
+			$itemsArray["itemPublisher"] = $itemPublisher;
+
+			$itemObj = json_encode($itemsArray);
 
 			echo "
 				<tr>
                     <td>$counter</td>
                     <td><img src='../uploads/items/$itemPicture' class='admin-item-img'></td>
-                    <td>$itemName</td>
-                    <td>$itemCategory</td>
-                    <td>$itemDetails</td>
-                    <td>$itemPublisher</td>
+                    <td>$newItemName</td>
+                    <td>$newItemCategory</td>
+                    <td>$newItemDetails</td>
+                    <td>$newItemPublisher</td>
                     <td>$itemPublishDate</td>
 
                     <td>
-                        <button type='button' class='btn indigo accent-2'><i class='fa fa-eye'></i> View</button>
+                        <button type='button'  class='btn indigo accent-2' onclick='viewItem($itemObj)'>
+                        	<i class='fa fa-eye'></i> View
+                        </button>
                         &nbsp;
-                        <button type='button' class='btn green accent-2'><i class='fa fa-check'></i> Approve</button>
+
+                        <button type='button' class='btn green' onclick='approveItem($itemObj)'>
+                        	<i class='fa fa-check'></i> Approve
+                        </button>
                         &nbsp;
-                        <button type='button' class='btn red accent-2'><i class='fa fa-times'></i> Decline</button>
+
+                        <button type='button' class='btn red accent-2' onclick='showDeclineItemModal($itemObj)'>
+                        	<i class='fa fa-times' ></i> Decline
+                        </button>
                     </td>
                 </tr>";
 

@@ -177,6 +177,27 @@ function getPendingPosts() {
 	})
 }
 
+//function to view the item
+function viewItem(itemObj) {
+	$(".view-item-image").prop("src","../uploads/items/" + itemObj.itemPicture);
+	$(".item-name").html(itemObj.itemName);
+	$(".item-category").html(itemObj.itemCategory);
+	$(".item-details").html(itemObj.itemDetails);
+	$(".view-item-modal").modal("open");
+}
+
+//a function to approve the item
+function approveItem(itemObj) {
+	alert('item approved');
+	console.log('item approved');
+}
+
+//a function to show decline item modal
+function showDeclineItemModal(itemObj) {
+	alert('decline item');
+	console.log('decline item');
+}
+
 //function to get the admin dashboard summary
 function getDashboardSummary() {
 	$.get(CONSTANTS.getDashboardSummaryUrl, function(response) {

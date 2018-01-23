@@ -28,7 +28,30 @@
 		</section>
 	</section>
 
-</section>
+	<!-- Modal Structure -->
+	<div id="viewItemModal" class="modal view-item-modal">
+	    <div class="modal-content">
+	    	<h4><b>Item Details</b></h4><hr>
+
+	      	<h6><b>Item Picture</b></h6>
+	      	<img src="" class="view-item-image"><br/><br/>
+
+	      	<h6><b>Item Name</b></h6>
+	      	<p class="item-name"></p><br>
+
+	      	<h6><b>Item Category</b></h6>
+	      	<p class="item-category"></p><br>
+
+	      	<h6><b>Item Details</b></h6>
+	      	<p class="item-details"></p><br>
+
+
+	    </div>
+	    <div class="modal-footer">
+	      	<a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+	    </div>
+	</div>
+        
 
 <!-- include the footer file -->
 <?php include "includes/footer.inc.php"; ?>
