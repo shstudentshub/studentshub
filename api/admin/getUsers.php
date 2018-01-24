@@ -29,33 +29,20 @@
 			$userName = $row["user_name"];
 			$userEmail = $row["user_email"];
 			$userContact = $row["user_contact"];
-			$userSignDate = $row["user_sign date"];
+			$userSignDate = $row["user_sign_date"];
 
-			$itemObj = json_encode($itemsArray);
 
 			echo "
 				<tr>
                     <td>$counter</td>
-                    <td><img src='../uploads/items/$itemPicture' class='admin-item-img'></td>
-                    <td>$newItemName</td>
-                    <td>$newItemCategory</td>
-                    <td>$newItemDetails</td>
-                    <td>$newItemPublisher</td>
-                    <td>$itemPublishDate</td>
+                    <td>$userName</td>
+                    <td>$userEmail</td>
+                    <td>$userContact</td>
+                    <td>$userSignDate</td>
 
                     <td>
                         <button type='button'  class='btn indigo accent-2' onclick='viewItem($itemObj)'>
                         	<i class='fa fa-eye'></i> View
-                        </button>
-                        &nbsp;
-
-                        <button type='button' class='btn green' onclick='approveItem($itemObj)'>
-                        	<i class='fa fa-check'></i> Approve
-                        </button>
-                        &nbsp;
-
-                        <button type='button' class='btn red accent-2' onclick='showDeclineItemModal($itemObj)'>
-                        	<i class='fa fa-times' ></i> Decline
                         </button>
                     </td>
                 </tr>";
@@ -70,7 +57,7 @@
 	} else {
 		echo "
 			<section class='row jumbotron'>
-				<h4 class='center-align no-items-text'>There Are No Pending Posts Available</h4>
+				<h4 class='center-align no-items-text'>There Are No Users Available</h4>
 			</section>
 		";
 	}
