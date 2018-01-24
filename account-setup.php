@@ -95,7 +95,13 @@
 				</section>
 
 				<section class="col s12 m10 l10">
-					
+					<section class="row">
+						<section class="col m2 l2"></section>
+						<section class="col s12 m8 l8">
+							
+						</section>
+						<section class="col m2 l2"></section>
+					</section>
 				</section>
 
 			</section>
