@@ -23,7 +23,7 @@
 	<section class="col m10 l10 content-div">
 		<section class="row">
 			<section class="col s12 m12 l12">
-				<section class="res-res"></section>
+				<section class="users-res"></section>
 			</section>
 		</section>
 	</section>
