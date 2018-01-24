@@ -5,7 +5,7 @@
 	$itemsArray = array();
 	$counter = 1;
 	$itemStatus = $itemStatusArray['Pending'];
-	$getQuery = "SELECT item_id, item_name, item_details, item_img, item_post_date, user_name, category_name FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON item_category_id = category_id AND item_approval_status = $itemStatus ORDER BY item_id DESC";
+	$getQuery = "SELECT * FROM users ORDER BY user_id DESC";
 	$result = $database->query($getQuery);
 
 	if ($result->num_rows > 0) {
@@ -14,12 +14,10 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Item Picture</th>
-                        <th>Item Name</th>
-                        <th>Item Category</th>
-                        <th>Item Details</th>
-                        <th>Publisher</th>
-                        <th>Publish Date</th>
+                        <th>Name</th>
+                        <th>Email Address</th>
+                        <th>Contact Number</th>
+                        <th>Signup Date</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
