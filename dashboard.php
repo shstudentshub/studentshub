@@ -83,8 +83,8 @@
 				<section class="col m2 l2 dashboard-side-div hide-on-med-and-down">
 					<li class="selected-item"><a href="dashboard.php" class="selected"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
 					<li><a href="posts.php"><i class="fa fa-tags"></i> My Posts</a></li>
-					<li><a href="review.php"><i class="fa fa-tags"></i> View Pending Items</a></li>
-					<li><a href="approve.php"><i class="fa fa-tags"></i> View Approve Items</a></li>
+					<li><a href="review.php"><i class="fa fa-hourglass"></i> View Pending Items</a></li>
+					<li><a href="approve.php"><i class="fa fa-check"></i> View Approve Items</a></li>
 					<li><a href="profile.php"><i class="fa fa-user"></i>&nbsp; My Profile</a></li>
 					<li><a href="account-setup.php"><i class="fa fa-cog"></i> Account Settings</a></li>
 					<li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
