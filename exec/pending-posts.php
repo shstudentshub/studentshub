@@ -7,8 +7,8 @@
 	<!-- side div -->
 	<section class="col m2 l2 side-div">
 		<li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-		<li class="selected-item"><a href="pending-posts.php" class="selected"><i class="fa fa-buysellads"></i> Pending Items</a></li>
-		<li><a href="posts.php"><i class="fa fa-plus"></i> Posts</a></li>
+		<li class="selected-item"><a href="pending-posts.php" class="selected"><i class="fa fa-hourglass"></i> Pending Posts</a></li>
+		<li><a href="posts.php"><i class="fa fa-check"></i> Approved Posts</a></li>
 		<li><a href="categories.php"><i class="fa fa-list"></i> Categories</a></li>
 		<li><a href="users.php"><i class="fa fa-users"></i> Users</a></li>
 		<hr>
@@ -57,12 +57,18 @@
 	    <div class="modal-content">
 	    	<h4><b>Decline Item</b></h4><hr>
 
-	      	<form method="post" enctype="multipart/form-data" accept-charset="utf-8">
+	      	<form method="post" class="decline-item-form" enctype="multipart/form-data" accept-charset="utf-8">
 	      		<input type="hidden" class="decline-item-id">
 	      		<label><b>Reasons For Declining Item</b></label><br/>
-	      		<textarea placeholder="..." class="decline-item-message"></textarea><br/>
+	      		<select required class="browser-default decline-item-message">
+	      			<option value="" selected disabled>Select Reason</option>
+	      			<option value="Inappropriate Item Picture">Inappropriate Item Picture</option>
+	      			<option value="Inappropriate Category">Inappropriate Category</option>
+	      			<option value="Inappropriate Name/Title">Inappropriate Name/Title</option>
+	      			<option value="Inappropriate Item Details">Inappropriate Item Details</option>
+	      		</select><br/><br/>
 	      		<button type="submit" class="btn teal">Decline</button>&nbsp;&nbsp;&nbsp;
-	      		<button type="submit" class="btn modal-action modal-close red">Cancel</button>
+	      		<button type="button" class="btn modal-action modal-close red">Cancel</button>
 	      	</form>
 
 	    </div>

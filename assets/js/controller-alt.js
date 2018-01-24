@@ -9,6 +9,7 @@ const CONSTANTS = {
 	getDashboardUsersGraphDataUrl: "../api/admin/getDashboardUsersGraphData.php",
 	getDashboardPostsGraphDataUrl: "../api/admin/getDashboardPostsGraphData.php",
 	getPendingPostsUrl: "../api/admin/getPendingPosts.php",
+	toggleItemApprovalUrl: "../api/admin/toggleItemApproval.php",
 }
 
 //initializations of some methods
@@ -147,6 +148,31 @@ $(".delete-category-form").on("submit", function(event) {
 	});
 });
 
+//event handler to handle the declination of pending posts
+$(".decline-item-form").on("submit", function(event) {
+	event.preventDefault();
+
+	var itemId = $(".decline-item-id").val(),
+		declineMessage = $(".decline-item-message").val().trim(),
+		itemApprovalStatus = 2;
+
+	var data = $.param({
+		itemId: itemId,
+		declineMessage: declineMessage,
+		itemApprovalStatus: itemApprovalStatus
+	});
+
+	$.post(CONSTANTS.toggleItemApprovalUrl, data, function(response) {
+		if (response.success) {
+			$(".decline-item-modal").modal("close");
+			getPendingPosts();
+		}else {
+			alert(response.message);
+		}
+	})
+
+})
+
 /*All functions for requests for category page*/
 //function to get the categories for the categories page
 function getCategories() {
@@ -188,8 +214,21 @@ function viewItem(itemObj) {
 
 //a function to approve the item
 function approveItem(itemObj) {
-	alert('item approved');
-	console.log('item approved');
+	var itemId = itemObj.itemId,
+		itemApprovalStatus = itemObj.itemApprovalStatus;
+
+	var data = $.param({
+		itemId: itemId,
+		itemApprovalStatus: itemApprovalStatus
+	});
+
+	$.post(CONSTANTS.toggleItemApprovalUrl, data, function(response) {
+		if (response.success) {
+			getPendingPosts();
+		} else {
+			alert(response.message);
+		}
+	});
 }
 
 //a function to show decline item modal

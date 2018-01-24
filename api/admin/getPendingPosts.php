@@ -5,7 +5,7 @@
 	$itemsArray = array();
 	$counter = 1;
 	$itemStatus = $itemStatusArray['Pending'];
-	$getQuery = "SELECT item_id, item_name, item_details, item_img, item_post_date,user_name, category_name FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON item_category_id = category_id AND item_approval_status = $itemStatus ORDER BY item_id DESC";
+	$getQuery = "SELECT item_id, item_name, item_details, item_img, item_post_date, user_name, category_name FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON item_category_id = category_id AND item_approval_status = $itemStatus ORDER BY item_id DESC";
 	$result = $database->query($getQuery);
 
 	if ($result->num_rows > 0) {
@@ -40,6 +40,7 @@
 			$newItemPublisher = truncateString($itemPublisher,15,15);
 
 			$itemsArray["itemId"] = $itemId;
+			$itemsArray["itemApprovalStatus"] = $itemStatusArray["Approved"];
 			$itemsArray["itemName"] = $itemName;
 			$itemsArray["itemPicture"] = $itemPicture;
 			$itemsArray["itemCategory"] = $itemCategory;
