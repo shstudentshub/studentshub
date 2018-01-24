@@ -3,7 +3,7 @@ CONSTANTS = {
 	userSignupUrl: "api/user/signup.php",
 	userLoginUrl: "api/user/login.php",
 	userPostsUrl: "api/user/getUserPosts.php",
-	getUserPendingPostsUrl: "api/user/getUserPendingPosts.php",
+	userPendingPostsUrl: "api/user/getUserPendingPosts.php",
 	getItemCategoryUrl: "api/user/getItemCategories.php",
 	addUserItemUrl: "api/user/addUserItem.php",
 	deleteUserItemUrl: "api/user/deleteUserItem.php",
@@ -14,6 +14,7 @@ CONSTANTS = {
 //initialization of some methods
 getHomeCategories();
 getUserPosts();
+getUserPendingPosts();
 getItemCategories();
 getUserPostsGraphData();
 getUserPostSummary();
@@ -236,6 +237,13 @@ function getHomeCategories() {
 function getUserPosts() {
 	$.get(CONSTANTS.userPostsUrl, function(response) {
 		$(".user-posts").html(response);
+	})
+}
+
+//function to show pending use items
+function getUserPendingPosts() {
+	$.get(CONSTANTS.userPendingPostsUrl, function(response) {
+		$(".user-pending-posts").html(response);
 	})
 }
 

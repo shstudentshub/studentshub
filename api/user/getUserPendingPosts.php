@@ -83,7 +83,7 @@
 	} else {
 		echo "
 			<div class='panel custom-bg-lt'>
-				You Have Not Posted Any Items Yet
+				There Are No Pending Items
 			</div>
 		";
 	}	
