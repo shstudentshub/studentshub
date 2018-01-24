@@ -31,6 +31,12 @@
 			$userContact = $row["user_contact"];
 			$userSignDate = $row["user_sign_date"];
 
+			$usersArray["userName"] = $userName;
+			$usersArray["userEmail"] = $userEmail;
+			$usersArray["userContact"] = $userContact;
+			$usersArray["userSignDate"] = $userSignDate;
+
+			$usersObj = json_encode($usersArray);
 
 			echo "
 				<tr>
@@ -41,7 +47,7 @@
                     <td>$userSignDate</td>
 
                     <td>
-                        <button type='button'  class='btn indigo accent-2' onclick='viewItem($itemObj)'>
+                        <button type='button'  class='btn indigo accent-2' onclick='viewUser($usersObj)'>
                         	<i class='fa fa-eye'></i> View
                         </button>
                     </td>
