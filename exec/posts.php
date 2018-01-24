@@ -24,11 +24,11 @@
 	<section class="col m10 l10 content-div">
 		<section class="row">
 			<section class="col s12 m12 l12">
-				<section class="pending-posts-res"></section>
+				<section class="approved-posts-res"></section>
 			</section>
 		</section>
 	</section>
-	
+
 </section>
 
 <!-- include the footer file -->

@@ -238,7 +238,7 @@ function approveItem(itemObj) {
 /*for the approved posts page*/
 function getApprovedPosts() {
 	$.get(CONSTANTS.getApprovedPostsUrl, function(response) {
-		alert(response)
+		$(".approved-posts-res").html(response);
 	})
 }
 
