@@ -26,10 +26,10 @@
 		while ($row = $result->fetch_assoc()) {
 
 			$userId = $row["user_id"];
-			$userId = $row["user_name"];
-			$userId = $row["user_email"];
-			$userId = $row["user_contact"];
-			$userId = $row["user_sign date"];
+			$userName = $row["user_name"];
+			$userEmail = $row["user_email"];
+			$userContact = $row["user_contact"];
+			$userSignDate = $row["user_sign date"];
 
 			$itemObj = json_encode($itemsArray);
 
