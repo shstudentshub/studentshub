@@ -17,6 +17,8 @@
 
 		$row = $result->fetch_assoc();
 		$userFullname = $row["user_name"];
+		$userContact = $row["user_contact"];
+		$userEmail = $row["user_email"];
 	}
 ?>
 
@@ -93,7 +95,33 @@
 				</section>
 
 				<section class="col s12 m10 l10">
-					<section class="profile-res"></section>
+					<section class='row'>
+						<section class='col m4 l4'></section>
+							<section class='col s12 m4 l4'>
+								<section class='user-profile-div'>
+									<h4 class='center-align'>User Profile</h4>
+									<h1 class='center-align'><i class='fa fa-user'></i></h1>
+									<table>
+								        <tbody>
+								          <tr>
+								            <td class='right-align'><b>Full Name</b></td>
+								            <td><?php echo $userFullname ?></td>
+								          </tr>
+								          <tr>
+								            <td class='right-align'><b>Contact Number</b></td>
+								            <td><?php echo $userContact ?></td>
+								          </tr>
+								          <tr>
+								            <td class='right-align'><b>Email Address</b></td>
+								            <td><?php echo $userEmail ?></td>
+								          </tr>
+								        </tbody>
+								      </table>
+								      <p class='center-align'><a href='account-setup.php'>Edit Profile</a></p>
+								</section>
+							</section>
+						<section class='col m4 l4'></section>
+					</section>
 				</section>
 
 			</section>

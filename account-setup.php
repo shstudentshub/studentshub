@@ -17,6 +17,8 @@
 
 		$row = $result->fetch_assoc();
 		$userFullname = $row["user_name"];
+		$userContact = $row["user_contact"];
+		$userEmail = $row["user_email"];
 	}
 ?>
 
