@@ -261,7 +261,11 @@ function getUsers() {
 }
 
 function viewUser(userObj) {
-	alert(JSON.stringify(userObj));
+	$(".user-name").html(userObj.userName);
+	$(".user-email").html(userObj.userEmail);
+	$(".user-contact").html(userObj.userContact);
+	$(".user-sign-date").html(userObj.userSignDate);
+	$(".view-user-modal").modal("open");
 }
 
 //function to get the admin dashboard summary

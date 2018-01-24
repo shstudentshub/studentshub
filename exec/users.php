@@ -43,7 +43,7 @@
 	      	<p class="user-contact"></p><br>
 
 	      	<h6><b>User Sign Date</b></h6>
-	      	<p class="user-sign-date"></p><br>
+	      	<p class="user-sign-date"></p>
 
 	    </div>
 	    <div class="modal-footer">
