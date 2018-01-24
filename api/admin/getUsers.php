@@ -2,7 +2,7 @@
 	include "../db-config.php";
 	include "../helper-functions.php";
 
-	$itemsArray = array();
+	$usersArray = array();
 	$counter = 1;
 	$itemStatus = $itemStatusArray['Pending'];
 	$getQuery = "SELECT * FROM users ORDER BY user_id DESC";
@@ -24,26 +24,12 @@
             	<tbody>";
 
 		while ($row = $result->fetch_assoc()) {
-			$itemId = intval($row["item_id"]);
-			$itemPicture = $row["item_img"];
-			$itemName = $row["item_name"];
-			$itemCategory = $row["category_name"];
-			$itemDetails = $row["item_details"];
-			$itemPublisher = $row["user_name"];
-			$itemPublishDate = $row["item_post_date"];
 
-			$newItemName = truncateString($itemName,15,15);
-			$newItemCategory = truncateString($itemCategory,15,15);
-			$newItemDetails = truncateString($itemDetails,15,15);
-			$newItemPublisher = truncateString($itemPublisher,15,15);
-
-			$itemsArray["itemId"] = $itemId;
-			$itemsArray["itemApprovalStatus"] = $itemStatusArray["Approved"];
-			$itemsArray["itemName"] = $itemName;
-			$itemsArray["itemPicture"] = $itemPicture;
-			$itemsArray["itemCategory"] = $itemCategory;
-			$itemsArray["itemDetails"] = $itemDetails;
-			$itemsArray["itemPublisher"] = $itemPublisher;
+			$userId = $row["user_id"];
+			$userId = $row["user_name"];
+			$userId = $row["user_email"];
+			$userId = $row["user_contact"];
+			$userId = $row["user_sign date"];
 
 			$itemObj = json_encode($itemsArray);
 
