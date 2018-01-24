@@ -22,8 +22,13 @@
 
 	<!--content div  -->
 	<section class="col m10 l10 content-div">
-		<h1>Posts Content Comes Here</h1>
+		<section class="row">
+			<section class="col s12 m12 l12">
+				<section class="pending-posts-res"></section>
+			</section>
+		</section>
 	</section>
+	
 </section>
 
 <!-- include the footer file -->
