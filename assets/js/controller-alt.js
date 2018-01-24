@@ -169,6 +169,7 @@ $(".decline-item-form").on("submit", function(event) {
 		if (response.success) {
 			$(".decline-item-modal").modal("close");
 			getPendingPosts();
+			getApprovedPosts();
 		}else {
 			alert(response.message);
 		}
