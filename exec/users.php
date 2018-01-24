@@ -27,7 +27,7 @@
 			</section>
 		</section>
 	</section>
-
+	
 </section>
 
 <!-- include the footer file -->

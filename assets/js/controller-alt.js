@@ -11,7 +11,8 @@ const CONSTANTS = {
 	getPendingPostsUrl: "../api/admin/getPendingPosts.php",
 	toggleItemApprovalUrl: "../api/admin/toggleItemApproval.php",
 	getDashboardPostsGraphDataUrl: "../api/admin/getDashboardPostsGraphData.php",
-	getApprovedPostsUrl: "../api/admin/getApprovedPosts.php"
+	getApprovedPostsUrl: "../api/admin/getApprovedPosts.php",
+	getUsersUrl: "../api/admin/getUsers.php"
 }
 
 //initializations of some methods
