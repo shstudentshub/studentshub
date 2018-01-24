@@ -93,7 +93,7 @@
 				</section>
 
 				<section class="col s12 m10 l10">
-					<h3>Approve items comes here</h3>
+					<section class="approved-posts"></section>
 				</section>
 
 			</section>
