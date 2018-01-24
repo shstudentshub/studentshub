@@ -18,7 +18,7 @@
 		<section class='row'>
 			<section class='col m4 l4'></section>
 			<section class='col s12 m4 l4'>
-				<section class='card'>
+				<section class='user-profile-div'>
 					<h4 class='center-align'>User Profile</h4>
 					<h1 class='center-align'><i class='fa fa-user'></i></h1>
 					<table>
@@ -37,6 +37,7 @@
 				          </tr>
 				        </tbody>
 				      </table>
+				      <p class='center-align'><a href='account-setup.php'>Edit Profile</a></p>
 				</section>
 			</section>
 			<section class='col m4 l4'></section>
