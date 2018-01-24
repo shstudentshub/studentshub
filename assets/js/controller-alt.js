@@ -249,7 +249,9 @@ function getApprovedPosts() {
 /*for the users page*/
 //function to get the users
 function getUsers() {
-
+	$.get(CONSTANTS.getUsersUrl, function(response) {
+		$(".users-res").html(response);
+	})
 }
 
 //a function to show decline item modal
