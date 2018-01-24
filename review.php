@@ -93,7 +93,7 @@
 				</section>
 
 				<section class="col s12 m10 l10">
-					<section class="user-pending-posts"></section>
+					<section class="pending-posts"></section>
 				</section>
 
 			</section>

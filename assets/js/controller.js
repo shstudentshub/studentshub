@@ -243,7 +243,7 @@ function getUserPosts() {
 //function to show pending use items
 function getUserPendingPosts() {
 	$.get(CONSTANTS.userPendingPostsUrl, function(response) {
-		$(".user-pending-posts").html(response);
+		$(".pending-posts").html(response);
 	})
 }
 

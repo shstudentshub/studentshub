@@ -56,7 +56,6 @@
 			$newCategoryName = truncateString($categoryName,13,10);
 			$newItemName = truncateString($itemName,13,10);
 			$newItemLocation = truncateString($itemLocation,13,10);
-			$itemApprovalStatus = stringifyApprovalStatus($itemApprovalStatus);
 
 			echo "
 				<tr>
