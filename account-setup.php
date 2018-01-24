@@ -98,7 +98,9 @@
 					<section class="row">
 						<section class="col m2 l2"></section>
 						<section class="col s12 m8 l8">
-							
+							<form method="post" enctype="multipart/form-data" accept-charset="utf-8">						
+
+							</form>
 						</section>
 						<section class="col m2 l2"></section>
 					</section>
