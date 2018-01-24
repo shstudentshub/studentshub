@@ -86,7 +86,7 @@
 	} else {
 		echo "
 			<section class='row jumbotron'>
-				<h4 class='center-align no-items-text'>There Are No Categories Available</h4>
+				<h4 class='center-align no-items-text'>There Are No Pending Posts Available</h4>
 			</section>
 		";
 	}

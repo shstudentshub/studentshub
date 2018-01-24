@@ -29,6 +29,53 @@
 		</section>
 	</section>
 
+	<!-- View Item Modal -->
+	<div id="viewItemModal" class="modal view-item-modal">
+	    <div class="modal-content">
+	    	<h4><b>Item Details</b></h4><hr>
+
+	      	<h6><b>Item Picture</b></h6>
+	      	<img src="" class="view-item-image"><br/><br/>
+
+	      	<h6><b>Item Name</b></h6>
+	      	<p class="item-name"></p><br>
+
+	      	<h6><b>Item Category</b></h6>
+	      	<p class="item-category"></p><br>
+
+	      	<h6><b>Item Details</b></h6>
+	      	<p class="item-details"></p><br>
+
+	    </div>
+	    <div class="modal-footer">
+	      	<a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+	    </div>
+	</div>
+
+
+	<!-- Decline Item Modal -->
+	<div id="declineItemModal" class="modal decline-item-modal">
+	    <div class="modal-content">
+	    	<h4><b>Decline Item</b></h4><hr>
+
+	      	<form method="post" class="decline-item-form" enctype="multipart/form-data" accept-charset="utf-8">
+	      		<input type="hidden" class="decline-item-id">
+	      		<label><b>Reasons For Declining Item</b></label><br/>
+	      		<select required class="browser-default decline-item-message">
+	      			<option value="" selected disabled>Select Reason</option>
+	      			<option value="Inappropriate Item Picture">Inappropriate Item Picture</option>
+	      			<option value="Inappropriate Category">Inappropriate Category</option>
+	      			<option value="Inappropriate Name/Title">Inappropriate Name/Title</option>
+	      			<option value="Inappropriate Item Details">Inappropriate Item Details</option>
+	      		</select><br/><br/>
+	      		<button type="submit" class="btn teal">Decline</button>&nbsp;&nbsp;&nbsp;
+	      		<button type="button" class="btn modal-action modal-close red">Cancel</button>
+	      	</form>
+
+	    </div>
+	    </div>
+	</div>
+
 </section>
 
 <!-- include the footer file -->

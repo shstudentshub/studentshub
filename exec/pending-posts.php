@@ -75,6 +75,6 @@
 	    </div>
 	</div>
         
-
+</section>
 <!-- include the footer file -->
 <?php include "includes/footer.inc.php"; ?>
