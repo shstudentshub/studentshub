@@ -22,6 +22,7 @@ getDashboardUsersGraphData();
 getDashboardPostsGraphData();
 getPendingPosts();
 getApprovedPosts();
+getUsers();
 
 //event handler to handle the login of the admin
 $(".admin-form").on("submit", function(event) {
@@ -238,10 +239,17 @@ function approveItem(itemObj) {
 }
 
 /*for the approved posts page*/
+//function to get the approved posts
 function getApprovedPosts() {
 	$.get(CONSTANTS.getApprovedPostsUrl, function(response) {
 		$(".approved-posts-res").html(response);
 	})
+}
+
+/*for the users page*/
+//function to get the users
+function getUsers() {
+
 }
 
 //a function to show decline item modal
