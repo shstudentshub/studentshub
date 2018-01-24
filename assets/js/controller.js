@@ -4,6 +4,7 @@ CONSTANTS = {
 	userLoginUrl: "api/user/login.php",
 	userPostsUrl: "api/user/getUserPosts.php",
 	userPendingPostsUrl: "api/user/getUserPendingPosts.php",
+	userApprovedPostsUrl: "api/user/getUserApprovedPosts.php",
 	getItemCategoryUrl: "api/user/getItemCategories.php",
 	addUserItemUrl: "api/user/addUserItem.php",
 	deleteUserItemUrl: "api/user/deleteUserItem.php",
@@ -15,6 +16,7 @@ CONSTANTS = {
 getHomeCategories();
 getUserPosts();
 getUserPendingPosts();
+userApprovedPosts();
 getItemCategories();
 getUserPostsGraphData();
 getUserPostSummary();
@@ -244,6 +246,13 @@ function getUserPosts() {
 function getUserPendingPosts() {
 	$.get(CONSTANTS.userPendingPostsUrl, function(response) {
 		$(".pending-posts").html(response);
+	})
+}
+
+//function to show the approved posts
+function userApprovedPosts() {
+	$.get(CONSTANTS.userApprovedPostsUrl, function(response) {
+		$(".approved-posts").html(response);
 	})
 }
 
