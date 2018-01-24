@@ -93,7 +93,7 @@
 				</section>
 
 				<section class="col s12 m10 l10">
-					
+					<section class="declined-posts"></section>
 				</section>
 
 			</section>
