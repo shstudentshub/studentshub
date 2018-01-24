@@ -64,7 +64,8 @@ body {
 }
 
 .search{
-  margin-right: 550px;
+  margin-right: 500px;
+  height: 10px;
 }
 
 .search-sm-div{
@@ -394,18 +395,18 @@ body {
 
 /* For the snackbar styling */
 .snackbar {
-    visibility: hidden; 
-    min-width: 250px; 
+    visibility: hidden;
+    min-width: 250px;
     width: 50%;
     background-color: #333;
-    color: #fff; 
+    color: #fff;
     text-align: center;
     border-radius: 2px;
-    padding: 10px; 
-    position: relative; 
+    padding: 10px;
+    position: relative;
     z-index: 9999;
-    left: 25%; 
-    top: 30px; 
+    left: 25%;
+    top: 30px;
 }
 
 .snackbar.show {
@@ -545,14 +546,44 @@ input-placeholder { /* WebKit browsers */
   color: #F56400;
   border: 1px solid #F56400;
 }
+/*  Search bottom*/
+.btn1, .custon-btn2{
+  background-color: #F56400;
+  color: #fff;
+  border: 1px solid #F56400;
+}
+
 .custom-btn1:hover{
   background-color: #F56400;
   color: #fff;
 }
 
+.wrapme{
+    height: 50px;
+    margin-top: 5px;
+
+}
+.wrap{
+
+}
+
+#mb-search{
+    width:70%;
+    border:1px solid #e5e5e5;
+}
+
+.input-field > a #search{
+    height: 40px;
+    margin-top: 10px;
+    border:1px solid #e5e5e5;
+}
+.input-field >a  #search:focus{
+    border: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5 !important;
+}
 
 input[type=search]:focus {
-  border-bottom: 1px solid #F56400 !important;
+  border-bottom: 1px solid #e5e5e5 !important;
   box-shadow: 0 1px 0 0 #F56400 !important
 }
 
@@ -589,7 +620,7 @@ input[type=search]:focus {
       margin-top: 10px;
       margin-left: 0px;
       width: 100%;
-       
+
     }
     .carousel{
       margin-top: -40px;
@@ -614,13 +645,13 @@ input[type=search]:focus {
 
 @media (max-width: 1054px) {
   .search{
-      margin-right: 390px;
+      margin-right: 350px;
     }
 }
 
 @media (max-width: 1024px){
     .search{
-      margin-right: 500px;
+      margin-right: 300px;
     }
 
     .surprise-div{
@@ -637,7 +668,7 @@ input[type=search]:focus {
       margin-top: 10px;
       margin-left: 0px;
       width: 470px;
-        
+
     }
 
     .pick-of-the-day-img {
@@ -669,18 +700,18 @@ input[type=search]:focus {
     }
 
     .snackbar {
-        visibility: hidden; 
-        min-width: 250px; 
+        visibility: hidden;
+        min-width: 250px;
         width: 60%;
         margin: -90px 0 0 -40px;
         background-color: #333;
-        color: #fff; 
+        color: #fff;
         text-align: center;
         border-radius: 2px;
-        padding: 20px 10px; 
-        position: relative; 
+        padding: 20px 10px;
+        position: relative;
         z-index: 9999;
-        top: 30px; 
+        top: 30px;
     }
 
     .signin-modal, .signup-modal {
@@ -779,7 +810,7 @@ input[type=search]:focus {
         margin-top: 20px;
         margin-left: 0px;
         width: 100%;
-       
+
     }
 
     .pick-of-the-day-img {
@@ -796,7 +827,7 @@ input[type=search]:focus {
       margin-top: 10px;
       margin-left: 0px;
       width: 100%;
-       
+
     }
 }
 
@@ -822,10 +853,17 @@ input[type=search]:focus {
       margin-top: 10px;
       margin-left: 0px;
       width: 100%;
-       
+
     }
+
 }
 
+@media (max-width: 320px) {
+  .image{
+    margin-top: -80px;
+margin-left: -40px;
+  }
+}
 
 
 

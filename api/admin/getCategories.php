@@ -7,7 +7,7 @@
 	$result = $database->query($getQuery);
 
 	if ($result->num_rows > 0) {
-		echo "<table class='responsive-table'>
+		echo "<table class='striped responsive-table'>
                 <h5><strong>Post Categories</strong></h5><hr/>
                 <thead>
                     <tr>

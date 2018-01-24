@@ -11,6 +11,7 @@
 		<li><a href="posts.php"><i class="fa fa-check"></i> Approved Posts</a></li>
 		<li><a href="categories.php"><i class="fa fa-list"></i> Categories</a></li>
 		<li><a href="users.php"><i class="fa fa-users"></i> Users</a></li>
+		<li><a href="ads.php"><i class="fa fa-buysellads"></i> View Pending Items</a></li>
 		<hr>
 		<li class="selected-item"><a href="send-messages.php" class="selected"><i class="fa fa-send"></i> Send Message</a></li>
 		<li><a href="messages.php"><i class="fa fa-envelope"></i> Messages</a></li>

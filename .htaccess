@@ -1,10 +1,13 @@
 RewriteEngine on
 
-RewriteRule ^index?$ index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
 
-ErrorDocument 403  http://localhost/studentshub/error/index.php
-ErrorDocument 404  http://localhost/studentshub/error/index.php
-ErrorDocument 500  http://localhost/studentshub/error/index.php
+RewriteRule ^(.*)$ $.1.php [NC,L]
+
+ErrorDocument 403  http://localhost/StudentHub/error/index.php
+ErrorDocument 404  http://localhost/StudentHub/error/index.php
+ErrorDocument 500  http://localhost/StudentHub/error/index.php
 
 
 Options -Indexes

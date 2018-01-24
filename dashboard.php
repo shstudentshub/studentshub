@@ -47,7 +47,7 @@
 					</a>
 
 					<ul class="right">
-						<li><a href="#" onclick="Materialize.toast('You have log in as: <?php echo ucfirst($userFullname);?>', 4000)">Hi <?php echo ucfirst($userFullname); ?></a></li>
+						<li><a href="#!" onclick="Materialize.toast('You have log in as: <?php echo ucfirst($userFullname);?>', 4000)">Hi <?php echo ucfirst($userFullname); ?></a></li>
 					</ul>
 
 					<ul class="side-nav dashboard-side-nav-sm" id="nav-mobile">

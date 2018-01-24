@@ -10,6 +10,7 @@ const CONSTANTS = {
 	getDashboardPostsGraphDataUrl: "../api/admin/getDashboardPostsGraphData.php",
 	getPendingPostsUrl: "../api/admin/getPendingPosts.php",
 	toggleItemApprovalUrl: "../api/admin/toggleItemApproval.php",
+	getDashboardPostsGraphDataUrl: "../api/admin/getDashboardPostsGraphData.php"
 }
 
 //initializations of some methods
@@ -174,6 +175,7 @@ $(".decline-item-form").on("submit", function(event) {
 })
 
 /*All functions for requests for category page*/
+/*All functions for requests for all the pages*/
 //function to get the categories for the categories page
 function getCategories() {
 	$.get(CONSTANTS.getCategoriesUrl, function(response) {
