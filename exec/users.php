@@ -27,7 +27,30 @@
 			</section>
 		</section>
 	</section>
-	
+
+	<!-- View User Modal -->
+	<div id="viewItemModal" class="modal view-user-modal">
+	    <div class="modal-content">
+	    	<h4><b>User Details</b></h4><hr>
+
+	      	<h6><b>User Name</b></h6>
+	      	<p class="user-name"></p><br>
+
+	      	<h6><b>User Email</b></h6>
+	      	<p class="user-email"></p><br>
+
+	      	<h6><b>User Contact Number</b></h6>
+	      	<p class="user-contact"></p><br>
+
+	      	<h6><b>User Sign Date</b></h6>
+	      	<p class="user-sign-date"></p><br>
+
+	    </div>
+	    <div class="modal-footer">
+	      	<a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+	    </div>
+	</div>
+
 </section>
 
 <!-- include the footer file -->
