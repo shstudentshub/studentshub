@@ -6,6 +6,7 @@ CONSTANTS = {
 	userPendingPostsUrl: "api/user/getUserPendingPosts.php",
 	userApprovedPostsUrl: "api/user/getUserApprovedPosts.php",
 	userDeclinedPostsUrl: "api/user/getUserDeclinedPosts.php",
+	userProfileUrl: "api/user/getUserProfile.php",
 	getItemCategoryUrl: "api/user/getItemCategories.php",
 	addUserItemUrl: "api/user/addUserItem.php",
 	deleteUserItemUrl: "api/user/deleteUserItem.php",
@@ -19,6 +20,7 @@ getUserPosts();
 getUserPendingPosts();
 getuserApprovedPosts();
 getuserDeclinedPosts();
+getUserProfile();
 getItemCategories();
 getUserPostsGraphData();
 getUserPostSummary();
@@ -262,6 +264,13 @@ function getuserApprovedPosts() {
 function getuserDeclinedPosts() {
 	$.get(CONSTANTS.userDeclinedPostsUrl, function(response) {
 		$(".declined-posts").html(response);
+	})
+}
+
+/*for the user profile page*/
+function getUserProfile() {
+	$.get(CONSTANTS.userProfileUrl, function(response) {
+		$(".profile-res").html(response);
 	})
 }
 

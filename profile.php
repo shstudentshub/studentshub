@@ -93,7 +93,7 @@
 				</section>
 
 				<section class="col s12 m10 l10">
-					
+					<section class="profile-res"></section>
 				</section>
 
 			</section>
