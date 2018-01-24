@@ -3,6 +3,7 @@ CONSTANTS = {
 	userSignupUrl: "api/user/signup.php",
 	userLoginUrl: "api/user/login.php",
 	userPostsUrl: "api/user/getUserPosts.php",
+	getUserPendingPostsUrl: "api/user/getUserPendingPosts.php",
 	getItemCategoryUrl: "api/user/getItemCategories.php",
 	addUserItemUrl: "api/user/addUserItem.php",
 	deleteUserItemUrl: "api/user/deleteUserItem.php",

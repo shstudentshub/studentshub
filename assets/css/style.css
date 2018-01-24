@@ -753,8 +753,6 @@ input[type=search]:focus {
     }
 }
 
-
-
 @media (max-width: 600px){
     .pick-of-the-day-div {
         margin-top: 10px;

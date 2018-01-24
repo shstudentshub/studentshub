@@ -93,7 +93,7 @@
 				</section>
 
 				<section class="col s12 m10 l10">
-					<h3>Items under Review comes here</h3>
+					<section class="user-pending-posts"></section>
 				</section>
 
 			</section>
