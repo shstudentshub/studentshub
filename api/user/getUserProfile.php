@@ -15,6 +15,30 @@
 	$userEmail = $row["user_email"];
 
 	echo "
-		
-
+		<section class='row'>
+			<section class='col m4 l4'></section>
+			<section class='col s12 m4 l4'>
+				<section class='card'>
+					<h4 class='center-align'>User Profile</h4>
+					<h1 class='center-align'><i class='fa fa-user'></i></h1>
+					<table>
+				        <tbody>
+				          <tr>
+				            <td class='right-align'><b>Full Name</b></td>
+				            <td>$userName</td>
+				          </tr>
+				          <tr>
+				            <td class='right-align'><b>Contact Number</b></td>
+				            <td>$userContact</td>
+				          </tr>
+				          <tr>
+				            <td class='right-align'><b>Email Address</b></td>
+				            <td>$userEmail</td>
+				          </tr>
+				        </tbody>
+				      </table>
+				</section>
+			</section>
+			<section class='col m4 l4'></section>
+		</section>
 	";
