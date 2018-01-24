@@ -58,6 +58,7 @@
 						<li><a href="posts.php">My Posts</a></li>
 						<li><a href="review.php">View Pending Items</a></li>
 						<li><a href="approve.php">View Approve Items</a></li>
+						<li><a href="declined.php">View Declined Items</a></li>
 						<li><a href="profile.php">My Profile</a></li>
 						<li><a href="account-setup.php">Account Settings</a></li>
 						<li><a href="logout.php">Logout</a></li>
@@ -85,6 +86,7 @@
 					<li><a href="posts.php"><i class="fa fa-tags"></i> My Posts</a></li>
 					<li><a href="review.php"><i class="fa fa-hourglass"></i> View Pending Items</a></li>
 					<li><a href="approve.php"><i class="fa fa-check"></i> View Approve Items</a></li>
+					<li><a href="declined.php"><i class="fa fa-times"></i> View Declined Items</a></li>
 					<li><a href="profile.php"><i class="fa fa-user"></i>&nbsp; My Profile</a></li>
 					<li><a href="account-setup.php"><i class="fa fa-cog"></i> Account Settings</a></li>
 					<li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
