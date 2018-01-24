@@ -237,7 +237,9 @@ function approveItem(itemObj) {
 
 /*for the approved posts page*/
 function getApprovedPosts() {
-	
+	$.get(getApprovedPostsUrl, function(response) {
+		console.log(response);
+	})
 }
 
 //a function to show decline item modal
