@@ -21,7 +21,11 @@
 
 	<!--content div  -->
 	<section class="col m10 l10 content-div">
-		<h1>Users Content Comes Here</h1>
+		<section class="row">
+			<section class="col s12 m12 l12">
+				<section class="res-res"></section>
+			</section>
+		</section>
 	</section>
 
 </section>
