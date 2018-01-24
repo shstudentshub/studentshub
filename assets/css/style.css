@@ -573,8 +573,8 @@ input-placeholder { /* WebKit browsers */
 }
 
 .input-field > a #search{
-    height: 40px;
-    margin-top: 10px;
+    height: 35px;
+    margin-top: 15px;
     border:1px solid #e5e5e5;
 }
 .input-field >a  #search:focus{

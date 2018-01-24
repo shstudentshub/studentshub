@@ -58,7 +58,7 @@
 							<section class="row">
 								<section class="input-field col s9 m9">
 								  <a>
-									<input id="search" type="search" class="search"  placeholder="Search for items">
+									<input id="search" type="search" class="search"  placeholder="Search for items...">
 								  </a>
 								</section>
 								<section class="input-field col s3 m3">
