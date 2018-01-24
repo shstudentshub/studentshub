@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteRule ^index?$ index.php
+
+ErrorDocument 403  http://localhost/studentshub/error/index.php
+ErrorDocument 404  http://localhost/studentshub/error/index.php
+ErrorDocument 500  http://localhost/studentshub/error/index.php
+
+
+Options -Indexes
