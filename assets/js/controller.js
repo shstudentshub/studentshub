@@ -11,6 +11,10 @@ CONSTANTS = {
 	deleteUserItemUrl: "api/user/deleteUserItem.php",
 	getUserPostsGraphDataUrl: "api/user/getUserPostsGraph.php",
 	getUserPostSummaryUrl: "api/user/getUserPostSummary.php",
+	getUserPendingBadgeURL: "api/user/getUserPendingBadge.php",
+	getUserApproveBadgeURL: "api/user/getUserApproveBadge.php",
+	getUserRejectedBadgeURL: "api/user/getUserRejectedBadge.php",
+	getUserAllBadgeURL : "api/user/getUserAllBadge.php"
 }
 
 //initialization of some methods
@@ -22,6 +26,10 @@ getuserDeclinedPosts();
 getItemCategories();
 getUserPostsGraphData();
 getUserPostSummary();
+getUserNewBadge();
+getUserApproveBadge();
+getUserRejectedBadge();
+getUserAllBadge();
 
 //event to handle the sign up of a user
 $(".user-signup-form").on("submit", function(event) {
@@ -294,6 +302,31 @@ function getItemCategories() {
 	$.get(CONSTANTS.getItemCategoryUrl, function(response) {
 		$(".post-item-categories, .edit-item-categories").html(response);
 	});
+}
+
+//Function to get New Badges
+function getUserNewBadge(){
+	$.get(CONSTANTS.getUserPendingBadgeURL,function(response){
+		$(".badge").html(response);
+	})
+}
+
+function getUserApproveBadge(){
+	$.get(CONSTANTS.getUserApproveBadgeURL,function(response){
+		$(".appBadge").html(response);
+	})
+}
+
+function getUserRejectedBadge(){
+	$.get(CONSTANTS.getUserRejectedBadgeURL,function(response){
+		$(".decBadge").html(response);
+	})
+}
+
+function getUserAllBadge(){
+	$.get(CONSTANTS.getUserAllBadgeURL,function(response){
+		$(".allBadge").html(response);
+	})
 }
 
 //function to show the snackbar with the message and optional image
