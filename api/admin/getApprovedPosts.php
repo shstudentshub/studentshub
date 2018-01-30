@@ -10,7 +10,7 @@
 
 	if ($result->num_rows > 0) {
 		echo "<table class='responsive-table'>
-                <h5><strong>Pending Posts</strong></h5><hr/>
+                <h5><strong>Approved Posts</strong></h5><hr/>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -81,7 +81,7 @@
 	} else {
 		echo "
 			<section class='row jumbotron'>
-				<h4 class='center-align no-items-text'>There Are Approved Posts Available</h4>
+				<h4 class='center-align no-items-text'>There Are No Approved Posts Available</h4>
 			</section>
 		";
 	}

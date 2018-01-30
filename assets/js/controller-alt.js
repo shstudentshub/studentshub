@@ -12,10 +12,12 @@ const CONSTANTS = {
 	toggleItemApprovalUrl: "../api/admin/toggleItemApproval.php",
 	getDashboardPostsGraphDataUrl: "../api/admin/getDashboardPostsGraphData.php",
 	getApprovedPostsUrl: "../api/admin/getApprovedPosts.php",
-	getUsersUrl: "../api/admin/getUsers.php"
+	getUsersUrl: "../api/admin/getUsers.php",
+	getNewBadgesURL: "../api/admin/getNewBadges.php",
+	getApproveBadgesURL: "../api/admin/getApproveBadges.php"
 }
 
-//initializations of some methods
+//initializations of some loops methods 
 getCategories();
 getDashboardSummary();
 getDashboardUsersGraphData();
@@ -23,6 +25,8 @@ getDashboardPostsGraphData();
 getPendingPosts();
 getApprovedPosts();
 getUsers();
+getNewBadges();
+getApproveBadges();
 
 //event handler to handle the login of the admin
 $(".admin-form").on("submit", function(event) {
@@ -231,6 +235,12 @@ function approveItem(itemObj) {
 
 	$.post(CONSTANTS.toggleItemApprovalUrl, data, function(response) {
 		if (response.success) {
+
+			var $toast = $("<span>Please wait ...</span>");
+			Materialize.toast($toast, 1900);
+			setTimeout(function(){
+				window.location.href = 'pending-posts.php';
+			},2000)
 			getPendingPosts();
 		} else {
 			alert(response.message);
@@ -249,6 +259,7 @@ function getApprovedPosts() {
 //a function to show decline item modal
 function showDeclineItemModal(itemObj) {
 	$(".decline-item-id").val(itemObj.itemId);
+	console.log(itemObj);
 	$(".decline-item-modal").modal("open");
 }
 
@@ -277,6 +288,21 @@ function getDashboardSummary() {
 	});
 }
 
+//function to get new badges
+function getNewBadges(){
+	$.get(CONSTANTS.getNewBadgesURL,function(response){
+		console.log(response);
+		$(".badge").html(response);
+	})
+}
+
+function getApproveBadges(){
+	$.get(CONSTANTS.getApproveBadgesURL,function(response){
+		console.log(response);
+		$(".appBadges").html(response);
+	})
+}
+
 //function to get the admin dashboard users graph data
 function getDashboardUsersGraphData() {
 	$.get(CONSTANTS.getDashboardUsersGraphDataUrl, function(response) {
@@ -290,6 +316,7 @@ function getDashboardPostsGraphData() {
 		drawChart("adminPostsChart",'bar','',response.months,response.posts);
 	});
 }
+
 
 
 //function to draw the chart
