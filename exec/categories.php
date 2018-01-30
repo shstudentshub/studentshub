@@ -6,7 +6,11 @@
 	<section class="col m2 l2 side-div">
 		<li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
 		<li><a href="pending-posts.php"><i class="fa fa-hourglass"></i>Pending Posts<i class="badge"></i></a></li>
+<<<<<<< HEAD
 		<li><a href="posts.php"><i class="fa fa-check"></i> Approved Posts<i class="appBadges"></i></a></li>
+=======
+		<li><a href="posts.php" class="collection-item"><i class="fa fa-check"></i> Approved Posts<i class="appBadges"></i></a></li>
+>>>>>>> 69741d08ae15cb8e54cb6c21fb2324cba6c465b0
 		<li class="selected-item"><a href="categories.php" class="selected"><i class="fa fa-list"></i> Categories</a></li>
 		<li><a href="users.php"><i class="fa fa-users"></i> Users</a></li>
 		<hr>

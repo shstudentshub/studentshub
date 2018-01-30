@@ -2,7 +2,7 @@
 	#Define the database credentials as constants
 	define("SERVER_NAME", "localhost");
   define("USER_NAME", "root");
-  define("USER_PASSWORD", "aubynj");
+  define("USER_PASSWORD", "");
   define("DATABASE_NAME", "studentshub");
 
     //Instantiate an object of the mysqli class to connect to the database
