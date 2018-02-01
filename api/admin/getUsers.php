@@ -10,7 +10,7 @@
 
 	if ($result->num_rows > 0) {
 		echo "<table class='responsive-table'>
-                <h5><strong>Pending Posts</strong></h5><hr/>
+                <h5><strong>Current Users</strong></h5><hr/>
                 <thead>
                     <tr>
                         <th>#</th>

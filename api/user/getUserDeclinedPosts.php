@@ -15,6 +15,7 @@
 		echo "
 			<section class='responsive-table'>
 				<table>
+					<h5><strong>These Post Needs to be Edited</strong></h5><hr/>
 			        <thead>
 			          <tr>
 			              <th>#</th>

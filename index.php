@@ -3,7 +3,7 @@
 
 <section class="row intro-row">
 
-    <section class="col l8 s12">
+    <section class="col s12">
 
         <section class="carousel carousel-slider intro-carousel" data-indicators="true">
             <h5 class="center-align carousel-header">Shopping Now</h5>
@@ -16,26 +16,6 @@
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder3.jpg"></a>
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder0.jpg"></a>
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder9.jpg"></a>
-        </section>
-    </section>
-
-    <!-- the division beside the carousel -->
-    <section class="col m4 l4 s12">
-        <section class="intro-div-right">
-
-            <a href="" title="">
-                <section class="pick-of-the-day-div">
-                    <img src="assets/img/try.jpg" class="pick-of-the-day-img">
-                    <p class="center-align pick-of-the-day-text">Pick Of The Day</p>
-                </section>
-            </a>
-
-            <a href="" title="">
-                <section class="surprise-div">
-                    <p class="center-align">Another Item Comes Here</p>
-                </section>
-            </a>
-
         </section>
     </section>
 

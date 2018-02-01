@@ -57,10 +57,10 @@
 							<h5 class="side-nav-profile-name">Dashboard</h5>
 						</section>
 						<li><a href="dashboard.php">My Dashboard</a></li>
-						<li><a href="posts.php">My Posts</a></li>
-						<li><a href="review.php">View Pending Items</a></li>
-						<li><a href="approve.php">View Approve Items</a></li>
-						<li><a href="declined.php">View Declined Items</a></li>
+						<li><a href="posts.php">My Posts<span class="allBadge"></span></a></li>
+						<li><a href="review.php">View Pending Items<span class="badge"></span></a></li>
+						<li><a href="approve.php">View Approve Items<span class="appBadge"></span></a></li>
+						<li><a href="declined.php">View Declined Items<span class="decBadge"></span></a></li>
 						<li class="selected-item"><a href="profile.php" class="selected">My Profile</a></li>
 						<li><a href="account-setup.php">Account Settings</a></li>
 						<li><a href="logout.php">Logout</a></li>
@@ -84,12 +84,12 @@
 			<section class="row">
 
 				<section class="col m2 l2 dashboard-side-div hide-on-med-and-down">
-					<li><a href="dashboard.php"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
-					<li><a href="posts.php"><i class="fa fa-tags"></i> My Posts</a></li>
-					<li><a href="review.php"><i class="fa fa-hourglass"></i> View Pending Items</a></li>
-					<li><a href="approve.php"><i class="fa fa-check"></i> View Approve Items</a></li>
-					<li><a href="declined.php"><i class="fa fa-times"></i> View Declined Items</a></li>
-					<li class="selected-item"><a href="profile.php" class="selected"><i class="fa fa-user"></i>&nbsp; My Profile</a></li>
+					<li><a href="dashboard.php" class="selected"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
+					<li><a href="posts.php"><i class="fa fa-tags"></i> My Posts<i class="allBadge"></i></a></li>
+					<li><a href="review.php"><i class="fa fa-hourglass"></i> Pending Items<i class="badge"></i></a></li>
+					<li><a href="approve.php"><i class="fa fa-check"></i> Approve Items<i class="appBadge"></i></a></li>
+					<li><a href="declined.php"><i class="fa fa-times"></i> Declined Items<i class="decBadge"></i></a></li>
+					<li class="selected-item"><a href="profile.php"><i class="fa fa-user"></i>&nbsp; My Profile</a></li>
 					<li><a href="account-setup.php"><i class="fa fa-cog"></i> Account Settings</a></li>
 					<li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
 				</section>
