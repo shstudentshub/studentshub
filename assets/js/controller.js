@@ -241,7 +241,7 @@ $(".add-post-form .post-item-img, .add-post-form .item-select").on("change", fun
 //some methods to make requests from api
 function getHomeCategories() {
 	$.get(CONSTANTS.getHomeCategoriesUrl, function(response) {
-		$(".home-categories").html(response);
+		$(".nav-categories").html(response);
 	})
 }
 

@@ -205,14 +205,8 @@
 		</section>
 
 		<div class="top-menu hide-on-med-and-down">
-			<ul style="display: inline-flex; width: 100%; justify-content: space-between !important;padding-left: 18px;padding-right:18px;">
-				<li><a href="" style="color:#000">Agriculture</a></li>
-				<li><a href="" style="color:#000">Electronics</a></li>
-				<li><a href="" style="color:#000">Fashions</a></li>
-				<li><a href="" style="color:#000">Food & Beverages</a></li>
-				<li><a href="" style="color:#000">Games & Consoles</a></li>
-				<li><a href="" style="color:#000">Services</a></li>
-				<li><a href="" style="color:#000">Other</a></li>
+			<ul class="nav-categories">
+				
 			</ul>
 		</div>
 		<!-- this is the snackbar for the page -->

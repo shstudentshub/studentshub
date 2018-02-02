@@ -76,16 +76,9 @@
 
 			<!--SideBar-->
 			<section class="col m2 12 side-div hide-on-med-and-down">
-				<h4 class="search-align"><u>Side Div</u></h4>
+				<h5 class="search-align"><u>Categories</u></h5>
 				<section class="row search-align">
-					<ul>
-						<li>Some list items</li>
-						<li>Some list items</li>
-						<li>Some list items</li>
-						<li>Some list items</li>
-						<li>Some list items</li>
-						<li>Some list items</li>
-					</ul>
+					<ul class="search-categories"></ul>
 				</section>
 
 				<section class="search-aligh-top search-align">
@@ -109,71 +102,7 @@
 
 			<section class="col m10 110 content-div search-content-div">
 				<h4 style="text-align:center;">Content of search comes here</h4>
-				<section class="row">
-					<section class="center animated-box">
-						<div class="preloader-wrapper big active">
-					      <div class="spinner-layer spinner-blue-only">
-					        <div class="circle-clipper left">
-					          <div class="circle"></div>
-					        </div><div class="gap-patch">
-					          <div class="circle"></div>
-					        </div><div class="circle-clipper right">
-					          <div class="circle"></div>
-					        </div>
-					      </div>
-				        </div>
-					</section>
-				</section>
-				<section class="row search-aligh-big-down">
-					<h6><b>People who search this items also viewed this</b></h6>
-					<section class="col m2 l2 s12">
-			            <a href="" title="View Item">
-			                <section class=" item-viewed">
-			                    <img src="assets/img/placeholder-1.png">
-			                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
-			                </section>
-			            </a>
-       				 </section>
-       				 <section class="col m2 l2 s12">
-			            <a href="" title="View Item">
-			                <section class="item-viewed">
-			                    <img src="assets/img/placeholder-1.png">
-			                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
-			                </section>
-			            </a>
-       				 </section>
-       				 <section class="col m2 l2 s12">
-			            <a href="" title="View Item">
-			                <section class=" item-viewed">
-			                    <img src="assets/img/placeholder-1.png">
-			                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
-			                </section>
-			            </a>
-       				 </section>
-       				 <section class="col m2 l2 s12">
-			            <a href="" title="View Item">
-			                <section class=" item-viewed">
-			                    <img src="assets/img/placeholder-1.png">
-			                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
-			                </section>
-			            </a>
-       				 </section>
-       				 <section class="col m2 l2 s12">
-			            <a href="" title="View Item">
-			                <section class=" item-viewed">
-			                    <img src="assets/img/placeholder-1.png">
-			                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
-			                </section>
-			            </a>
-       				 </section>
-       				 <section class="col m2 l2 s12">
-			            <a href="" title="View Item">
-			                <section class=" item-viewed">
-			                    <img src="assets/img/placeholder-1.png">
-			                    <p class="center-align"><i class="fa fa-eye-open"></i>View Item Details</p>
-			                </section>
-			            </a>
-       				 </section>
+				<section class="row search-res">
 				</section>
 			</section>
 		</section>
@@ -187,6 +116,6 @@
 	        <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/init.js"></script>
-	        <script type="text/javascript" src="./assets/js/controller.js"></script>
+	        <script type="text/javascript" src="./assets/js/search-controller.js"></script>
 		</body>
 	</html>
