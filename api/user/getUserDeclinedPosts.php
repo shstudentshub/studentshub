@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include "../db-config.php";
 	include "../helper-functions.php";
 	session_start();
@@ -83,7 +83,7 @@
 	} else {
 		echo "
 			<div class='panel custom-bg-lt'>
-				There Are No Pending Items
+				There Are No Declined Items Yet
 			</div>
 		";
-	}	
+	}

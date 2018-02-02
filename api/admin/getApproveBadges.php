@@ -1,3 +1,4 @@
+
 <?php
 
 include "../db-config.php";
@@ -11,5 +12,3 @@ if($row = $result->num_rows){
 	echo "<span class='badge'>$row</span>";
 }
 
-
-?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include "api/db-config.php";
 	session_start();
 	$userLoggedIn = false;
@@ -62,22 +62,22 @@
 								  </a>
 								</section>
 								<section class="input-field col s3 m3">
-									<button type="submit" class="btn1 custom-btn2">Search</button>
+									<button type="submit" class="btn3 custom-btn2">Search</button>
 								</section>
 							</section>
 						</li>
 						<li class="hide-on-med-and-down">
 							<!-- <a class="dropdown-trigger" href="#!" data-activates="cat-dropdown1">Categories <i class="fa fa-chevron-down"></i></a> -->
 						</li>
-						
-						<?php 
+
+						<?php
 							if (!$userLoggedIn) { ?>
 
 						<li><a href="#signin-modal" class="modal-trigger">Sell</a></li>
 						<li><a href="#signin-modal" class="modal-trigger">Sign In</a></li>
 						<li><a href="#signup-modal" class="modal-trigger">Sign Up</a></li>
 
-						<?php 
+						<?php
 							} else if ($userLoggedIn) { ?>
 								<li><a href="dashboard.php">Dashboard</a></li>
 								<li><a class="dropdown-trigger" href="#!" data-activates="user-dropdown"><?php echo $userFullname; ?> <i class="fa fa-chevron-down"></i></a></li>
@@ -100,9 +100,9 @@
 
 		<!-- Search box for mobile viewport only -->
 		<div class="search-sm-div">
-			<div class= "wrapme hide-on-large-only">
+			<div class= "col wrapme hide-on-large-only s12">
 				<input id="mb-search" type="search" placeholder=" &#128270; Search for items" required class="search-sm">
-				<button type="submit" class="btn1 custom-btn2">Search</button>
+				<button type="submit" class="btn2 custom-btn3">Search</button>
 			</div>
 		</div>
 
@@ -122,7 +122,7 @@
 						<form method="post" class="user-form user-signup-form" accept-charset="utf-8">
 							<section class="row">
 						        <section class="input-field col s12">
-						          <input  type="text" class="validate user-signup-fullname" placeholder="Full Name" required>						        
+						          <input  type="text" class="validate user-signup-fullname" placeholder="Full Name" required>
 						      	</section>
 						    </section>
 
@@ -204,6 +204,17 @@
 			</section>
 		</section>
 
+		<div class="top-menu hide-on-med-and-down">
+			<ul style="display: inline-flex; width: 100%; justify-content: space-between !important;padding-left: 18px;padding-right:18px;">
+				<li><a href="" style="color:#000">Agriculture</a></li>
+				<li><a href="" style="color:#000">Electronics</a></li>
+				<li><a href="" style="color:#000">Fashions</a></li>
+				<li><a href="" style="color:#000">Food & Beverages</a></li>
+				<li><a href="" style="color:#000">Games & Consoles</a></li>
+				<li><a href="" style="color:#000">Services</a></li>
+				<li><a href="" style="color:#000">Other</a></li>
+			</ul>
+		</div>
 		<!-- this is the snackbar for the page -->
 		<section class="snackbar">
 			<i class="fa fa-check snackbar-icon-success"></i>

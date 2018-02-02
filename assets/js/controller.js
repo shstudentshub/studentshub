@@ -109,7 +109,7 @@ $(".user-signin-form").on("submit", function(event) {
 
 				setTimeout(function() {
 					console.log('successful login');
-					window.location.href = 'dashboard.php';
+					window.location.href = 'dashboard';
 					hideSnackBar();
 				},1000);
 			} else if(!response.success) { //else if login is not successful,
@@ -150,11 +150,11 @@ $(".add-post-form").on("submit", function(event) {
 	} else if (itemPriceTerm == "" || itemPriceTerm == null || itemPriceTerm == undefined) {
 		showSnackBar("Please Provide The Item Price Term", "error");
 	} else {
-		//append the file to the formdata 
+		//append the file to the formdata
 		formData.append("itemImage",itemImg[0]);
 
-		var postItemUrl = CONSTANTS.addUserItemUrl + "?itemName=" + itemName + 
-		"&itemPrice=" + itemPrice + "&itemLocation=" + itemLocation + "&itemDetails=" + itemDetails + "&itemCategory=" + itemCategory + 
+		var postItemUrl = CONSTANTS.addUserItemUrl + "?itemName=" + itemName +
+		"&itemPrice=" + itemPrice + "&itemLocation=" + itemLocation + "&itemDetails=" + itemDetails + "&itemCategory=" + itemCategory +
 		"&itemPriceTerm=" + itemPriceTerm;
 
 		$.ajax({
@@ -225,7 +225,7 @@ $(".post-item-img").on("change", function(){
 	reader.onload = function (e) {
 	    $(".post-item-img-preview").attr('src', e.target.result);
 	}
-	        
+
 	reader.readAsDataURL(file[0]);
 });
 
@@ -349,11 +349,14 @@ function showSnackBar(text,imageType) {
 
 	$(".snackbar-text").html(text);
 	$(".snackbar").addClass("show").removeClass("hide");
+  setTimeout(function(){
+    hideSnackBar();
+  },6000);
 }
 
 //functioin to hide snackbar
 function hideSnackBar() {
-	$(".snackbar").addClass("hide").removeClass("show");
+	$(".snackbar").removeClass("show").addClass("hide");
 	$(".snackbar-icon-error,.snackbar-icon-success, .snackbar-loader").show();
 	$(".snackbar-text").html('');
 }

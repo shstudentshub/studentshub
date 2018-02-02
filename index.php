@@ -25,14 +25,14 @@
     <section class="row recently-added-row">
     <!-- display Category items for desktop -->
     <section class="col s12 m12 l12 hide-on-med-and-down">
-        <h5 class="center-align item-title">Categories</h5><br/>
+        <h5 class="item-title">Why StudentHub?</h5><br/>
 
 
         <section class="col m2 l2 s12">
             <a href="" title="View Item">
                 <section class="recent-item">
-                    <img src="assets/img/placeholder-1.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Agriculture</p>
+                    <img src="assets/img/placeholder-1.png" class="circle">
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Secure</p>
                 </section>
             </a>
         </section>
@@ -40,8 +40,8 @@
         <section class="col m2 l2 s12">
             <a href="" title="View Item">
                 <section class="recent-item">
-                    <img src="assets/img/placeholder-2.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Electronics</p>
+                    <img src="assets/img/placeholder-2.png" class="circle">
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Daily Deals</p>
                 </section>
             </a>
         </section>
@@ -49,8 +49,8 @@
         <section class="col m2 l2 s12">
             <a href="" title="View Item">
                 <section class="recent-item">
-                    <img src="assets/img/placeholder-3.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Fashions</p>
+                    <img src="assets/img/placeholder-3.png" class="circle">
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Rewards</p>
                 </section>
             </a>
         </section>
@@ -58,8 +58,8 @@
         <section class="col m2 l2 s12">
             <a href="" title="View Item">
                 <section class="recent-item">
-                    <img src="assets/img/placeholder-4.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Food & Beverages</p>
+                    <img src="assets/img/placeholder-4.png" class="circle">
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Price Match Guarantee</p>
                 </section>
             </a>
         </section>
@@ -67,8 +67,8 @@
         <section class="col m2 l2 s12">
             <a href="" title="View Item">
                 <section class="recent-item">
-                    <img src="assets/img/placeholder-2.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Games & Consoles</p>
+                    <img src="assets/img/placeholder-2.png" class="circle">
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Super Friendly</p>
                 </section>
             </a>
         </section>
@@ -76,13 +76,11 @@
         <section class="col m2 l2 s12">
             <a href="" title="View Item">
                 <section class="recent-item">
-                    <img src="assets/img/placeholder-1.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Services</p>
+                    <img src="assets/img/placeholder-1.png" class="circle">
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Good Service</p>
                 </section>
             </a>
         </section><br/><br/>
-
-        <p class="center-align"><a href="" class="custom-text-color">More <i class="fa fa-chevron-right"></i></a></p>
 
     </section>
 
@@ -152,33 +150,33 @@
 
 
     <!-- Displaying Category in mobile view-->
-    <section class="col s12 m12 l12 hide-on-large-only">
-        <h5 class="center-align item-title">Category</h5>
+    <section class="col s12 m12 l12 hide-on-large-only" style="margin-top: -90px">
+        <h5 class="center-align item-title">Why StudentHub?</h5>
         <p class="center-align item-sub-title">(swipe to navigate)</p>
         <section class="center-align mobile-slide-div">
 
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-1.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Agriculture</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Secure</p>
                 </a>
             </section>
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-2.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Electronics</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Daily Deals</p>
                 </a>
             </section>
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-3.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Fashions</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Rewards</p>
                 </a>
             </section>
             <section class="recent-item-sm">
                 <a class="carousel-item" href="#one!">
                     <img src="assets/img/placeholder-4.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Food & Beverages</p>
+                    <p class="center-align"><i class="fa fa-eye-open"></i>Price Match Guarantee</p>
                 </a>
             </section>
             <section class="recent-item-sm">

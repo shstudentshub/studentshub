@@ -52,7 +52,7 @@ $(".admin-form").on("submit", function(event) {
 			if (response.success) { // if the login is successful
 				$(".admin-login-res").html(response.message).css("color","green");
 				setTimeout(function() {
-					window.location.href = 'dashboard.php';
+					window.location.href = 'dashboard';
 				}, 800);
 			} else if (!response.success) { //else if it is not succesful
 
