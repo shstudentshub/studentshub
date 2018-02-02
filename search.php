@@ -50,7 +50,6 @@
 						</li>
 						<li><a href="#signin-modal" class="modal-trigger">Sign In</a></li>
 						<li><a href="#signup-modal" class="modal-trigger">Sign Up</a></li>
-						<li><a href="#"><i class="tiny material-icons">cart</i></a></li>
 					</ul>
 					<ul class="side-nav" id="nav-mobile">
 						<section class="side-nav-profile-div">

@@ -25,7 +25,7 @@
     <section class="row recently-added-row">
     <!-- display Category items for desktop -->
     <section class="col s12 m12 l12 hide-on-med-and-down">
-        <h5 class="item-title">Why StudentHub?</h5><br/>
+        <h5 class="item-title center-align">Why StudentHub?</h5><br/>
 
 
         <section class="col m2 l2 s12">
