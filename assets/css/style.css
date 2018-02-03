@@ -90,8 +90,21 @@ body {
     width:100%;
     visibility: visible;
 }
-.animated-box{
-   margin-top: 50px;
+
+.nav-categories li a {
+    color: #000;
+}
+
+.nav-categories {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+    padding: 0px 30px;
+    overflow:auto;
+}
+
+.nav-categories:nth-child(1) {
+    margin-left: 10px;
 }
 
 .search-align{
@@ -448,6 +461,24 @@ body {
     padding: 10px;
     border: 1px solid #c0c0c0;
 }
+
+.search-item-img {
+    height: 200px;
+}
+
+.item-details-row {
+    height: auto;
+}
+
+.item-detail-img {
+    width: 100%;
+    height: 400px;
+}
+
+.item-detials-info {
+    line-height: 1.43000;
+}
+
 
 /* For the snackbar styling */
 .snackbar {

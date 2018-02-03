@@ -18,7 +18,6 @@
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder9.jpg"></a>
         </section>
     </section>
-
 </section> <br/><br/>
 
 <section class="row recently-added-row">
@@ -379,3 +378,11 @@
 
 <!-- include the footer of the document -->
 <?php include "includes/footer.inc.php"; ?>
+<script>
+    function navigateSearchCategories(categoryObj) {
+        localStorage.setItem('categoryName',categoryObj.categoryName);
+        localStorage.setItem('categoryId',categoryObj.categoryId);
+        window.location.href = "search";
+    }
+</script>
+

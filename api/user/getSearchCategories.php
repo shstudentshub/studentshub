@@ -11,12 +11,8 @@
 		while ($row = $result->fetch_assoc()) {
 			$categoryId = $row['category_id'];
 			$categoryName = $row['category_name'];
-			$categoryArray["categoryId"] = $categoryId;
-			$categoryArray["categoryName"] = $categoryName;
 
-			$categoryObj = json_encode($categoryArray);
-
-			echo "<li><a onclick='navigateSearchCategories($categoryObj)'>$categoryName</a></li>";
+			echo "<li><a>$categoryName</a></li>";
 		}
 	} else {
 		echo "<li><a href=''>No Categories Available</a></li>";
