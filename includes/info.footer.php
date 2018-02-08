@@ -3,7 +3,7 @@
           <section class="container">
             <section class="row">
               <section class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
+                <h5 class="white-text">Our Social Media</h5>
                   <a class="grey-text text-lighten-3 btn-floating btn-small facebook-btn" href="#!"><i class="fa fa-facebook"> </i></a>
                   <a class="grey-text text-lighten-3 btn-floating btn-small twitter-btn" href="#!"><i class="fa fa-twitter"></i></a>
                   <a class="grey-text text-lighten-3 btn-floating btn-small instagram-btn" href="#!"><i class="fa fa-instagram"></i></a>
@@ -12,10 +12,10 @@
               <section class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">FAQ</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Team</a></li>
                 </ul>
               </section>
             </section>

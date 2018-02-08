@@ -670,14 +670,18 @@ body {
 .facebook-btn:hover{
   background-color: #3b5998;
 }
+
+.facebook-btn, .twitter-btn, .linkedin-btn,.instagram-btn{
+  background: #000;
+}
 .twitter-btn:hover{
-  background-color: ;
+  background-color: #1dcaff;
 }
 .linkedin-btn:hover{
   background-color: #0077B5;
 }
 .instagram-btn:hover{
-  background-color: ;
+  background: linear-gradient(#8a3ab9,#4c68d7, #cd486b,#fbad50,#fccc63,#bc2a8d,#e95950);
 }
 
 .footer-list li a {

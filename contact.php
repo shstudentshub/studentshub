@@ -29,7 +29,7 @@
 		<!-- Fixed Search bar for mobile viewport -->
 		<section class="row">
 			<section class="col s12 m12 contactpage parallax-container">
-				<h5 class="center-align" style="margin:90px auto">This is a section</h5>
+				<h5 class="center-align" style="margin:90px auto">Let Get In Touch</h5>
 			</section>
 
 			<section class="col s12 m12 displayMap">
