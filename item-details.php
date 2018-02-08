@@ -103,7 +103,7 @@
 		<section class="navbar-fixed">
 			<nav class="custom-navbar custom-search">
 				<section class="nav-wrapper">
-					<a class="hide-on-med-and-down logo-container brand-logo">
+					<a href="index" class="hide-on-med-and-down logo-container brand-logo">
 						HuB
 					</a>
 
@@ -111,7 +111,7 @@
 						<li class="hide-on-med-and-down">
 							<!-- <a class="dropdown-trigger" href="#!" data-activates="cat-dropdown1">Categories <i class="fa fa-chevron-down"></i></a> -->
 						</li>
-						<li><a href="#"><i class="tiny material-icons">cart</i></a></li>
+						<li><a href="#">Back</a></li>
 					</ul>
 					<ul class="side-nav" id="nav-mobile">
 						<section class="side-nav-profile-div">

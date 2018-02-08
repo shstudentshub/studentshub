@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include '../db-config.php';
 	include '../helper-functions.php';
 
@@ -8,7 +8,7 @@
 	$itemStatus = $itemStatusArray['Approved'];
 
 	$hashString = md5(time());
-	
+
 	if ($categoryName == 'all') {
 		$getQuery = "SELECT * FROM items WHERE item_approval_status = $itemStatus";
 	} else {
@@ -50,14 +50,14 @@
 				      </section>
 				    </section>
 			";
-			
+
 		}
 	} else {
 		if ($categoryName == 'all') {
 		 	echo "";
 		} else {
-			echo "<li><a href=''>No Items For Your Chosen Category</a></li>";
+			echo "<h6>No Items For Your Chosen Category</h6>";
 		}
 
-		
-	}	
+
+	}

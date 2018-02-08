@@ -16,7 +16,7 @@
 
 			$categoryObj = json_encode($categoryArray);
 
-			echo "<li><a onclick='navigateSearchCategories($categoryObj)'>$categoryName</a></li>";
+			echo "<li class='categoryList'><a onclick='navigateSearchCategories($categoryObj)'>$categoryName</a></li>";
 		}
 	} else {
 		echo "<li><a href=''>No Categories Available</a></li>";

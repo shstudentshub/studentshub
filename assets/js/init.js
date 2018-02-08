@@ -26,4 +26,5 @@ $(function(){
     	$('.intro-carousel').carousel('next');
     },5000);
 
+    $(".parallax").parallax();
 });

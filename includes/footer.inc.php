@@ -46,8 +46,8 @@
                     </section>
 
                     <section class="footer-list">
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Contact Us</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="contact">Contact Us</a></li>
                         <li><a href="">Policies</a></li>
                         <li><a href="">Privacy</a></li>
                     </section>
@@ -62,7 +62,7 @@
                     </section>
 
                     <section class="footer-list">
-                        <li><a href="">FAQ</a></li>
+                        <li><a href="faq">FAQ</a></li>
                         <li><a href="">Buying</a></li>
                         <li><a href="">Selling</a></li>
                         <li><a href="">Customer Service</a></li>

@@ -1,0 +1,38 @@
+
+        <footer class="page-footer footer-body">
+          <section class="container">
+            <section class="row">
+              <section class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                  <a class="grey-text text-lighten-3 btn-floating btn-small facebook-btn" href="#!"><i class="fa fa-facebook"> </i></a>
+                  <a class="grey-text text-lighten-3 btn-floating btn-small twitter-btn" href="#!"><i class="fa fa-twitter"></i></a>
+                  <a class="grey-text text-lighten-3 btn-floating btn-small instagram-btn" href="#!"><i class="fa fa-instagram"></i></a>
+                  <a class="grey-text text-lighten-3 btn-floating btn-small linkedin-btn" href="#!"><i class="fa fa-linkedin"></i></a>
+              </section>
+              <section class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </section>
+            </section>
+          </section>
+          <section class="footer-copyright">
+            <div class="container">
+            <p class="center-align white-text">Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</p>
+          </section>
+        </section>
+        </footer>
+
+			<script type="text/javascript" src="./assets/js/jquery-2.2.4.min.js"></script>
+	        <script type="text/javascript" src="./assets/js/modernizr.js"></script>
+	        <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
+	        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
+	        <script type="text/javascript" src="./assets/js/init.js"></script>
+	        <script type="text/javascript" src="./assets/js/search-controller.js"></script>
+	        <script type="text/javascript" src="./assets/js/controller.js"></script>
+		</body>
+	</html>

@@ -53,7 +53,7 @@
 						<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
 					</a>
 
-					<ul class="right">
+					<ul class="right data-list">
 						<li class="hide-on-med-and-down">
 							<section class="row">
 								<section class="input-field col s9 m9">
@@ -195,10 +195,15 @@
 						    		<button type="button" class="btn modal-action modal-close custom-btn">Cancel</button>
 						    	</section>
 						    </section>
-
-						</form>
+							<p class="center-align">Or</p>
+						</form><br>
+						<section>
+							<button class="faceBT facebookBtn" type="submit" name="action">Login with Facebook</button>
+						</section>
 					</section>
-					<section class="col s12 m3 l3"></section>
+					<section class="col s12 m3 l3">
+
+					</section>
 				</section>
 
 			</section>

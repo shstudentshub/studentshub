@@ -28,7 +28,7 @@
 		<section class="navbar-fixed">
 			<nav class="custom-navbar custom-search">
 				<section class="nav-wrapper">
-					<a class="hide-on-med-and-down logo-container brand-logo">
+					<a href="index" class="hide-on-med-and-down logo-container brand-logo">
 						HuB
 					</a>
 

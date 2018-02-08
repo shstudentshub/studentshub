@@ -1,8 +1,8 @@
-<?php 
+<?php
 	include "../db-config.php";
 
 	$categoryArray = array();
-	
+
 	$getQuery = "SELECT * FROM categories ORDER BY category_name ASC";
 	$result = $database->query($getQuery);
 
@@ -16,4 +16,4 @@
 		}
 	} else {
 		echo "<li><a href=''>No Categories Available</a></li>";
-	}	
+	}

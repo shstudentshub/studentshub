@@ -158,7 +158,7 @@ $(".add-post-form").on("submit", function(event) {
 		"&itemPriceTerm=" + itemPriceTerm;
 
 		$.ajax({
-	     	url: postItemUrl,
+	    url: postItemUrl,
 			type: "POST",
 			data: formData,
 			enctype: 'multipart/form-data',
@@ -402,3 +402,13 @@ function drawChart(elementId,chartType,title,labels,data) {
 	    }
 	});
 }
+
+/*function displayMap(){
+	var mapProperties = {
+		center: new google.maps.LatLng(5.1154907,-1.2938681),
+		zoom: 15
+	}
+	var map = new google.maps.Map(document.getElementById("map"),mapProperties);
+}
+
+*/
