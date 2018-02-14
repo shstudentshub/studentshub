@@ -7,15 +7,13 @@
 
         <section class="carousel carousel-slider intro-carousel" data-indicators="true">
             <h5 class="center-align carousel-header">Shopping Now</h5>
-            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder01.jpg"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder6.png"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder7.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder1.png"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder01.png"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder2.png"></a>
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder8.jpg"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder2.jpg"></a>
             <a class="carousel-item" href="#one!"><img src="assets/img/carousholder4.jpg"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder3.jpg"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder0.jpg"></a>
-            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder9.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder0.png"></a>
+            <a class="carousel-item" href="#one!"><img src="assets/img/carousholder9.png"></a>
         </section>
     </section>
 </section> <br/><br/>
@@ -385,4 +383,3 @@
         window.location.href = "search";
     }
 </script>
-

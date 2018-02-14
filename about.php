@@ -1,6 +1,6 @@
 <?php include "includes/info.header.php" ?>
 		<!-- The navbar -->
-		
+
 		  <section class="navbar-fixed">
 		    <nav>
 		      <section class="nav-wrapper">
@@ -33,27 +33,34 @@
 		  	<section class="col s12 m6">
 		  		<section class="content-area">
 		  			<h4>About Us</h4>
-		  			<span>Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet. lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum. Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum</span>
+		  			<span>Students hub is a community based marketplace for student’s retail and marketing in Africa. It connects people within their local vicinity to buy, sell or exchange used goods and services by making it fast and easy for anyone to post a listing through their mobile phone or on the web. Student hub is the one stop site for every student.</span>
 		  		</section>
 		  	</section>
 		  	<section class="col s12 m6 right-content">
-		  		
+
 		  	</section>
 		  	<section class="col s12 m6 left-content hide-on-med-and-down">
-		  		
+
 		  	</section>
 		  	<section class="col s12 m6">
 		  		<section class="content-area">
 		  			<h4>Vision</h4>
-		  			<span>Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet. lorem ipsum Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum. Lorem Ipsum sit amet lorem ipsum Lorem Ipsum sit amet lorem ipsum</span>
+		  			<span>
+              <ul>
+                <li>To provide 100% authentic products and services with the best price for students</li>
+                <li>To offer the most convenient shopping experience</li>
+                <li>To promote entrepreneurship among students</li>
+                <li>To equip students for the industrial workforce</li>
+		  			</ul>
+          </span>
 		  		</section>
 		  	</section>
 		  	<section class="col s12 m6 left-content hide-on-large-only">
-		  		
+
 		  	</section>
 		  </section>
-        
+
 
 		<!-- Fixed Search bar for mobile viewport -->
-		
+
 <?php  include "includes/info.footer.php" ?>

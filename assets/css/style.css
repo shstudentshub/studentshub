@@ -185,8 +185,6 @@ body {
 .right-content{
   height: 400px;
   background-image: url("../img/about.jpg");
-}{
-
 }
 .left-content{
   height: 400px;
@@ -1285,6 +1283,14 @@ input[type=search]:focus {
     }
     .search-content-div{
       margin-top: 60px;
+    }
+    .right-content{
+      width: inherit;
+      height: 350px;
+    }
+    .left-content{
+      width: inherit;
+      height: 350px;
     }
 }
 
