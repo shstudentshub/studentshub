@@ -250,7 +250,9 @@
             <h6 class="center-align item-title">Buying</h6><br/>
             <section class="col s12 m4 l4">
                 <section class="process-item">
+                  <section class="icon-round">
                     <h1 class="center-align process-item-icon"><i class="fa fa-search"></i></h1>
+                  </section>
                     <h5 class="center-align process-item-title">1. Search Item</h5>
                     <p class="center-align process-item-sub-title">Search Items Posted By Verified Users</p>
                 </section>
@@ -258,7 +260,10 @@
 
             <section class="col s12 m4 l4">
                 <section class="process-item">
+                  <section class="icon-round">
                     <h1 class="center-align process-item-icon"><i class="fa fa-phone"></i></h1>
+                  </section>
+
                     <h5 class="center-align process-item-title">2. Contact Seller</h5>
                     <p class="center-align process-item-sub-title">Call Or Send The Seller A Message</p>
                 </section>
@@ -266,7 +271,9 @@
 
             <section class="col s12 m4 l4">
                 <section class="process-item">
+                  <section class="icon-round">
                     <h1 class="center-align process-item-icon"><i class="fa fa-handshake-o"></i></h1>
+                  </section>
                     <h5 class="center-align process-item-title">3. Close Deal</h5>
                     <p class="center-align process-item-sub-title">Close The Deal With The Seller In Person</p>
                 </section>
@@ -277,7 +284,9 @@
             <h6 class="center-align item-title">Selling</h6><br/>
             <section class="col s12 m4 l4">
                 <section class="process-item">
+                  <section class="icon-round">
                     <h1 class="center-align process-item-icon"><i class="fa fa-paper-plane"></i></h1>
+                  </section>
                     <h5 class="center-align process-item-title">1. Post Item</h5>
                     <p class="center-align process-item-sub-title">Post Item For Millions Of People To See</p>
                 </section>
@@ -285,7 +294,9 @@
 
             <section class="col s12 m4 l4">
                 <section class="process-item">
+                  <section class="icon-round">
                     <h1 class="center-align process-item-icon"><i class="fa fa-mobile"></i></h1>
+                  </section>
                     <h5 class="center-align process-item-title">2. Receive Client Call</h5>
                     <p class="center-align process-item-sub-title">Receive Call From People Interested In Your Item</p>
                 </section>
@@ -293,7 +304,9 @@
 
             <section class="col s12 m4 l4">
                 <section class="process-item">
+                  <section class="icon-round">
                     <h1 class="center-align process-item-icon"><i class="fa fa-handshake-o"></i></h1>
+                  </section>
                     <h5 class="center-align process-item-title">3. Close Deal</h5>
                     <p class="center-align process-item-sub-title">Close The Deal With The Buyer In Person</p>
                 </section>

@@ -389,7 +389,7 @@ body {
 
 .process-item-icon {
     position: relative;
-    line-height: 20px;
+  /*  line-height: 20px; */
     color: #111;
 }
 
@@ -711,6 +711,15 @@ strong{
   font-weight: bold;
 }
 
+.icon-round{
+  background: rgba(0, 0, 0, 0) url("../img/round-image.png") no-repeat scroll left top / 100% auto;
+  display: inline-block;
+  height: 150px;
+  position: relative;
+  top: 30%;
+  left: 30%;
+  width: 150px;
+}
 
 input-placeholder { /* WebKit browsers */
     color:    red;
