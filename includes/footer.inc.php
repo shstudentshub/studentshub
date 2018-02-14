@@ -78,10 +78,10 @@
                     </section>
 
                     <section class="footer-list">
-                        <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
-                        <li><a href=""><i class="fa fa-twitter"></i>  Twitter</a></li>
-                        <li><a href=""><i class="fa fa-instagram"></i>  Instagram</a></li>
-                        <li><a href=""><i class="fa fa-linkedin"></i>  LinkedIn</a></li>
+                        <li><a href="https://www.facebook.com/info.studenthub/"><i class="fa fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com/studenthub_%20"><i class="fa fa-twitter"></i>  Twitter</a></li>
+                        <li><a href="https://www.instagram.com/studenthub_/"><i class="fa fa-instagram"></i>  Instagram</a></li>
+                        <li><a href="#!"><i class="fa fa-linkedin"></i>  LinkedIn</a></li>
                     </section>
                 </section>
 
