@@ -1031,6 +1031,11 @@ input[type=search]:focus {
     }
     .intro-row{
         margin-top: 15px;
+        height: inherit;
+    }
+    .carousel-item img {
+        z-index: 2;
+        height: 250px;
     }
     .search{
         margin-right:300px;
@@ -1038,6 +1043,7 @@ input[type=search]:focus {
     .search-content-div{
       margin-top: 60px;
     }
+
 }
 
 
@@ -1076,6 +1082,11 @@ input[type=search]:focus {
         position: relative;
         z-index: 9999;
         top: 30px;
+    }
+    .carousel-item img {
+        z-index: 2;
+        height: 230px;
+
     }
 
     .carousel{
@@ -1128,9 +1139,14 @@ input[type=search]:focus {
     }
     .intro-row{
         margin-top: 15px;
+        height: inherit;
     }
     .search-content-div{
       margin-top: 60px;
+    }
+    .carousel-item img {
+        z-index: 2;
+        height: 170px;
     }
 }
 
@@ -1172,9 +1188,14 @@ input[type=search]:focus {
     }
     .intro-row{
         margin-top: 15px;
+        height: inherit;
     }
     .search-content-div{
       margin-top: 60px;
+    }
+    .carousel-item img {
+        z-index: 2;
+        height: 190px;
     }
 }
 
@@ -1218,6 +1239,7 @@ input[type=search]:focus {
     }
     .intro-row{
         margin-top: 15px;
+        height: inherit;
     }
     .carousel-item img {
         z-index: 2;
@@ -1254,10 +1276,11 @@ input[type=search]:focus {
     }
     .intro-row{
         margin-top: 15px;
+        height: inherit;
     }
     .carousel-item img {
         z-index: 2;
-        height: 200px;
+        height: 140px;
     }
     .search-content-div{
       margin-top: 60px;
@@ -1285,10 +1308,11 @@ input[type=search]:focus {
   }
   .intro-row{
         margin-top: 15px;
+        height: inherit;
     }
     .carousel-item img {
         z-index: 2;
-        height: 200px;
+        height: 140px;
     }
     .search-content-div{
       margin-top: 60px;

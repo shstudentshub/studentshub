@@ -279,6 +279,18 @@
                 </section>
             </section>
         </section><br/><br/>
+        <section class="row">
+          <h6 class="center-align item-title">Some ads will be shown here</h6><br/>
+          <section class="col s12 m4 l4">
+          </section>
+          <section class="col s12 m4 l4">
+            <section class="process-item">
+              <p class="center-align process-item-sub-title">Some serious ads will be shown here</p>
+            </section>
+          </section>
+          <section class="col s12 m4 l4">
+          </section>
+        </section><br/><br/>
 
         <section class="row">
             <h6 class="center-align item-title">Selling</h6><br/>
