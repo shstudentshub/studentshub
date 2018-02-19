@@ -14,7 +14,7 @@
 		$itemDetails = mysqli_real_escape_string($database,trim($_GET['itemDetails']));
 		$itemCategory = intval($_GET['itemCategory']);
 		$itemPriceTerm = mysqli_real_escape_string($database,trim($_GET['itemPriceTerm']));
-		
+
 
 		if (isset($_FILES["itemImage"])) {
 
@@ -23,13 +23,13 @@
 			$newItemImgName = "User_".$publisherId."_".time().".".end($itemImgExt);
 
 			move_uploaded_file($_FILES["itemImage"]["tmp_name"],$itemImgUploadDir.$newItemImgName);
-			 
+
 			$itemInsertQuery = "INSERT INTO items (item_name,item_details,item_category_id,item_price,item_location,item_publisher_id,item_price_term,item_post_date,item_img) VALUES(?,?,?,?,?,?,?,?,?)";
 
 			$preparedInsertQuery = $database->prepare($itemInsertQuery);
 			$preparedInsertQuery->bind_param('ssississs',$itemName,$itemDetails,$itemCategory,$itemPrice,$itemLocation,$publisherId,$itemPriceTerm,$itemPostDate,$newItemImgName);
 
-			if ($preparedInsertQuery->execute()) { 
+			if ($preparedInsertQuery->execute()) {
 
 				$response["success"] = true;
 				$response["message"] = "Item Posted Successfully.\nWaiting For Admin Review";
@@ -44,6 +44,3 @@
 
 		}
 	}
-
-
-
