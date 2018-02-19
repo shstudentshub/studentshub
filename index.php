@@ -23,62 +23,43 @@
     <!-- display Category items for desktop -->
     <section class="col s12 m12 l12 hide-on-med-and-down">
         <h5 class="item-title center-align">Why StudentHub?</h5><br/>
-
-
-        <section class="col m2 l2 s12">
-            <a href="" title="View Item">
-                <section class="recent-item">
-                    <img src="assets/img/placeholder-1.png" class="circle">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Secure</p>
+        <section class="reasons-div">
+            <section class="reason-div">
+                <section class="reason-icon-div blue accent-5">
+                    <h1 class="center-align reason-icon"><i class="fa fa-lock"></i></h1>
                 </section>
-            </a>
+                <p class="center-align"><b>Secure</b></p>
+            </section>
+
+            <section class="reason-div">
+                <section class="reason-icon-div pink accent-5">
+                    <h1 class="center-align reason-icon"><i class="fa fa-calendar"></i></h1>
+                </section>
+                <p class="center-align"><b>Daily Deals</b></p>
+            </section>
+
+            <section class="reason-div">
+                <section class="reason-icon-div orange accent-4">
+                    <h1 class="center-align reason-icon">&cent;</h1>
+                </section>
+                <p class="center-align"><b>Rewards</b></p>
+            </section>
+
+            <section class="reason-div">
+                <section class="reason-icon-div teal accent-3">
+                    <h1 class="center-align reason-icon"><i class="fa fa-balance-scale"></i></h1>
+                </section>
+                <p class="center-align"><b>Price Match Quarantee</b></p>
+            </section>
+
+            <section class="reason-div">
+                <section class="reason-icon-div indigo accent-5">
+                    <h1 class="center-align reason-icon"><i class="fa fa-angellist"></i></h1>
+                </section>
+                <p class="center-align"><b>Super Friendly</b></p>
+            </section>
         </section>
-
-        <section class="col m2 l2 s12">
-            <a href="" title="View Item">
-                <section class="recent-item">
-                    <img src="assets/img/placeholder-2.png" class="circle">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Daily Deals</p>
-                </section>
-            </a>
-        </section>
-
-        <section class="col m2 l2 s12">
-            <a href="" title="View Item">
-                <section class="recent-item">
-                    <img src="assets/img/placeholder-3.png" class="circle">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Rewards</p>
-                </section>
-            </a>
-        </section>
-
-        <section class="col m2 l2 s12">
-            <a href="" title="View Item">
-                <section class="recent-item">
-                    <img src="assets/img/placeholder-4.png" class="circle">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Price Match Guarantee</p>
-                </section>
-            </a>
-        </section>
-
-        <section class="col m2 l2 s12">
-            <a href="" title="View Item">
-                <section class="recent-item">
-                    <img src="assets/img/placeholder-2.png" class="circle">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Super Friendly</p>
-                </section>
-            </a>
-        </section>
-
-        <section class="col m2 l2 s12">
-            <a href="" title="View Item">
-                <section class="recent-item">
-                    <img src="assets/img/placeholder-1.png" class="circle">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Good Service</p>
-                </section>
-            </a>
-        </section><br/><br/>
-
+        
     </section><br><br>
 
     <!-- display recently added items for desktop -->
@@ -97,44 +78,45 @@
     <section class="col s12 m12 l12 hide-on-large-only" style="margin-top: -90px">
         <h5 class="center-align item-title">Why StudentHub?</h5>
         <p class="center-align item-sub-title">(swipe to navigate)</p>
-        <section class="center-align mobile-slide-div">
+        <section class="center-align">
+            <section class="reasons-div-sm">
+                
+                <section class="reason-div">
+                    <section class="reason-icon-div blue accent-5">
+                        <h1 class="center-align reason-icon"><i class="fa fa-lock"></i></h1>
+                    </section>
+                    <p class="center-align"><b>Secure</b></p>
+                </section>
 
-            <section class="recent-item-sm">
-                <a class="carousel-item" href="#one!">
-                    <img src="assets/img/placeholder-1.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Secure</p>
-                </a>
+                <section class="reason-div">
+                    <section class="reason-icon-div pink accent-5">
+                        <h1 class="center-align reason-icon"><i class="fa fa-calendar"></i></h1>
+                    </section>
+                    <p class="center-align"><b>Daily Deals</b></p>
+                </section>
+
+                <section class="reason-div">
+                    <section class="reason-icon-div orange accent-4">
+                        <h1 class="center-align reason-icon">&cent;</h1>
+                    </section>
+                    <p class="center-align"><b>Rewards</b></p>
+                </section>
+
+                <section class="reason-div">
+                    <section class="reason-icon-div teal accent-3">
+                        <h1 class="center-align reason-icon"><i class="fa fa-balance-scale"></i></h1>
+                    </section>
+                    <p class="center-align"><b>Price Match Quarantee</b></p>
+                </section>
+
+                <section class="reason-div">
+                    <section class="reason-icon-div indigo accent-5">
+                        <h1 class="center-align reason-icon"><i class="fa fa-angellist"></i></h1>
+                    </section>
+                    <p class="center-align"><b>Super Friendly</b></p>
+                </section>
             </section>
-            <section class="recent-item-sm">
-                <a class="carousel-item" href="#one!">
-                    <img src="assets/img/placeholder-2.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Daily Deals</p>
-                </a>
-            </section>
-            <section class="recent-item-sm">
-                <a class="carousel-item" href="#one!">
-                    <img src="assets/img/placeholder-3.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Rewards</p>
-                </a>
-            </section>
-            <section class="recent-item-sm">
-                <a class="carousel-item" href="#one!">
-                    <img src="assets/img/placeholder-4.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Price Match Guarantee</p>
-                </a>
-            </section>
-            <section class="recent-item-sm">
-                <a class="carousel-item" href="#one!">
-                    <img src="assets/img/placeholder-2.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Games & Console</p>
-                </a>
-            </section>
-            <section class="recent-item-sm">
-                <a class="carousel-item" href="#one!">
-                    <img src="assets/img/placeholder-1.png">
-                    <p class="center-align"><i class="fa fa-eye-open"></i>Services</p>
-                </a>
-            </section>
+
         </section>
     </section>
     <br/><br/><br/>
