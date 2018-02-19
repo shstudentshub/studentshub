@@ -1,5 +1,6 @@
 CONSTANTS = {
 	getHomeCategoriesUrl: "api/user/getHomeCategories.php",
+	getHomeRecentPostsUrl: "api/user/getHomeRecentPosts.php",
 	userSignupUrl: "api/user/signup.php",
 	userLoginUrl: "api/user/login.php",
 	userPostsUrl: "api/user/getUserPosts.php",
@@ -30,6 +31,7 @@ getUserNewBadge();
 getUserApproveBadge();
 getUserRejectedBadge();
 getUserAllBadge();
+getHomeRecentPosts();
 
 //event to handle the sign up of a user
 $(".user-signup-form").on("submit", function(event) {
@@ -238,10 +240,27 @@ $(".add-post-form .post-item-img, .add-post-form .item-select").on("change", fun
 	hideSnackBar();
 });
 
+//event handler to handle the search of items
+$(".search-btn").on('click',function(event) {
+	event.preventDefault();
+	var query = $(".index-search").val().trim();
+	if (query != "") {
+		window.location.href = 'search?q=' + query;
+	}
+})
+
+$(".search-btn-sm").on('click',function(event) {
+	event.preventDefault();
+	var query = $(".index-search-sm").val().trim();
+	if (query != "") {
+		window.location.href = 'search?q=' + query;
+	}
+})
+
 //some methods to make requests from api
 function getHomeCategories() {
 	$.get(CONSTANTS.getHomeCategoriesUrl, function(response) {
-		$(".nav-categories").html(response);
+		$(".nav-categories, .nav-categories-sm").html(response);
 	})
 }
 
@@ -302,6 +321,17 @@ function getItemCategories() {
 	$.get(CONSTANTS.getItemCategoryUrl, function(response) {
 		$(".post-item-categories, .edit-item-categories").html(response);
 	});
+}
+
+//function to get the recent posts for the index page
+function getHomeRecentPosts() {
+	$.get(CONSTANTS.getHomeRecentPostsUrl, function(response) {
+		if (response.success) {
+			$(".recent-items-lg-div").html(response.lgTemplate);
+			$(".mobile-slide-div").html(response.smTemplate);
+		}
+	
+	})
 }
 
 //Function to get New Badges

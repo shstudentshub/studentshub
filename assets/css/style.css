@@ -309,7 +309,7 @@ body {
     overflow-y: hidden;
     white-space: nowrap;
 }
-
+ 
 .top-menu{
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
@@ -322,7 +322,8 @@ body {
 }
 
 .recent-item-sm img {
-    height: 180px;
+    height: 220px;
+    width: 300px;
 }
 
 /*for the process row*/
@@ -581,6 +582,43 @@ body {
     line-height: 1.43000;
 }
 
+.reasons-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.reasons-div-sm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.reasons-div-sm.reason-icon-div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #c0c0c0;
+    border-radius: 100%;
+}
+
+.reason-icon-div {
+    height: 200px;
+    width: 200px;
+    border: 1px solid #c0c0c0;
+    border-radius: 100%;
+}
+
+.reason-icon {
+  font-size: 90px;
+  line-height: 130px;
+  color: #fff;
+}
+
+/*for the search page*/
+.search-categories li{
+  cursor: pointer;
+}
 
 /* For the snackbar styling */
 .snackbar {

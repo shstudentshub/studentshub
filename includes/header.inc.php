@@ -58,11 +58,11 @@
 							<section class="row">
 								<section class="input-field col s9 m9">
 								  <a>
-									<input id="search" type="search" class="search"  placeholder="Search for items...">
+									<input id="search" type="search" class="search index-search"  placeholder="Search for items...">
 								  </a>
 								</section>
 								<section class="input-field col s3 m3">
-									<button type="submit" class="btn3 custom-btn2">Search</button>
+									<button type="submit" class="btn3 custom-btn2 search-btn">Search</button>
 								</section>
 							</section>
 						</li>
@@ -85,13 +85,10 @@
 						<?php } ?>
 					</ul>
 					<ul class="side-nav" id="nav-mobile">
-						<section class="side-nav-profile-div">
-							<img src="assets/img/profile-placeholder.jpg" class="side-nav-profile-img" alt="Logo">
-							<span class="side-nav-profile-name">User Name</span>
-						</section>
-						<li><a href="#">Some links</a></li>
-						<li><a href="#">Some links</a></li>
-						<li><a href="#">Some links</a></li>
+						<li><a>CATEGORIES</a></li><hr>
+						<ul class="nav-categories-sm">
+				
+						</ul>
 					</ul>
 					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>
 				</section>
@@ -101,8 +98,8 @@
 		<!-- Search box for mobile viewport only -->
 		<div class="search-sm-div">
 			<div class= "col wrapme hide-on-large-only s12">
-				<input id="mb-search" type="search" placeholder=" &#128270; Search for items" required class="search-sm">
-				<button type="submit" class="btn2 custom-btn3">Search</button>
+				<input id="mb-search" type="search" placeholder=" &#128270; Search for items" required class="search-sm index-search-sm">
+				<button type="submit" class="btn2 custom-btn3 search-btn-sm">Search</button>
 			</div>
 		</div>
 

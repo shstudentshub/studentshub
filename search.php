@@ -1,3 +1,10 @@
+<?php 
+	if (isset($_GET['q'])) {
+		$query = $_GET['q'];
+	} else {
+		$query = "";
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -37,7 +44,7 @@
 							<section class="row">
 								<section class="input-field col s9 m9">
 								  <a>
-									<input id="search" type="search" class="search"  placeholder="Search for items...">
+									<input id="search" value="<?php echo $query ?>" type="search" class="search main-search"  placeholder="Search for items...">
 								  </a>
 								</section>
 								<section class="input-field col s3 m3">
@@ -45,20 +52,15 @@
 								</section>
 							</section>
 						</li>
-						<li class="hide-on-med-and-down">
-							<!-- <a class="dropdown-trigger" href="#!" data-activates="cat-dropdown1">Categories <i class="fa fa-chevron-down"></i></a> -->
-						</li>
-						<li><a href="#signin-modal" class="modal-trigger">Sign In</a></li>
-						<li><a href="#signup-modal" class="modal-trigger">Sign Up</a></li>
+						
 					</ul>
 					<ul class="side-nav" id="nav-mobile">
-						<section class="side-nav-profile-div">
-							<img src="assets/img/profile-placeholder.jpg" class="side-nav-profile-img" alt="Logo">
-							<span class="side-nav-profile-name">User Name</span>
+						<li><a href="index">HOME</a></li>
+						<li><a>CATEGORIES</a></li><hr>
+
+						<section class="row search-align">
+							<ul class="search-categories"></ul>
 						</section>
-						<li><a href="#">Some links</a></li>
-						<li><a href="#">Some links</a></li>
-						<li><a href="#">Some links</a></li>
 					</ul>
 					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>
 				</section>
@@ -68,7 +70,7 @@
 		<!-- Fixed Search bar for mobile viewport -->
 		<div class="row search-sm-div search-mobile hide-on-large-only">
 			<div class= "col s12 wrapme ">
-				<input id="mb-search" type="search" placeholder=" &#128270; Search for items" required class="search-sm">
+				<input id="mb-search" type="search" value="<?php echo $query ?>" placeholder=" &#128270; Search for items" required class="search-sm main-search">
 				<button type="submit" class="btn2 custon-btn1">Search</button>
 			</div>
 		</div>
@@ -80,36 +82,18 @@
 				<section class="row search-align">
 					<ul class="search-categories"></ul>
 				</section>
-
-				<section class="search-aligh-top search-align">
-					<ul>
-						<li>Some Adverts</li>
-						<li>Some Adverts</li>
-						<li>Some Adverts</li>
-						<li>Some Adverts</li>
-						<li>Some Adverts</li>
-						<li>Some Adverts</li>
-					</ul>
-				</section>
-
-				<section class="search-aligh-top search-align">
-					<ul>
-						<li>Get Coupon</li>
-
-					</ul>
-				</section>
 			</section>
 
 			<section class="col m10 110 content-div search-content-div">
-				<h4 style="text-align:center;">Content of search comes here</h4>
 				<section class="row search-res">
+					<img src='assets/img/snackbar-loader.gif' height='50px' width='50px' style='margin-left: 40%;'>
 				</section>
 			</section>
 		</section>
 
-		<hr>
+		<!-- <hr> -->
 
-        <p class="center-align footer-cr">Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</p>
+        <!-- <p class="center-align footer-cr">Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</p> -->
 
 			<script type="text/javascript" src="./assets/js/jquery-2.2.4.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/modernizr.js"></script>
@@ -117,5 +101,17 @@
 	        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/init.js"></script>
 	        <script type="text/javascript" src="./assets/js/search-controller.js"></script>
+	        <?php if (isset($_GET['q'])) { ?>
+	        	<script>
+	        		var data = $.param({
+						query:'<?php echo $_GET['q']; ?>'
+					});
+
+					$.post(SEARCH_CONSTANTS.getSearchResultsUrl,data, function(response) {
+						$(".search-res").html(response)
+					})
+	        	</script>
+	       	<?php } ?>
+
 		</body>
 	</html>

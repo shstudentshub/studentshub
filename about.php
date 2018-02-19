@@ -28,7 +28,7 @@
 
 		  <section class="row">
 		  	<section class="col s12 m12 parallax-container">
-		  		<div class="parallax"><img src="./assets/img/carousholder0.jpg" class="aboutPic"></div>
+		  		<div class="parallax"><img src="assets/img/New/carousholder0.jpg" class="aboutPic"></div>
 		  	</section> <br>
 		  	<section class="col s12 m6">
 		  		<section class="content-area">
