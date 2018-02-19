@@ -1,19 +1,13 @@
-<?php
+<?php 
 	include '../db-config.php';
 	include '../helper-functions.php';
 
-	$categoryName = mysqli_real_escape_string($database,$_POST['categoryName']);
-	$categoryId = intval($_POST['categoryId']);
-	$getQuery = '';
+	$query = mysqli_real_escape_string($database,trim($_POST['query']));
 	$itemStatus = $itemStatusArray['Approved'];
-
 	$hashString = md5(time());
-
-	if ($categoryName == 'all') {
-		$getQuery = "SELECT * FROM items WHERE item_approval_status = $itemStatus";
-	} else {
-		$getQuery = "SELECT * FROM items INNER JOIN categories ON item_category_id = category_id WHERE item_approval_status = $itemStatus AND item_category_id = $categoryId";
-	}
+	
+	$searchTerm = "%{$query}%";
+	$getQuery = "SELECT * FROM items WHERE item_name LIKE '$searchTerm' OR item_details LIKE '$searchTerm' OR item_location LIKE '$searchTerm' AND item_approval_status = $itemStatus";
 
 	$result = $database->query($getQuery);
 
@@ -53,11 +47,7 @@
 
 		}
 	} else {
-		if ($categoryName == 'all') {
-		 	echo "<h6>Sorry, No Items Available</h6>";
-		} else {
-			echo "<h6>Sorry, No Items For Your Chosen Category</h6>";
-		}
+		echo "<h6 class='center-align'>Sorry, No Result Found For Search Term '$query'</h6>";
 
 
 	}

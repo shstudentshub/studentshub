@@ -322,7 +322,8 @@ body {
 }
 
 .recent-item-sm img {
-    height: 180px;
+    height: 220px;
+    width: 300px;
 }
 
 /*for the process row*/
@@ -581,6 +582,10 @@ body {
     line-height: 1.43000;
 }
 
+/*for the search page*/
+.search-categories li{
+  cursor: pointer;
+}
 
 /* For the snackbar styling */
 .snackbar {
