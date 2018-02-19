@@ -211,7 +211,7 @@
 
 		<div class="top-menu hide-on-med-and-down">
 			<ul class="nav-categories">
-				
+
 			</ul>
 		</div>
 		<!-- this is the snackbar for the page -->
