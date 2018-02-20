@@ -14,7 +14,7 @@ $(".main-search").keyup(function(event) {
 
 	var query = $(this).val().trim();
 	if (query != "") {
-		$(".search-res").html("<img src='assets/img/snackbar-loader.gif' height='50px' width='50px' style='margin-left: 40%;'>");
+		$(".search-res").html("<img src='assets/img/loader.gif' height='50px' width='50px' style='margin-left: 40%;'>");
 		var data = $.param({
 			query:query
 		});

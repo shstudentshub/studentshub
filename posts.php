@@ -114,7 +114,7 @@
 		      			<section class="row">
 		      				<section class="col s12 m6 l6">
 		      					<img src="assets/img/item-img-preview.png" class="post-item-img-preview">
-		      				    <input type="file" id="post-item-img" class="post-item-img" accept="image/*"><br/>
+		      				    <input type="file" id="post-item-img" class="post-item-img" accept="image/*" multiple><br/>
 		      				    <label for="post-item-img" class="post-item-img-label orange accent-1">Upload Item Photo</label>
 		      				</section>
 		      			</section>

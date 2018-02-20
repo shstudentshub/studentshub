@@ -100,5 +100,7 @@
         <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
         <script type="text/javascript" src="./assets/js/chart.min.js"></script>
         <script type="text/javascript" src="./assets/js/init.js"></script>
-        <script type="text/javascript" src="./assets/js/controller.js"></script>    </body>
+        <script type="text/javascript" src="./assets/js/controller.js"></script>
+        <script type="text/javascript" src="./assets/js/.js"></script>
+      </body>
 </html>
