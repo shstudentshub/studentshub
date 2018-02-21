@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include "api/db-config.php";
 
 	$hashId = $_GET["id"];
@@ -71,7 +71,7 @@
 			<h1>There Are No Items For Your Wicked Query</h1>
 		";
 	}
-	
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -111,7 +111,7 @@
 						<li class="hide-on-med-and-down">
 							<!-- <a class="dropdown-trigger" href="#!" data-activates="cat-dropdown1">Categories <i class="fa fa-chevron-down"></i></a> -->
 						</li>
-						<li><a href="#">Back</a></li>
+						<li><a href="#" onclick="back()">Back</a></li>
 					</ul>
 					<ul class="side-nav" id="nav-mobile">
 						<section class="side-nav-profile-div">
@@ -129,7 +129,7 @@
 
 		<section class="row main-row">
 			<br><br>
-			<?php  
+			<?php
 				echo "$itemTemplate";
 			?>
 		</section>

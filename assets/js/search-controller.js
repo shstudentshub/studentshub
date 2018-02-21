@@ -63,3 +63,8 @@ function getSideCategoryItems(categoryObj) {
 		$(".search-res").html(response)
 	})
 }
+
+//Function for going back in search Category
+function back(){
+  window.history.back();
+}
