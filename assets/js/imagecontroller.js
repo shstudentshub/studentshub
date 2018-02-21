@@ -1,5 +1,5 @@
 const CONSTANT_IMAGE = {
-  	addUserItemUrl: "api/user/addUserItem.php"
+  	addUserItemUrl: "api/user/imageuploads.php"
 }
 
 
@@ -8,10 +8,11 @@ const CONSTANT_IMAGE = {
 
 
 //event handler to handle the submission of the items
-$(".add-post-form").on("submit", function(event) {
+$("#multiuploads").on("submit", function(event) {
 	event.preventDefault();
 
-	var formData = new FormData(),
+
+	var formData = new FormData($(this)[0]),
 		itemImg = document.getElementById('post-item-img').files,
 		itemName = $(".post-item-name").val().trim(),
 		itemPrice = $(".post-item-price").val(),
@@ -20,11 +21,12 @@ $(".add-post-form").on("submit", function(event) {
 		itemCategory = $(".post-item-categories").val().trim(),
 		itemPriceTerm = $(".post-item-price-term").val().trim();
 
+
 	//validating the fields
 	if ((itemImg.length < 1)) {
 		showSnackBar("Please Select Item Image", "error");
-	} else if ((itemImg.length > 0) && (itemImg[0].size > (3 * 1024 *1024))) {
-		showSnackBar("Item Image Cannot Be Greater Than 5MB", "error");
+	} else if (itemImg.length > 5) {
+		showSnackBar("Maximum image is only 5", "error");
 	} else if (itemName == "") {
 		showSnackBar("Please Provide The Item Name", "error");
 	} else if (itemPrice == "") {
@@ -39,9 +41,9 @@ $(".add-post-form").on("submit", function(event) {
 		showSnackBar("Please Provide The Item Price Term", "error");
 	} else {
 		//append the file to the formdata
-    for (var i = 0; i < itemImg.length; i++) {
-      formData.append("itemImage"+i,itemImg[i]);
-    }
+    //for (var i = 0; i < itemImg.length; i++) {
+      //formData.append("itemImage"+i,itemImg[i]);
+    //}
 
 
 		var postItemUrl = CONSTANT_IMAGE.addUserItemUrl + "?itemName=" + itemName +
@@ -56,9 +58,11 @@ $(".add-post-form").on("submit", function(event) {
 			contentType: false,
 			processData: false,
 			success: function(response, textStatus, jqXHR){
-
-			    if (response.success) {
+        console.log(response);
+			    if(response.success){
+            console.log(response.success);
 			    	showSnackBar(response.message,"success");
+
 			    	setTimeout(function() {
 						$(".post-item-modal").modal("close");
 						hideSnackBar();
@@ -67,14 +71,16 @@ $(".add-post-form").on("submit", function(event) {
 				} else if (!response.success) {
 					showSnackBar(response.message,"error");
 				} else {
-					showSnackBar("Sorry, An Error Occured. Check Your Internet Connection And Try Again","error");
+					showSnackBar("Sorry, contact Administrator And Try Again Later","error");
 				}
 			},
 			error: function(error) {
+        console.log(error);
 				showSnackBar("Sorry, An Error Occured. Check Your Internet Connection And Try Again","error");
 			}
 
 	    });
 
 	}
+
 });

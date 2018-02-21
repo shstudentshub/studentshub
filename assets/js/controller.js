@@ -110,7 +110,7 @@ $(".user-signin-form").on("submit", function(event) {
 
 				setTimeout(function() {
 					console.log('successful login');
-					window.location.href = 'dashboard';
+					window.location.href = 'index';
 					hideSnackBar();
 				},1000);
 			} else if(!response.success) { //else if login is not successful,
@@ -364,13 +364,3 @@ function drawChart(elementId,chartType,title,labels,data) {
 	    }
 	});
 }
-
-/*function displayMap(){
-	var mapProperties = {
-		center: new google.maps.LatLng(5.1154907,-1.2938681),
-		zoom: 15
-	}
-	var map = new google.maps.Map(document.getElementById("map"),mapProperties);
-}
-
-*/

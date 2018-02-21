@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include "api/db-config.php";
 	session_start();
 	$userLoggedIn = false;
@@ -56,6 +56,7 @@
 						<section class="side-nav-profile-div">
 							<h5 class="side-nav-profile-name">Dashboard</h5>
 						</section>
+            <li><a href="index">Home</a></li>
 						<li><a href="dashboard">My Dashboard</a></li>
 						<li><a href="posts">My Posts<span class="allBadge"></span></a></li>
 						<li><a href="review">View Pending Items<span class="badge"></span></a></li>
@@ -84,6 +85,7 @@
 			<section class="row">
 
 				<section class="col m2 l2 dashboard-side-div hide-on-med-and-down">
+          <li><a href="index"><i class="fa fa-home"></i> Home</i></a></li>
 					<li><a href="dashboard" class="selected"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
 					<li><a href="posts"><i class="fa fa-tags"></i> My Posts<i class="allBadge"></i></a></li>
 					<li><a href="review"><i class="fa fa-hourglass"></i> Pending Items<i class="badge"></i></a></li>

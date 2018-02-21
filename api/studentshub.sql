@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 17, 2018 at 12:47 AM
--- Server version: 10.1.24-MariaDB
--- PHP Version: 7.1.6
+-- Host: localhost
+-- Generation Time: Feb 21, 2018 at 02:54 PM
+-- Server version: 5.7.21-0ubuntu0.16.04.1
+-- PHP Version: 7.1.14-1+ubuntu16.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -103,6 +101,18 @@ INSERT INTO `categories` (`category_id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `itemimages`
+--
+
+CREATE TABLE `itemimages` (
+  `image_id` int(11) NOT NULL,
+  `image_names` varchar(100) DEFAULT NULL,
+  `item_image_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `items`
 --
 
@@ -114,24 +124,13 @@ CREATE TABLE `items` (
   `item_price` varchar(25) NOT NULL,
   `item_location` varchar(150) NOT NULL,
   `item_publisher_id` int(11) NOT NULL,
-  `item_img` varchar(50) NOT NULL,
+  `item_tracking_id` varchar(255) NOT NULL,
   `item_price_term` varchar(50) NOT NULL,
   `item_approval_status` int(1) NOT NULL DEFAULT '0',
   `item_post_date` date NOT NULL,
-  `item_views` int(11) NOT NULL,
-  `item_likes` int(11) NOT NULL
+  `item_views` int(11) DEFAULT NULL,
+  `item_likes` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `items`
---
-
-INSERT INTO `items` (`item_id`, `item_name`, `item_details`, `item_category_id`, `item_price`, `item_location`, `item_publisher_id`, `item_img`, `item_price_term`, `item_approval_status`, `item_post_date`, `item_views`, `item_likes`) VALUES
-(6, 'Keyboard', 'Brand new keyboard', 1, '1200', 'Accra', 10, 'User_10_1516117082.jpg', 'fixed', 0, '2018-01-16', 0, 0),
-(7, 'Mug', 'Tea mug', 6, '50', 'Accra', 10, 'User_10_1516117139.png', 'fixed', 0, '2018-01-16', 0, 0),
-(8, 'watch', 'A brand new wall clock', 1, '100', 'Kumasi', 10, 'User_10_1518849403.gif', 'negotiable', 0, '2018-02-17', 0, 0),
-(9, 'Art', 'A new art collection', 8, '2000', 'Accra', 10, 'User_10_1521238375.jpg', 'fixed', 0, '2018-03-16', 0, 0),
-(10, 'Keyboard', 'New Keyboard', 1, '200', 'Accra', 14, 'User_14_1521242149.jpg', 'negotiable', 0, '2018-03-17', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -153,11 +152,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_contact`, `user_password`, `user_sign_date`) VALUES
-(10, 'enochMarley', 'mail@mail.com', '029187897189', '$2y$10$fZNYPdwMEVmGLAML8EGLEeI5o0d3IUcCkfLMTN6Jwi2AaO35Hh0dK', '2018-01-12'),
-(11, 'fullName', 'mail1@mail.com', '949432', '$2y$10$yE9BlPnBLL6G8zt5SfYsPOJsQiAA/IVsrZa7DmzZBAUndsMjN9oau', '2018-01-15'),
-(12, 'jdsklfjdk', 'kdjflkd@jflkd.dkfldjfk', 'kjf990900', '$2y$10$COxHeYU8OZo.Q/RPCCdKLOqOD26dNqvah.maXkJA80V6sAAFBDO1K', '2018-02-02'),
-(13, 'dfdfd', 'fsdf@dfd.dfds', 'dfdfd', '$2y$10$6GHghYKkkbJgqaBzxdEVOeteaVYKUpYMnagu2yNpU.xVA0B/u00IW', '2018-02-13'),
-(14, 'John Doe', 'mail1@mail1.com', '0271728188', '$2y$10$Jv8sDPBZ7A2aLxFmgTqyROaBBP6EWAKMpTaMdwUw6xwD5DfxuVrbq', '2018-03-01');
+(10, 'enochMarley', 'mail@mail.com', '029187897189', '$2y$10$fZNYPdwMEVmGLAML8EGLEeI5o0d3IUcCkfLMTN6Jwi2AaO35Hh0dK', '2018-03-14'),
+(14, 'John Doe', 'mail1@mail1.com', '0271728188', '$2y$10$Jv8sDPBZ7A2aLxFmgTqyROaBBP6EWAKMpTaMdwUw6xwD5DfxuVrbq', '2018-03-01'),
+(17, 'kelvin', 'john@gmail.com', '094929', '$2y$10$O15.2mbvB.QE3fjK1ExIxea0fE.vrivDDxjbVut9JpqMAT66ws94u', '2018-01-27');
 
 --
 -- Indexes for dumped tables
@@ -192,6 +189,13 @@ ALTER TABLE `admin_notifications`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `itemimages`
+--
+ALTER TABLE `itemimages`
+  ADD PRIMARY KEY (`image_id`),
+  ADD KEY `item_image_id` (`item_image_id`);
 
 --
 -- Indexes for table `items`
@@ -237,18 +241,29 @@ ALTER TABLE `admin_notifications`
 ALTER TABLE `categories`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
+-- AUTO_INCREMENT for table `itemimages`
+--
+ALTER TABLE `itemimages`
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+--
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `itemimages`
+--
+ALTER TABLE `itemimages`
+  ADD CONSTRAINT `item_image_id` FOREIGN KEY (`item_image_id`) REFERENCES `items` (`item_id`);
 
 --
 -- Constraints for table `items`
@@ -256,7 +271,6 @@ ALTER TABLE `users`
 ALTER TABLE `items`
   ADD CONSTRAINT `itemcaterr` FOREIGN KEY (`item_category_id`) REFERENCES `categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `itempublisherr` FOREIGN KEY (`item_publisher_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

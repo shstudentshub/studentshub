@@ -1,13 +1,13 @@
 <?php
-    include "../dbConfig.php";
+    include "../db-config.php";
     ini_set('display_errors', 1);
 
-
+    session_start();
+    $response = array();
+    $itemImgUploadDir = "../../uploads/items/";
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-      session_start();
-  		$response = array();
-  		$itemImgUploadDir = "../../uploads/items/";
+
 
   		$publisherId = intval($_SESSION["userId"]);
   		$itemPostDate = date("Y-m-d");
@@ -20,75 +20,75 @@
 
       $tracking_id = md5(microtime());
 
-
       //Let insert into database without image uploads
 
-      $itemInsertQuery = "INSERT INTO items (item_name,item_details,item_category_id,item_price,item_location,item_publisher_id,item_price_term,item_post_date,item_tracking_id) VALUES(?,?,?,?,?,?,?,?,?)";
+      $itemInsertQuery = "INSERT INTO items(item_name,item_details,item_category_id,item_price,item_location,item_publisher_id,item_tracking_id,item_price_term,item_post_date) VALUES(?,?,?,?,?,?,?,?,?)";
 
 			$preparedInsertQuery = $database->prepare($itemInsertQuery);
-			$preparedInsertQuery->bind_param('ssississ',$itemName,$itemDetails,$itemCategory,$itemPrice,$itemLocation,$publisherId,$itemPriceTerm,$itemPostDate);
-      $statement->execute();
+			$preparedInsertQuery->bind_param("ssississs",$itemName,$itemDetails,$itemCategory,$itemPrice,$itemLocation,$publisherId,$tracking_id,$itemPriceTerm,$itemPostDate);
 
-      $anotherQuery = "SELECT item_id FROM items WHERE item_tracking_id = $tracking_id ";
+      $preparedInsertQuery->execute();
+
+
+      $anotherQuery = "SELECT * FROM items WHERE item_tracking_id = '$tracking_id'";
       $result = $database->query($anotherQuery);
 
-      while($row = $result->fetch_assoc()){
-        $id = intval($row["item_id"]);
+      if($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+          $id = intval($row["item_id"]);
+        }
       }
 
+      //Let check if images ontains more than one
       if(is_array($_FILES)){
 
+        //Now we begin to loop each images and check for it validity
         foreach ($_FILES['files']['name'] as $key => $value) {
-          $file_name = explode(".",$_FILES['files']['name'][$key]);
+            $file_name = explode(".",$_FILES['files']['name'][$key]);
 
-          if($file_name[1] == "jpg" || $file_name[1] == "jpeg" || $file_name[1] == "png"){
+            //Check whether images is valid
+            if($file_name[1] == "jpg" || $file_name[1] == "jpeg" || $file_name[1] == "png"){
 
-            $rand = substr(md5(microtime()),rand(0,25),5);
-            //$new_name = "USER".$rand.".".$file_name[1];
-            $newItemImgName = "User_".$publisherId."_".time().".".$file_name[1];
-            $source = $_FILES['files']['tmp_name'][$key];
-            $target = $itemImgUploadDir.$newItemImgName;
+              //Let generate 19 random characters
+              $rand = substr(md5(microtime()),rand(0,25),19);
 
-            if(move_uploaded_file($source,$target)){
+              //Rename file with the 19 random characters
+              $imageName = "User_".$publisherId."_".$rand.".".$file_name[1];
+              $source = $_FILES['files']['tmp_name'][$key];
+              $target = $itemImgUploadDir.$imageName;
 
-              $query = "INSERT INTO itemimages(image_names,item_image_id) VALUES(?,?)";
-              $prepareStmt = $database->prepare($query);
-              $prepareStmt->bind_param("si",$newItemImgName,$id);
+              //Let make uploads to target folder
+              if(move_uploaded_file($source,$target)){
 
-              if($prepareStmt->execute()){
-                $response['success'] = true;
-                $response['message'] = " Uploaded successful";
+                //Let begin to insert All images into DB
+                $imageQuery = "INSERT INTO itemimages(image_names,item_image_id) VALUES(?,?)";
+                $prepareImageInsert = $database->prepare($imageQuery);
+                $prepareImageInsert->bind_param("si",$imageName,$id);
+
+                //If execution or insertion is successful, Give feedback to user
+                if($prepareImageInsert->execute()){
+                  $response["success"] = true;
+                  $response["message"] = "Item Posted Successfully.\nWaiting For Admin Review";
+                }else{
+                  echo "Can't insert into DB";
+                }
 
               }else{
-                $response['success'] = false;
-                $response['message'] = "There is a problem saving post.";
-
+                $response["success"] = false;
+                $response["message"] = "Problem posting item";
               }
 
             }else{
-              $response['success'] = false;
-              $response['message'] = "Images cannot be upload";
-
+              $response["success"] = false;
+              $response["message"] = "Some images contains invalid";
             }
 
-
-          }else{
-            $response['success'] = false;
-            $response['message'] = "Images contains invalid format";
-
-          }
-
-
         }
-        header("Content-Type:application/json");
-        echo json_encode($response);
 
-      }else{
-        echo "few";
-      }
+        //Contains all response to be send
+        header('Content-Type: application/json');
+		    echo json_encode($response);
 
 
-
-    }else{
-      echo "Nothing now";
     }
+}
