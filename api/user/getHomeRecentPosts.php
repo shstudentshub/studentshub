@@ -36,7 +36,7 @@
 		            <a href='item-details?id=$hashId' title='View Item'>
 		                <section class='recent-item'>
 		                    <img src='uploads/items/$image[0]'><br>
-                        <span>$curency $itemPrice</span>
+                        <span class='curPrice'>$curency $itemPrice</span>
 		                    <a href='item-details?id=$hashId'><p class='center-align'><i class='fa fa-eye-open'></i> View Item Details</p></a>
 		                </section>
 		            </a>

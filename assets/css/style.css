@@ -54,6 +54,11 @@ body {
     background: #f8af7d;
 }
 
+.curPrice{
+  color: #000;
+  border: 1px solid #ccc;
+}
+
 .custom-btn {
   background: #f78d44;
 }
@@ -291,6 +296,7 @@ body {
 .recent-item {
     transition: all 0.2s ease-in;
     padding: 5px;
+    border: 1px solid #ccc;
 }
 
 .recent-item:hover {
