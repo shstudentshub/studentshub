@@ -6,7 +6,7 @@
 	$response = array();
 
 	$hashString = md5(time());
-  $getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_approval_status = $itemStatus ORDER BY item_id DESC LIMIT 4";
+  $getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_approval_status = $itemStatus ORDER BY item_id DESC LIMIT 6";
 
 
 	$result = $database->query($getQuery);
@@ -37,7 +37,7 @@
 		                <section class='recent-item'>
 		                    <img src='uploads/items/$image[0]'><br>
                         <span class='curPrice'>$curency $itemPrice</span>
-		                    <a href='item-details?id=$hashId'><p class='center-align'><i class='fa fa-eye-open'></i> View Item Details</p></a>
+		                    <a href='item-details?id=$hashId'><p class='center-align' style='color:#000;font-weight:bold'><i class='fa fa-eye-open'></i> $itemName</p></a>
 		                </section>
 		            </a>
 		        </section>
@@ -47,8 +47,8 @@
 				<section class='recent-item-sm'>
 	                <a class='carousel-item' href='#one!'>
 	                    <img src='uploads/items/$image[0]' class='recent-item-sm-img'><br>
-                      <span>$curency $itemPrice</span>
-	                    <a href='item-details?id=$hashId'><p class='center-align'><i class='fa fa-eye-open'></i>View Item Details</p></a>
+                      <span class='curPrice'>$curency $itemPrice</span>
+	                    <a href='item-details?id=$hashId'><p class='center-align' style='color:#000;font-weight:bold'><i class='fa fa-eye-open'></i>$itemName</p></a>
 	                </a>
 	            </section>
 			";
