@@ -132,9 +132,11 @@ $(".delete-post-form").on("submit", function(event) {
 			itemImg: itemImg
 		});
 
+console.log(data);
 	$.post(CONSTANTS.deleteUserItemUrl,data, function(response) {
-
+    console.log(response);
 		if (response.success) {
+
 			showSnackBar(response.message,"success");
 			setTimeout(function() {
 				$(".delete-item-modal").modal("close");
@@ -153,7 +155,7 @@ $(".delete-post-form").on("submit", function(event) {
 $(".post-item-img").on("change", function(){
     var file = document.getElementById('post-item-img').files;
 
-    $(".post-item-img-label").html("Item Photo Selected");
+    $(".post-item-img-label").html("Item Photo Selected").css('color','#ffff');
 
 	var reader = new FileReader();
 	reader.onload = function (e) {

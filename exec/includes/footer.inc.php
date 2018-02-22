@@ -4,6 +4,7 @@
         <script type="text/javascript" src="../assets/js/modernizr.js"></script>
         <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
         <script type="text/javascript" src="../assets/js/init-alt.js"></script>
+        <script type="text/javascript" src="../assets/js/Modalcontroller.js"></script>
         <script type="text/javascript" src="../assets/js/controller-alt.js"></script>
         <script type="text/javascript" src="../assets/js/chart.min.js"></script>
 	</body>

@@ -29,7 +29,15 @@ body {
     font-weight: bold;
 }
 
+.item-detail-sub{
+  height:100px;
+  width: 100px;
+  cursor: pointer;
+}
 
+.invalid{
+  color: #e42c2c;
+}
 .custom-navbar a{
   color: #EA172E;
 }

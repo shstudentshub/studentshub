@@ -1,11 +1,11 @@
-<?php 
+<?php
 	include "../db-config.php";
 	include "../helper-functions.php";
 	session_start();
 
 	$userId = intval($_SESSION["userId"]);
 
-	$getQuery = "SELECT * FROM items WHERE item_publisher_id = $userId ORDER BY item_id DESC";
+	$getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_publisher_id = $userId ORDER BY item_id DESC";
 	$result = $database->query($getQuery);
 
 	if ($result->num_rows > 0) {
@@ -19,7 +19,7 @@
 			              <th>#</th>
 			              <th>Item Photo</th>
 			              <th>Item Name</th>
-			              <th>Item Price <span>(GH&cent;)</span></th>
+			              <th>Currency <span>| Item Price</span></th>
 			              <th>Item Category</th>
 			              <th>Item Location</th>
 			              <th>Item Status</th>
@@ -32,17 +32,19 @@
 		while ($row = $result->fetch_assoc()) {
 			#get the values from the table tuples
 			$itemId = intval($row["item_id"]);
-			$itemImg = $row["item_img"];
+			$itemImg = $row["image_names"];
 			$itemName = $row["item_name"];
 			$itemPrice = floatval($row["item_price"]);
 			$itemCategoryId = intval($row["item_category_id"]);
 			$itemLocation = $row["item_location"];
 			$itemDetails = $row["item_details"];
 			$itemApprovalStatus = intval($row["item_approval_status"]);
+      $curency = $row['item_currency'];
 
 			#encode the item's detials into an array for further operations
+      $image = unserialize($itemImg);
 			$itemArray["itemId"] = $itemId;
-			$itemArray["itemImg"] = $itemImg;
+			$itemArray["itemImg"] = $image;
 			/*$itemArray["itemName"] = $itemName;
 			$itemArray["itemPrice"] = $itemPrice;
 			$itemArray["itemDetails"] = $itemDetails;
@@ -63,12 +65,14 @@
 			$newItemLocation = truncateString($itemLocation,13,10);
 			$itemApprovalStatus = stringifyApprovalStatus($itemApprovalStatus);
 
+
+
 			echo "
 				<tr>
 					<td>$counter</td>
-					<td><img src='uploads/items/$itemImg' class='user-item-img'></td>
+					<td><img src='uploads/items/$image[0]' class='user-item-img'></td>
 					<td>$newItemName</td>
-					<td>$itemPrice</td>
+					<td>$curency $itemPrice</td>
 					<td>$newCategoryName</td>
 					<td>$newItemLocation</td>
 					<td>$itemApprovalStatus</td>
@@ -92,4 +96,4 @@
 				You Have Not Posted Any Items Yet
 			</div>
 		";
-	}	
+	}

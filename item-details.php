@@ -1,5 +1,6 @@
 <?php
 	include "api/db-config.php";
+  ini_set('display_errors', 1);
 
 	$hashId = $_GET["id"];
 	$itemId1 = substr($hashId,10);
@@ -21,7 +22,7 @@
 	$updateViewResult = $database->query($updateViewNumber);
 
 	#query to get the details of the item
-	$getDetailsQuery = "SELECT user_name, user_contact, item_category_id, item_img, item_name, item_details, item_price, item_location, item_price_term FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON category_id = item_category_id WHERE item_id = $itemId";
+	$getDetailsQuery = "SELECT user_name, user_contact, item_category_id, item_name, item_details,item_currency ,item_price, item_location,image_names ,item_price_term FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON category_id = item_category_id INNER JOIN itemimages ON item_id = item_image_id WHERE item_id = $itemId";
 
 	$getDetailsResult = $database->query($getDetailsQuery);
 	if ($getDetailsResult->num_rows > 0) {
@@ -30,47 +31,17 @@
 		$userName = $detailsRow["user_name"];
 		$userContact = $detailsRow["user_contact"];
 		$itemCategory = $detailsRow["item_category_id"];
-		$itemImage = $detailsRow["item_img"];
+		$itemImage = $detailsRow["image_names"];
 		$itemName = $detailsRow["item_name"];
 		$itemDetails = $detailsRow["item_details"];
 		$itemPrice = $detailsRow["item_price"];
 		$itemLocation = $detailsRow["item_location"];
 		$itemPriceTerm = $detailsRow["item_price_term"];
+    $curency = $detailsRow['item_currency'];
 
-		$itemTemplate = "
-			<section class='container'>
-				<section class='row item-details-row'>
-					<section class='col s12 m6'>
-						<img src='uploads/items/$itemImage' class='item-detail-img'>
-					</section>
-					<section class='col s12 m6'>
-						<h5>$itemName</h5><br>
-						<address>
-							<h6><b>Item Details</b></h6>
-							$itemDetails<br><br>
 
-							<h6><b>Item Price</b></h6>
-							$itemPrice<br><br>
-
-							<h6><b>Item Location</b></h6>
-							$itemLocation<br><br>
-
-							<ul class='collapsible' data-collapsible='accordion'>
-							    <li>
-							      <div class='collapsible-header'><i class='fa fa-phone'></i> View Seller's Contact Number</div>
-							      <div class='collapsible-body'><span><a href='tel:$userContact' title=''>$userContact</a></span></div>
-							    </li>
-							</ul>
-						</address>
-					</section>
-				</section>
-			</section>
-		";
-	} else {
-		$itemTemplate = "
-			<h1>There Are No Items For Your Wicked Query</h1>
-		";
-	}
+    $image = unserialize($itemImage);
+    $getSize = sizeof($image);
 
 ?>
 <!DOCTYPE html>
@@ -113,7 +84,7 @@
 						</li>
 						<li><a href="#" onclick="back()">Back</a></li>
 					</ul>
-					<ul class="side-nav" id="nav-mobile">
+				<!--	<ul class="side-nav" id="nav-mobile">
 						<section class="side-nav-profile-div">
 							<img src="assets/img/profile-placeholder.jpg" class="side-nav-profile-img" alt="Logo">
 							<span class="side-nav-profile-name">User Name</span>
@@ -122,7 +93,7 @@
 						<li><a href="#">Some links</a></li>
 						<li><a href="#">Some links</a></li>
 					</ul>
-					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>-->
 				</section>
 			</nav>
 		</section>
@@ -130,7 +101,47 @@
 		<section class="row main-row">
 			<br><br>
 			<?php
-				echo "$itemTemplate";
+    echo  "
+        <section class='container'>
+          <section class='row item-details-row'>
+            <section class='col s12 m6'>
+              <img src='uploads/items/$image[0]' class='item-detail-img'>
+              ";
+              for ($i=0; $i < $getSize; $i++) {
+            echo    "<section class='col s3 m3' >
+                <img src='uploads/items/$image[$i]' class='item-detail-sub' id='previewReader' onclick='preview()'>
+                </section>";
+              };
+      echo "
+            </section>
+            <section class='col s12 m6'>
+              <h5>$itemName</h5><br>
+              <address>
+                <h6><b>Item Details</b></h6>
+                $itemDetails<br><br>
+
+                <h6><b>Item Price</b></h6>
+                  $curency $itemPrice<br><br>
+
+                <h6><b>Item Location</b></h6>
+                $itemLocation<br><br>
+
+                <ul class='collapsible' data-collapsible='accordion'>
+                    <li>
+                      <div class='collapsible-header'><i class='fa fa-phone'></i> View Seller's Contact Number</div>
+                      <div class='collapsible-body'><span><a href='tel:$userContact' title=''>$userContact</a></span></div>
+                    </li>
+                </ul>
+              </address>
+            </section>
+          </section>
+        </section>
+      ";
+    } else {
+      echo "
+        <h1>There Are No Items For Your Wicked Query</h1>
+      ";
+    }
 			?>
 		</section>
 		<hr>
@@ -142,6 +153,7 @@
 	        <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/init.js"></script>
+          <script type="text/javascript" src="./assets/js/previewController.js"></script>
 	        <script type="text/javascript" src="./assets/js/search-controller.js"></script>
 		</body>
 	</html>

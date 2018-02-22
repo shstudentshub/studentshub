@@ -16,15 +16,18 @@ $("#multiuploads").on("submit", function(event) {
 		itemImg = document.getElementById('post-item-img').files,
 		itemName = $(".post-item-name").val().trim(),
 		itemPrice = $(".post-item-price").val(),
+    tradeCurrency = $(".tradeCurrency").val().trim(),
 		itemLocation = $(".post-item-location").val().trim(),
 		itemDetails = $(".post-item-details").val().trim(),
 		itemCategory = $(".post-item-categories").val().trim(),
 		itemPriceTerm = $(".post-item-price-term").val().trim();
 
+    //function to check if image contains gif and is invalid
+    checkImageValidity(itemImg);
 
 	//validating the fields
 	if ((itemImg.length < 1)) {
-		showSnackBar("Please Select Item Image", "error");
+		showSnackBar("Please select valid item image", "error");
 	} else if (itemImg.length > 5) {
 		showSnackBar("Maximum image is only 5", "error");
 	} else if (itemName == "") {
@@ -39,7 +42,9 @@ $("#multiuploads").on("submit", function(event) {
 		showSnackBar("Please Provide The Item Category", "error");
 	} else if (itemPriceTerm == "" || itemPriceTerm == null || itemPriceTerm == undefined) {
 		showSnackBar("Please Provide The Item Price Term", "error");
-	} else {
+	}else if(tradeCurrency == "" || tradeCurrency == null || tradeCurrency == undefined){
+    showSnackBar("Please Provide currency to trade in", "error");
+  }else {
 		//append the file to the formdata
     //for (var i = 0; i < itemImg.length; i++) {
       //formData.append("itemImage"+i,itemImg[i]);
@@ -48,7 +53,7 @@ $("#multiuploads").on("submit", function(event) {
 
 		var postItemUrl = CONSTANT_IMAGE.addUserItemUrl + "?itemName=" + itemName +
 		"&itemPrice=" + itemPrice + "&itemLocation=" + itemLocation + "&itemDetails=" + itemDetails + "&itemCategory=" + itemCategory +
-		"&itemPriceTerm=" + itemPriceTerm;
+		"&itemPriceTerm=" + itemPriceTerm + "&tradeCurrency="+tradeCurrency;
 
 		$.ajax({
 	    url: postItemUrl,
@@ -84,3 +89,16 @@ $("#multiuploads").on("submit", function(event) {
 	}
 
 });
+
+//function to check image extensions
+function checkImageValidity(image){
+  var fileType = ["image/jpeg","image/png","image/jpg"];
+  for (var i = 0; i < image.length; i++) {
+    if($.inArray(image[i].type, fileType) < 0){
+      showSnackBar("Image contains invalid format","error");
+      $("#multiuploads")[0].reset();
+      document.getElementById("post-item-img").value = "";
+      $(".post-item-img-label").html("Upload another image").css('color','#e42c2c');
+    }
+  }
+}

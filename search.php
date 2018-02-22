@@ -86,7 +86,7 @@
 
 			<section class="col m10 110 content-div search-content-div">
 				<section class="row search-res">
-					<img src='assets/img/loader.gif' height='50px' width='50px' style='margin-left: 40%;'>
+					<!--<img src='assets/img/loader.gif' height='50px' width='50px' style='margin-left: 40%;'>-->
 				</section>
 			</section>
 		</section>

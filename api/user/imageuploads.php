@@ -5,6 +5,7 @@
     session_start();
     $response = array();
     $itemImgUploadDir = "../../uploads/items/";
+    $imageArray = array();
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
@@ -17,17 +18,20 @@
   		$itemDetails = mysqli_real_escape_string($database,trim($_GET['itemDetails']));
   		$itemCategory = intval($_GET['itemCategory']);
   		$itemPriceTerm = mysqli_real_escape_string($database,trim($_GET['itemPriceTerm']));
+      $tradeCurrency = mysqli_real_escape_string($database,trim($_GET['tradeCurrency']));
 
       $tracking_id = md5(microtime());
 
+
       //Let insert into database without image uploads
 
-      $itemInsertQuery = "INSERT INTO items(item_name,item_details,item_category_id,item_price,item_location,item_publisher_id,item_tracking_id,item_price_term,item_post_date) VALUES(?,?,?,?,?,?,?,?,?)";
+      $itemInsertQuery = "INSERT INTO items(item_name,item_details,item_category_id,item_price,item_currency,item_location,item_publisher_id,item_tracking_id,item_price_term,item_post_date) VALUES(?,?,?,?,?,?,?,?,?,?)";
 
 			$preparedInsertQuery = $database->prepare($itemInsertQuery);
-			$preparedInsertQuery->bind_param("ssississs",$itemName,$itemDetails,$itemCategory,$itemPrice,$itemLocation,$publisherId,$tracking_id,$itemPriceTerm,$itemPostDate);
+			$preparedInsertQuery->bind_param("ssisssisss",$itemName,$itemDetails,$itemCategory,$itemPrice,$tradeCurrency,$itemLocation,$publisherId,$tracking_id,$itemPriceTerm,$itemPostDate);
 
       $preparedInsertQuery->execute();
+
 
 
       $anotherQuery = "SELECT * FROM items WHERE item_tracking_id = '$tracking_id'";
@@ -59,30 +63,30 @@
 
               //Let make uploads to target folder
               if(move_uploaded_file($source,$target)){
-
-                //Let begin to insert All images into DB
-                $imageQuery = "INSERT INTO itemimages(image_names,item_image_id) VALUES(?,?)";
-                $prepareImageInsert = $database->prepare($imageQuery);
-                $prepareImageInsert->bind_param("si",$imageName,$id);
-
-                //If execution or insertion is successful, Give feedback to user
-                if($prepareImageInsert->execute()){
-                  $response["success"] = true;
-                  $response["message"] = "Item Posted Successfully.\nWaiting For Admin Review";
-                }else{
-                  echo "Can't insert into DB";
-                }
+                array_push($imageArray,$imageName);
 
               }else{
                 $response["success"] = false;
                 $response["message"] = "Problem posting item";
               }
 
-            }else{
-              $response["success"] = false;
-              $response["message"] = "Some images contains invalid";
             }
 
+        }
+
+        //Now let serialize images
+        $imagesToBeInserted = serialize($imageArray);
+        //Let begin to insert All images into DB
+        $imageQuery = "INSERT INTO itemimages(image_names,item_image_id) VALUES(?,?)";
+        $prepareImageInsert = $database->prepare($imageQuery);
+        $prepareImageInsert->bind_param("si",$imagesToBeInserted,$id);
+
+        //If execution or insertion is successful, Give feedback to user
+        if($prepareImageInsert->execute()){
+          $response["success"] = true;
+          $response["message"] = "Item Posted Successfully.\nWaiting For Admin Review";
+        }else{
+          echo "Can't insert into DB";
         }
 
         //Contains all response to be send

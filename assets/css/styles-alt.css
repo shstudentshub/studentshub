@@ -36,6 +36,12 @@ body {
     margin-left: 40%;
 }
 
+.imageItems{
+  width: 250px;
+  height: 230px;
+  margin-top: 5px;
+}
+
 .admin-form input {
 	text-align: center;
 }

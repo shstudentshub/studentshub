@@ -6,7 +6,7 @@
 	$userId = intval($_SESSION["userId"]);
 	$pendingStatus = $itemStatusArray["Declined"];
 
-	$getQuery = "SELECT * FROM items WHERE item_publisher_id = $userId AND item_approval_status = $pendingStatus ORDER BY item_id DESC";
+	$getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_publisher_id = $userId AND item_approval_status = $pendingStatus ORDER BY item_id DESC";
 	$result = $database->query($getQuery);
 
 	if ($result->num_rows > 0) {
@@ -21,7 +21,7 @@
 			              <th>#</th>
 			              <th>Item Photo</th>
 			              <th>Item Name</th>
-			              <th>Item Price <span>(GH&cent;)</span></th>
+			              <th>Currency |<span>Item Price</span></th>
 			              <th>Item Category</th>
 			              <th>Item Location</th>
 			              <th>Actions</th>
@@ -39,10 +39,13 @@
 			$itemCategoryId = intval($row["item_category_id"]);
 			$itemLocation = $row["item_location"];
 			$itemDetails = $row["item_details"];
+      $currency  = $row["item_currency"];
 
 			#encode the item's detials into an array for further operations
+      //Unserialize image before use
+      $image = unserialize($itemImg);
 			$itemArray["itemId"] = $itemId;
-			$itemArray["itemImg"] = $itemImg;
+			$itemArray["itemImg"] = $image;
 
 			$itemObj = json_encode($itemArray);
 
@@ -61,9 +64,9 @@
 			echo "
 				<tr>
 					<td>$counter</td>
-					<td><img src='uploads/items/$itemImg' class='user-item-img'></td>
+					<td><img src='uploads/items/$image[0]' class='user-item-img'></td>
 					<td>$newItemName</td>
-					<td>$itemPrice</td>
+					<td>$currency $itemPrice</td>
 					<td>$newCategoryName</td>
 					<td>$newItemLocation</td>
 					<td>

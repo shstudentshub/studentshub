@@ -1,11 +1,11 @@
-<?php 
+<?php
 	include "../db-config.php";
 	include "../helper-functions.php";
 
 	$itemsArray = array();
 	$counter = 1;
 	$itemStatus = $itemStatusArray['Approved'];
-	$getQuery = "SELECT item_id, item_name, item_details, item_img, item_post_date, user_name, category_name FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON item_category_id = category_id AND item_approval_status = $itemStatus ORDER BY item_id DESC";
+	$getQuery = "SELECT item_id, item_name, item_details, image_names, item_post_date, user_name, category_name FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON item_category_id = category_id INNER JOIN itemimages on item_id = item_image_id AND item_approval_status = $itemStatus ORDER BY item_id DESC";
 	$result = $database->query($getQuery);
 
 	if ($result->num_rows > 0) {
@@ -27,7 +27,7 @@
 
 		while ($row = $result->fetch_assoc()) {
 			$itemId = intval($row["item_id"]);
-			$itemPicture = $row["item_img"];
+			$itemPicture = $row["image_names"];
 			$itemName = $row["item_name"];
 			$itemCategory = $row["category_name"];
 			$itemDetails = $row["item_details"];
@@ -39,10 +39,11 @@
 			$newItemDetails = truncateString($itemDetails,15,15);
 			$newItemPublisher = truncateString($itemPublisher,15,15);
 
+      $image = unserialize($itemPicture);
 			$itemsArray["itemId"] = $itemId;
 			$itemsArray["itemApprovalStatus"] = $itemStatusArray["Approved"];
 			$itemsArray["itemName"] = $itemName;
-			$itemsArray["itemPicture"] = $itemPicture;
+			$itemsArray["itemPicture"] = $image;
 			$itemsArray["itemCategory"] = $itemCategory;
 			$itemsArray["itemDetails"] = $itemDetails;
 			$itemsArray["itemPublisher"] = $itemPublisher;
@@ -52,7 +53,7 @@
 			echo "
 				<tr>
                     <td>$counter</td>
-                    <td><img src='../uploads/items/$itemPicture' class='admin-item-img'></td>
+                    <td><img src='../uploads/items/$image[0]' class='admin-item-img'></td>
                     <td>$newItemName</td>
                     <td>$newItemCategory</td>
                     <td>$newItemDetails</td>

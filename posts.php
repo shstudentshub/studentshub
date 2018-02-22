@@ -122,8 +122,15 @@
 		      			</section>
 
 		      			<section class="row">
-			      			<section class="col s12 m12 l12">
+			      			<section class="col s12 m6 l6">
 			      				<input type="text" class="validate post-item-name" placeholder="Item Name (Title)" required>
+			      			</section>
+                  <section class="col s12 m6 l6">
+                    <select class="browser-default item-select tradeCurrency" required>
+                      <option value="" disabled selected>Trade Currency</option>
+                      <option value="&#8358">&#8358</option>
+                      <option value="&#8373">&#8373</option>
+                    </select>
 			      			</section>
 			      		</section><br/>
 
