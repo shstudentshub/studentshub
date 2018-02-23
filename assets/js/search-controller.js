@@ -68,3 +68,8 @@ function getSideCategoryItems(categoryObj) {
 function back(){
   window.history.back();
 }
+
+$(".preview-item").on("click", function() {
+	var currentImageSrc = $(this).attr("src");
+	$(".preview-div").attr("src",currentImageSrc);
+});

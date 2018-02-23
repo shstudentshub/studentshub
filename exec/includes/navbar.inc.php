@@ -4,7 +4,7 @@
 
 	#initialize session and check if the admin username is set in session, if not redirect to login page
 	session_start();
-	if (!isset($_SESSION["adminUsername"])) {
+	if (empty($_SESSION["adminUsername"])) {
 		echo "<script>window.location.href = 'index.php'</script>";
 	}
 	

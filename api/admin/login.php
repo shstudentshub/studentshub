@@ -22,8 +22,8 @@
 			session_start(); #start a session to store some values
 			$_SESSION["adminUsername"] = $row['admin_username']; #store the admin username
 			$_SESSION["User"] = $row['admin_id'];
+			$_SESSION["User"] = $row['admin_id'];
 
-			#set success response values and send them
 			$response['success'] = true;
 			$response['message'] = "Logged In Successfully";
 			header('Content-Type: application/json');

@@ -55,7 +55,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--Import materialize.css-->
 		<link type="text/css" rel="stylesheet" href="./assets/css/materialize.css"  media="screen,projection"/>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css" media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>
@@ -105,11 +104,11 @@
         <section class='container'>
           <section class='row item-details-row'>
             <section class='col s12 m6'>
-              <img src='uploads/items/$image[0]' class='item-detail-img'>
+              <img src='uploads/items/$image[0]' class='item-detail-img preview-div'>
               ";
               for ($i=0; $i < $getSize; $i++) {
             echo    "<section class='col s3 m3' >
-                <img src='uploads/items/$image[$i]' class='item-detail-sub' id='previewReader' onclick='preview()'>
+                <img src='uploads/items/$image[$i]' class='item-detail-sub preview-item' id='previewReader'>
                 </section>";
               };
       echo "
@@ -153,7 +152,6 @@
 	        <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/init.js"></script>
-          <script type="text/javascript" src="./assets/js/previewController.js"></script>
 	        <script type="text/javascript" src="./assets/js/search-controller.js"></script>
 		</body>
 	</html>
