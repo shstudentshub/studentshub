@@ -7,7 +7,7 @@
 
 	$hashString = md5(time());
 	
-	$getQuery = "SELECT * FROM items WHERE item_approval_status = $itemStatus ORDER BY item_id DESC LIMIT 4";
+	$getQuery = "SELECT * FROM items WHERE item_approval_status = $itemStatus ORDER BY item_id DESC LIMIT 5";
 
 	$result = $database->query($getQuery);
 

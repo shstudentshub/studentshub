@@ -582,6 +582,12 @@ body {
     line-height: 1.43000;
 }
 
+.recent-items-lg-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .reasons-div {
     display: flex;
     flex-direction: row;
