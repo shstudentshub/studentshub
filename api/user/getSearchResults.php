@@ -9,7 +9,7 @@
 	$hashString = md5(time());
 
 	$searchTerm = "%{$query}%";
-	$getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_name LIKE '$searchTerm' OR item_details LIKE '$searchTerm' OR item_location LIKE '$searchTerm' AND item_approval_status = $itemStatus";
+	$getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE (item_name LIKE '$searchTerm' OR item_details LIKE '$searchTerm' OR item_location LIKE '$searchTerm') AND item_approval_status = $itemStatus";
 
 
 

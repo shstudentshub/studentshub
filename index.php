@@ -68,7 +68,7 @@
         <section class="row recent-items-lg-div">
 
         </section>
-        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color">View More <i class="fa fa-chevron-right"></i></a></p>
+        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color" style="cursor:pointer">View More <i class="fa fa-chevron-right"></i></a></p>
 
     </section>
 
@@ -126,7 +126,7 @@
         <h5 class="center-align item-title">Recently Added</h5>
         <p class="center-align item-sub-title">(swipe to navigate)</p>
         <section class="row center-align mobile-slide-div"></section>
-        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color">View More <i class="fa fa-chevron-right"></i></a></p>
+        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color" style="cursor:pointer">View More <i class="fa fa-chevron-right"></i></a></p>
     </section>
 </section>
 <br/><br/>

@@ -319,8 +319,8 @@ body {
     height: 150px;
 }
 .mobile-slide-div {
-    overflow-x: scroll;
-    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
     white-space: nowrap;
 }
 
