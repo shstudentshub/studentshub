@@ -17,7 +17,7 @@ const CONSTANTS = {
 	getApproveBadgesURL: "../api/admin/getApproveBadges.php"
 }
 
-//initializations of some loops methods 
+//initializations of some loops methods
 getCategories();
 getDashboardSummary();
 getDashboardUsersGraphData();
@@ -41,7 +41,7 @@ $(".admin-form").on("submit", function(event) {
 		$(".admin-login-res").html("Admin Password Cannot Be Empty").css("color","red"); //show password
 	} else { //else if both username and password are not empty
 
-		var data = $.param({  
+		var data = $.param({
 			username: adminUsername,
 			password: adminPassword
 		});  //sanitize the credentails so it can be sent to the api
@@ -216,12 +216,31 @@ function getPendingPosts() {
 
 //function to view the item
 function viewItem(itemObj) {
-	$(".view-item-image").prop("src","../uploads/items/" + itemObj.itemPicture);
+  //console.log(itemObj.itemPicture);
+  var imageArray = itemObj.itemPicture;
+
+  //$(".view-item-image").prop("src","../uploads/items/" + imageArray[i]);
+
+  for (var i = 0; i < imageArray.length; i++) {
+
+    var img = $("<img class='imageItems col s12 m6 l6' />");
+    img.attr('src',"../uploads/items/" + imageArray[i]);
+    img.appendTo(".imageDisplay");
+
+  }
+
 	$(".item-name").html(itemObj.itemName);
 	$(".item-category").html(itemObj.itemCategory);
 	$(".item-details").html(itemObj.itemDetails);
 	$(".view-item-modal").modal("open");
 }
+
+$(".modal-close ").on('click',function(event){
+  $('img.imageItems').attr('src','').removeClass('imageItems');
+
+  console.log("Close");
+})
+
 
 //a function to approve the item
 function approveItem(itemObj) {

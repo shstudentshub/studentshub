@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include "api/db-config.php";
 	session_start();
 	$userLoggedIn = false;
@@ -19,6 +19,9 @@
 		$userFullname = $row["user_name"];
 		$userContact = $row["user_contact"];
 		$userEmail = $row["user_email"];
+    $city = $row["City"];
+    $country = $row["Country"];
+    $userSignUpdate = $row["user_sign_date"];
 	}
 ?>
 
@@ -56,6 +59,7 @@
 						<section class="side-nav-profile-div">
 							<h5 class="side-nav-profile-name">Dashboard</h5>
 						</section>
+            <li><a href="index">Home</a></li>
 						<li><a href="dashboard">My Dashboard</a></li>
 						<li><a href="posts">My Posts<span class="allBadge"></span></a></li>
 						<li><a href="review">View Pending Items<span class="badge"></span></a></li>
@@ -84,6 +88,7 @@
 			<section class="row">
 
 				<section class="col m2 l2 dashboard-side-div hide-on-med-and-down">
+          <li><a href="index"><i class="fa fa-home"></i> Home</i></a></li>
 					<li><a href="dashboard" class="selected"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
 					<li><a href="posts"><i class="fa fa-tags"></i> My Posts<i class="allBadge"></i></a></li>
 					<li><a href="review"><i class="fa fa-hourglass"></i> Pending Items<i class="badge"></i></a></li>
@@ -112,8 +117,16 @@
 								            <td><?php echo $userContact ?></td>
 								          </tr>
 								          <tr>
-								            <td class='right-align'><b>Email Address</b></td>
-								            <td><?php echo $userEmail ?></td>
+								            <td class='right-align'><b>You sign up on:</b></td>
+								            <td><?php echo $userSignUpdate ?></td>
+								          </tr>
+                          <tr>
+								            <td class='right-align'><b>City :</b></td>
+								            <td><?php echo $city ?></td>
+								          </tr>
+                          <tr>
+								            <td class='right-align'><b>Country:</b></td>
+								            <td><?php echo $country ?></td>
 								          </tr>
 								        </tbody>
 								      </table>

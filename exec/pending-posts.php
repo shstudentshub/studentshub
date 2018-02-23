@@ -3,7 +3,7 @@
 
 <!-- The main items on the page. The side navigation and the content division -->
 <section class="row main-row">
-	
+
 	<!-- side div -->
 	<section class="col m2 l2 side-div">
 		<li><a href="dashboard "><i class="fa fa-dashboard"></i> Dashboard</a></li>
@@ -33,8 +33,11 @@
 	    <div class="modal-content">
 	    	<h4><b>Item Details</b></h4><hr>
 
-	      	<h6><b>Item Picture</b></h6>
-	      	<img src="" class="view-item-image"><br/><br/>
+	      	-<h6><b>Item Picture</b></h6>
+	      	<!--<img src=""  class="view-item-image"><br/><br/>-->
+          <section class="row imageDisplay">
+
+          </section>
 
 	      	<h6><b>Item Name</b></h6>
 	      	<p class="item-name"></p><br>
@@ -47,7 +50,8 @@
 
 	    </div>
 	    <div class="modal-footer">
-	      	<a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+
+	      	<button type="button" class="btn modal-action modal-close waves-effect waves-green">Close</button>
 	    </div>
 	</div>
 
@@ -74,7 +78,7 @@
 	    </div>
 	    </div>
 	</div>
-        
+
 </section>
 <!-- include the footer file -->
 <?php include "includes/footer.inc.php"; ?>

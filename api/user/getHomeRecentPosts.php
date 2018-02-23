@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include '../db-config.php';
 	include '../helper-functions.php';
 
@@ -6,8 +6,13 @@
 	$response = array();
 
 	$hashString = md5(time());
+<<<<<<< HEAD
 	
 	$getQuery = "SELECT * FROM items WHERE item_approval_status = $itemStatus ORDER BY item_id DESC LIMIT 5";
+=======
+  $getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_approval_status = $itemStatus ORDER BY item_id DESC LIMIT 6";
+
+>>>>>>> 944c312d24153c98acce939dc27d660a890cc0aa
 
 	$result = $database->query($getQuery);
 
@@ -19,21 +24,25 @@
 		while ($row = $result->fetch_assoc()) {
 			$itemId = $row['item_id'];
 			$itemName = $row['item_name'];
-			$itemImage = $row['item_img'];
+			$itemImage = $row['image_names'];
 			$itemLocation = $row['item_location'];
 			$itemPrice = $row['item_price'];
+      $curency = $row['item_currency'];
 
 			$hashSection1 = substr($hashString,0,10);
 			$hashSection2 = substr($hashString,11,10);
 			$hashId = $hashSection1.$itemId.$hashSection2;
+
+      $image = unserialize($itemImage);
 
 			$lgTemplate.=  "
 
 				<section class='col m2 l2 s12'>
 		            <a href='item-details?id=$hashId' title='View Item'>
 		                <section class='recent-item'>
-		                    <img src='uploads/items/$itemImage'>
-		                    <a href='item-details?id=$hashId'><p class='center-align'><i class='fa fa-eye-open'></i> View Item Details</p></a>
+		                    <img src='uploads/items/$image[0]'><br>
+                        <span class='curPrice'>$curency $itemPrice</span>
+		                    <a href='item-details?id=$hashId'><p class='center-align' style='color:#000;font-weight:bold'><i class='fa fa-eye-open'></i> $itemName</p></a>
 		                </section>
 		            </a>
 		        </section>
@@ -42,8 +51,9 @@
 			$smTemplate.= "
 				<section class='recent-item-sm'>
 	                <a class='carousel-item' href='#one!'>
-	                    <img src='uploads/items/$itemImage' class='recent-item-sm-img'>
-	                    <a href='item-details?id=$hashId'><p class='center-align'><i class='fa fa-eye-open'></i>View Item Details</p></a>
+	                    <img src='uploads/items/$image[0]' class='recent-item-sm-img'><br>
+                      <span class='curPrice'>$curency $itemPrice</span>
+	                    <a href='item-details?id=$hashId'><p class='center-align' style='color:#000;font-weight:bold'><i class='fa fa-eye-open'></i>$itemName</p></a>
 	                </a>
 	            </section>
 			";
@@ -62,5 +72,5 @@
 			echo "<li><a href=''>No Items For Your Chosen Category</a></li>";
 		}
 
-		
-	}	
+
+	}

@@ -87,7 +87,7 @@
 					<ul class="side-nav" id="nav-mobile">
 						<li><a>CATEGORIES</a></li><hr>
 						<ul class="nav-categories-sm">
-				
+
 						</ul>
 					</ul>
 					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>
@@ -192,10 +192,10 @@
 						    		<button type="button" class="btn modal-action modal-close custom-btn">Cancel</button>
 						    	</section>
 						    </section>
-							<p class="center-align">Or</p>
+							<!--<p class="center-align">Or</p>-->
 						</form><br>
 						<section>
-							<button class="faceBT facebookBtn" type="submit" name="action">Login with Facebook</button>
+						<!--	<button class="faceBT facebookBtn" type="submit" name="action">Login with Facebook</button>-->
 						</section>
 					</section>
 					<section class="col s12 m3 l3">
@@ -208,7 +208,7 @@
 
 		<div class="top-menu hide-on-med-and-down">
 			<ul class="nav-categories">
-				
+
 			</ul>
 		</div>
 		<!-- this is the snackbar for the page -->

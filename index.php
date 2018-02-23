@@ -40,7 +40,7 @@
 
             <section class="reason-div">
                 <section class="reason-icon-div orange accent-4">
-                    <h1 class="center-align reason-icon">&cent;</h1>
+                    <h1 class="center-align reason-icon">&#8358;</h1>
                 </section>
                 <p class="center-align"><b>Rewards</b></p>
             </section>
@@ -59,16 +59,16 @@
                 <p class="center-align"><b>Super Friendly</b></p>
             </section>
         </section>
-        
+
     </section><br><br>
 
     <!-- display recently added items for desktop -->
     <section class="col s12 m12 l12 hide-on-med-and-down">
         <h5 class="center-align item-title">Recently Added</h5><br/>
         <section class="row recent-items-lg-div">
-            
+
         </section>
-        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color">View More <i class="fa fa-chevron-right"></i></a></p>
+        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color" style="cursor:pointer">View More <i class="fa fa-chevron-right"></i></a></p>
 
     </section>
 
@@ -80,7 +80,7 @@
         <p class="center-align item-sub-title">(swipe to navigate)</p>
         <section class="center-align">
             <section class="reasons-div-sm">
-                
+
                 <section class="reason-div">
                     <section class="reason-icon-div blue accent-5">
                         <h1 class="center-align reason-icon"><i class="fa fa-lock"></i></h1>
@@ -97,7 +97,7 @@
 
                 <section class="reason-div">
                     <section class="reason-icon-div orange accent-4">
-                        <h1 class="center-align reason-icon">&cent;</h1>
+                        <h1 class="center-align reason-icon">&#8358;</h1>
                     </section>
                     <p class="center-align"><b>Rewards</b></p>
                 </section>
@@ -126,7 +126,7 @@
         <h5 class="center-align item-title">Recently Added</h5>
         <p class="center-align item-sub-title">(swipe to navigate)</p>
         <section class="row center-align mobile-slide-div"></section>
-        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color">View More <i class="fa fa-chevron-right"></i></a></p>
+        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color" style="cursor:pointer">View More <i class="fa fa-chevron-right"></i></a></p>
     </section>
 </section>
 <br/><br/>

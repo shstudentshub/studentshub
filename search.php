@@ -1,4 +1,4 @@
-<?php 
+<?php
 	if (isset($_GET['q'])) {
 		$query = $_GET['q'];
 	} else {
@@ -36,7 +36,7 @@
 			<nav class="custom-navbar custom-search">
 				<section class="nav-wrapper">
 					<a href="index" class="hide-on-med-and-down logo-container brand-logo">
-						HuB
+						<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
 					</a>
 
 					<ul class="right custom-right">
@@ -52,7 +52,7 @@
 								</section>
 							</section>
 						</li>
-						
+
 					</ul>
 					<ul class="side-nav" id="nav-mobile">
 						<li><a href="index">HOME</a></li>
@@ -86,7 +86,7 @@
 
 			<section class="col m10 110 content-div search-content-div">
 				<section class="row search-res">
-					<img src='assets/img/snackbar-loader.gif' height='50px' width='50px' style='margin-left: 40%;'>
+					<!--<img src='assets/img/loader.gif' height='50px' width='50px' style='margin-left: 40%;'>-->
 				</section>
 			</section>
 		</section>

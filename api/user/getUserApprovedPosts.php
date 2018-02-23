@@ -6,7 +6,7 @@
 	$userId = intval($_SESSION["userId"]);
 	$pendingStatus = $itemStatusArray["Approved"];
 
-	$getQuery = "SELECT * FROM items WHERE item_publisher_id = $userId AND item_approval_status = $pendingStatus ORDER BY item_id DESC";
+	$getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_publisher_id = $userId AND item_approval_status = $pendingStatus ORDER BY item_id DESC";
 	$result = $database->query($getQuery);
 
 	if ($result->num_rows > 0) {
@@ -20,7 +20,7 @@
 			              <th>#</th>
 			              <th>Item Photo</th>
 			              <th>Item Name</th>
-			              <th>Item Price <span>(GH&cent;)</span></th>
+			              <th>Currency |<span>Item Price</span></th>
 			              <th>Item Category</th>
 			              <th>Item Location</th>
 			              <th>Actions</th>
@@ -32,16 +32,19 @@
 		while ($row = $result->fetch_assoc()) {
 			#get the values from the table tuples
 			$itemId = intval($row["item_id"]);
-			$itemImg = $row["item_img"];
+			$itemImg = $row["image_names"];
 			$itemName = $row["item_name"];
 			$itemPrice = floatval($row["item_price"]);
 			$itemCategoryId = intval($row["item_category_id"]);
 			$itemLocation = $row["item_location"];
 			$itemDetails = $row["item_details"];
-
+      $currency = $row["item_currency"];
 			#encode the item's detials into an array for further operations
+
+      //Unserialize image before use
+      $image = unserialize($itemImg);
 			$itemArray["itemId"] = $itemId;
-			$itemArray["itemImg"] = $itemImg;
+			$itemArray["itemImg"] = $image;
 
 			$itemObj = json_encode($itemArray);
 
@@ -60,13 +63,13 @@
 			echo "
 				<tr>
 					<td>$counter</td>
-					<td><img src='uploads/items/$itemImg' class='user-item-img'></td>
+					<td><img src='uploads/items/$image[0]' class='user-item-img'></td>
 					<td>$newItemName</td>
-					<td>$itemPrice</td>
+					<td>$currency $itemPrice</td>
 					<td>$newCategoryName</td>
 					<td>$newItemLocation</td>
 					<td>
-						<i class='fa fa-trash-o user-item-action-icon delete-icon' onclick='showDeleteUserItemAlert($itemObj)'></i>
+					<!--	<i class='fa fa-trash-o user-item-action-icon delete-icon' onclick='showDeleteUserItemAlert($itemObj)'></i>-->
 					</td>
 				</tr>
 			";
