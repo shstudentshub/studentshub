@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 22, 2018 at 10:01 PM
+-- Generation Time: Feb 23, 2018 at 12:36 PM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.1.14-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -117,7 +117,9 @@ CREATE TABLE `itemimages` (
 INSERT INTO `itemimages` (`image_id`, `image_names`, `item_image_id`) VALUES
 (19, 'a:5:{i:0;s:32:"User_18_63fa81697e2de94c41f.jpeg";i:1;s:31:"User_18_c9f38d34005a8314e6e.jpg";i:2;s:31:"User_18_361f3f4bab1ee97cb8a.png";i:3;s:31:"User_18_4de884eb55fb6282127.png";i:4;s:28:"User_18_35f0cf657a27e43f.png";}', 13),
 (20, 'a:4:{i:0;s:31:"User_18_82d0cf8658d2c83865a.png";i:1;s:31:"User_18_8de434bab1383edd806.jpg";i:2;s:29:"User_18_648a7512d4ab5dcd3.png";i:3;s:26:"User_18_8ecfc9f29e6d54.png";}', 14),
-(21, 'a:4:{i:0;s:28:"User_18_8c80c9537d06386a.jpg";i:1;s:31:"User_18_67dbb85b8eaa441e30c.jpg";i:2;s:30:"User_18_3f6a6f1b711206afd5.jpg";i:3;s:31:"User_18_e47cc22aea775a4606e.jpg";}', 15);
+(22, 'a:4:{i:0;s:31:"User_18_b475284eab175757119.png";i:1;s:31:"User_18_4aa5b177228be9c77d6.png";i:2;s:31:"User_18_94f8afa8d2c3070fabf.png";i:3;s:30:"User_18_c580f6607945186b96.png";}', 16),
+(23, 'a:2:{i:0;s:31:"User_18_44bd6863785844d85f6.png";i:1;s:31:"User_18_46237f8a3408439cc4c.jpg";}', 17),
+(24, 'a:3:{i:0;s:23:"User_18_d132ac548c2.png";i:1;s:30:"User_18_a82b61a1d7f71296d2.png";i:2;s:31:"User_18_159e7f9124fc8f5d225.jpg";}', 18);
 
 -- --------------------------------------------------------
 
@@ -147,9 +149,11 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`item_id`, `item_name`, `item_details`, `item_category_id`, `item_price`, `item_currency`, `item_location`, `item_publisher_id`, `item_tracking_id`, `item_price_term`, `item_approval_status`, `item_post_date`, `item_views`, `item_likes`) VALUES
-(13, 'Shirt', 'askldjfasf lkasdjfalsk asf aslkja skl kja sfkj', 7, '900', 'â‚¦', 'Nigera', 18, '3e1884f82d7d525197659abeac5cb1f1', 'fixed', 1, '2018-02-22', 87, NULL),
+(13, 'Shirt', 'askldjfasf lkasdjfalsk asf aslkja skl kja sfkj', 7, '900', 'â‚¦', 'Nigera', 18, '3e1884f82d7d525197659abeac5cb1f1', 'fixed', 1, '2018-02-22', 90, NULL),
 (14, 'Movies', 'Movie Box', 10, '800', 'â‚µ', 'Ghana', 18, 'e4e3fb258b12a87dd3e31d14a2926484', 'fixed', 0, '2018-02-22', 1, NULL),
-(15, 'Houses', 'Something to be share so soon. Houses for sale in Nigeria', 10, '1000', 'â‚¦', 'Indo State Nigeria', 18, 'de9bd08f877ca9575c9414193c463c8c', 'fixed', 1, '2018-02-22', 47, NULL);
+(16, 'Watches', 'aksjdfkalsjdf', 1, '900', 'â‚µ', 'Ucc', 18, '3773a7a3d8882d4ca1173c5bfc566a9e', 'negotiable', 0, '2018-02-22', NULL, NULL),
+(17, 'Phone', 'Phones in cart', 1, '800', 'â‚¦', 'Nigeria (Yibora state)', 18, '20d81d46913a38e10dfda66bda3d9ac0', 'fixed', 1, '2018-02-22', NULL, NULL),
+(18, 'News Apps', 'asdjlfkasdjf askdljf aslkdfja ksdljf aksldjf klj', 7, '10', 'â‚¦', 'Indo State', 18, '12e1e46ef88bc83a728b00a8f25c05af', 'fixed', 1, '2018-02-22', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -189,18 +193,20 @@ CREATE TABLE `users` (
   `user_email` varchar(70) NOT NULL,
   `user_contact` varchar(20) NOT NULL,
   `user_password` varchar(300) NOT NULL,
-  `user_sign_date` date NOT NULL
+  `user_sign_date` date NOT NULL,
+  `City` varchar(100) NOT NULL,
+  `Country` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_contact`, `user_password`, `user_sign_date`) VALUES
-(10, 'enochMarley', 'mail@mail.com', '029187897189', '$2y$10$fZNYPdwMEVmGLAML8EGLEeI5o0d3IUcCkfLMTN6Jwi2AaO35Hh0dK', '2018-03-14'),
-(14, 'John Doe', 'mail1@mail1.com', '0271728188', '$2y$10$Jv8sDPBZ7A2aLxFmgTqyROaBBP6EWAKMpTaMdwUw6xwD5DfxuVrbq', '2018-03-01'),
-(17, 'kelvin', 'john@gmail.com', '094929', '$2y$10$O15.2mbvB.QE3fjK1ExIxea0fE.vrivDDxjbVut9JpqMAT66ws94u', '2018-01-27'),
-(18, 'kelvin', 'kelvinclin4u@inboxbear.com', '0000000000', '$2y$10$Hr0rLNAMRZb4/Lgb91MJ7OwbTxrWSqlZd8vkiY8V5.P.KcowAkwou', '2018-02-21');
+INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_contact`, `user_password`, `user_sign_date`, `City`, `Country`) VALUES
+(10, 'enochMarley', 'mail@mail.com', '029187897189', '$2y$10$fZNYPdwMEVmGLAML8EGLEeI5o0d3IUcCkfLMTN6Jwi2AaO35Hh0dK', '2018-03-14', 'Accra', ''),
+(14, 'John Doe', 'mail1@mail1.com', '0271728188', '$2y$10$Jv8sDPBZ7A2aLxFmgTqyROaBBP6EWAKMpTaMdwUw6xwD5DfxuVrbq', '2018-03-01', '', ''),
+(17, 'kelvin', 'john@gmail.com', '094929', '$2y$10$O15.2mbvB.QE3fjK1ExIxea0fE.vrivDDxjbVut9JpqMAT66ws94u', '2018-01-27', '', ''),
+(18, 'kelvin', 'kelvinclin4u@inboxbear.com', '0000000000', '$2y$10$Hr0rLNAMRZb4/Lgb91MJ7OwbTxrWSqlZd8vkiY8V5.P.KcowAkwou', '2018-02-21', 'Accra', 'Ghana');
 
 --
 -- Indexes for dumped tables
@@ -296,12 +302,12 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `itemimages`
 --
 ALTER TABLE `itemimages`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `multi`
 --

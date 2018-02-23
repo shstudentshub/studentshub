@@ -19,6 +19,9 @@
 		$userFullname = $row["user_name"];
 		$userContact = $row["user_contact"];
 		$userEmail = $row["user_email"];
+    $city = $row["City"];
+    $country = $row["Country"];
+    $userSignUpdate = $row["user_sign_date"];
 	}
 ?>
 
@@ -114,8 +117,16 @@
 								            <td><?php echo $userContact ?></td>
 								          </tr>
 								          <tr>
-								            <td class='right-align'><b>Email Address</b></td>
-								            <td><?php echo $userEmail ?></td>
+								            <td class='right-align'><b>You sign up on:</b></td>
+								            <td><?php echo $userSignUpdate ?></td>
+								          </tr>
+                          <tr>
+								            <td class='right-align'><b>City :</b></td>
+								            <td><?php echo $city ?></td>
+								          </tr>
+                          <tr>
+								            <td class='right-align'><b>Country:</b></td>
+								            <td><?php echo $country ?></td>
 								          </tr>
 								        </tbody>
 								      </table>

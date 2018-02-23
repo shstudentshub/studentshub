@@ -27,6 +27,8 @@
 			$itemPrice = $row['item_price'];
       $curency = $row['item_currency'];
 
+      $newString = truncateString($itemLocation,7,7);
+
 			$hashSection1 = substr($hashString,0,10);
 			$hashSection2 = substr($hashString,11,10);
 			$hashId = $hashSection1.$itemId.$hashSection2;
@@ -47,7 +49,7 @@
 				          		<span>$curency</span> $itemPrice
 				          	</section>
 				          	<section class='col s6 m6'>
-				          		$itemLocation
+				          		$newString
 				          	</section>
 				          	<br>
 				        </section>
