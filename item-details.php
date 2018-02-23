@@ -75,7 +75,7 @@
 			<nav class="custom-navbar custom-search">
 				<section class="nav-wrapper">
 					<a href="index" class="hide-on-med-and-down logo-container brand-logo">
-						HuB
+						<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
 					</a>
 
 					<ul class="right custom-right">
