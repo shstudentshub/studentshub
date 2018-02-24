@@ -19,6 +19,8 @@
 		$userFullname = $row["user_name"];
 		$userContact = $row["user_contact"];
 		$userEmail = $row["user_email"];
+		$userCountry = $row["Country"];
+		$userCity = $row["City"];
 	}
 ?>
 
@@ -33,7 +35,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--Import materialize.css-->
 		<link type="text/css" rel="stylesheet" href="./assets/css/materialize.css"  media="screen,projection"/>
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css" media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>
@@ -49,6 +50,7 @@
 					</a>
 
 					<ul class="right">
+						<li><a href="index">Home</a></li>
 						<li><a href="#!" onclick="Materialize.toast('You have log in as: <?php echo ucfirst($userFullname);?>', 4000)">Hi <?php echo ucfirst($userFullname); ?></a></li>
 					</ul>
 
@@ -56,7 +58,7 @@
 						<section class="side-nav-profile-div">
 							<h5 class="side-nav-profile-name">Dashboard</h5>
 						</section>
-            <li><a href="index">Home</a></li>
+            			<li><a href="index">Home</a></li>
 						<li><a href="dashboard">My Dashboard</a></li>
 						<li><a href="posts">My Posts<span class="allBadge"></span></a></li>
 						<li><a href="review">View Pending Items<span class="badge"></span></a></li>
@@ -100,8 +102,64 @@
 					<section class="row">
 						<section class="col m2 l2"></section>
 						<section class="col s12 m8 l8">
-							<form method="post" enctype="multipart/form-data" accept-charset="utf-8">
+							<h5>User Account Settings</h5>
+							<form method="post" enctype="multipart/form-data" class="account-setup-form" accept-charset="utf-8">
+								<section class="row">
+									<section class="input-field col s12 m6 l6">
+										<input id="first_name" type="text" class="validate settings-username" value="<?php echo $userFullname; ?>" disabled>
+          								<label for="first_name">Full Name</label>
+									</section>
 
+									<section class="input-field col s12 m6 l6">
+										<input id="email" type="text" class="validate settings-email" value="<?php echo $userEmail; ?>" disabled>
+          								<label for="email">Email Address</label>
+									</section>
+
+								</section><br>
+
+								<section class="row">
+									<section class="input-field col s12 m6 l6">
+										<input id="contact_number" type="text" class="validate settings-contact" value="<?php echo $userContact; ?>">
+          								<label for="contact_number">Contact Number</label>
+									</section>
+
+									<section class="input-field col s12 m6 l6">
+										<input id="country" type="text" class="validate settings-country" value="<?php echo $userCountry; ?>">
+          								<label for="country">Country</label>
+									</section>
+
+								</section><br>
+
+								<section class="row">
+									<section class="input-field col s12 m6 l6">
+										<input id="city" type="text" class="validate settings-city" value="<?php echo $userCity; ?>">
+          								<label for="city">City</label>
+									</section>
+								</section>
+							</form><br><br>
+
+							<h5>User Password Reset</h5>
+							<form method="post" enctype="multipart/form-data" accept-charset="utf-8" class="user-password-reset-form">
+								<section class="row">
+									<section class="input-field col s12 m6 l6">
+										<input id="old_pass" type="text" class="validate settings-old-pass">
+          								<label for="old_pass">Current (Old) Password</label>
+									</section>
+								</section>
+
+								<section class="row">
+									<section class="input-field col s12 m6 l6">
+										<input id="new_pass" type="text" class="validate settings-new-pass">
+          								<label for="new_pass">New Password</label>
+									</section>
+								</section>
+
+								<section class="row">
+									<section class="input-field col s12 m6 l6">
+										<input id="conf_pass" type="text" class="validate settings-conf-pass">
+          								<label for="conf_pass">Confirm Password</label>
+									</section>
+								</section>
 							</form>
 						</section>
 						<section class="col m2 l2"></section>

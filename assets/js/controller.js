@@ -260,6 +260,7 @@ function getItemCategories() {
 //function to get the recent posts for the index page
 function getHomeRecentPosts() {
 	$.get(CONSTANTS.getHomeRecentPostsUrl, function(response) {
+			console.log(response);
 		if (response.success) {
 			$(".recent-items-lg-div").html(response.lgTemplate);
 			$(".mobile-slide-div").html(response.smTemplate);

@@ -6,13 +6,10 @@
 	$response = array();
 
 	$hashString = md5(time());
-<<<<<<< HEAD
 	
 	$getQuery = "SELECT * FROM items WHERE item_approval_status = $itemStatus ORDER BY item_id DESC LIMIT 5";
-=======
   $getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_approval_status = $itemStatus ORDER BY item_id DESC LIMIT 6";
 
->>>>>>> 944c312d24153c98acce939dc27d660a890cc0aa
 
 	$result = $database->query($getQuery);
 

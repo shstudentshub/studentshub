@@ -21,13 +21,9 @@
 			$row = $result->fetch_assoc(); #convert the values of the rows into an array
 			session_start(); #start a session to store some values
 			$_SESSION["adminUsername"] = $row['admin_username']; #store the admin username
-<<<<<<< HEAD
-			#$_SESSION["User"] = $row['admin_id'];
-=======
 			$_SESSION["User"] = $row['admin_id'];
->>>>>>> 944c312d24153c98acce939dc27d660a890cc0aa
+			$_SESSION["User"] = $row['admin_id'];
 
-			#set success response values and send them
 			$response['success'] = true;
 			$response['message'] = "Logged In Successfully";
 			header('Content-Type: application/json');
