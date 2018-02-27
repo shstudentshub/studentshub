@@ -20,10 +20,167 @@
 
 <section class="row recently-added-row">
     <section class="row recently-added-row">
-    <!-- display Category items for desktop -->
+
+    <!-- display recently added items for desktop -->
     <section class="col s12 m12 l12 hide-on-med-and-down">
-        <h5 class="item-title center-align">Why StudentHub?</h5><br/>
-        <section class="reasons-div">
+        <h5 class="center-align item-title">Recently Added</h5><br/>
+        <section class="row recent-items-lg-div">
+
+        </section>
+        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color" style="cursor:pointer">View More <i class="fa fa-chevron-right"></i></a></p>
+
+    </section>
+
+
+
+
+    <!-- display recently added slider for mobile -->
+    <section class="col s12 m12 l12 hide-on-large-only">
+        <h5 class="center-align item-title">Recently Added</h5>
+        <p class="center-align item-sub-title">(swipe to navigate)</p>
+        <section class="row center-align mobile-slide-div"></section>
+        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color" style="cursor:pointer">View More <i class="fa fa-chevron-right"></i></a></p>
+    </section>
+</section>
+<br/><br/>
+
+<!-- how it works row -->
+<section class="row process-row">
+    <h5 class="center-align item-title">How It Works</h5><br/>
+      <section class="row">
+        <h6 class="center-align item-title">Buying</h6><br/>
+          <section class="buyingAndSelling">
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                  <section class="icon-round">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-search"></i></h1>
+                  </section>
+                    <h5 class="center-align process-item-title"> Search Item</h5>
+                    <p class="center-align process-item-sub-title hide-on-med-and-down">Search Items Posted By Verified Users</p>
+                </section>
+            </section>
+
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                  <section class="icon-round">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-phone"></i></h1>
+                  </section>
+
+                    <h5 class="center-align process-item-title"> Contact Seller</h5>
+                    <p class="center-align process-item-sub-title hide-on-med-and-down">Call Or Send The Seller A Message</p>
+                </section>
+            </section>
+
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                  <section class="icon-round">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-handshake-o"></i></h1>
+                  </section>
+                    <h5 class="center-align process-item-title">3. Close Deal</h5>
+                    <p class="center-align process-item-sub-title hide-on-med-and-down">Close The Deal With The Seller In Person</p>
+                </section>
+            </section>
+          </section>
+        </section><br/><br/>
+        <!-- <section class="row">
+          <h6 class="center-align item-title">Some ads will be shown here</h6><br/>
+          <section class="col s12 m4 l4">
+          </section>
+          <section class="col s12 m4 l4">
+            <section class="process-item">
+              <p class="center-align process-item-sub-title">Some serious ads will be shown here</p>
+            </section>
+          </section>
+          <section class="col s12 m4 l4">
+          </section>
+        </section><br/><br/> -->
+
+        <section class="row">
+          <h6 class="center-align item-title">Selling</h6><br/>
+          <section class="buyingAndSelling">
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                  <section class="icon-round">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-paper-plane"></i></h1>
+                  </section>
+                    <h5 class="center-align process-item-title"> Post Item</h5>
+                    <p class="center-align process-item-sub-title hide-on-med-and-down">Post Item For Millions Of People To See</p>
+                </section>
+            </section>
+
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                  <section class="icon-round">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-mobile"></i></h1>
+                  </section>
+                    <h5 class="center-align process-item-title"> Receive Client Call</h5>
+                    <p class="center-align process-item-sub-title hide-on-med-and-down">Receive Call From People Interested In Your Item</p>
+                </section>
+            </section>
+
+            <section class="col s12 m4 l4">
+                <section class="process-item">
+                  <section class="icon-round">
+                    <h1 class="center-align process-item-icon"><i class="fa fa-handshake-o"></i></h1>
+                  </section>
+                    <h5 class="center-align process-item-title"> Close Deal</h5>
+                    <p class="center-align process-item-sub-title hide-on-med-and-down">Close The Deal With The Buyer In Person</p>
+                </section>
+            </section>
+          </section>
+        </section>
+
+</section>
+
+<!-- display Category items for desktop -->
+<section class="col s12 m12 l12 hide-on-med-and-down">
+    <h5 class="item-title center-align">Why StudentHub?</h5><br/>
+    <section class="reasons-div">
+        <section class="reason-div">
+            <section class="reason-icon-div blue accent-5">
+                <h1 class="center-align reason-icon"><i class="fa fa-lock"></i></h1>
+            </section>
+            <p class="center-align"><b>Secure</b></p>
+        </section>
+
+        <section class="reason-div">
+            <section class="reason-icon-div pink accent-5">
+                <h1 class="center-align reason-icon"><i class="fa fa-calendar"></i></h1>
+            </section>
+            <p class="center-align"><b>Daily Deals</b></p>
+        </section>
+
+        <section class="reason-div">
+            <section class="reason-icon-div orange accent-4">
+                <h1 class="center-align reason-icon">&#8358;</h1>
+            </section>
+            <p class="center-align"><b>Rewards</b></p>
+        </section>
+
+        <section class="reason-div">
+            <section class="reason-icon-div teal accent-3">
+                <h1 class="center-align reason-icon"><i class="fa fa-balance-scale"></i></h1>
+            </section>
+            <p class="center-align"><b>Price Match Quarantee</b></p>
+        </section>
+
+        <section class="reason-div">
+            <section class="reason-icon-div indigo accent-5">
+                <h1 class="center-align reason-icon"><i class="fa fa-angellist"></i></h1>
+            </section>
+            <p class="center-align"><b>Super Friendly</b></p>
+        </section>
+    </section>
+
+</section><br><br><br><br><br><br><br>
+
+<!-- Displaying Category in mobile view-->
+<section class="col s12 m12 l12 hide-on-large-only" style="margin-top: -90px">
+    <h5 class="center-align item-title">Why StudentHub?</h5>
+    <p class="center-align item-sub-title">(swipe to navigate)</p>
+    <section class="center-align">
+        <section class="reasons-div-sm">
+
             <section class="reason-div">
                 <section class="reason-icon-div blue accent-5">
                     <h1 class="center-align reason-icon"><i class="fa fa-lock"></i></h1>
@@ -49,7 +206,7 @@
                 <section class="reason-icon-div teal accent-3">
                     <h1 class="center-align reason-icon"><i class="fa fa-balance-scale"></i></h1>
                 </section>
-                <p class="center-align"><b>Price Match Quarantee</b></p>
+                <p class="center-align"><b>Price Match</b></p>
             </section>
 
             <section class="reason-div">
@@ -60,160 +217,10 @@
             </section>
         </section>
 
-    </section><br><br>
-
-    <!-- display recently added items for desktop -->
-    <section class="col s12 m12 l12 hide-on-med-and-down">
-        <h5 class="center-align item-title">Recently Added</h5><br/>
-        <section class="row recent-items-lg-div">
-
-        </section>
-        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color" style="cursor:pointer">View More <i class="fa fa-chevron-right"></i></a></p>
-
-    </section>
-
-
-
-    <!-- Displaying Category in mobile view-->
-    <section class="col s12 m12 l12 hide-on-large-only" style="margin-top: -90px">
-        <h5 class="center-align item-title">Why StudentHub?</h5>
-        <p class="center-align item-sub-title">(swipe to navigate)</p>
-        <section class="center-align">
-            <section class="reasons-div-sm">
-
-                <section class="reason-div">
-                    <section class="reason-icon-div blue accent-5">
-                        <h1 class="center-align reason-icon"><i class="fa fa-lock"></i></h1>
-                    </section>
-                    <p class="center-align"><b>Secure</b></p>
-                </section>
-
-                <section class="reason-div">
-                    <section class="reason-icon-div pink accent-5">
-                        <h1 class="center-align reason-icon"><i class="fa fa-calendar"></i></h1>
-                    </section>
-                    <p class="center-align"><b>Daily Deals</b></p>
-                </section>
-
-                <section class="reason-div">
-                    <section class="reason-icon-div orange accent-4">
-                        <h1 class="center-align reason-icon">&#8358;</h1>
-                    </section>
-                    <p class="center-align"><b>Rewards</b></p>
-                </section>
-
-                <section class="reason-div">
-                    <section class="reason-icon-div teal accent-3">
-                        <h1 class="center-align reason-icon"><i class="fa fa-balance-scale"></i></h1>
-                    </section>
-                    <p class="center-align"><b>Price Match Quarantee</b></p>
-                </section>
-
-                <section class="reason-div">
-                    <section class="reason-icon-div indigo accent-5">
-                        <h1 class="center-align reason-icon"><i class="fa fa-angellist"></i></h1>
-                    </section>
-                    <p class="center-align"><b>Super Friendly</b></p>
-                </section>
-            </section>
-
-        </section>
-    </section>
-    <br/><br/><br/>
-
-    <!-- display recently added slider for mobile -->
-    <section class="col s12 m12 l12 hide-on-large-only">
-        <h5 class="center-align item-title">Recently Added</h5>
-        <p class="center-align item-sub-title">(swipe to navigate)</p>
-        <section class="row center-align mobile-slide-div"></section>
-        <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color" style="cursor:pointer">View More <i class="fa fa-chevron-right"></i></a></p>
     </section>
 </section>
-<br/><br/>
+<br/><br/><br/>
 
-<!-- how it works row -->
-<section class="row process-row">
-    <h5 class="center-align item-title">How It Works</h5><br/>
-        <section class="row">
-            <h6 class="center-align item-title">Buying</h6><br/>
-            <section class="col s12 m4 l4">
-                <section class="process-item">
-                  <section class="icon-round">
-                    <h1 class="center-align process-item-icon"><i class="fa fa-search"></i></h1>
-                  </section>
-                    <h5 class="center-align process-item-title">1. Search Item</h5>
-                    <p class="center-align process-item-sub-title">Search Items Posted By Verified Users</p>
-                </section>
-            </section>
-
-            <section class="col s12 m4 l4">
-                <section class="process-item">
-                  <section class="icon-round">
-                    <h1 class="center-align process-item-icon"><i class="fa fa-phone"></i></h1>
-                  </section>
-
-                    <h5 class="center-align process-item-title">2. Contact Seller</h5>
-                    <p class="center-align process-item-sub-title">Call Or Send The Seller A Message</p>
-                </section>
-            </section>
-
-            <section class="col s12 m4 l4">
-                <section class="process-item">
-                  <section class="icon-round">
-                    <h1 class="center-align process-item-icon"><i class="fa fa-handshake-o"></i></h1>
-                  </section>
-                    <h5 class="center-align process-item-title">3. Close Deal</h5>
-                    <p class="center-align process-item-sub-title">Close The Deal With The Seller In Person</p>
-                </section>
-            </section>
-        </section><br/><br/>
-        <!-- <section class="row">
-          <h6 class="center-align item-title">Some ads will be shown here</h6><br/>
-          <section class="col s12 m4 l4">
-          </section>
-          <section class="col s12 m4 l4">
-            <section class="process-item">
-              <p class="center-align process-item-sub-title">Some serious ads will be shown here</p>
-            </section>
-          </section>
-          <section class="col s12 m4 l4">
-          </section>
-        </section><br/><br/> -->
-
-        <section class="row">
-            <h6 class="center-align item-title">Selling</h6><br/>
-            <section class="col s12 m4 l4">
-                <section class="process-item">
-                  <section class="icon-round">
-                    <h1 class="center-align process-item-icon"><i class="fa fa-paper-plane"></i></h1>
-                  </section>
-                    <h5 class="center-align process-item-title">1. Post Item</h5>
-                    <p class="center-align process-item-sub-title">Post Item For Millions Of People To See</p>
-                </section>
-            </section>
-
-            <section class="col s12 m4 l4">
-                <section class="process-item">
-                  <section class="icon-round">
-                    <h1 class="center-align process-item-icon"><i class="fa fa-mobile"></i></h1>
-                  </section>
-                    <h5 class="center-align process-item-title">2. Receive Client Call</h5>
-                    <p class="center-align process-item-sub-title">Receive Call From People Interested In Your Item</p>
-                </section>
-            </section>
-
-            <section class="col s12 m4 l4">
-                <section class="process-item">
-                  <section class="icon-round">
-                    <h1 class="center-align process-item-icon"><i class="fa fa-handshake-o"></i></h1>
-                  </section>
-                    <h5 class="center-align process-item-title">3. Close Deal</h5>
-                    <p class="center-align process-item-sub-title">Close The Deal With The Buyer In Person</p>
-                </section>
-            </section>
-        </section>
-
-</section>
 
 <!-- reviews row -->
 <!-- <section class="row reviews-row">

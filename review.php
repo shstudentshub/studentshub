@@ -33,6 +33,11 @@
 		<link type="text/css" rel="stylesheet" href="./assets/css/materialize.css"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css" media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css">
+    <style media="screen">
+      body{
+        overflow-x: auto;
+      }
+    </style>
 	</head>
 	<body>
 		<div class="se-pre-con"></div>

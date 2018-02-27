@@ -56,7 +56,7 @@
 							<section class="row">
 								<section class="input-field col s9 m9">
 								  <a>
-									<input id="search" type="search" class="search index-search"  placeholder="Search for items...">
+									<input id="search" type="search" class="search index-search"  placeholder="Search for items or Country">
 								  </a>
 								</section>
 								<section class="input-field col s3 m3">
@@ -96,7 +96,7 @@
 		<!-- Search box for mobile viewport only -->
 		<div class="search-sm-div">
 			<div class= "col wrapme hide-on-large-only s12">
-				<input id="mb-search" type="search" placeholder=" &#128270; Search for items" required class="search-sm index-search-sm">
+				<input id="mb-search" type="search" placeholder=" &#128270; Search for items or country" required class="search-sm index-search-sm">
 				<button type="submit" class="btn2 custom-btn3 search-btn-sm">Search</button>
 			</div>
 		</div>

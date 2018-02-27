@@ -29,7 +29,7 @@
 		<title>Students Hub | The Total Student Shopping Experience</title>
 		<link rel="shortcut icon" href="assets/img/students-hub-logo.png" type="image/x-icon">
       	<meta name="keywords" content="">
-  		<meta name="description" content="">
+  		  <meta name="description" content="">
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--Import materialize.css-->
@@ -71,8 +71,8 @@
 					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>
 				</section>
 			</nav>
-		</section>
 
+		</section>
 		<!-- this is the snackbar for the page -->
 		<section class="snackbar">
 			<i class="fa fa-check snackbar-icon-success"></i>
@@ -144,7 +144,7 @@
               <hr>
 
 							<h5>User Password Reset</h5>
-							<form method="post" enctype="multipart/form-data" accept-charset="utf-8" class="user-password-reset-form">
+							<form method="post" enctype="multipart/form-data" accept-charset="utf-8" class="user-password-reset-form" id="user-password-settings">
 								<section class="row">
 									<section class="input-field col s12 m6 l6">
 										<input id="old_pass" type="password" class="validate settings-old-pass">

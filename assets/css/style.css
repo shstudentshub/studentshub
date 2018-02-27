@@ -614,6 +614,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 .reasons-div-sm {
@@ -621,6 +622,14 @@ body {
     flex-direction: row;
     justify-content: space-between;
     overflow: auto;
+    margin-bottom: 50px;
+}
+
+.buyingAndSelling{
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+
 }
 
 .reasons-div-sm.reason-icon-div {
@@ -661,13 +670,14 @@ body {
     position: relative;
     z-index: 9999;
     left: 25%;
-    top: 40px;
+    top: 200px;
 }
 
 .snackbar.show {
     visibility: visible;
     -webkit-animation: fadein 0.7s;
     animation: fadein 0.7s;
+    position: fixed;
 }
 
 .snackbar.hide {
@@ -685,21 +695,21 @@ body {
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
     from {top: 0; opacity: 0;}
-    to {top: 40px; opacity: 1;}
+    to {top: 200px; opacity: 1;}
 }
 
 @keyframes fadein {
     from {top: 0; opacity: 0;}
-    to {top: 40px; opacity: 1;}
+    to {top: 200px; opacity: 1;}
 }
 
 @-webkit-keyframes fadeout {
-    from {top: 30px; opacity: 1;}
+    from {top: 200px; opacity: 1;}
     to {top: 0; opacity: 0;}
 }
 
 @keyframes fadeout {
-    from {top: 30px; opacity: 1;}
+    from {top: 200px; opacity: 1;}
     to {top: 0; opacity: 0;}
 }
 
@@ -775,6 +785,15 @@ hr{
 
 strong{
   font-weight: bold;
+}
+
+.process-item-title{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.process-item-sub-title{
+  font-size: 12px;
 }
 
 .icon-round{
@@ -1088,6 +1107,12 @@ input[type=search]:focus {
         top: 30px;
     }
 
+    .mobile-slide-div{
+      display: flex;
+      flex-direction: row;
+      overflow: auto;
+    }
+
     .signin-modal, .signup-modal {
         margin: 2% !important;
         max-height: 75vh !important;
@@ -1115,6 +1140,20 @@ input[type=search]:focus {
     }
     .reason-icon{
       margin-top: 20px;
+    }
+    .process-item-icon{
+      font-size: 20px;
+      margin-top: 16px;
+    }
+    .icon-round{
+      height: 60px;
+      width: 60px;
+    }
+    .process-item-title{
+      font-size: 12px;
+    }
+    .buyingAndSelling{
+      margin-left: 1px;
     }
 }
 
@@ -1160,7 +1199,10 @@ input[type=search]:focus {
         height: 230px;
 
     }
-
+    .mobile-slide-div{
+      display: flex;
+      flex-direction: column;
+    }
     .carousel{
       margin-top: 10px;
     }
@@ -1176,6 +1218,20 @@ input[type=search]:focus {
     }
     .reason-icon{
       margin-top: 20px;
+    }
+    .process-item-icon{
+      font-size: 20px;
+      margin-top: 16px;
+    }
+    .icon-round{
+      height: 50px;
+      width: 50px;
+    }
+    .process-item-title{
+      font-size: 12px;
+    }
+    .buyingAndSelling{
+      margin-left: 1px;
     }
 }
 
@@ -1228,11 +1284,30 @@ input[type=search]:focus {
         height: 170px;
     }
     .reason-icon-div{
-      height: 150px;
-      width: 150px;
+      height: 100px;
+      width: 100px;
     }
     .reason-icon{
-      margin-top: 20px;
+      margin-top: -10px;
+      font-size: 40px;
+    }
+    .process-item-icon{
+      font-size: 20px;
+      margin-top: 16px;
+    }
+    .icon-round{
+      height: 50px;
+      width: 50px;
+    }
+    .process-item-title{
+      font-size: 12px;
+    }
+    .buyingAndSelling{
+      margin-left: 1px;
+    }
+    .mobile-slide-div{
+      display: flex;
+      flex-direction: column;
     }
 }
 
@@ -1284,11 +1359,30 @@ input[type=search]:focus {
         height: 190px;
     }
     .reason-icon-div{
-      height: 150px;
-      width: 150px;
+      height: 100px;
+      width: 100px;
     }
     .reason-icon{
-      margin-top: 20px;
+      margin-top: -10px;
+      font-size: 40px;
+    }
+    .process-item-icon{
+      font-size: 20px;
+      margin-top: 16px;
+    }
+    .icon-round{
+      height: 50px;
+      width: 50px;
+    }
+    .process-item-title{
+      font-size: 12px;
+    }
+    .buyingAndSelling{
+      margin-left: 1px;
+    }
+    .mobile-slide-div{
+      display: flex;
+      flex-direction: column;
     }
 }
 
@@ -1342,11 +1436,30 @@ input[type=search]:focus {
       margin-top: 60px;
     }
     .reason-icon-div{
-      height: 150px;
-      width: 150px;
+      height: 80px;
+      width: 80px;
     }
     .reason-icon{
-      margin-top: 20px;
+      margin-top: -10px;
+      font-size: 30px;
+    }
+    .process-item-icon{
+      font-size: 20px;
+      margin-top: 16px;
+    }
+    .icon-round{
+      height: 50px;
+      width: 50px;
+    }
+    .process-item-title{
+      font-size: 12px;
+    }
+    .buyingAndSelling{
+      margin-left: 1px;
+    }
+    .mobile-slide-div{
+      display: flex;
+      flex-direction: column;
     }
 }
 
@@ -1386,11 +1499,30 @@ input[type=search]:focus {
       margin-top: 60px;
     }
     .reason-icon-div{
-      height: 150px;
-      width: 150px;
+      height: 80px;
+      width: 80px;
     }
     .reason-icon{
-      margin-top: 20px;
+      margin-top: -10px;
+      font-size: 30px;
+    }
+    .process-item-icon{
+      font-size: 20px;
+      margin-top: 16px;
+    }
+    .icon-round{
+      height: 50px;
+      width: 50px;
+    }
+    .process-item-title{
+      font-size: 12px;
+    }
+    .buyingAndSelling{
+      margin-left: 1px;
+    }
+    .mobile-slide-div{
+      display: flex;
+      flex-direction: column;
     }
 }
 
@@ -1433,11 +1565,30 @@ input[type=search]:focus {
       height: 350px;
     }
     .reason-icon-div{
-      height: 150px;
-      width: 150px;
+      height: 80px;
+      width: 80px;
     }
     .reason-icon{
-      margin-top: 20px;
+      margin-top: -10px;
+      font-size: 30px;
+    }
+    .process-item-icon{
+      font-size: 20px;
+      margin-top: 16px;
+    }
+    .icon-round{
+      height: 50px;
+      width: 50px;
+    }
+    .process-item-title{
+      font-size: 12px;
+    }
+    .buyingAndSelling{
+      margin-left: 1px;
+    }
+    .mobile-slide-div{
+      display: flex;
+      flex-direction: column;
     }
 }
 

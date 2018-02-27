@@ -65,6 +65,7 @@ $(".user-password-reset-form").on("submit",function(event){
           console.log(response);
           if(response.success){
             showSnackBar(response.message, "success");
+            $("form#user-password-settings")[0].reset();
           }else if(!response.message){
             showSnackBar(response.message, "error");
           }
