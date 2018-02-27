@@ -42,7 +42,6 @@
         <p class="center-align"><a onclick="viewMoreItems()" class="custom-text-color" style="cursor:pointer">View More <i class="fa fa-chevron-right"></i></a></p>
     </section>
 </section>
-<br/><br/>
 
 <!-- how it works row -->
 <section class="row process-row">
@@ -81,7 +80,7 @@
                 </section>
             </section>
           </section>
-        </section><br/><br/>
+        </section>
         <!-- <section class="row">
           <h6 class="center-align item-title">Some ads will be shown here</h6><br/>
           <section class="col s12 m4 l4">
@@ -172,7 +171,7 @@
         </section>
     </section>
 
-</section><br><br><br><br><br><br><br>
+</section><br>
 
 <!-- Displaying Category in mobile view-->
 <section class="col s12 m12 l12 hide-on-large-only" style="margin-top: -90px">

@@ -78,6 +78,7 @@
 						<?php
 							} else if ($userLoggedIn) { ?>
 								<li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="posts">Sell</a></li>
 								<li><a class="dropdown-trigger" href="#!" data-activates="user-dropdown"><?php echo $userFullname; ?> <i class="fa fa-chevron-down"></i></a></li>
 
 						<?php } ?>

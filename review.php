@@ -52,6 +52,7 @@
 
 					<ul class="right">
 						<li><a href="index">Home</a></li>
+            <li><a href="posts">Sell</a></li>
 						<li><a href="#!" onclick="Materialize.toast('You have log in as: <?php echo ucfirst($userFullname);?>', 4000)">Hi <?php echo ucfirst($userFullname); ?></a></li>
 					</ul>
 
