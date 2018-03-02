@@ -19,18 +19,17 @@
 		$userFullname = $row["user_name"];
 		$userContact = $row["user_contact"];
 		$userEmail = $row["user_email"];
-		$userCountry = $row["Country"];
-		$userCity = $row["City"];
+		$userCountry = $row["user_country"];
+		$userCity = $row["user_city"];
 	}
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Students Hub | The Total Student Shopping Experience</title>
 		<link rel="shortcut icon" href="assets/img/students-hub-logo.png" type="image/x-icon">
       	<meta name="keywords" content="">
-  		<meta name="description" content="">
+  		  <meta name="description" content="">
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--Import materialize.css-->
@@ -50,7 +49,8 @@
 					</a>
 
 					<ul class="right">
-						<li><a href="index">Home</a></li>
+            <li><a href="index">Home</a></li>
+            <li><a href="posts">Sell</a></li>
 						<li><a href="#!" onclick="Materialize.toast('You have log in as: <?php echo ucfirst($userFullname);?>', 4000)">Hi <?php echo ucfirst($userFullname); ?></a></li>
 					</ul>
 
@@ -72,8 +72,8 @@
 					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>
 				</section>
 			</nav>
-		</section>
 
+		</section>
 		<!-- this is the snackbar for the page -->
 		<section class="snackbar">
 			<i class="fa fa-check snackbar-icon-success"></i>
@@ -81,7 +81,6 @@
 			<img src="assets/img/snackbar-loader.gif" class="snackbar-loader">
 			<span class="snackbar-text"><b> </b></span><br/>
 		</section>
-
 
 		<section class="row dashboard-div">
 			<section class="row">
@@ -106,7 +105,7 @@
 							<form method="post" enctype="multipart/form-data" class="account-setup-form" accept-charset="utf-8">
 								<section class="row">
 									<section class="input-field col s12 m6 l6">
-										<input id="first_name" type="text" class="validate settings-username" value="<?php echo $userFullname; ?>" disabled>
+										<input id="first_name" type="text" class="validate settings-fullname" value="<?php echo $userFullname; ?>" disabled>
           								<label for="first_name">Full Name</label>
 									</section>
 
@@ -136,30 +135,42 @@
           								<label for="city">City</label>
 									</section>
 								</section>
+
+                <section clas="row">
+                  <section class="col s12 m3 l3">
+                    <button type="submit" class="btn modal-action modal-close custom-btn">Update</button>
+                  </section>
+                </section>
 							</form><br><br>
+              <hr>
 
 							<h5>User Password Reset</h5>
-							<form method="post" enctype="multipart/form-data" accept-charset="utf-8" class="user-password-reset-form">
+							<form method="post" enctype="multipart/form-data" accept-charset="utf-8" class="user-password-reset-form" id="user-password-settings">
 								<section class="row">
 									<section class="input-field col s12 m6 l6">
-										<input id="old_pass" type="text" class="validate settings-old-pass">
+										<input id="old_pass" type="password" class="validate settings-old-pass">
           								<label for="old_pass">Current (Old) Password</label>
 									</section>
 								</section>
 
 								<section class="row">
 									<section class="input-field col s12 m6 l6">
-										<input id="new_pass" type="text" class="validate settings-new-pass">
+										<input id="new_pass" type="password" class="validate settings-new-pass">
           								<label for="new_pass">New Password</label>
 									</section>
 								</section>
 
 								<section class="row">
 									<section class="input-field col s12 m6 l6">
-										<input id="conf_pass" type="text" class="validate settings-conf-pass">
+										<input id="conf_pass" type="password" class="validate settings-conf-pass">
           								<label for="conf_pass">Confirm Password</label>
 									</section>
 								</section>
+                <section clas="row">
+                  <section class="col s12 m3 l3">
+                    <button type="submit" class="btn modal-action modal-close custom-btn">Update</button>
+                  </section>
+                </section>
 							</form>
 						</section>
 						<section class="col m2 l2"></section>

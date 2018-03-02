@@ -7,24 +7,24 @@ $(function(){
     });
 
 	//initialize the side nav
-    $(".button-collapse").sideNav();
+    //$(".button-collapse").sideNav();
 
     //initialize the modal
-    $('.modal').modal();
+    //$('.modal').modal();
 
     //initialize the select element
-    $('select').material_select();
+   // $('select').material_select();
 
     //initialize the dropdown
-    $(".dropdown-trigger").dropdown();
+    //$(".dropdown-trigger").dropdown();
 
     //initialize the carousel
-    $('.intro-carousel').carousel({fullWidth: true});
-    $('.recent-added-carousel').carousel();
+    //$('.intro-carousel').carousel({fullWidth: true});
+    //$('.recent-added-carousel').carousel();
 
-    setInterval(function() {
-    	$('.intro-carousel').carousel('next');
-    },5000);
+    //setInterval(function() {
+    	//$('.intro-carousel').carousel('next');
+    //},5000);
 
-    $(".parallax").parallax();
+    //$(".parallax").parallax();
 });

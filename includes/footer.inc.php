@@ -1,26 +1,22 @@
 		<!-- footer row -->
-        <?php if(!isset($_SESSION['userId'])){ ?>
-    <section class="row footer-row">
+        <?php /*if(!isset($_SESSION['userId'])){*/ ?>
+    <section class="container-fluid footer-row">
+        <h6 class="text-center item-title">Hear From Us Regularly By Joining Our Mailing List</h6><br/>
         <section class="row">
-            <h6 class="center-align item-title">Hear From Us Regularly By Joining Our Mailing List</h6><br/>
-            <section class="col m3 l3"></section>
-            <section class="col m6 l6">
-                <form method="post" class="col s12">
-                    <section class="row">
-                        <section class="input-field col s9 m9">
-                            <input type="email" class="validate"  placeholder="Your Email Address" required>
-                        </section>
-                        <section class="input-field col s3 m3">
-                            <button type="submit" class="btn1 custom-btn1">Join&nbspUs</button>
-                        </section>
+            <section class="col-md-3 col-lg-3"></section>
+            <section class="col-md-6 col-lg-6">
+                <form method="post" class="col-md-12">
+                    <section class="join-us-input-div">
+                        <input type="email" class="form-control"  placeholder="Your Email Address" required>
+                        <button type="submit" class="btn1 custom-btn1">Join&nbsp;Us</button>
                     </section>
                 </form>
             </section>
-            <section class="col m3 l3"></section>
+            <section class="col-md-3 col-lg-3"></section>
         </section><br/>
 
         <section class="row">
-            <section class="col s12 m3 l3">
+            <section class="col-md-3 col-sm-12 col-xs-12">
                 <section class="footer-item">
                     <section class="footer-header">
                         <h6 class="footer-header-title">Students Hub</h6>
@@ -39,7 +35,7 @@
 
             </section>
 
-            <section class="col s4 m3 l3">
+            <section class="col-md-3 col-sm-4 col-xs-4">
                 <section class="footer-item">
                     <section class="footer-header">
                         <h6 class="footer-header-title">Company</h6>
@@ -55,7 +51,7 @@
 
             </section>
 
-            <section class="col s4 m3 l3">
+            <section class="col-md-3 col-sm-4 col-xs-4">
                 <section class="footer-item">
                     <section class="footer-header">
                         <h6 class="footer-header-title">Info</h6>
@@ -71,7 +67,7 @@
 
             </section>
 
-            <section class="col s4 m3 l3">
+            <section class="col-md-3 col-sm-4 col-xs-4">
                 <section class="footer-item">
                     <section class="footer-header">
                         <h6 class="footer-header-title">Follow Us</h6>
@@ -89,18 +85,20 @@
         </section>
         <hr>
 
-        <p class="center-align footer-cr">Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</p>
+        <p class="text-center"><small>Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.<small></p>
 
     </section>
-    <?php } ?>
+    <?php /*}*/ ?>
 
 		<!--Import js libraries -->
-        <script type="text/javascript" src="./assets/js/jquery-2.2.4.min.js"></script>
-        <script type="text/javascript" src="./assets/js/modernizr.js"></script>
-        <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
-        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
-        <script type="text/javascript" src="./assets/js/init.js"></script>
-        <script type="text/javascript" src="./assets/js/controller.js"></script>
-        <script type="text/javascript" src="./assets/js/imagecontroller.js"></script>
+        <script type="text/javascript" src="assets/js/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="assets/js/modernizr.js"></script>
+        <script type="text/javascript" src="assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/chart.min.js"></script>
+        <script type="text/javascript" src="assets/js/init.js"></script>
+        <script type="text/javascript" src="assets/js/controller.js"></script>
+        <script type="text/javascript" src="assets/js/settingsController.js"></script>
+        <script type="text/javascript" src="assets/js/imagecontroller.js"></script>
       </body>
 </html>

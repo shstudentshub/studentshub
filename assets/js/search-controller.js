@@ -53,7 +53,7 @@ function getInitCategoryItems() {
 }
 
 function getSideCategoryItems(categoryObj) {
-	$('.button-collapse').sideNav('hide');
+	//$('.button-collapse').sideNav('hide');
 	var data = $.param({
 		categoryName: categoryObj.categoryName,
 		categoryId: categoryObj.categoryId

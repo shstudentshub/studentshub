@@ -93,4 +93,4 @@
 		</section>
 
 
-<?php  include "includes/info.footer.php" ?>
+<?php  include "includes/footer.inc.php" ?>

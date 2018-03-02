@@ -34,11 +34,11 @@
 
 			$lgTemplate.=  "
 
-				<section class='col m2 l2 s12'>
+				<section class='col-md-2 col-sm-12 recent'>
 		            <a href='item-details?id=$hashId' title='View Item'>
 		                <section class='recent-item'>
-		                    <img src='uploads/items/$image[0]'><br>
-                        <span class='curPrice'>$curency $itemPrice</span>
+		                    <img src='uploads/items/$image[0]' class='img-fluid'><br>
+                        	<span class='curPrice'>$curency $itemPrice</span>
 		                    <a href='item-details?id=$hashId'><p class='center-align' style='color:#000;font-weight:bold'><i class='fa fa-eye-open'></i> $itemName</p></a>
 		                </section>
 		            </a>

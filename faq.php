@@ -1,6 +1,6 @@
 <?php include "includes/info.header.php" ?>
 		<!-- The navbar -->
-		
+
 		  <div class="navbar-fixed">
 		    <nav>
 		      <section class="nav-wrapper">
@@ -24,7 +24,7 @@
 		      </section>
 		    </nav>
 		  </div>
-        
+
 
 		<!-- Fixed Search bar for mobile viewport -->
 		<section class="row container">
@@ -111,8 +111,8 @@
 				      <div class="collapsible-header"><strong>Are the prices on Students hub negotiable?</strong></div>
 				      <div class="collapsible-body"><span>Yes, some of them are. It depends on the seller. Contact seller</span></div>
 				    </li>
-				  </ul>		
+				  </ul>
 			</section>
 		</section>
-		
-<?php  include "includes/info.footer.php" ?>
+
+<?php  include "includes/footer.inc.php" ?>

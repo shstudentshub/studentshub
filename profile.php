@@ -19,8 +19,8 @@
 		$userFullname = $row["user_name"];
 		$userContact = $row["user_contact"];
 		$userEmail = $row["user_email"];
-    $city = $row["City"];
-    $country = $row["Country"];
+    $city = $row["user_city"];
+    $country = $row["user-country"];
     $userSignUpdate = $row["user_sign_date"];
 	}
 ?>
@@ -52,6 +52,7 @@
 
 					<ul class="right">
 						<li><a href="index">Home</a></li>
+            <li><a href="posts">Sell</a></li>
 						<li><a href="#!" onclick="Materialize.toast('You have log in as: <?php echo ucfirst($userFullname);?>', 4000)">Hi <?php echo ucfirst($userFullname); ?></a></li>
 					</ul>
 

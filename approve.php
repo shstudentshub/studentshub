@@ -33,6 +33,11 @@
 		<link type="text/css" rel="stylesheet" href="./assets/css/materialize.css"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css" media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css">
+    <style media="screen">
+      body{
+        overflow-x: auto;
+      }
+    </style>
 	</head>
 	<body>
 		<div class="se-pre-con"></div>
@@ -46,7 +51,8 @@
 					</a>
 
 					<ul class="right">
-						<li><a href="index">Home</a></li>
+            <li><a href="index">Home</a></li>
+            <li><a href="posts">Sell</a></li>
 						<li><a href="#!" onclick="Materialize.toast('You have log in as: <?php echo ucfirst($userFullname);?>', 4000)">Hi <?php echo ucfirst($userFullname); ?></a></li>
 					</ul>
 
