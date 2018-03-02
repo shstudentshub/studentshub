@@ -700,6 +700,16 @@ body {
 /*for the search page*/
 .search-categories li{
   cursor: pointer;
+  list-style-type: none;
+  font-size: 14px;
+}
+
+.search-card-img {
+    height: 200px;
+}
+
+.search-card {
+    margin: 5px;
 }
 
 /* For the snackbar styling */

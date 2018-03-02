@@ -27,7 +27,7 @@
 			$itemPrice = $row['item_price'];
       $curency = $row['item_currency'];
 
-      $newString = truncateString($itemLocation,7,7);
+      $newString = truncateString($itemLocation,25,25);
 
 			$hashSection1 = substr($hashString,0,10);
 			$hashSection2 = substr($hashString,11,10);
@@ -37,32 +37,24 @@
       $image = unserialize($itemImage);
 
 			echo "
-				    <section class='col s12 m3'>
-				      <section class='card'>
-				        <section class='card-image'>
-				          <img src='uploads/items/$image[0]' class='search-item-img'>
-				          <span class='card-title'>$itemName</span>
-				          <a href='item-details?id=$hashId' class='btn-floating halfway-fab waves-effect waves-light red center-align'><small>View</small></a>
-				        </section>
-				        <section class='card-content'>
-				          	<section class='col s6 m6'>
-				          		<span>$curency</span> $itemPrice
-				          	</section>
-				          	<section class='col s6 m6'>
-				          		$newString
-				          	</section>
-				          	<br>
-				        </section>
-				      </section>
-				    </section>
-			";
+					<div class='card search-card' style='width: 18rem;'>
+					  <img class='card-img-top search-card-img' src='uploads/items/$image[0]' alt='Card image cap'>
+					  <div class='card-body'>
+					    <p class='card-title'>
+					    	<small><i class='fa fa-asterisk'></i> $itemName</small><br>
+					    	<small><i class='fa fa-map-marker'></i>&nbsp; $newString</small><br>
+					    	<small><i class='fa fa-info-circle'></i> $curency $itemPrice</i></small>
+					    </p>
+					    <a href='item-details?id=$hashId' class='btn btn-info btn-sm'>View</a>
+					  </div>
+					</div>";
 
 		}
 	} else {
 		if ($categoryName == 'all') {
-		 	echo "<h6>Sorry, No Items Available</h6>";
+		 	echo "<h6 class='text-center text-info'>Sorry, No Items Available</h6>";
 		} else {
-			echo "<h6>Sorry, No Items For Your Chosen Category</h6>";
+			echo "<h6 class='text-center text-info'>Sorry, No Items For Your Chosen Category</h6>";
 		}
 
 

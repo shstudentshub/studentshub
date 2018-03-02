@@ -83,7 +83,7 @@
 
 			<!--SideBar-->
 			<section class="col-md-2 side-div hide-on-med-and-down">
-				<h5 class="search-align"><u>Categories</u></h5>
+				<h6 class="search-align"><b>Categories</b></h6>
 				<section class="row search-align">
 					<ul class="search-categories"></ul>
 				</section>
