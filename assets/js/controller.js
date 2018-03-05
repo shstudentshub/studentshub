@@ -110,7 +110,7 @@ $(".user-signin-form").on("submit", function(event) {
 
 				setTimeout(function() {
 					console.log('successful login');
-					window.location.href = 'index';
+					window.location.reload();
 					hideSnackBar();
 				},1000);
 			} else if(!response.success) { //else if login is not successful,
@@ -132,7 +132,6 @@ $(".delete-post-form").on("submit", function(event) {
 			itemImg: itemImg
 		});
 
-console.log(data);
 	$.post(CONSTANTS.deleteUserItemUrl,data, function(response) {
     console.log(response);
 		if (response.success) {
@@ -154,15 +153,18 @@ console.log(data);
 //event handlers to display the item image if it is selected
 $(".post-item-img").on("change", function(){
     var file = document.getElementById('post-item-img').files;
+    var msg = "";
 
-    $(".post-item-img-label").html("Item Photo Selected").css('color','#ffff');
+    var numberOfImages = file.length;
+    if (numberOfImages == 1) {
+    	msg = "1 Photo Selected";
+    } else {
+    	msg = numberOfImages + " Photos Selected";
+    }
 
-	var reader = new FileReader();
-	reader.onload = function (e) {
-	    $(".post-item-img-preview").attr('src', e.target.result);
-	}
+    $(".post-item-img-label").html(msg).css('color','#ffff');
 
-	reader.readAsDataURL(file[0]);
+	
 });
 
 //event to hide the snackbar if a user starts to enter something after an error
@@ -194,7 +196,7 @@ $(".search-btn-sm").on('click',function(event) {
 //some methods to make requests from api
 function getHomeCategories() {
 	$.get(CONSTANTS.getHomeCategoriesUrl, function(response) {
-		$(".nav-categories, .nav-categories-sm").html(response);
+		$(".nav-categories, .side-nav-categories").html(response);
 	})
 }
 
@@ -231,7 +233,21 @@ function getuserDeclinedPosts() {
 function showDeleteUserItemAlert(itemObj) {
 	$(".delete-item-id").val(itemObj.itemId);
 	$(".delete-item-img").val(itemObj.itemImg);
-	$(".delete-item-modal").modal("open");
+	$(".delete-item-modal").modal("show");
+}
+
+function showEditItemModal(itemObj) {
+	$(".edit-post-item-name").val(itemObj.itemName);
+	$(".edit-Item-Id").val(itemObj.itemId);
+	$(".edit-post-item-price").val(itemObj.itemPrice);
+	$(".edit-post-item-location").val(itemObj.itemLocation);
+	$(".edit-previous-currency").html(itemObj.currency);
+	$(".edit-previous-price-term").html(itemObj.itemPriceTerm);
+	$(".edit-previous-category").html(itemObj.categoryName);
+	$(".edit-previous-condition").html(itemObj.itemCondition);
+	$(".edit-post-item-details").html(itemObj.itemDetails);
+
+	$("#edit-post-modal").modal("show");
 }
 
 //function to delete user's post data for graph
@@ -253,7 +269,7 @@ function getUserPostSummary() {
 //function to get the item categories
 function getItemCategories() {
 	$.get(CONSTANTS.getItemCategoryUrl, function(response) {
-		$(".post-item-categories, .edit-item-categories").html(response);
+		$(".post-item-categories, .edit-item-categories, .edit-post-item-categories").html(response);
 	});
 }
 

@@ -60,7 +60,8 @@ function getSideCategoryItems(categoryObj) {
 	});
 
 	$.post(SEARCH_CONSTANTS.getCategoryItemsUrl,data, function(response) {
-		$(".search-res").html(response)
+		$(".search-res").html(response);
+		closeSideNav();
 	})
 }
 

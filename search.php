@@ -44,14 +44,12 @@
 			<a class="navbar-brand" href="index">
 				<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
+			<a class="nav-item custom-nav-item nav-link collapse-icon" href="#" onclick="openSideNav()"><i class="fa fa-navicon"></i></a>
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<section class="navbar-nav mr-auto">
 		            <form class="form-inline">
-		                <input id="search" type="search" value="<?php echo $query ?>" class="form-control form-control-sm mr-sm-2 index-search"  placeholder="Search for items or Country">
-		                <button class="btn btn-sm btn-outline-default my-2 my-sm-0" type="submit">Search</button>
+		                <input id="search" type="search" value="<?php echo $query ?>" class="form-control form-control-sm mr-sm-2 main-search"  placeholder="Search for items or Country">
+		                <!-- <button class="btn btn-sm btn-outline-default my-2 my-sm-0" type="submit">Search</button> -->
 		            </form>
 		        </section>
 
@@ -77,6 +75,40 @@
 				</ul>
 			</div>
 		</nav>
+		<section class="search-sm-div hide-on-large-only">
+		         <input type="search" value="<?php echo $query ?>" placeholder=" &#128270; Search for items" name="search" class="form-control-sm form-control search-sm main-search">&nbsp;&nbsp;
+		         <button class="btn custom-btn1 btn-sm" type="submit">Search</button>
+		</section>
+
+		<section id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+            
+            <?php
+				if (!$userLoggedIn) { ?>
+				<a href="#signin-modal" class="nav-link" data-toggle="modal">Sign In</a>
+				<a href="#signup-modal" class="nav-link" data-toggle="modal">Sign Up</a><br>
+				<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><strong>Categories <i class="fa fa-chevron-down"></i></strong></a>
+				<div class="collapse" id="collapseExample">
+				  <div class="">
+				    <ul class="search-categories"></ul>
+				  </div>
+				</div>
+				
+				<?php
+				} else if ($userLoggedIn) { ?>
+				<a  href="#" ><strong><?php echo $userFullname; ?></strong></a><br>
+				<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><strong>Categories <i class="fa fa-chevron-down"></i></strong></a>
+				<div class="collapse" id="collapseExample">
+				  <div class="">
+				    <ul class="search-categories"></ul>
+				  </div>
+				</div>
+				<a href="dashboard.php" class="nav-link">Dashboard</a>
+				<a href="posts" class="nav-link">Sell</a>
+				<a class="dropdown-item" href="account-setup">Account</a>
+				<a class="dropdown-item" href="logout.php">Logout</a>
+			<?php } ?>
+        </section>
 
 		<section class="container-fluid main-div">
 			<section class="row main-row">
@@ -97,33 +129,7 @@
 		</section>
 		</section>
 
-		<!-- <hr> -->
-
-        <!-- <p class="center-align footer-cr">Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</p> -->
-
-			<script type="text/javascript" src="./assets/js/jquery-2.2.4.min.js"></script>
-	        <script type="text/javascript" src="./assets/js/modernizr.js"></script>
-	        <script type="text/javascript" src="./assets/js/popper.min.js"></script>
-	        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
-	        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
-	        <script type="text/javascript" src="./assets/js/init.js"></script>
-	        <script type="text/javascript" src="./assets/js/search-controller.js"></script>
-	        <?php if (isset($_GET['q'])) { ?>
-	        	<script>
-	        		var data = $.param({
-						query:'<?php echo $_GET['q']; ?>'
-					});
-
-					$.post(SEARCH_CONSTANTS.getSearchResultsUrl,data, function(response) {
-						$(".search-res").html(response)
-					})
-	        	</script>
-	       	<?php } ?>
-
-		</body>
-	</html>
-
-	<!-- Modals for login and signup -->
+		<!-- Modals for login and signup -->
 		<!-- Sign up modal -->
 		<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog">
 			<div class="modal-dialog" role="document">
@@ -185,7 +191,7 @@
 				        <img src="assets/img/students-hub-logo.png" class="form-logo" alt="Logo">
 						<p class="text-center"><small>Enter Your Email And Password To Sign In</small></p>
 						<br/>
-						<form method="post" class="user-form user-signup-form" accept-charset="utf-8">
+						<form method="post" class="user-form user-signin-form" accept-charset="utf-8">
 							<section class="row">
 								<section class="col-md-1"></section>
 								<section class="col-md-10">
@@ -197,7 +203,7 @@
 									<section class="form-group">
 										<input type="password" class="user-signin-password" placeholder="Password" required>
 									</section><br>
-									<button type="submit" class="btn btn-primary">Signup</button>
+									<button type="submit" class="btn btn-primary">Login</button>
 				        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 								</section>
 								<section class="col-md-1"></section>
@@ -210,3 +216,48 @@
 			    </div>
 			</div>
 		</div>
+
+		<!-- this is the snackbar for the page -->
+		<section class="snackbar">
+			<i class="fa fa-check snackbar-icon-success"></i>
+			<i class="fa fa-warning snackbar-icon-error"></i>
+			<img src="assets/img/snackbar-loader.gif" class="snackbar-loader">
+			<span class="snackbar-text"><b> </b></span><br/>
+		</section>
+
+        <script>
+			//function to open the side nav
+		    function openSideNav() {
+		        document.getElementById("mySidenav").style.width = "100%";
+		    }
+
+		    //function to close the side nav
+		    function closeSideNav(){
+		        document.getElementById("mySidenav").style.width = "0%";
+		    }
+		</script>
+
+			<script type="text/javascript" src="./assets/js/jquery-2.2.4.min.js"></script>
+	        <script type="text/javascript" src="./assets/js/modernizr.js"></script>
+	        <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+	        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+	        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
+	        <script type="text/javascript" src="./assets/js/init.js"></script>
+	        <script type="text/javascript" src="./assets/js/controller.js"></script>
+	        <script type="text/javascript" src="./assets/js/search-controller.js"></script>
+	        <?php if (isset($_GET['q'])) { ?>
+	        	<script>
+	        		var data = $.param({
+						query:'<?php echo $_GET['q']; ?>'
+					});
+
+					$.post(SEARCH_CONSTANTS.getSearchResultsUrl,data, function(response) {
+						$(".search-res").html(response)
+					})
+	        	</script>
+	       	<?php } ?>
+
+		</body>
+	</html>
+
+	

@@ -19,16 +19,17 @@
   		$itemCategory = intval($_GET['itemCategory']);
   		$itemPriceTerm = mysqli_real_escape_string($database,trim($_GET['itemPriceTerm']));
       $tradeCurrency = mysqli_real_escape_string($database,trim($_GET['tradeCurrency']));
+      $itemCondition = mysqli_real_escape_string($database,trim($_GET['itemCondition']));
 
       $tracking_id = md5(microtime());
 
 
       //Let insert into database without image uploads
 
-      $itemInsertQuery = "INSERT INTO items(item_name,item_details,item_category_id,item_price,item_currency,item_location,item_publisher_id,item_tracking_id,item_price_term,item_post_date) VALUES(?,?,?,?,?,?,?,?,?,?)";
+      $itemInsertQuery = "INSERT INTO items(item_name,item_details,item_category_id,item_price,item_currency,item_location,item_publisher_id,item_tracking_id,item_price_term,item_post_date,item_condition) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 
 			$preparedInsertQuery = $database->prepare($itemInsertQuery);
-			$preparedInsertQuery->bind_param("ssisssisss",$itemName,$itemDetails,$itemCategory,$itemPrice,$tradeCurrency,$itemLocation,$publisherId,$tracking_id,$itemPriceTerm,$itemPostDate);
+			$preparedInsertQuery->bind_param("ssisssissss",$itemName,$itemDetails,$itemCategory,$itemPrice,$tradeCurrency,$itemLocation,$publisherId,$tracking_id,$itemPriceTerm,$itemPostDate,$itemCondition);
 
       $preparedInsertQuery->execute();
 

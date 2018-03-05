@@ -22,7 +22,7 @@
           </section>
           <section class="footer-copyright">
             <div class="container">
-            <p class="center-align white-text">Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</p>
+            <p class="text-center"><small>Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</small></p>
           </section>
         </section>
         </footer>

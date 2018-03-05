@@ -12,17 +12,14 @@
 		$itemArray = array();
 		$counter = 1;
 		echo "
-			<section class='responsive-table'>
-				<table>
+			<section class='table-responsive'>
+				<table class='table table-sm table-hover'>
 			        <thead>
 			          <tr>
 			              <th>#</th>
 			              <th>Item Photo</th>
 			              <th>Item Name</th>
-			              <th>Currency <span>| Item Price</span></th>
-			              <th>Item Category</th>
-			              <th>Item Location</th>
-			              <th>Item Status</th>
+			              <th>Currency <span>Item Price</span></th>
 			              <th>Actions</th>
 			          </tr>
 			        </thead>
@@ -38,19 +35,25 @@
 			$itemCategoryId = intval($row["item_category_id"]);
 			$itemLocation = $row["item_location"];
 			$itemDetails = $row["item_details"];
+			$itemCondition = $row["item_condition"];
+			$itemPriceTerm = $row["item_price_term"];
 			$itemApprovalStatus = intval($row["item_approval_status"]);
-      $curency = $row['item_currency'];
+      		$curency = $row['item_currency'];
 
 			#encode the item's detials into an array for further operations
-      $image = unserialize($itemImg);
+      		$image = unserialize($itemImg);
 			$itemArray["itemId"] = $itemId;
-			$itemArray["itemImg"] = $image;
-			/*$itemArray["itemName"] = $itemName;
+			//$itemArray["itemImg"] = $image;
+			$itemArray["itemName"] = $itemName;
 			$itemArray["itemPrice"] = $itemPrice;
 			$itemArray["itemDetails"] = $itemDetails;
-			$itemArray["itemLocation"] = $itemLocation;*/
+			$itemArray["itemLocation"] = $itemLocation;
+			$itemArray["itemCategoryId"] = $itemCategoryId;
+			$itemArray["itemCondition"] = $itemCondition;
+			$itemArray["itemPriceTerm"] = $itemPriceTerm;
+			$itemArray["currency"] = $curency;
 
-			$itemObj = json_encode($itemArray);
+			
 
 
 			#get the category name of the item
@@ -65,6 +68,9 @@
 			$newItemLocation = truncateString($itemLocation,13,10);
 			$itemApprovalStatus = stringifyApprovalStatus($itemApprovalStatus);
 
+			$itemArray["categoryName"] = $categoryName;
+			$itemObj = json_encode($itemArray);
+
 
 
 			echo "
@@ -73,11 +79,9 @@
 					<td><img src='uploads/items/$image[0]' class='user-item-img'></td>
 					<td>$newItemName</td>
 					<td>$curency $itemPrice</td>
-					<td>$newCategoryName</td>
-					<td>$newItemLocation</td>
-					<td>$itemApprovalStatus</td>
 					<td>
-						<i class='fa fa-trash-o user-item-action-icon delete-icon' onclick='showDeleteUserItemAlert($itemObj)'></i>
+						<i class='fa fa-trash-o user-item-action-icon text-danger' onclick='showDeleteUserItemAlert($itemObj)'></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<i class='fa fa-edit user-item-action-icon text-info' onclick='showEditItemModal($itemObj)'></i>
 					</td>
 				</tr>
 			";

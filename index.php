@@ -49,6 +49,8 @@
     </section>
 </section>
 
+
+
 <section class="container-fluid">
     <section class="row recently-added-row">
         <!-- display recently added items for desktop -->
@@ -185,7 +187,7 @@
             <section class="reason-icon-div bg-primary">
                 <h1 class="text-center reason-icon"><i class="fa fa-balance-scale"></i></h1>
             </section>
-            <p class="text-center process-item-title">Price Match Quarantee</p>
+            <p class="text-center process-item-title">Price Match</p>
         </section>
 
         <section class="reason-div">
@@ -274,7 +276,7 @@
 
 
 <!-- include the footer of the document -->
-<?php include "includes/footer.inc.php"; ?>
+<?php include "includes/index-footer.inc.php"; ?>
 <script>
     function navigateSearchCategories(categoryObj) {
         localStorage.setItem('categoryName',categoryObj.categoryName);

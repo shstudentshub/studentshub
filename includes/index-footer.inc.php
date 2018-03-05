@@ -1,11 +1,11 @@
 		<!-- footer row -->
-        <?php if(!isset($_SESSION['userId'])){ ?>
+        <?php /*if(!isset($_SESSION['userId'])){*/ ?>
     <section class="container-fluid footer-row">
         <h6 class="text-center item-title">Hear From Us Regularly By Joining Our Mailing List</h6><br/>
         <section class="row">
             <section class="col-md-3 col-lg-3"></section>
             <section class="col-md-6 col-lg-6">
-                <form method="post" class="col-md-12  user-guest-form">
+                <form method="post" enctype="multipart/form-data" class="col-md-12  user-guest-form">
                     <section class="join-us-input-div">
                         <input type="email" class="form-control user-guest-email"  placeholder="Your Email Address" required>
                         <button type="submit" class="btn1 custom-btn1">Join&nbsp;Us</button>
@@ -88,7 +88,7 @@
         <p class="text-center"><small>Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</small></p>
 
     </section>
-    <?php } ?>
+    <?php/* }*/ ?>
 
 		<!--Import js libraries -->
         <script type="text/javascript" src="assets/js/jquery-2.2.4.min.js"></script>

@@ -1,6 +1,6 @@
 <?php
 	include "api/db-config.php";
-  ini_set('display_errors', 1);
+  	ini_set('display_errors', 1);
 
 	$hashId = $_GET["id"];
 	$itemId1 = substr($hashId,10);
@@ -22,7 +22,7 @@
 	$updateViewResult = $database->query($updateViewNumber);
 
 	#query to get the details of the item
-	$getDetailsQuery = "SELECT user_name, user_contact, item_category_id, item_name, item_details,item_currency ,item_price, item_location,image_names ,item_price_term FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON category_id = item_category_id INNER JOIN itemimages ON item_id = item_image_id WHERE item_id = $itemId";
+	$getDetailsQuery = "SELECT user_name, user_contact, item_category_id, item_name,item_condition,item_details,item_currency ,item_price, item_location,image_names ,item_price_term FROM items INNER JOIN users ON item_publisher_id = user_id INNER JOIN categories ON category_id = item_category_id INNER JOIN itemimages ON item_id = item_image_id WHERE item_id = $itemId";
 
 	$getDetailsResult = $database->query($getDetailsQuery);
 	if ($getDetailsResult->num_rows > 0) {
@@ -37,11 +37,12 @@
 		$itemPrice = $detailsRow["item_price"];
 		$itemLocation = $detailsRow["item_location"];
 		$itemPriceTerm = $detailsRow["item_price_term"];
-    $curency = $detailsRow['item_currency'];
+    	$curency = $detailsRow['item_currency'];
+    	$itemCondition = $detailsRow["item_condition"];
 
 
-    $image = unserialize($itemImage);
-    $getSize = sizeof($image);
+    	$image = unserialize($itemImage);
+    	$getSize = sizeof($image);
 
 ?>
 <!DOCTYPE html>
@@ -54,83 +55,70 @@
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="./assets/css/materialize.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css" media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>
 	<body>
 		<div class="se-pre-con"></div>
 
-		<!-- User DropDown -->
-		<ul id="user-dropdown" class="dropdown-content">
-			<li><a href="#!">Account</a></li>
-			<li><a href="#!">Need Help?</a></li>
-			<li class="divider"></li>
-			<li><a href="logout.php">Logout</a></li>
-		</ul>
+		<nav class="fixed-top navbar navbar-expand-lg navbar-light custom-navbar">
+			<a class="navbar-brand" href="index">
+				<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
+			</a>
+			<a class="nav-item custom-nav-item nav-link collapse-icon" href="#" onclick="openSideNav()"><i class="fa fa-navicon"></i></a>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-		<!-- The navbar -->
-		<section class="navbar-fixed">
-			<nav class="custom-navbar custom-search">
-				<section class="nav-wrapper">
-					<a href="index" class="hide-on-med-and-down logo-container brand-logo">
-						<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
-					</a>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item" class="active"><a href="index" class="nav-link">Home</a></li>
+				</ul>
+			</div>
+		</nav>
 
-					<ul class="right custom-right">
-						<li class="hide-on-med-and-down">
-							<!-- <a class="dropdown-trigger" href="#!" data-activates="cat-dropdown1">Categories <i class="fa fa-chevron-down"></i></a> -->
-						</li>
-						<li><a href="#" onclick="back()">Back</a></li>
-					</ul>
-				<!--	<ul class="side-nav" id="nav-mobile">
-						<section class="side-nav-profile-div">
-							<img src="assets/img/profile-placeholder.jpg" class="side-nav-profile-img" alt="Logo">
-							<span class="side-nav-profile-name">User Name</span>
-						</section>
-						<li><a href="#">Some links</a></li>
-						<li><a href="#">Some links</a></li>
-						<li><a href="#">Some links</a></li>
-					</ul>
-					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>-->
-				</section>
-			</nav>
-		</section>
+		<!-- for the side nav -->
+		<section id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+            
+            <a href="index">Home</a>
+        </section>
 
-		<section class="row main-row">
+		<section class="container-fluid main-div">
 			<br><br>
 			<?php
     echo  "
         <section class='container'>
           <section class='row item-details-row'>
-            <section class='col s12 m6'>
-              <img src='uploads/items/$image[0]' class='item-detail-img preview-div'>
+            <section class='col-sm-12 col-md-6'>
+              <img src='uploads/items/$image[0]' class='item-detail-img preview-div img-fluid'><br><br>
+              <section class='col-sm-3 col-md-3 item-detail-sub-imgs' >
               ";
               for ($i=0; $i < $getSize; $i++) {
-            echo    "<section class='col s3 m3' >
-                <img src='uploads/items/$image[$i]' class='item-detail-sub preview-item' id='previewReader'>
-                </section>";
+            	echo  "
+                	<img src='uploads/items/$image[$i]' class='item-detail-sub preview-item' id='previewReader'>
+                ";
               };
-      echo "
+      		echo "
+      		</section>
             </section>
-            <section class='col s12 m6'>
+            <section class='col-sm-12 col-md-6'>
               <h5>$itemName</h5><br>
               <address>
-                <h6><b>Item Details</b></h6>
+                <h6><b>Details</b></h6>
                 $itemDetails<br><br>
 
-                <h6><b>Item Price</b></h6>
+                <h6><b>Price</b></h6>
                   $curency $itemPrice<br><br>
+				
+				<h6><b>Condition</b></h6>
+                  $itemCondition<br><br>
 
-                <h6><b>Item Location</b></h6>
+                <h6><b>Location</b></h6>
                 $itemLocation<br><br>
 
-                <ul class='collapsible' data-collapsible='accordion'>
-                    <li>
-                      <div class='collapsible-header'><i class='fa fa-phone'></i> View Seller's Contact Number</div>
-                      <div class='collapsible-body'><span><a href='tel:$userContact' title=''>$userContact</a></span></div>
-                    </li>
-                </ul>
+                <h6><b>Contact Seller</b></h6>
+                <a href='tel:$userContact' title='' onclick='updateCallCount($itemId)'>$userContact</a><br><br>
+
               </address>
             </section>
           </section>
@@ -138,18 +126,30 @@
       ";
     } else {
       echo "
-        <h1>There Are No Items For Your Wicked Query</h1>
+          <h1>There Are No Items Found</h1>
       ";
     }
 			?>
 		</section>
 		<hr>
 
-        <p class="center-align footer-cr">Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</p>
+		<script type="text/javascript">
+			//function to open the side nav
+		    function openSideNav() {
+		        document.getElementById("mySidenav").style.width = "100%";
+		    }
+
+		    //function to close the side nav
+		    function closeSideNav(){
+		        document.getElementById("mySidenav").style.width = "0%";
+		    }
+		</script>
+
+        <p class="text-center"><small>Students Hub &copy; <?php echo date('Y'); ?>. All Rights Reserved.</small></p>
 
 			<script type="text/javascript" src="./assets/js/jquery-2.2.4.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/modernizr.js"></script>
-	        <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
+	        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
 	        <script type="text/javascript" src="./assets/js/init.js"></script>
 	        <script type="text/javascript" src="./assets/js/search-controller.js"></script>

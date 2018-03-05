@@ -30,7 +30,7 @@
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="./assets/css/materialize.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.min.css" media="screen,projection"/>
 		<link rel="stylesheet" href="./assets/css/style.css">
 	</head>
@@ -38,38 +38,36 @@
 		<div class="se-pre-con"></div>
 
 		<!-- The navbar -->
-		<section class="navbar-fixed">
-			<nav class="custom-navbar">
-				<section class="nav-wrapper">
-					<a class="hide-on-med-and-down">
-						<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
-					</a>
+		<nav class="fixed-top navbar navbar-expand-lg navbar-light custom-navbar">
+			<a class="navbar-brand" href="index">
+				<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
+			</a>
+			<a class="nav-item custom-nav-item nav-link collapse-icon" href="#" onclick="openSideNav()"><i class="fa fa-navicon"></i></a>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-					<ul class="right">
-            <li><a href="index">Home</a></li>
-            <li><a href="posts">Sell</a></li>
-						<li><a href="#!" onclick="Materialize.toast('You have log in as: <?php echo ucfirst($userFullname);?>', 4000)">Hi <?php echo ucfirst($userFullname); ?></a></li>
-					</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="index" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="posts" class="nav-link">Sell</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Hi <?php echo ucfirst($userFullname); ?></a></li>
+				</ul>
+			</div>
+		</nav>
 
-					<ul class="side-nav dashboard-side-nav-sm" id="nav-mobile">
-						<section class="side-nav-profile-div">
-							<h5 class="side-nav-profile-name">Dashboard</h5>
-						</section>
-            <li><a href="index">Home</a></li>
-						<li class="selected-item"><a href="dashboard" class="selected">My Dashboard</a></li>
-						<li><a href="posts">My Posts<span class="allBadge"></span></a></li>
-						<li><a href="review">View Pending Items<span class="badge"></span></a></li>
-						<li><a href="approve">View Approve Items<span class="appBadge"></span></a></li>
-						<li><a href="declined">View Declined Items<span class="decBadge"></span></a></li>
-						<li><a href="profile">My Profile</a></li>
-						<li><a href="account-setup">Account Settings</a></li>
-						<li><a href="logout">Logout</a></li>
-					</ul>
+		<!-- for the side nav -->
+		<section id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+            <a  href="#" ><strong><?php echo $userFullname; ?></strong></a>
 
-					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>
-				</section>
-			</nav>
-		</section>
+            <li><a href="index"><i class="fa fa-home"></i> Home</i></a></li>
+			<li class="selected-item"><a href="dashboard" class="selected"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
+			<li><a href="posts"><i class="fa fa-tags"></i> My Posts<i class="allBadge"></i></a></li>
+			<li><a href="review"><i class="fa fa-hourglass"></i> Pending Items<i class="badge"></i></a></li>
+			<li><a href="approve"><i class="fa fa-check"></i> Approve Items<i class="appBadge"></i></a></li>
+			<li><a href="declined"><i class="fa fa-times"></i> Declined Items<i class="decBadge"></i></a></li>
+			<li><a href="profile"><i class="fa fa-user"></i>&nbsp; My Profile</a></li>
+			<li><a href="account-setup"><i class="fa fa-cog"></i> Account Settings</a></li>
+			<li><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+        </section>
 
 		<!-- this is the snackbar for the page -->
 		<section class="snackbar">
@@ -80,11 +78,11 @@
 		</section>
 
 
-		<section class="row dashboard-div">
+		<section class="container-fluid dashboard-div">
 			<section class="row">
 
-				<section class="col m2 l2 dashboard-side-div hide-on-med-and-down">
-          <li><a href="index"><i class="fa fa-home"></i> Home</i></a></li>
+				<section class="col-md-2 dashboard-side-div hide-on-med-and-down">
+          			<li><a href="index"><i class="fa fa-home"></i> Home</i></a></li>
 					<li class="selected-item"><a href="dashboard" class="selected"><i class="fa fa-dashboard"></i> My Dashboard</a></li>
 					<li><a href="posts"><i class="fa fa-tags"></i> My Posts<i class="allBadge"></i></a></li>
 					<li><a href="review"><i class="fa fa-hourglass"></i> Pending Items<i class="badge"></i></a></li>
@@ -95,28 +93,28 @@
 					<li><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
 				</section>
 
-				<section class="col s12 m10 l10">
+				<section class="col-md-10 col-sm-12">
 					<section class="row">
-						<section class="col s12 m3 l3">
-							<section class="panel purple accent-1 user-dashboard-summary">
+						<section class="col-sm-12 col-md-3">
+							<section class="alert alert-primary user-dashboard-summary">
 								<p><span class="dashboard-summary-number user-total-posts">0</span><br/>Total Posts</p>
 							</section>
 						</section>
 
-						<section class="col s12 m3 l3">
-							<section class="panel green accent-1 user-dashboard-summary">
+						<section class="col-sm-12 col-md-3">
+							<section class="alert alert-success user-dashboard-summary">
 								<p><span class="dashboard-summary-number user-pending-posts">0</span><br/>Pending Posts</p>
 							</section>
 						</section>
 
-						<section class="col s12 m3 l3">
-							<section class="panel cyan accent-1 user-dashboard-summary">
+						<section class="col-sm-12 col-md-3">
+							<section class="alert alert-info user-dashboard-summary">
 								<p><span class="dashboard-summary-number user-approved-posts">0</span><br/>Approved Posts</p>
 							</section>
 						</section>
 
-						<section class="col s12 m3 l3">
-							<section class="panel orange accent-1 user-dashboard-summary">
+						<section class="col-sm-12 col-md-3">
+							<section class="alert alert-warning user-dashboard-summary">
 								<p><span class="dashboard-summary-number user-rejected-posts">0</span><br/>Rejected Posts</p>
 							</section>
 						</section>
@@ -124,7 +122,7 @@
 					</section><br><hr>
 
 					<section class="row">
-						<section class="col s12 m12 l12">
+						<section class="col-sm-12 col-md-12">
 							<section class="item-added-chart">
 								<canvas id="userChart" class="user-dashboard-graph"></canvas>
 							</section>
@@ -135,5 +133,15 @@
 			</section>
 
 		</section>
+		<script>
+			//function to open the side nav
+		    function openSideNav() {
+		        document.getElementById("mySidenav").style.width = "100%";
+		    }
 
+		    //function to close the side nav
+		    function closeSideNav(){
+		        document.getElementById("mySidenav").style.width = "0%";
+		    }
+		</script>
 <?php include "includes/footer.inc.php"; ?>

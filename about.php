@@ -1,64 +1,71 @@
 <?php include "includes/info.header.php" ?>
+
 		<!-- The navbar -->
+		<nav class="fixed-top navbar navbar-expand-lg navbar-light custom-navbar">
+			<a class="navbar-brand" href="index">
+				<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
+			</a>
+			<a class="nav-item custom-nav-item nav-link collapse-icon" href="#" onclick="openSideNav()"><i class="fa fa-navicon"></i></a>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-		  <section class="navbar-fixed">
-		    <nav>
-		      <section class="nav-wrapper">
-		        <a href="index" class="brand-logo hide-on-med-and-down">
-		        	HuB
-		        </a>
-		        <ul class="right hide-on-med-and-down">
-		          <li class="active"><a href="about">About</a></li>
-		          <li><a href="contact">Contact</a></li>
-		          <li><a href="faq">FAQ</a></li>
-		          <li><a href="team">Team</a></li>
-		        </ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item" class="active"><a href="about" class="nav-link">About</a></li>
+		          	<li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+		          	<li class="nav-item"><a href="faq" class="nav-link">FAQ</a></li>
+		          	<!-- <li class="nav-item"><a href="team" class="nav-link">Team</a></li> -->
+				</ul>
+			</div>
+		</nav>
 
-		        <ul class="side-nav" id="nav-mobile">
-					<li class="active"><a href="about">About</a></li>
-					<li><a href="contact">Contact</a></li>
-					<li><a href="faq">FAQ</a></li>
-					<li><a href="team">Team</a></li>
-		        </ul>
-		        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>
-		      </section>
-		    </nav>
-		  </section>
+		<!-- for the side nav -->
+		<section id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+            
+            <a href="about">About</a>
+		    <a href="contact">Contact</a>
+		    <a href="faq">FAQ</a>
+		    <!-- <a href="team">Team</a> -->
+        </section>
 
+		
+		<section class="row">
+			<div class="about-parallax-div parallax"><img src="assets/img/about-parallax.jpg" class="about-parallax-img img-fluid"></div>
+		</section>
 
-		  <section class="row">
-		  	<section class="col s12 m12 parallax-container">
-		  		<div class="parallax"><img src="assets/img/New/carousholder0.jpg" class="aboutPic"></div>
-		  	</section> <br>
-		  	<section class="col s12 m6">
-		  		<section class="content-area">
-		  			<h4>About Us</h4>
-		  			<span>Students hub is a community based marketplace for student’s retail and marketing in Africa. It connects people within their local vicinity to buy, sell or exchange used goods and services by making it fast and easy for anyone to post a listing through their mobile phone or on the web. Student hub is the one stop site for every student.</span>
-		  		</section>
-		  	</section>
-		  	<section class="col s12 m6 right-content">
+		<section class="container-fluid main-div about-div">
+			<section class="row">
+				<section class="col-sm-12 col-md-6">
+			  		<section class="content-area">
+			  			<h4>About Us</h4>
+			  			<span>Students hub is a community based marketplace for student’s retail and marketing in Africa. It connects people within their local vicinity to buy, sell or exchange used goods and services by making it fast and easy for anyone to post a listing through their mobile phone or on the web. Student hub is the one stop site for every student.</span>
+			  		</section>
+		  	    </section>
+		  	    <section class="col-sm-12 col-md-6 right-content hide-on-med-and-down"></section>
+			</section>
 
-		  	</section>
-		  	<section class="col s12 m6 left-content hide-on-med-and-down">
+			<section class="row">
+		  	    <section class="col-sm-12 col-md-6 left-content hide-on-med-and-down"></section>
+				<section class="col-sm-12 col-md-6">
+			  		<section class="content-area">
+			  			<h4>About Us</h4>
+			  			<span>Students hub is a community based marketplace for student’s retail and marketing in Africa. It connects people within their local vicinity to buy, sell or exchange used goods and services by making it fast and easy for anyone to post a listing through their mobile phone or on the web. Student hub is the one stop site for every student.</span>
+			  		</section>
+		  	    </section>
+			</section>
+		</section>
 
-		  	</section>
-		  	<section class="col s12 m6">
-		  		<section class="content-area">
-		  			<h4>Vision</h4>
-		  			<span>
-              <ul>
-                <li>To provide 100% authentic products and services with the best price for students</li>
-                <li>To offer the most convenient shopping experience</li>
-                <li>To promote entrepreneurship among students</li>
-                <li>To equip students for the industrial workforce</li>
-		  			</ul>
-          </span>
-		  		</section>
-		  	</section>
-		  	<section class="col s12 m6 left-content hide-on-large-only">
+		<script type="text/javascript">
+			//function to open the side nav
+		    function openSideNav() {
+		        document.getElementById("mySidenav").style.width = "100%";
+		    }
 
-		  	</section>
-		  </section>
+		    //function to close the side nav
+		    function closeSideNav(){
+		        document.getElementById("mySidenav").style.width = "0%";
+		    }
+		</script>
 
 
 		<!-- Fixed Search bar for mobile viewport -->

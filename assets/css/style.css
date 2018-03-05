@@ -11,10 +11,24 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 * {
     font-family: 'montserratregular', sans-serif;
+}
+
+table {
+    font-size: 12px;
+}
+
+label {
+  font-size: 12px;
+}
+
+.recent-item > a:hover {
+    text-decoration: none;
+    color: #0000ff;
 }
 
 .custom-search{
@@ -30,7 +44,12 @@ body {
 .custom-navbar{
     background-color: #fff;
     border-bottom: 1px solid #f7f7f7;
-    height: 60px;
+    height: 50px;
+    padding: 5px;
+}
+
+.collapse-icon {
+    visibility: hidden;
 }
 
 .custom-navbar .nav-link{
@@ -83,14 +102,19 @@ body {
     color: #444;
 }
 /* Index Page CSS*/
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+}
+
 .navbar-logo{
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     margin: 5px;
 }
 
 .navbar-fixed, .modal {
-    z-index: 99999;
+    z-index: 9999;
 }
 
 .search{
@@ -99,9 +123,21 @@ body {
 }
 
 .search-sm-div{
-   padding: 0px 10px 10px 0px;
+   margin-top: 60px;
+   display: flex;
+   position: relative;
+   flex-direction: row;
+   width: 90%;
+   padding: -50px auto;
+   margin-bottom: -70px;
+   left: 10px;
+}
+
+input[type="search"]{
+    height: 30px;
 
 }
+
 .search-mobile{
     background-color: #f5f5e8;;
     position: fixed;
@@ -159,6 +195,7 @@ body {
     border: 0px transparent;
     border-bottom: 1px solid #c0c0c0;
     width: 100%;
+    font-size: 12px;
 }
 
 .user-form .form-group {
@@ -220,11 +257,33 @@ body {
 .right-content{
   height: 400px;
   background-image: url("../img/about.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+
 .left-content{
   height: 400px;
   background-image: url("../img/vision.jpg");
 }
+
+.about-parallax-div {
+  width: 100%;
+}
+
+.about-parallax-img {
+    width: 100%;
+}
+
+.contact-div, .about-div {
+  font-size: 13px;
+}
+
+.faq-items li {
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+
 .side-nav-profile-img {
     display: block;
     position: relative;
@@ -277,6 +336,10 @@ body {
 .carousel-item img {
     z-index: 2;
     height: 400px;
+}
+
+.carousel-inner-sm > img {
+    height: 90vh;
 }
 
 .pick-of-the-day-div {
@@ -500,8 +563,17 @@ body {
 /* user dashboard styling*/
 .dashboard-div {
     min-height: 80vh;
-    padding: 10px;
+    padding: 5px;
     margin: 0;
+    margin-top: 8vh;
+}
+
+.post-item-fab {
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    margin: -5% 0 0 90%;
+    color: #fff;
 }
 
 .dashboard-side-div li {
@@ -636,7 +708,15 @@ body {
 
 .item-detail-img {
     width: 100%;
-    height: 400px;
+    height: 300px;
+}
+
+.item-detail-sub-imgs {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
 }
 
 .item-detials-info {
@@ -654,6 +734,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 50px;
+    overflow: auto;
 }
 
 .reasons-div-sm {
@@ -712,6 +793,61 @@ body {
     margin: 5px;
 }
 
+#search {
+    font-size: 12px;
+}
+
+.search-input-sm {
+    width: 40%;
+    height: 20px;
+    border: 1px solid #d4d4d4;
+    margin-top: 10px;
+}
+/*styles for the side nav*/
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1031; 
+    top: 0; 
+    left: 0;
+    background-color: #fff; 
+    overflow-x: hidden; 
+    padding: 60px 0px 0px 0px; 
+    transition: 0.5s; 
+}
+
+.sidenav li {
+    list-style-type: none;
+    font-size: 12px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #444;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 25px;
+    margin-left: 50px;
+} 
+
+.sidenav .selected-item {
+    border-left: 3px solid #EA172E;
+    background: #f7f7f7
+}
+
 /* For the snackbar styling */
 .snackbar {
     visibility: hidden;
@@ -725,7 +861,7 @@ body {
     position: relative;
     z-index: 9999;
     left: 25%;
-    top: 200px;
+    top: 10vh;
 }
 
 .snackbar.show {
@@ -750,21 +886,21 @@ body {
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
     from {top: 0; opacity: 0;}
-    to {top: 200px; opacity: 1;}
+    to {top: 10vh; opacity: 1;}
 }
 
 @keyframes fadein {
     from {top: 0; opacity: 0;}
-    to {top: 200px; opacity: 1;}
+    to {top: 10vh; opacity: 1;}
 }
 
 @-webkit-keyframes fadeout {
-    from {top: 200px; opacity: 1;}
+    from {top: 10vh; opacity: 1;}
     to {top: 0; opacity: 0;}
 }
 
 @keyframes fadeout {
-    from {top: 200px; opacity: 1;}
+    from {top: 10vh; opacity: 1;}
     to {top: 0; opacity: 0;}
 }
 
@@ -980,10 +1116,16 @@ input-placeholder { /* WebKit browsers */
   height:43px;
 }
 
+.custom-btn1{
+  background-color: orange;
+  color: #fff;
+}
+
 .custom-btn1:hover{
   background-color: #EA172E;
   color: #fff;
 }
+
 .btn2:focus,.btn3:focus{
   background-color: #EA172E;
   color: #fff;
@@ -1103,6 +1245,26 @@ input[type=search]:focus {
 
 @media (max-width: 992px)  {
 
+    .dashboard-div {
+        margin-top: 20vh;
+    }
+    .collapse-icon {
+        visibility: visible;
+    }
+
+
+    .post-item-fab {
+        height: 60px;
+        width: 60px;
+        margin: 10px;
+        margin: -5% 0 0 78%;
+        color: #fff;
+    }
+
+    .hide-on-med-and-down {
+      display: none;
+    }
+
     .pick-of-the-day-div {
       margin-top: 10px;
       margin-left: 0px;
@@ -1149,7 +1311,7 @@ input[type=search]:focus {
         border-radius: 2px;
         padding: 20px 10px;
         position: relative;
-        z-index: 9999;
+        z-index: 99999;
         top: 30px;
     }
 
@@ -1279,6 +1441,24 @@ input[type=search]:focus {
     .buyingAndSelling{
       margin-left: 1px;
     }
+
+    .process-item-icon-div {
+        background: inherit;
+        height: 80px;
+        position: relative;
+        width: 80px;
+        border: 1px dashed #d4d4d4;
+        border-radius: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .process-item-title {
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 600px){
@@ -1355,6 +1535,24 @@ input[type=search]:focus {
       display: flex;
       flex-direction: column;
     }
+
+    .process-item-icon-div {
+        background: inherit;
+        height: 80px;
+        position: relative;
+        width: 80px;
+        border: 1px dashed #d4d4d4;
+        border-radius: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .process-item-title {
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 550px){
@@ -1429,6 +1627,24 @@ input[type=search]:focus {
     .mobile-slide-div{
       display: flex;
       flex-direction: column;
+    }
+
+    .process-item-icon-div {
+        background: inherit;
+        height: 80px;
+        position: relative;
+        width: 80px;
+        border: 1px dashed #d4d4d4;
+        border-radius: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .process-item-title {
+        font-size: 10px;
     }
 }
 
@@ -1507,6 +1723,24 @@ input[type=search]:focus {
       display: flex;
       flex-direction: column;
     }
+
+    .process-item-icon-div {
+        background: inherit;
+        height: 80px;
+        position: relative;
+        width: 80px;
+        border: 1px dashed #d4d4d4;
+        border-radius: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .process-item-title {
+        font-size: 10px;
+    }
 }
 
 @media (max-device-width: 480px){
@@ -1569,6 +1803,24 @@ input[type=search]:focus {
     .mobile-slide-div{
       display: flex;
       flex-direction: column;
+    }
+
+    .process-item-icon-div {
+        background: inherit;
+        height: 80px;
+        position: relative;
+        width: 80px;
+        border: 1px dashed #d4d4d4;
+        border-radius: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .process-item-title {
+        font-size: 10px;
     }
 }
 
@@ -1636,9 +1888,95 @@ input[type=search]:focus {
       display: flex;
       flex-direction: column;
     }
+
+    .process-item-icon-div {
+        background: inherit;
+        height: 80px;
+        position: relative;
+        width: 80px;
+        border: 1px dashed #d4d4d4;
+        border-radius: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .process-item-title {
+        font-size: 10px;
+    }
+
 }
 
+/*********************
+  Media Query Classes
+**********************/
+@media only screen and (max-width: 600px) {
+  .hide-on-small-only, .hide-on-small-and-down {
+    display: none !important;
+  }
+}
 
+@media only screen and (max-width: 992px) {
+  .hide-on-med-and-down {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .hide-on-med-and-up {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .hide-on-med-only {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .hide-on-large-only {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .show-on-large {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .show-on-medium {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .show-on-small {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .show-on-medium-and-up {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .show-on-medium-and-down {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .center-on-small-only {
+    text-align: center;
+  }
+}
 
 
 /*for pre loader*/

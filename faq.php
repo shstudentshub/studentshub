@@ -1,36 +1,38 @@
 <?php include "includes/info.header.php" ?>
 		<!-- The navbar -->
+		<nav class="fixed-top navbar navbar-expand-lg navbar-light custom-navbar">
+			<a class="navbar-brand" href="index">
+				<img src="assets/img/students-hub-logo.png" class="navbar-logo" alt="Logo">
+			</a>
+			<a class="nav-item custom-nav-item nav-link collapse-icon" href="#" onclick="openSideNav()"><i class="fa fa-navicon"></i></a>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-		  <div class="navbar-fixed">
-		    <nav>
-		      <section class="nav-wrapper">
-		        <a href="index" class="brand-logo hide-on-med-and-down">
-		        	HuB
-		        </a>
-		        <ul class="right hide-on-med-and-down">
-		          <li><a href="about">About</a></li>
-		          <li><a href="contact">Contact</a></li>
-		          <li class="active"><a href="faq">FAQ</a></li>
-		          <li><a href="team">Team</a></li>
-		        </ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item" class="active"><a href="about" class="nav-link">About</a></li>
+		          	<li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+		          	<li class="nav-item"><a href="faq" class="nav-link">FAQ</a></li>
+		          	<!-- <li class="nav-item"><a href="team" class="nav-link">Team</a></li> -->
+				</ul>
+			</div>
+		</nav>
 
-		        <ul class="side-nav" id="nav-mobile">
-					<li><a href="about">About</a></li>
-					<li><a href="contact">Contact</a></li>
-					<li  class="active"><a href="faq">FAQ</a></li>
-					<li><a href="team">Team</a></li>
-		        </ul>
-		        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-navicon"></i></a>
-		      </section>
-		    </nav>
-		  </div>
+		<!-- for the side nav -->
+		<section id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+            
+            <a href="about">About</a>
+		    <a href="contact">Contact</a>
+		    <a href="faq">FAQ</a>
+		    <!-- <a href="team">Team</a> -->
+        </section>
 
 
 		<!-- Fixed Search bar for mobile viewport -->
-		<section class="row container">
+		<section class="container main-div">
 			<h5>FAQ</h5>
 			<section class="col s12 m12">
-				<ul class="collapsible popout" data-collapsible="accordion">
+				<ul class="faq-items" data-collapsible="accordion">
 				    <li>
 				      <div class="collapsible-header"><strong>How do I post a free posting?</strong></div>
 				      <div class="collapsible-body"><span>You can post a free AD by having an account or logging in to our site. You subscribe for a free plan. To learn how, please read our help page on how to create a free post. However, having a students hub account will allow you to post, edit, delete, and repost more easily.</span>
@@ -114,5 +116,17 @@
 				  </ul>
 			</section>
 		</section>
+
+		<script type="text/javascript">
+			//function to open the side nav
+		    function openSideNav() {
+		        document.getElementById("mySidenav").style.width = "100%";
+		    }
+
+		    //function to close the side nav
+		    function closeSideNav(){
+		        document.getElementById("mySidenav").style.width = "0%";
+		    }
+		</script>
 
 <?php  include "includes/footer.inc.php" ?>

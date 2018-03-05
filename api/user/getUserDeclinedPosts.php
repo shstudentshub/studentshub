@@ -13,8 +13,8 @@
 		$itemArray = array();
 		$counter = 1;
 		echo "
-			<section class='responsive-table'>
-				<table>
+			<section class='table-responsive'>
+				<table class='table table-sm table-hover'>
 					<h5><strong>These Post Needs to be Edited</strong></h5><hr/>
 			        <thead>
 			          <tr>

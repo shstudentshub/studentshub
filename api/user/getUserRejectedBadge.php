@@ -12,6 +12,6 @@ $getCount = "SELECT * FROM items WHERE item_publisher_id = $userSecID AND item_a
 
 $result = $database->query($getCount);
 if($row = $result->num_rows){
-	echo "<span class='new badge red'>$row</span>";
+	echo "<span class='new badge badge-danger'>$row</span>";
 }
 
