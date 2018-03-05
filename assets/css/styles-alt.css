@@ -1,0 +1,204 @@
+/*Custom CSS*/
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: 'montserratregular', sans-serif;
+}
+
+body {
+	overflow: hidden;
+}
+
+.custom-btn {
+	background: #f78d44;
+}
+
+.custom-btn:hover {
+	background: #f7ae7b;
+}
+
+.admin-custom-navbar {
+	background: #f78d44;
+	padding: 0% 1%;
+}
+
+/*For the login page*/
+.admin-login-row {
+	padding: 10% 0 0 0;
+}
+
+.admin-form-div {
+	border: 1px solid #ccc;
+	padding: 3%;
+}
+
+.admin-form-logo {
+	height: 80px;
+    width: 80px;
+    margin-left: 40%;
+}
+
+.imageItems{
+  width: 250px;
+  height: 230px;
+  margin-top: 5px;
+}
+
+.admin-form input {
+	text-align: center;
+}
+
+.admin-form .admin-login-btn {
+	width: 100%;
+}
+
+
+/*for the navbar and body stucture*/
+.admin-navbar-logo{
+    width: 70px;
+    height: 55px;
+    margin: 5px;
+}
+
+.side-div {
+	background-color: transparent;
+	padding: 10px !important;
+	height: auto;
+}
+
+.items-main-div {
+	padding: 10px 20px;
+}
+
+.side-div li {
+	display: block;
+	width: 100%;
+	list-style-type: none;
+	background-color: inherit;
+	border-bottom: 1px solid transparent !important;
+}
+
+.side-div li.selected-item {
+	background: #f78d44;
+	border-radius: 5px;
+	margin-bottom: 1px;
+}
+
+.side-div li a {
+	display: block;
+	height: 40px;
+	font-size: 13px;
+	line-height: 2.5em;
+	color: #545656;
+	padding-left: 2%;
+	transition: all 0.2s ease-in;
+}
+
+.side-div li a.selected {
+	color: #fff;
+}
+
+.side-div li a.selected:hover {
+	color: #fff;
+	background: #f78d44;
+	cursor: default;
+	border-bottom: 1px solid transparent !important;
+}
+
+.side-div li a:hover {
+	text-decoration: none;
+	background: #f7ae7b;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.content-div {
+	padding-top: 5px !important;
+	background: transparent;
+	height: 85.5vh;
+	overflow: auto;
+	margin-top: 5px;
+}
+
+.jumbotron {
+	padding: 10px;
+	background: #f7f7f7;
+	border-radius: 5px;
+}
+
+.no-items-text {
+	color: #ccc;
+}
+
+.action-icon-edit, .action-icon-delete {
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.action-icon-edit {
+	color: #2962ff ;
+}
+
+.action-icon-delete {
+	color: #FF2A55;
+}
+
+/*for the dashboard page*/
+.panel {
+    padding: 10px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: #444;
+}
+
+.dashboard-summary-number {
+    font-size: 42px;
+}
+
+/*for the pending posts page*/
+.admin-item-img {
+	height: 50px;
+	width: 50px;
+}
+
+.view-item-image {
+	height: 100px;
+	width: 100px;
+}
+
+.decline-item-form .decline-item-message {
+	border: 1px solid #c0c0c0;
+	height: 40px;
+	width: 40%;
+}
+
+/*for pre loader*/
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../img/students-hub-logo.gif) center no-repeat #fff;
+}
+
+/* Customs CSS*/
+hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
