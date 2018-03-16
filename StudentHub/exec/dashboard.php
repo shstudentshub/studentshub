@@ -3,7 +3,6 @@
 
 <!-- The main items on the page. The side navigation and the content division -->
 <section class="row main-row">
-
 	<!-- side div -->
 	<section class="col m2 l2 side-div">
 		<li class="selected-item"><a href="dashboard.php" class="selected"><i class="fa fa-dashboard"></i> Dashboard</a></li>
@@ -20,7 +19,38 @@
 
 	<!--content div  -->
 	<section class="col m10 l10 content-div">
-		<h1>Dashboard Content Comes Here</h1>
+		<section class="row">
+			<section class="col s12 m34 l4">
+				<section class="panel purple accent-1 admin-dashboard-summary">
+					<p><span class="dashboard-summary-number admin-total-users">0</span> Users</p>
+				</section>
+			</section>
+			<section class="col s12 m4 l4">
+				<section class="panel green accent-1 admin-dashboard-summary">
+					<p><span class="dashboard-summary-number admin-total-posts">0</span> Posts</p>
+				</section>
+			</section>
+			<section class="col s12 m4 l4">
+				<section class="panel cyan accent-1 admin-dashboard-summary">
+					<p><span class="dashboard-summary-number admin-total-categories">0</span> Categories</p>
+				</section>
+			</section>
+			
+		</section><br><hr>
+
+		<section class="row">
+			<section class="col s12 m6 l6">
+				<section class="item-added-chart">
+					<canvas id="adminUsersChart" class="user-dashboard-graph"></canvas>
+				</section>
+			</section>
+
+			<section class="col s12 m6 l6">
+				<section class="item-added-chart">
+					<canvas id="adminPostsChart" class="user-dashboard-graph"></canvas>
+				</section>
+			</section>
+		</section>
 	</section>
 </section>
 

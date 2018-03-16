@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2018 at 10:37 AM
+-- Generation Time: Mar 17, 2018 at 12:47 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -109,28 +109,29 @@ INSERT INTO `categories` (`category_id`, `category_name`) VALUES
 CREATE TABLE `items` (
   `item_id` int(11) NOT NULL,
   `item_name` varchar(70) NOT NULL,
-  `item_description` varchar(200) NOT NULL,
-  `item_status` varchar(20) NOT NULL,
   `item_details` varchar(255) NOT NULL,
   `item_category_id` int(11) NOT NULL,
-  `item_price` float NOT NULL,
+  `item_price` varchar(25) NOT NULL,
   `item_location` varchar(150) NOT NULL,
   `item_publisher_id` int(11) NOT NULL,
+  `item_img` varchar(50) NOT NULL,
+  `item_price_term` varchar(50) NOT NULL,
+  `item_approval_status` int(1) NOT NULL DEFAULT '0',
   `item_post_date` date NOT NULL,
   `item_views` int(11) NOT NULL,
   `item_likes` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `item_images`
+-- Dumping data for table `items`
 --
 
-CREATE TABLE `item_images` (
-  `item_image_id` int(11) NOT NULL,
-  `image_name` varchar(70) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `items` (`item_id`, `item_name`, `item_details`, `item_category_id`, `item_price`, `item_location`, `item_publisher_id`, `item_img`, `item_price_term`, `item_approval_status`, `item_post_date`, `item_views`, `item_likes`) VALUES
+(6, 'Keyboard', 'Brand new keyboard', 1, '1200', 'Accra', 10, 'User_10_1516117082.jpg', 'fixed', 0, '2018-01-16', 0, 0),
+(7, 'Mug', 'Tea mug', 6, '50', 'Accra', 10, 'User_10_1516117139.png', 'fixed', 0, '2018-01-16', 0, 0),
+(8, 'watch', 'A brand new wall clock', 1, '100', 'Kumasi', 10, 'User_10_1518849403.gif', 'negotiable', 0, '2018-02-17', 0, 0),
+(9, 'Art', 'A new art collection', 8, '2000', 'Accra', 10, 'User_10_1521238375.jpg', 'fixed', 0, '2018-03-16', 0, 0),
+(10, 'Keyboard', 'New Keyboard', 1, '200', 'Accra', 14, 'User_14_1521242149.jpg', 'negotiable', 0, '2018-03-17', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -147,20 +148,16 @@ CREATE TABLE `users` (
   `user_sign_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `user_messages`
+-- Dumping data for table `users`
 --
 
-CREATE TABLE `user_messages` (
-  `message_id` int(11) NOT NULL,
-  `sender_id` int(11) NOT NULL,
-  `receiver_id` int(11) DEFAULT NULL,
-  `message_content` text NOT NULL,
-  `message_send_date` date NOT NULL,
-  `message_status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_contact`, `user_password`, `user_sign_date`) VALUES
+(10, 'enochMarley', 'mail@mail.com', '029187897189', '$2y$10$fZNYPdwMEVmGLAML8EGLEeI5o0d3IUcCkfLMTN6Jwi2AaO35Hh0dK', '2018-01-12'),
+(11, 'fullName', 'mail1@mail.com', '949432', '$2y$10$yE9BlPnBLL6G8zt5SfYsPOJsQiAA/IVsrZa7DmzZBAUndsMjN9oau', '2018-01-15'),
+(12, 'jdsklfjdk', 'kdjflkd@jflkd.dkfldjfk', 'kjf990900', '$2y$10$COxHeYU8OZo.Q/RPCCdKLOqOD26dNqvah.maXkJA80V6sAAFBDO1K', '2018-02-02'),
+(13, 'dfdfd', 'fsdf@dfd.dfds', 'dfdfd', '$2y$10$6GHghYKkkbJgqaBzxdEVOeteaVYKUpYMnagu2yNpU.xVA0B/u00IW', '2018-02-13'),
+(14, 'John Doe', 'mail1@mail1.com', '0271728188', '$2y$10$Jv8sDPBZ7A2aLxFmgTqyROaBBP6EWAKMpTaMdwUw6xwD5DfxuVrbq', '2018-03-01');
 
 --
 -- Indexes for dumped tables
@@ -205,24 +202,10 @@ ALTER TABLE `items`
   ADD KEY `itempublisherr` (`item_publisher_id`);
 
 --
--- Indexes for table `item_images`
---
-ALTER TABLE `item_images`
-  ADD KEY `itemimgerr` (`item_image_id`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
-
---
--- Indexes for table `user_messages`
---
-ALTER TABLE `user_messages`
-  ADD PRIMARY KEY (`message_id`),
-  ADD KEY `msgrecerr` (`receiver_id`),
-  ADD KEY `msgsecderr` (`sender_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -257,17 +240,12 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `user_messages`
---
-ALTER TABLE `user_messages`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Constraints for dumped tables
 --
@@ -278,19 +256,6 @@ ALTER TABLE `user_messages`
 ALTER TABLE `items`
   ADD CONSTRAINT `itemcaterr` FOREIGN KEY (`item_category_id`) REFERENCES `categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `itempublisherr` FOREIGN KEY (`item_publisher_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `item_images`
---
-ALTER TABLE `item_images`
-  ADD CONSTRAINT `itemimgerr` FOREIGN KEY (`item_image_id`) REFERENCES `items` (`item_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `user_messages`
---
-ALTER TABLE `user_messages`
-  ADD CONSTRAINT `msgrecerr` FOREIGN KEY (`receiver_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `msgsecderr` FOREIGN KEY (`sender_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

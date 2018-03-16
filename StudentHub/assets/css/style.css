@@ -330,6 +330,11 @@ body {
     font-size: 42px;
 }
 
+.user-dashboard-graph {
+    height: 100px;
+    width: 50%;
+}
+
 /*for the item posting page*/
 .post-fab {
     height: 60px;

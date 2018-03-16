@@ -5,13 +5,17 @@ CONSTANTS = {
 	userPostsUrl: "api/user/getUserPosts.php",
 	getItemCategoryUrl: "api/user/getItemCategories.php",
 	addUserItemUrl: "api/user/addUserItem.php",
-	deleteUserItemUrl: "api/user/deleteUserItem.php"
+	deleteUserItemUrl: "api/user/deleteUserItem.php",
+	getUserPostsGraphDataUrl: "api/user/getUserPostsGraph.php",
+	getUserPostSummaryUrl: "api/user/getUserPostSummary.php",
 }
 
 //initialization of some methods
 getHomeCategories();
 getUserPosts();
 getItemCategories();
+getUserPostsGraphData();
+getUserPostSummary();
 
 //event to handle the sign up of a user
 $(".user-signup-form").on("submit", function(event) {
@@ -181,7 +185,7 @@ $(".delete-post-form").on("submit", function(event) {
 		});
 
 	$.post(CONSTANTS.deleteUserItemUrl,data, function(response) {
-		
+
 		if (response.success) {
 			showSnackBar(response.message,"success");
 			setTimeout(function() {
@@ -241,6 +245,22 @@ function showDeleteUserItemAlert(itemObj) {
 	$(".delete-item-modal").modal("open");
 }
 
+//function to delete user's post data for graph
+function getUserPostsGraphData() {
+	$.get(CONSTANTS.getUserPostsGraphDataUrl, function(response) {
+		drawChart("userChart",'line','Frequency Of Your Item Post',response.months,response.posts);
+	})
+}
+
+function getUserPostSummary() {
+	$.get(CONSTANTS.getUserPostSummaryUrl, function(response) {
+		$(".user-total-posts").html(response.total);
+		$(".user-approved-posts").html(response.approved);
+		$(".user-pending-posts").html(response.pending);
+		$(".user-rejected-posts").html(response.rejected);
+	})
+}
+
 //function to get the item categories
 function getItemCategories() {
 	$.get(CONSTANTS.getItemCategoryUrl, function(response) {
@@ -275,4 +295,46 @@ function hideSnackBar() {
 	$(".snackbar").addClass("hide").removeClass("show");
 	$(".snackbar-icon-error,.snackbar-icon-success, .snackbar-loader").show();
 	$(".snackbar-text").html('');
+}
+
+//function to draw the chart
+function drawChart(elementId,chartType,title,labels,data) {
+
+	var ctx = document.getElementById(elementId);
+	var myChart = new Chart(ctx, {
+	    type: chartType,
+	    data: {
+	        labels: labels,
+	        datasets: [{
+	            label: title,
+	            data: data,
+	            backgroundColor: [
+	                'rgba(255, 99, 132, 0.2)',
+	                'rgba(54, 162, 235, 0.2)',
+	                'rgba(255, 206, 86, 0.2)',
+	                'rgba(75, 192, 192, 0.2)',
+	                'rgba(153, 102, 255, 0.2)',
+	                'rgba(255, 159, 64, 0.2)'
+	            ],
+	            borderColor: [
+	                'rgba(255,99,132,1)',
+	                'rgba(54, 162, 235, 1)',
+	                'rgba(255, 206, 86, 1)',
+	                'rgba(75, 192, 192, 1)',
+	                'rgba(153, 102, 255, 1)',
+	                'rgba(255, 159, 64, 1)'
+	            ],
+	            borderWidth: 1
+	        }]
+	    },
+	    options: {
+	        scales: {
+	            yAxes: [{
+	                ticks: {
+	                    beginAtZero:true
+	                }
+	            }]
+	        }
+	    }
+	});
 }

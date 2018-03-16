@@ -95,7 +95,7 @@
         <script type="text/javascript" src="./assets/js/jquery-2.2.4.min.js"></script>
         <script type="text/javascript" src="./assets/js/modernizr.js"></script>
         <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
+        <script type="text/javascript" src="./assets/js/chart.min.js"></script>
         <script type="text/javascript" src="./assets/js/init.js"></script>
-        <script type="text/javascript" src="./assets/js/controller.js"></script>
-    </body>
+        <script type="text/javascript" src="./assets/js/controller.js"></script>    </body>
 </html>

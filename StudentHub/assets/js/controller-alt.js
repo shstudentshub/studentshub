@@ -4,11 +4,17 @@ const CONSTANTS = {
 	addCategoryUrl: "../api/admin/addCategory.php",
 	getCategoriesUrl: "../api/admin/getCategories.php",
 	editCategoryUrl: "../api/admin/editCategory.php",
-	deleteCategoryUrl: "../api/admin/deleteCategory.php"
+	deleteCategoryUrl: "../api/admin/deleteCategory.php",
+	getDashboardSummaryUrl: "../api/admin/getDashboardSummary.php",
+	getDashboardUsersGraphDataUrl: "../api/admin/getDashboardUsersGraphData.php",
+	getDashboardPostsGraphDataUrl: "../api/admin/getDashboardPostsGraphData.php"
 }
 
 //initializations of some methods
 getCategories();
+getDashboardSummary();
+getDashboardUsersGraphData();
+getDashboardPostsGraphData();
 
 //event handler to handle the login of the admin
 $(".admin-form").on("submit", function(event) {
@@ -142,7 +148,6 @@ $(".delete-category-form").on("submit", function(event) {
 /*All functions for requests for all the pages*/
 //function to get the categories for the categories page
 function getCategories() {
-
 	$.get(CONSTANTS.getCategoriesUrl, function(response) {
 		$(".categories-res-div").html(response);
 	});
@@ -160,4 +165,70 @@ function showDeleteCategoryDialog(category) {
 	$(".category-delete-msg").html("Are You Sure You Want To Delete The Category '" + category.categoryName + "'");
 	$(".delete-category-id").val(category.categoryId);
 	$(".delete-category-modal").modal("open");
+}
+
+//function to get the admin dashboard summary
+function getDashboardSummary() {
+	$.get(CONSTANTS.getDashboardSummaryUrl, function(response) {
+		$(".admin-total-users").html(response.totalUsers);
+		$(".admin-total-posts").html(response.totalPosts);
+		$(".admin-total-categories").html(response.totalCategories);
+	});
+}
+
+//function to get the admin dashboard users graph data
+function getDashboardUsersGraphData() {
+	$.get(CONSTANTS.getDashboardUsersGraphDataUrl, function(response) {
+		drawChart("adminUsersChart",'line','User Signup Rate',response.months,response.users);
+	});
+}
+
+//function to get the admin dashboard posts graph data
+function getDashboardPostsGraphData() {
+	$.get(CONSTANTS.getDashboardPostsGraphDataUrl, function(response) {
+		drawChart("adminPostsChart",'bar','Item Post Rate',response.months,response.posts);
+	});
+}
+
+
+//function to draw the chart
+function drawChart(elementId,chartType,title,labels,data) {
+
+	var ctx = document.getElementById(elementId);
+	var myChart = new Chart(ctx, {
+	    type: chartType,
+	    data: {
+	        labels: labels,
+	        datasets: [{
+	            label: title,
+	            data: data,
+	            backgroundColor: [
+	                'rgba(255, 99, 132, 0.2)',
+	                'rgba(54, 162, 235, 0.2)',
+	                'rgba(255, 206, 86, 0.2)',
+	                'rgba(75, 192, 192, 0.2)',
+	                'rgba(153, 102, 255, 0.2)',
+	                'rgba(255, 159, 64, 0.2)'
+	            ],
+	            borderColor: [
+	                'rgba(255,99,132,1)',
+	                'rgba(54, 162, 235, 1)',
+	                'rgba(255, 206, 86, 1)',
+	                'rgba(75, 192, 192, 1)',
+	                'rgba(153, 102, 255, 1)',
+	                'rgba(255, 159, 64, 1)'
+	            ],
+	            borderWidth: 1
+	        }]
+	    },
+	    options: {
+	        scales: {
+	            yAxes: [{
+	                ticks: {
+	                    beginAtZero:true
+	                }
+	            }]
+	        }
+	    }
+	});
 }

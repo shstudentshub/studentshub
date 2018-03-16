@@ -90,24 +90,34 @@
 					<section class="row">
 						<section class="col s12 m3 l3">
 							<section class="panel purple accent-1 user-dashboard-summary">
-								<p><span class="dashboard-summary-number user-no-of-posts">0</span><br/>Total Posts</p>
+								<p><span class="dashboard-summary-number user-total-posts">0</span><br/>Total Posts</p>
+							</section>
+						</section>
+
+						<section class="col s12 m3 l3">
+							<section class="panel green accent-1 user-dashboard-summary">
+								<p><span class="dashboard-summary-number user-pending-posts">0</span><br/>Pending Posts</p>
 							</section>
 						</section>
 
 						<section class="col s12 m3 l3">
 							<section class="panel cyan accent-1 user-dashboard-summary">
-								<p><span class="dashboard-summary-number user-no-of-approved-posts">0</span><br/>Approved Posts</p>
+								<p><span class="dashboard-summary-number user-approved-posts">0</span><br/>Approved Posts</p>
 							</section>
 						</section>
 
 						<section class="col s12 m3 l3">
 							<section class="panel orange accent-1 user-dashboard-summary">
-								<p><span class="dashboard-summary-number user-no-of-rejected-posts">0</span><br/>Rejected Posts</p>
+								<p><span class="dashboard-summary-number user-rejected-posts">0</span><br/>Rejected Posts</p>
 							</section>
 						</section>
-						<section class="col s12 m3 l3">
-							<section class="panel green accent-1 user-dashboard-summary">
-								<p><span class="dashboard-summary-number user-no-of-pending-posts">0</span><br/>Pending Posts</p>
+						
+					</section><br><hr>
+
+					<section class="row">
+						<section class="col s12 m12 l12">
+							<section class="item-added-chart">
+								<canvas id="userChart" class="user-dashboard-graph"></canvas>
 							</section>
 						</section>
 					</section>
