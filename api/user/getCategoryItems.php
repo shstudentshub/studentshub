@@ -10,9 +10,9 @@
 	$hashString = md5(time());
 
 	if ($categoryName == 'all') {
-		$getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_approval_status = $itemStatus";
+		$getQuery = "SELECT * FROM items INNER JOIN itemimages ON item_image_id = item_id WHERE item_approval_status = $itemStatus ORDER BY item_id DESC";
 	} else {
-		$getQuery = "SELECT * FROM items INNER JOIN categories ON item_category_id = category_id INNER JOIN itemimages ON item_image_id = item_id WHERE item_approval_status = $itemStatus AND item_category_id = $categoryId";
+		$getQuery = "SELECT * FROM items INNER JOIN categories ON item_category_id = category_id INNER JOIN itemimages ON item_image_id = item_id WHERE item_approval_status = $itemStatus AND item_category_id = $categoryId ORDER BY item_id DESC";
 	}
 
 	$result = $database->query($getQuery);
