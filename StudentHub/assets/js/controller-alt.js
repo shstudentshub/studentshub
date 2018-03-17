@@ -186,7 +186,7 @@ function getDashboardUsersGraphData() {
 //function to get the admin dashboard posts graph data
 function getDashboardPostsGraphData() {
 	$.get(CONSTANTS.getDashboardPostsGraphDataUrl, function(response) {
-		drawChart("adminPostsChart",'bar','Item Post Rate',response.months,response.posts);
+		drawChart("adminPostsChart",'bar','',response.months,response.posts);
 	});
 }
 

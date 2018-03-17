@@ -40,13 +40,15 @@
 
 		<section class="row">
 			<section class="col s12 m6 l6">
-				<section class="item-added-chart">
+				<section class="">
+					<p class="center-align"><b>User Signup Rate</b></p>
 					<canvas id="adminUsersChart" class="user-dashboard-graph"></canvas>
 				</section>
 			</section>
 
 			<section class="col s12 m6 l6">
-				<section class="item-added-chart">
+				<section class="">
+					<p class="center-align"><b>User Post Rate</b></p>
 					<canvas id="adminPostsChart" class="user-dashboard-graph"></canvas>
 				</section>
 			</section>
